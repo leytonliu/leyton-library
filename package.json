@@ -1,25 +1,30 @@
 {
   "name": "leyton-library",
-  "private": true,
-  "version": "0.0.0",
+  "private": false,
+  "version": "0.0.1",
   "type": "module",
   "files": [
     "dist",
-    "index.d.ts"
+    "types"
   ],
   "main": "./dist/index.umd.cjs",
   "module": "./dist/index.js",
   "types": "types/index.d.ts",
   "exports": {
-    "types": "./index.d.ts",
+    "types": "./types/index.d.ts",
     "import": "./dist/index.js",
     "require": "./dist/index.umd.cjs"
   },
   "scripts": {
     "dev": "vite",
     "build": "tsc && vite build",
-    "preinstall": "node scripts/check-node-version.js"
+    "preinstall": "node scripts/check-node-version.js",
+    "prepublishOnly": "npm run build"
   },
+  "publishConfig": {
+    "access": "public"
+  },
+  "sideEffects": false,
   "devDependencies": {
     "semver": "^7.7.2",
     "typescript": "~5.9.2",
