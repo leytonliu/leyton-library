@@ -27,7 +27,12 @@
   },
   // 指定只编译 lib 目录下的文件。
   "include": [
-    "lib",
-    "**/*.test.ts"
+    "lib"
+  ],
+  "exclude": [
+    "**/*.test.ts",
+    "node_modules",
+    "dist",
+    "types"
   ]
 }
