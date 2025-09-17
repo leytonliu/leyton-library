@@ -20,7 +20,9 @@
     "build": "tsc && vite build",
     "preinstall": "node scripts/check-node-version.js",
     "prepublishOnly": "npm run build",
-    "release": "bash scripts/release.sh"
+    "release": "bash scripts/release.sh",
+    "test": "vitest run",
+    "test:watch": "vitest"
   },
   "publishConfig": {
     "access": "public",
@@ -28,8 +30,10 @@
   },
   "sideEffects": false,
   "devDependencies": {
+    "@types/node": "^20.14.10",
     "semver": "^7.7.2",
     "typescript": "~5.9.2",
-    "vite": "^7.0.6"
+    "vite": "^7.0.6",
+    "vitest": "^2.1.2"
   }
 }

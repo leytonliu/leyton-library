@@ -18,7 +18,6 @@ class PromiseQueue {
       return;
     }
 
-    // 达到并发限制
     if (this.running >= this.limit || this.current >= this.queue.length) {
       return;
     }
@@ -48,3 +47,5 @@ class PromiseQueue {
 }
 
 export { PromiseQueue };
+export default PromiseQueue;
+
