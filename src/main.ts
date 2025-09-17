@@ -1,6 +1,6 @@
-import './style.css'
-import typescriptLogo from './typescript.svg'
-import { setupCounter } from '../lib/main'
+import './style.css';
+import typescriptLogo from './typescript.svg';
+import { setupCounter, sayHello, PromiseQueue } from '../lib';
 
 document.querySelector<HTMLDivElement>('#app')!.innerHTML = `
   <div>
@@ -18,6 +18,30 @@ document.querySelector<HTMLDivElement>('#app')!.innerHTML = `
       Click on the Vite and TypeScript logos to learn more
     </p>
   </div>
-`
+`;
 
-setupCounter(document.querySelector<HTMLButtonElement>('#counter')!)
+setupCounter(document.querySelector<HTMLButtonElement>('#counter')!);
+sayHello();
+
+(() => {
+  const queue = Array(10)
+    .fill(1)
+    .map((_, index) => {
+      return () =>
+        new Promise((resolve) => {
+          const timeout = 10000 * Math.random();
+          console.log(`任务 ${index} 开始执行，预计耗时 ${timeout}ms`);
+          setTimeout(() => {
+            console.log(`任务 ${index} 完成 ✅`);
+            resolve({
+              timeout,
+              index,
+            });
+          }, timeout);
+        });
+    });
+
+  const p = new PromiseQueue(queue, 5);
+  console.log(p);
+  p.run();
+})();

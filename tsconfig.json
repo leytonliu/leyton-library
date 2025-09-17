@@ -3,22 +3,30 @@
     "target": "es2022",
     "useDefineForClassFields": true,
     "module": "esnext",
-    "lib": ["ES2022", "DOM", "DOM.Iterable"],
-    "skipLibCheck": true,
-
+    "lib": [
+      "ES2022",
+      "DOM",
+      "DOM.Iterable"
+    ],
+    "skipLibCheck": true, // 跳过第三方库（.d.ts）的类型检查，加快编译
+    "declaration": true, // 生成 .d.ts 类型声明文件。
+    "outDir": "types", // 声明 .d.ts 文件的输出目录
+    "emitDeclarationOnly": true, // 只生成 .d.ts 文件，不生成 .js。常用于发布 npm 包的类型声明
     /* Bundler mode */
     "moduleResolution": "bundler",
     "allowImportingTsExtensions": true,
-    "isolatedModules": true,
-    "moduleDetection": "force",
-    "noEmit": true,
-
+    "isolatedModules": true, // 要求每个文件都能独立编译（不能依赖文件间隐式推导），为打包工具（如 Vite、esbuild）准备。
+    "moduleDetection": "force", // 强制把所有文件当作模块（即使没有 import/export），避免作用域污染
+    // "noEmit": true,  // 如果打开，不会生成任何输出文件（只做类型检查）。
     /* Linting */
-    "strict": true,
-    "noUnusedLocals": true,
-    "noUnusedParameters": true,
-    "noFallthroughCasesInSwitch": true,
-    "noUncheckedSideEffectImports": true
+    "strict": true, // 开启所有严格模式选项（强类型约束）。
+    "noUnusedLocals": true, // 有未使用的局部变量时报错。
+    "noUnusedParameters": true, // noUnusedParameters: true
+    "noFallthroughCasesInSwitch": true, // noFallthroughCasesInSwitch: true
+    "noUncheckedSideEffectImports": true // 禁止只为副作用而导入的模块（比如 import './xxx'），除非明确声明。
   },
-  "include": ["src"]
+  // 指定只编译 lib 目录下的文件。
+  "include": [
+    "lib"
+  ]
 }
