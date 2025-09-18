@@ -62,6 +62,83 @@ h1 {
   color: #888;
 }
 
+/* 翻转卡片页面布局 */
+.page {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 2rem;
+}
+
+.title {
+  margin: 0;
+}
+
+.cards {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 2rem;
+  justify-items: center;
+  align-items: center;
+}
+
+.flip-card {
+  width: 160px; /* 正方形卡片尺寸 */
+  height: 160px;
+  perspective: 1000px; /* 提供3D视距以产生翻转效果 */
+  cursor: grab;
+  touch-action: none; /* 允许 Pointer 事件处理拖拽 */
+  position: relative; /* 使 z-index 生效 */
+}
+
+.flip-card-inner {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  transform-style: preserve-3d;
+  transition: transform 0.6s;
+}
+
+.flip-card:hover .flip-card-inner {
+  transform: rotateY(180deg);
+}
+
+.flip-card-front,
+.flip-card-back {
+  position: absolute;
+  inset: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 12px;
+  backface-visibility: hidden;
+  -webkit-backface-visibility: hidden; /* Safari */
+  box-shadow: 0 10px 30px rgba(0,0,0,0.2);
+  font-size: 2.4rem;
+  font-weight: 700;
+}
+
+.flip-card-front {
+  background: linear-gradient(135deg, #7f7fff, #4e4efc);
+}
+
+.flip-card-back {
+  background: linear-gradient(135deg, #34d399, #059669);
+  transform: rotateY(180deg);
+}
+
+/* 拖拽时的指针与层级反馈 */
+.flip-card.dragging {
+  cursor: grabbing;
+  z-index: 10;
+}
+
+@media (max-width: 720px) {
+  .cards {
+    grid-template-columns: 1fr;
+  }
+}
+
 button {
   border-radius: 8px;
   border: 1px solid transparent;
