@@ -19,7 +19,6 @@
   "scripts": {
     "dev": "vite",
     "build": "tsc && vite build",
-    "preinstall": "node scripts/check-node-version.js",
     "prepublishOnly": "npm run build",
     "release": "bash scripts/release.sh",
     "test": "vitest run",
