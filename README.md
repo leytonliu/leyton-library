@@ -23,7 +23,7 @@ yarn add leyton-library
 ### 基础工具函数
 
 ```typescript
-import { sayHello, setupCounter, PromiseQueue, union, intersection, encodeBase64 } from 'leyton-library';
+import { sayHello, setupCounter, PromiseQueue, union, intersection, encodeBase64, E2EEncryption } from 'leyton-library';
 
 // 基础工具
 sayHello(); // 输出: Hello
@@ -45,6 +45,17 @@ const encoded = encodeBase64('hello world'); // "aGVsbG8gd29ybGQ="
 const queue = new PromiseQueue(2); // 最大并发数 2
 queue.add(() => fetch('/api/data1'));
 queue.add(() => fetch('/api/data2'));
+
+// 端到端加密
+const alice = new E2EEncryption();
+const bob = new E2EEncryption();
+await alice.generateKeys();
+await bob.generateKeys();
+
+const message = 'Hello, this is a secret message!';
+const encrypted = await alice.encrypt(message, bob.getPublicKey());
+const decrypted = await bob.decrypt(encrypted);
+console.log(decrypted); // "Hello, this is a secret message!"
 ```
 
 ### MCP 服务器
@@ -134,6 +145,58 @@ const server = await createMcpBase64Server();
 const { server, transport } = await startMcpBase64Server();
 ```
 
+### 6. crypto (端到端加密)
+基于 Web Crypto API 实现的端到端加密模块，使用 RSA-OAEP + AES-GCM 混合加密。
+
+#### 高级 API（推荐）
+```typescript
+import { E2EEncryption } from 'leyton-library';
+
+// 创建两个用户
+const alice = new E2EEncryption();
+const bob = new E2EEncryption();
+
+// 生成密钥对
+await alice.generateKeys();
+await bob.generateKeys();
+
+// Alice 发送加密消息给 Bob
+const message = 'Hello Bob, this is a secret message!';
+const encrypted = await alice.encrypt(message, bob.getPublicKey());
+
+// Bob 解密消息
+const decrypted = await bob.decrypt(encrypted);
+console.log(decrypted); // "Hello Bob, this is a secret message!"
+```
+
+#### 低级 API
+```typescript
+import { 
+  generateRSAKeyPair, 
+  exportKeyPair, 
+  encryptData, 
+  decryptData 
+} from 'leyton-library';
+
+// 生成密钥对
+const keyPair = await generateRSAKeyPair();
+const { publicKey, privateKey } = await exportKeyPair(keyPair);
+
+// 加密数据
+const message = 'Secret message';
+const encrypted = await encryptData(message, publicKey);
+
+// 解密数据
+const decrypted = await decryptData(encrypted, privateKey);
+```
+
+#### 特性
+- ✅ **混合加密**：RSA-OAEP-256 + AES-GCM-256
+- ✅ **浏览器原生**：基于 Web Crypto API
+- ✅ **认证加密**：AES-GCM 提供完整性验证
+- ✅ **前向保密**：每次加密使用新的随机密钥
+- ✅ **标准格式**：PEM 格式密钥导入导出
+
 ## 🔧 MCP 服务器配置
 
 ### Cursor 集成
@@ -177,6 +240,7 @@ leyton-library/
 │   ├── promise-queue/     # Promise 队列模块
 │   ├── array/             # 数组工具模块
 │   ├── mcp-base64/        # MCP Base64 模块
+│   ├── crypto/            # 端到端加密模块
 │   └── index.ts           # 主入口文件
 ├── scripts/               # 脚本文件
 │   ├── mcp-server.js      # MCP 服务器启动脚本
