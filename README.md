@@ -1,4 +1,7 @@
 # leyton-library
+[![npm version](https://img.shields.io/npm/v/leyton-library.svg)](https://www.npmjs.com/package/leyton-library)
+[![npm downloads](https://img.shields.io/npm/dm/leyton-library.svg)](https://www.npmjs.com/package/leyton-library)
+
 
 一个功能丰富的 TypeScript 工具库，提供多种实用工具和 MCP (Model Context Protocol) 服务器功能。
 
