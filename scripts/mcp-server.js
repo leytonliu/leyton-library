@@ -1,6 +1,6 @@
 #!/usr/bin/env node
 
-import { startMcpBase64Server } from '../lib/mcp-base64/index.js';
+import { startMcpBase64Server } from '../dist/index.js';
 
 async function main() {
   try {
