@@ -27,7 +27,7 @@
     "mcp-server": "node scripts/mcp-server.js"
   },
   "bin": {
-    "leyton-mcp": "./scripts/mcp-server.js"
+    "leyton-mcp": "scripts/mcp-server.js"
   },
   "publishConfig": {
     "access": "public",
