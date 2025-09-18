@@ -1,5 +1,5 @@
 {
-  "name": "leyton-library",
+  "name": "@leytonliu/leyton-library",
   "private": false,
   "version": "0.0.7",
   "type": "module",
@@ -28,9 +28,13 @@
   "bin": {
     "leyton-mcp": "scripts/mcp-server.js"
   },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/leytonliu/leyton-library.git"
+  },
   "publishConfig": {
     "access": "public",
-    "registry": "https://registry.npmjs.org/"
+    "registry": "https://npm.pkg.github.com"
   },
   "sideEffects": false,
   "devDependencies": {
