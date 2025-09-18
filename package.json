@@ -22,7 +22,11 @@
     "prepublishOnly": "npm run build",
     "release": "bash scripts/release.sh",
     "test": "vitest run",
-    "test:watch": "vitest"
+    "test:watch": "vitest",
+    "mcp-server": "node scripts/mcp-server.js"
+  },
+  "bin": {
+    "leyton-mcp": "scripts/mcp-server.js"
   },
   "publishConfig": {
     "access": "public",
