@@ -41,10 +41,10 @@
   },
   "sideEffects": false,
   "dependencies": {
-    "@leyton-library/tools": "workspace:*",
-    "@leyton-library/cli": "workspace:*",
-    "@leyton-library/const": "workspace:*",
-    "@leyton-library/miniprogram": "workspace:*",
+    "@leyton/tools": "workspace:*",
+    "@leyton/cli": "workspace:*",
+    "@leyton/const": "workspace:*",
+    "@leyton/miniprogram": "workspace:*",
     "@modelcontextprotocol/sdk": "^1.18.0"
   },
   "devDependencies": {

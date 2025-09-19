@@ -52,7 +52,7 @@ leyton-library/
 
 ## 包说明
 
-### @leyton-library/tools
+### @leyton/tools
 核心工具函数包，包含：
 - **array**: 数组操作工具 (union, intersection)
 - **crypto**: 端到端加密工具 (E2EEncryption, RSA-OAEP + AES-GCM)
@@ -60,17 +60,17 @@ leyton-library/
 - **promise-queue**: Promise队列管理 (PromiseQueue)
 - **sayHello**: 基础示例函数
 
-### @leyton-library/cli
+### @leyton/cli
 命令行工具和MCP服务器，包含：
 - **mcp-base64**: MCP Base64编码服务器
 - CLI脚本和工具
 
-### @leyton-library/const
+### @leyton/const
 常量和配置包，包含：
 - **version**: 版本信息常量
 - **config**: 配置常量 (Registry, MCP, Crypto, Queue等)
 
-### @leyton-library/miniprogram
+### @leyton/miniprogram
 小程序开发工具包，包含：
 - **utils**: 小程序基础工具 (getSystemInfo, showToast, showModal等)
 - **storage**: 本地存储工具 (setStorage, getStorage, removeStorage等)
@@ -129,10 +129,10 @@ import { sayHello, PromiseQueue, E2EEncryption } from 'leyton-library';
 ### 2. 使用独立包 (推荐)
 ```typescript
 // 使用特定功能包
-import { PromiseQueue } from '@leyton-library/tools';
-import { VERSION } from '@leyton-library/const';
-import { showToast } from '@leyton-library/miniprogram';
-import { encodeBase64 } from '@leyton-library/cli';
+import { PromiseQueue } from '@leyton/tools';
+import { VERSION } from '@leyton/const';
+import { showToast } from '@leyton/miniprogram';
+import { encodeBase64 } from '@leyton/cli';
 ```
 
 ## 发布

@@ -1,5 +1,5 @@
 {
-  "name": "@leyton-library/tools",
+  "name": "@leyton/tools",
   "version": "0.1.0",
   "type": "module",
   "description": "Utility functions and tools for leyton-library",

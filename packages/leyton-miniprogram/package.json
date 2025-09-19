@@ -1,5 +1,5 @@
 {
-  "name": "@leyton-library/miniprogram",
+  "name": "@leyton/miniprogram",
   "version": "0.1.0",
   "type": "module",
   "description": "Miniprogram utilities for leyton-library",
@@ -26,8 +26,8 @@
   },
   "sideEffects": false,
   "dependencies": {
-    "@leyton-library/tools": "workspace:*",
-    "@leyton-library/const": "workspace:*"
+    "@leyton/tools": "workspace:*",
+    "@leyton/const": "workspace:*"
   },
   "devDependencies": {
     "@types/node": "^20.14.10",

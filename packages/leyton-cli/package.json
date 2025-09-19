@@ -1,5 +1,5 @@
 {
-  "name": "@leyton-library/cli",
+  "name": "@leyton/cli",
   "version": "0.1.0",
   "type": "module",
   "description": "CLI tools and MCP server for leyton-library",
@@ -32,7 +32,7 @@
   "sideEffects": false,
   "dependencies": {
     "@modelcontextprotocol/sdk": "^1.18.0",
-    "@leyton-library/tools": "workspace:*"
+    "@leyton/tools": "workspace:*"
   },
   "devDependencies": {
     "@types/node": "^20.14.10",

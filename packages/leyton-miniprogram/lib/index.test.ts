@@ -1,6 +1,6 @@
 import { describe, it, expect } from 'vitest'
 
-describe('@leyton-library/miniprogram', () => {
+describe('@leyton/miniprogram', () => {
   it('should export all modules', async () => {
     // Since miniprogram APIs are not available in Node.js environment,
     // we just test that the modules can be imported without error

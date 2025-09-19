@@ -1,5 +1,5 @@
 {
-  "name": "@leyton-library/const",
+  "name": "@leyton/const",
   "version": "0.1.0",
   "type": "module",
   "description": "Constants and configuration for leyton-library",

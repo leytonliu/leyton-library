@@ -8,21 +8,21 @@ importers:
 
   .:
     dependencies:
-      '@leyton-library/cli':
+      '@leyton/cli':
         specifier: workspace:*
         version: link:packages/leyton-cli
-      '@leyton-library/const':
+      '@leyton/const':
         specifier: workspace:*
         version: link:packages/leyton-const
-      '@leyton-library/miniprogram':
+      '@leyton/miniprogram':
         specifier: workspace:*
         version: link:packages/leyton-miniprogram
-      '@leyton-library/tools':
+      '@leyton/tools':
         specifier: workspace:*
         version: link:packages/leyton-tools
       '@modelcontextprotocol/sdk':
         specifier: ^1.18.0
-        version: 1.18.0
+        version: 1.18.1
     devDependencies:
       '@types/node':
         specifier: ^20.14.10
@@ -42,12 +42,12 @@ importers:
 
   packages/leyton-cli:
     dependencies:
-      '@leyton-library/tools':
+      '@leyton/tools':
         specifier: workspace:*
         version: link:../leyton-tools
       '@modelcontextprotocol/sdk':
         specifier: ^1.18.0
-        version: 1.18.0
+        version: 1.18.1
     devDependencies:
       '@types/node':
         specifier: ^20.14.10
@@ -79,10 +79,10 @@ importers:
 
   packages/leyton-miniprogram:
     dependencies:
-      '@leyton-library/const':
+      '@leyton/const':
         specifier: workspace:*
         version: link:../leyton-const
-      '@leyton-library/tools':
+      '@leyton/tools':
         specifier: workspace:*
         version: link:../leyton-tools
     devDependencies:
@@ -416,8 +416,8 @@ packages:
   '@jridgewell/sourcemap-codec@1.5.5':
     resolution: {integrity: sha512-cYQ9310grqxueWbl+WuIUIaiUaDcj7WOq5fVhEljNVgRfOUhY9fy2zTvfoqWsnebh8Sl70VScFbICvJnLKB0Og==}
 
-  '@modelcontextprotocol/sdk@1.18.0':
-    resolution: {integrity: sha512-JvKyB6YwS3quM+88JPR0axeRgvdDu3Pv6mdZUy+w4qVkCzGgumb9bXG/TmtDRQv+671yaofVfXSQmFLlWU5qPQ==}
+  '@modelcontextprotocol/sdk@1.18.1':
+    resolution: {integrity: sha512-d//GE8/Yh7aC3e7p+kZG8JqqEAwwDUmAfvH1quogtbk+ksS6E0RR6toKKESPYYZVre0meqkJb27zb+dhqE9Sgw==}
     engines: {node: '>=18'}
 
   '@rollup/rollup-android-arm-eabi@4.50.2':
@@ -1298,7 +1298,7 @@ snapshots:
 
   '@jridgewell/sourcemap-codec@1.5.5': {}
 
-  '@modelcontextprotocol/sdk@1.18.0':
+  '@modelcontextprotocol/sdk@1.18.1':
     dependencies:
       ajv: 6.12.6
       content-type: 1.0.5
