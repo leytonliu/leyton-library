@@ -1,8 +1,24 @@
 {
   "name": "leyton-library",
-  "private": false,
+  "private": true,
   "version": "0.0.8",
   "type": "module",
+  "workspaces": [
+    "packages/*"
+  ],
+  "scripts": {
+    "dev": "vite",
+    "build": "npm run build --workspaces",
+    "build:root": "tsc && vite build",
+    "prepublishOnly": "npm run build:root",
+    "release": "bash scripts/release.sh",
+    "test": "npm run test --workspaces",
+    "test:watch": "npm run test:watch --workspaces",
+    "mcp-server": "node scripts/mcp-server.js",
+    "clean": "rm -rf dist types packages/*/dist packages/*/types",
+    "install:all": "npm install",
+    "publish:all": "npm run build && npm publish --workspaces"
+  },
   "files": [
     "dist",
     "types",
@@ -16,15 +32,6 @@
     "import": "./dist/index.js",
     "require": "./dist/index.umd.cjs"
   },
-  "scripts": {
-    "dev": "vite",
-    "build": "tsc && vite build",
-    "prepublishOnly": "npm run build",
-    "release": "bash scripts/release.sh",
-    "test": "vitest run",
-    "test:watch": "vitest",
-    "mcp-server": "node scripts/mcp-server.js"
-  },
   "bin": {
     "leyton-mcp": "scripts/mcp-server.js"
   },
@@ -33,14 +40,18 @@
     "registry": "https://registry.npmjs.org/"
   },
   "sideEffects": false,
+  "dependencies": {
+    "@leyton-library/tools": "workspace:*",
+    "@leyton-library/cli": "workspace:*",
+    "@leyton-library/const": "workspace:*",
+    "@leyton-library/miniprogram": "workspace:*",
+    "@modelcontextprotocol/sdk": "^1.18.0"
+  },
   "devDependencies": {
     "@types/node": "^20.14.10",
     "semver": "^7.7.2",
     "typescript": "~5.9.2",
     "vite": "^7.0.6",
     "vitest": "^2.1.2"
-  },
-  "dependencies": {
-    "@modelcontextprotocol/sdk": "^1.18.0"
   }
 }
