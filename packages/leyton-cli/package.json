@@ -1,0 +1,43 @@
+{
+  "name": "@leyton-library/cli",
+  "version": "0.1.0",
+  "type": "module",
+  "description": "CLI tools and MCP server for leyton-library",
+  "main": "./dist/index.umd.cjs",
+  "module": "./dist/index.js",
+  "types": "./types/index.d.ts",
+  "exports": {
+    "types": "./types/index.d.ts",
+    "import": "./dist/index.js",
+    "require": "./dist/index.umd.cjs"
+  },
+  "bin": {
+    "leyton-mcp": "./scripts/mcp-server.js"
+  },
+  "files": [
+    "dist",
+    "types",
+    "scripts"
+  ],
+  "scripts": {
+    "build": "tsc && vite build",
+    "test": "vitest run",
+    "test:watch": "vitest",
+    "mcp-server": "node scripts/mcp-server.js"
+  },
+  "publishConfig": {
+    "access": "public",
+    "registry": "https://registry.npmjs.org/"
+  },
+  "sideEffects": false,
+  "dependencies": {
+    "@modelcontextprotocol/sdk": "^1.18.0",
+    "@leyton-library/tools": "workspace:*"
+  },
+  "devDependencies": {
+    "@types/node": "^20.14.10",
+    "typescript": "~5.9.2",
+    "vite": "^7.0.6",
+    "vitest": "^2.1.2"
+  }
+}
