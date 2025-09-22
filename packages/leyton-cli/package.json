@@ -1,6 +1,6 @@
 {
   "name": "@leyton/cli",
-  "version": "0.2.5",
+  "version": "0.2.6",
   "type": "module",
   "description": "CLI tools and MCP server for leyton-library",
   "main": "./dist/index.umd.cjs",
