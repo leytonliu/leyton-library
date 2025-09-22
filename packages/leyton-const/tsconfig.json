@@ -17,6 +17,6 @@
     "declaration": true,
     "outDir": "./types"
   },
-  "include": ["lib/**/*"],
+  "include": ["src/**/*"],
   "exclude": ["dist", "node_modules", "**/*.test.ts"]
 }

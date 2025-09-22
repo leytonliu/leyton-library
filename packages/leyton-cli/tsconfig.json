@@ -22,7 +22,7 @@
     "outDir": "./types"
   },
   "include": [
-    "lib/**/*",
+    "src/**/*",
     "scripts/**/*"
   ],
   "exclude": [
