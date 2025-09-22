@@ -1,7 +1,7 @@
 {
   "name": "leyton-library",
   "private": true,
-  "version": "0.1.5",
+  "version": "0.1.6",
   "type": "module",
   "workspaces": [
     "packages/*"
@@ -19,7 +19,7 @@
     "install:all": "npm install",
     "publish:all": "npm run build && npm publish --workspaces",
     "release:patch": "pnpm version patch --recursive && npm run build && npm publish --workspaces",
-    "release:minor": "pnpm version minor --recursive && npm run build && npm publish --workspaces", 
+    "release:minor": "pnpm version minor --recursive && npm run build && npm publish --workspaces",
     "release:major": "pnpm version major --recursive && npm run build && npm publish --workspaces"
   },
   "files": [
