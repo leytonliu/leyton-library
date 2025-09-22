@@ -1,7 +1,7 @@
 {
   "name": "leyton-library",
   "private": true,
-  "version": "0.2.2",
+  "version": "0.2.3",
   "type": "module",
   "workspaces": [
     "packages/*"
@@ -16,11 +16,9 @@
     "test:watch": "npm run test:watch --workspaces",
     "mcp-server": "node scripts/mcp-server.js",
     "clean": "rm -rf dist types packages/*/dist packages/*/types",
-    "install:all": "npm install",
-    "publish:all": "npm run build && npm publish --workspaces",
-    "release:patch": "pnpm version patch --recursive && npm run build && npm publish --workspaces",
-    "release:minor": "pnpm version minor --recursive && npm run build && npm publish --workspaces",
-    "release:major": "pnpm version major --recursive && npm run build && npm publish --workspaces"
+    "release:patch": "node scripts/version-update.js patch && npm run build && npm publish --workspaces",
+    "release:minor": "node scripts/version-update.js minor && npm run build && npm publish --workspaces",
+    "release:major": "node scripts/version-update.js major && npm run build && npm publish --workspaces"
   },
   "files": [
     "dist",
