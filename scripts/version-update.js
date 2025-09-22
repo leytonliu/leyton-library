@@ -3,6 +3,7 @@
 import fs from 'fs';
 import path from 'path';
 import { fileURLToPath } from 'url';
+import { execSync } from 'child_process';
 
 const __filename = fileURLToPath(import.meta.url);
 const __dirname = path.dirname(__filename);
@@ -65,3 +66,16 @@ fs.writeFileSync(rootPkgPath, JSON.stringify(rootPkgJson, null, 2) + '\n');
 console.log(`Updated root package from ${currentVersion} to ${newVersion}`);
 
 console.log('Version update completed!');
+
+// 自动提交和推送代码
+try {
+  console.log('Committing version changes...');
+  execSync('git add .', { stdio: 'inherit' });
+  execSync(`git commit -m "chore: bump version to ${newVersion}"`, { stdio: 'inherit' });
+  console.log('Pushing to remote...');
+  execSync('git push', { stdio: 'inherit' });
+  console.log('✅ Code committed and pushed successfully!');
+} catch (error) {
+  console.error('❌ Failed to commit/push:', error.message);
+  process.exit(1);
+}
