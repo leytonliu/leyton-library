@@ -1,7 +1,7 @@
 {
   "name": "leyton-library",
   "private": true,
-  "version": "0.0.8",
+  "version": "0.1.1",
   "type": "module",
   "workspaces": [
     "packages/*"
@@ -17,7 +17,10 @@
     "mcp-server": "node scripts/mcp-server.js",
     "clean": "rm -rf dist types packages/*/dist packages/*/types",
     "install:all": "npm install",
-    "publish:all": "npm run build && npm publish --workspaces"
+    "publish:all": "npm run build && npm publish --workspaces",
+    "release:patch": "bash scripts/release.sh patch",
+    "release:minor": "bash scripts/release.sh minor", 
+    "release:major": "bash scripts/release.sh major"
   },
   "files": [
     "dist",

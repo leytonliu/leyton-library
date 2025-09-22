@@ -82,4 +82,3 @@ step "Publishing to $REGISTRY_URL with tag $PUBLISH_TAG"
 npm publish --access public --tag "$PUBLISH_TAG" --registry="$REGISTRY_URL"
 
 step "Release completed successfully"
-
