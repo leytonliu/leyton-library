@@ -67,7 +67,17 @@ npm run build
 # Version bump                                #
 ###############################################
 step "Bumping version: $VERSION_BUMP"
-npm version "$VERSION_BUMP" --workspaces -m "release: %s"
+# 手动更新子包版本
+for pkg in packages/*/package.json; do
+  if [ -f "$pkg" ]; then
+    pkg_dir=$(dirname "$pkg")
+    echo "Updating version in $pkg_dir"
+    cd "$pkg_dir"
+    npm version "$VERSION_BUMP" --no-git-tag-version
+    cd - > /dev/null
+  fi
+done
+# 更新主包版本
 npm version "$VERSION_BUMP" -m "release: %s"
 
 ###############################################
