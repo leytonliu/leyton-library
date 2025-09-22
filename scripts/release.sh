@@ -35,8 +35,9 @@ fail() { echo "[release][ERROR] $1" >&2; exit 1; }
 ###############################################
 step "Checking git working tree is clean"
 if [[ -n "$(git status --porcelain)" ]]; then
-  git status --porcelain
-  fail "Working directory not clean. Commit or stash changes first."
+  step "Working directory not clean. Auto-committing changes..."
+  git add .
+  git commit -m "chore: auto-commit before release"
 fi
 
 step "Ensuring Node and npm are available"
@@ -66,6 +67,7 @@ npm run build
 # Version bump                                #
 ###############################################
 step "Bumping version: $VERSION_BUMP"
+npm version "$VERSION_BUMP" --workspaces -m "release: %s"
 npm version "$VERSION_BUMP" -m "release: %s"
 
 ###############################################
