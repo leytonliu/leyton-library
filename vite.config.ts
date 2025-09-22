@@ -3,7 +3,7 @@ import { defineConfig } from 'vite'
 export default defineConfig({
   build: {
     lib: {
-      entry: './lib/index.ts',
+      entry: './index.ts',
       name: 'index',
       fileName: 'index',
     },

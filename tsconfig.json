@@ -25,9 +25,9 @@
     "noFallthroughCasesInSwitch": true, // noFallthroughCasesInSwitch: true
     "noUncheckedSideEffectImports": true // 禁止只为副作用而导入的模块（比如 import './xxx'），除非明确声明。
   },
-  // 指定只编译 lib 目录下的文件。
+  // 指定只编译根目录的 index.ts 文件。
   "include": [
-    "lib"
+    "index.ts"
   ],
   "exclude": [
     "**/*.test.ts",
