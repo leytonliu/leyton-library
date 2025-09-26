@@ -1,7 +1,7 @@
 {
   "name": "leyton-library",
   "private": true,
-  "version": "0.2.6",
+  "version": "0.2.7",
   "type": "module",
   "workspaces": [
     "packages/*"
@@ -46,6 +46,7 @@
     "@leyton/cli": "workspace:*",
     "@leyton/const": "workspace:*",
     "@leyton/miniprogram": "workspace:*",
+    "@leyton/ui": "workspace:*",
     "@modelcontextprotocol/sdk": "^1.18.0"
   },
   "devDependencies": {
@@ -53,6 +54,8 @@
     "semver": "^7.7.2",
     "typescript": "~5.9.2",
     "vite": "^7.0.6",
-    "vitest": "^2.1.2"
+    "vitest": "^2.1.2",
+    "vue": "^3.3.0",
+    "@vitejs/plugin-vue": "^5.0.0"
   }
 }
