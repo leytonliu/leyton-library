@@ -1,10 +1,10 @@
 {
   "name": "@leyton/ui",
-  "version": "0.0.2",
+  "version": "0.0.3",
   "type": "module",
   "description": "Shared UI components for leyton-library based on Vue 3",
-  "main": "./src/index.ts",
-  "module": "./src/index.ts",
+  "main": "./dist/index.umd.cjs",
+  "module": "./dist/index.js",
   "types": "./types/index.d.ts",
   "exports": {
     ".": "./src/index.ts",
