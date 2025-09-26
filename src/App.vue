@@ -21,12 +21,12 @@
     <h2>Loading State</h2>
     <Button type="primary" loading>Loading</Button>
     <Button type="default" loading>Loading</Button>
-
   </div>
 </template>
 
 <script setup lang="ts">
 import { Button } from '@leyton/ui';
+import '@leyton/ui/style';
 </script>
 
 <style>
@@ -34,7 +34,8 @@ import { Button } from '@leyton/ui';
   padding: 20px;
 }
 
-h1, h2 {
+h1,
+h2 {
   margin-bottom: 16px;
 }
 
