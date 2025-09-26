@@ -2,6 +2,9 @@
  * Miniprogram storage utilities
  */
 
+const ACCESS_TOKEN_KEY = 'access_token';
+const REFRESH_TOKEN_KEY = 'refresh_token';
+
 /**
  * 设置本地存储
  */
@@ -19,14 +22,27 @@ export function setStorage<T>(key: string, data: T): Promise<void> {
 /**
  * 获取本地存储
  */
-export function getStorage<T>(key: string): Promise<T> {
+export function getStorage<T>(key: string): Promise<T | null> {
   return new Promise((resolve, reject) => {
     wx.getStorage({
       key,
       success: (res) => resolve(res.data as T),
-      fail: reject
+      // 小程序中，如果 key 不存在，会进入 fail 回调
+      fail: () => resolve(null)
     });
   });
+}
+
+/**
+ * 异步获取本地存储
+ */
+export function getStorageInfo(): Promise<WechatMiniprogram.GetStorageInfoSuccessCallbackOption> {
+    return new Promise((resolve, reject) => {
+        wx.getStorageInfo({
+            success: (res) => resolve(res),
+            fail: reject
+        });
+    });
 }
 
 /**
@@ -54,14 +70,41 @@ export function clearStorage(): Promise<void> {
   });
 }
 
+
+// --- Token Specific Functions ---
+
 /**
- * 获取存储信息
+ * 存储 Access Token 和 Refresh Token
+ * @param accessToken
+ * @param refreshToken
  */
-export function getStorageInfo(): Promise<WechatMiniprogram.GetStorageInfoSuccessCallbackOption> {
-  return new Promise((resolve, reject) => {
-    wx.getStorageInfo({
-      success: (res) => resolve(res),
-      fail: reject
-    });
-  });
+export async function setTokens({ accessToken, refreshToken }: { accessToken: string; refreshToken: string }): Promise<void> {
+  await Promise.all([
+    setStorage(ACCESS_TOKEN_KEY, accessToken),
+    setStorage(REFRESH_TOKEN_KEY, refreshToken)
+  ]);
+}
+
+/**
+ * 获取 Access Token
+ */
+export function getAccessToken(): Promise<string | null> {
+  return getStorage<string>(ACCESS_TOKEN_KEY);
+}
+
+/**
+ * 获取 Refresh Token
+ */
+export function getRefreshToken(): Promise<string | null> {
+  return getStorage<string>(REFRESH_TOKEN_KEY);
+}
+
+/**
+ * 清除所有 Token
+ */
+export async function clearTokens(): Promise<void> {
+  await Promise.all([
+    removeStorage(ACCESS_TOKEN_KEY),
+    removeStorage(REFRESH_TOKEN_KEY)
+  ]);
 }

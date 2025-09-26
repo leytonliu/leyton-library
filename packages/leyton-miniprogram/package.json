@@ -26,8 +26,9 @@
   },
   "sideEffects": false,
   "dependencies": {
+    "@leyton/const": "workspace:*",
     "@leyton/tools": "workspace:*",
-    "@leyton/const": "workspace:*"
+    "axios": "^1.12.2"
   },
   "devDependencies": {
     "@types/node": "^20.14.10",
