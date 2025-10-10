@@ -1,3 +1,5 @@
-import Button from './components/Button.vue';
+import Button from './components/button';
+import Dialog from './components/dialog/dialog.vue';
+import { Layout, LayoutHeader, LayoutSider, LayoutContent, LayoutFooter } from './components/layout';
 
-export { Button };
+export { Button, Dialog, Layout, LayoutHeader, LayoutSider, LayoutContent, LayoutFooter };

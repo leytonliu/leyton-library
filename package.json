@@ -42,20 +42,23 @@
   },
   "sideEffects": false,
   "dependencies": {
-    "@leyton/tools": "workspace:*",
+    "@highlightjs/vue-plugin": "^2.1.0",
     "@leyton/cli": "workspace:*",
     "@leyton/const": "workspace:*",
     "@leyton/miniprogram": "workspace:*",
+    "@leyton/tools": "workspace:*",
     "@leyton/ui": "workspace:*",
-    "@modelcontextprotocol/sdk": "^1.18.0"
+    "@modelcontextprotocol/sdk": "^1.18.0",
+    "highlight.js": "^11.11.1",
+    "vue-router": "^4.5.1"
   },
   "devDependencies": {
     "@types/node": "^20.14.10",
+    "@vitejs/plugin-vue": "^5.0.0",
     "semver": "^7.7.2",
     "typescript": "~5.9.2",
     "vite": "^7.0.6",
     "vitest": "^2.1.2",
-    "vue": "^3.3.0",
-    "@vitejs/plugin-vue": "^5.0.0"
+    "vue": "^3.3.0"
   }
 }

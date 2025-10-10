@@ -102,8 +102,8 @@ export default defineComponent({
   color: #333;
 }
 .leyton-btn--default:hover {
-  border-color: var(--leyton-color-primary-hover);
-  color: var(--leyton-color-primary-hover);
+  border-color: var(--leyton-color-primary);
+  color: var(--leyton-color-primary);
 }
 .leyton-btn--default:active {
   border-color: var(--leyton-color-primary-active);
@@ -124,8 +124,15 @@ export default defineComponent({
 
 .leyton-btn--secondary {
     background-color: #fff;
-    border-color: #d9d9d9;
-    color: #333;
+    border-color: var(--leyton-color-primary);
+    color: var(--leyton-color-primary);
+}
+.leyton-btn--secondary:hover {
+    background-color: #f0fff8;
+}
+.leyton-btn--secondary:active {
+    border-color: var(--leyton-color-primary-active);
+    color: var(--leyton-color-primary-active);
 }
 
 .leyton-btn--warning {
