@@ -1,59 +1,128 @@
 <template>
-  <view class="content">
-    <image class="logo" src="/static/logo.png"></image>
-    <view class="text-area">
-      <text class="title">{{ title }}</text>
+  <view class="container">
+    <view class="header">
+      <text class="title">CMS 组件迁移测试</text>
+      <text class="subtitle">Vue2 → Vue3</text>
     </view>
-    <view class="button-area">
-      <button type="primary" @click="startLoading">显示 Loading</button>
+
+    <view class="nav-list">
+      <view class="nav-item" @tap="goToCmsTest">
+        <view class="nav-icon">🎨</view>
+        <view class="nav-content">
+          <text class="nav-title">CMS Vue3 测试</text>
+          <text class="nav-desc">使用 mockData.json 测试</text>
+        </view>
+        <view class="nav-arrow">→</view>
+      </view>
+    </view>
+
+    <view class="info-card">
+      <text class="info-title">迁移状态</text>
+      <view class="status-item">
+        <text class="status-label">✅ 核心架构完成</text>
+      </view>
+      <view class="status-item">
+        <text class="status-label">✅ 基础组件完成</text>
+      </view>
+      <view class="status-item">
+        <text class="status-label">🔄 具体组件待迁移</text>
+      </view>
     </view>
   </view>
 </template>
 
 <script setup>
-import { ref } from 'vue';
-
-const title = ref('Hello Leyton');
-
-const startLoading = () => {
-  uni.$loading.show({
-    title: '测试中...'
+const goToCmsTest = () => {
+  uni.navigateTo({
+    url: '/pages/cms-test/index'
   });
-
-  setTimeout(() => {
-    uni.$loading.hide();
-  }, 2000);
 };
 </script>
 
-<style>
-.content {
+<style lang="scss" scoped>
+.container {
+  min-height: 100vh;
+  background: linear-gradient(180deg, #f8f9fa 0%, #e9ecef 100%);
+  padding: 40rpx;
+}
+
+.header {
+  text-align: center;
+  margin-bottom: 60rpx;
+  padding: 40rpx 0;
+
+  .title {
+    display: block;
+    font-size: 48rpx;
+    font-weight: bold;
+    color: #212529;
+    margin-bottom: 16rpx;
+  }
+
+  .subtitle {
+    display: block;
+    font-size: 28rpx;
+    color: #6c757d;
+  }
+}
+
+.nav-item {
   display: flex;
-  flex-direction: column;
   align-items: center;
-  justify-content: center;
+  background: white;
+  border-radius: 20rpx;
+  padding: 40rpx 30rpx;
+  margin-bottom: 20rpx;
+  box-shadow: 0 4rpx 12rpx rgba(0, 0, 0, 0.08);
+
+  .nav-icon {
+    font-size: 60rpx;
+    margin-right: 30rpx;
+  }
+
+  .nav-content {
+    flex: 1;
+
+    .nav-title {
+      display: block;
+      font-size: 32rpx;
+      font-weight: 600;
+      color: #212529;
+      margin-bottom: 8rpx;
+    }
+
+    .nav-desc {
+      display: block;
+      font-size: 24rpx;
+      color: #6c757d;
+    }
+  }
+
+  .nav-arrow {
+    font-size: 40rpx;
+    color: #6c757d;
+  }
 }
 
-.logo {
-  height: 200rpx;
-  width: 200rpx;
-  margin-top: 200rpx;
-  margin-left: auto;
-  margin-right: auto;
-  margin-bottom: 50rpx;
-}
+.info-card {
+  background: white;
+  border-radius: 20rpx;
+  padding: 40rpx;
+  margin-top: 40rpx;
 
-.text-area {
-  display: flex;
-  justify-content: center;
-}
+  .info-title {
+    display: block;
+    font-size: 32rpx;
+    font-weight: 600;
+    margin-bottom: 30rpx;
+  }
 
-.title {
-  font-size: 36rpx;
-  color: #8f8f94;
-}
+  .status-item {
+    margin-bottom: 16rpx;
 
-.button-area {
-  margin-top: 50rpx;
+    .status-label {
+      font-size: 28rpx;
+    }
+  }
 }
 </style>

@@ -1,0 +1,3794 @@
+{
+    "name": "小屏",
+    "show": true,
+    "gutter": 0,
+    "widthRange": {
+        "start": 0,
+        "end": 719
+    },
+    "design": {
+        "width": "375px",
+        "minHeight": "751px"
+    },
+    "childrenData": [
+        {
+            "anchorTitle": null,
+            "componentCode": "carousel-container",
+            "groupCode": "container",
+            "groupName": "容器",
+            "componentName": "轮播容器",
+            "editFlag": 0,
+            "data": {
+                "carouselNum": 11,
+                "height": 350,
+                "autoplay": true,
+                "hideButton": true,
+                "loop": true,
+                "paginationType": "2",
+                "hidePagination": 0,
+                "marginBottom": 24,
+                "activeColor": "#000000",
+                "inActiveColor": "#b3b3b3"
+            },
+            "readonlyData": {
+                "activeIndex": 2
+            },
+            "childrenData": [
+                {
+                    "anchorTitle": null,
+                    "componentCode": "image",
+                    "groupCode": "common",
+                    "groupName": "常用组件",
+                    "componentName": "图片",
+                    "editFlag": 0,
+                    "data": {
+                        "url": "https://static-d2s-prod.platform-loreal.cn/o2-resources/metadata/o2cms/2/O2-PUB/1755253602681_微信图片_20250731120121.jpg",
+                        "width": "100%",
+                        "height": "100%",
+                        "objectFit": "scale-down",
+                        "objectPosition": "center",
+                        "hasCover": false,
+                        "cdnUrl": "https://static-d2s-prod.platform-loreal.cn/o2-resources/metadata/o2cms/2/O2-PUB/1755253602681_微信图片_20250731120121.jpg",
+                        "path": "/o2-resources/metadata/o2cms/2/O2-PUB/1755253602681_微信图片_20250731120121.jpg"
+                    },
+                    "style": {},
+                    "childrenData": [],
+                    "componentId": "_e6e8a903-6a9b-4c7c-b596-2d816819be93",
+                    "enableTrack": 1,
+                    "trackName": "首页banner-光能吹风机",
+                    "action": {
+                        "code": "pdp",
+                        "data": {
+                            "entityName": "欧莱雅PRO 光能吹风机",
+                            "entityCode": "P20250610000001",
+                            "entityId": 9722,
+                            "platformProductCode": "P20250610000001",
+                            "mediaUrl": "/o2-resources/o2pcm/images/ow-1/op-p20250610000001/zh_cn/2/O2-PUB/op_p20250610000001_m_001_1750909411140.jpg",
+                            "lowedPrice": "2980.00"
+                        }
+                    }
+                },
+                {
+                    "anchorTitle": null,
+                    "componentCode": "image",
+                    "groupCode": "common",
+                    "groupName": "常用组件",
+                    "componentName": "图片",
+                    "editFlag": 0,
+                    "data": {
+                        "url": "https://static-d2s-prod.platform-loreal.cn/o2-resources/metadata/o2cms/2/O2-PUB/1747039942521_0428-首页banner.gif",
+                        "width": "100%",
+                        "height": "100%",
+                        "objectFit": "scale-down",
+                        "objectPosition": "center",
+                        "hasCover": false,
+                        "cdnUrl": "https://static-d2s-prod.platform-loreal.cn/o2-resources/metadata/o2cms/2/O2-PUB/1747039942521_0428-首页banner.gif",
+                        "path": "/o2-resources/metadata/o2cms/2/O2-PUB/1747039942521_0428-首页banner.gif"
+                    },
+                    "style": {},
+                    "childrenData": [],
+                    "componentId": "_a092df28-5682-4663-8539-c0c46477b5bb",
+                    "enableTrack": 1,
+                    "trackName": "首页banner-设计师大赛",
+                    "action": {
+                        "code": "bind-clp",
+                        "data": {
+                            "page": {},
+                            "params": {
+                                "pageCode": "O2_DTC:OW-1:CLP:CLP202404240001",
+                                "pageName": "全球发艺设计师大赛"
+                            }
+                        }
+                    }
+                },
+                {
+                    "anchorTitle": null,
+                    "componentCode": "image",
+                    "groupCode": "common",
+                    "groupName": "常用组件",
+                    "componentName": "图片",
+                    "editFlag": 0,
+                    "data": {
+                        "url": "https://static-d2s-prod.platform-loreal.cn/o2-resources/metadata/o2cms/2/O2-PUB/1761810177050_750_700.png",
+                        "width": "100%",
+                        "height": "100%",
+                        "objectFit": "scale-down",
+                        "objectPosition": "center",
+                        "hasCover": false,
+                        "cdnUrl": "https://static-d2s-prod.platform-loreal.cn/o2-resources/metadata/o2cms/2/O2-PUB/1761810177050_750_700.png",
+                        "path": "/o2-resources/metadata/o2cms/2/O2-PUB/1761810177050_750_700.png"
+                    },
+                    "style": {},
+                    "childrenData": [],
+                    "componentId": "_96b2046b-53fb-435e-98c9-e3e5359502ee",
+                    "enableTrack": 1,
+                    "trackName": "首页banner-零售洗",
+                    "action": {
+                        "code": "bind-promotion-plp",
+                        "data": {
+                            "params": {
+                                "sceneCode": "S20251030000008"
+                            }
+                        }
+                    }
+                },
+                {
+                    "anchorTitle": null,
+                    "componentCode": "image",
+                    "groupCode": "common",
+                    "groupName": "常用组件",
+                    "componentName": "图片",
+                    "editFlag": 0,
+                    "data": {
+                        "url": "https://static-d2s-prod.platform-loreal.cn/o2-resources/metadata/o2cms/2/O2-PUB/1761810385428_10月新客550送瞬顺-首页banner 750 700.jpg",
+                        "width": "100%",
+                        "height": "100%",
+                        "objectFit": "scale-down",
+                        "objectPosition": "center",
+                        "hasCover": false,
+                        "cdnUrl": "https://static-d2s-prod.platform-loreal.cn/o2-resources/metadata/o2cms/2/O2-PUB/1761810385428_10月新客550送瞬顺-首页banner 750 700.jpg",
+                        "path": "/o2-resources/metadata/o2cms/2/O2-PUB/1761810385428_10月新客550送瞬顺-首页banner 750 700.jpg"
+                    },
+                    "style": {},
+                    "childrenData": [],
+                    "componentId": "_9c8f0f97-911b-4d24-8d71-a8b8ad4a1e18",
+                    "enableTrack": 1,
+                    "trackName": "首页banner-新客礼"
+                },
+                {
+                    "anchorTitle": null,
+                    "componentCode": "image",
+                    "groupCode": "common",
+                    "groupName": "常用组件",
+                    "componentName": "图片",
+                    "editFlag": 0,
+                    "data": {
+                        "url": "https://static-d2s-prod.platform-loreal.cn/o2-resources/metadata/o2cms/2/O2-PUB/1761810412286_750_700.png",
+                        "width": "100%",
+                        "height": "100%",
+                        "objectFit": "scale-down",
+                        "objectPosition": "center",
+                        "hasCover": false,
+                        "cdnUrl": "https://static-d2s-prod.platform-loreal.cn/o2-resources/metadata/o2cms/2/O2-PUB/1761810412286_750_700.png",
+                        "path": "/o2-resources/metadata/o2cms/2/O2-PUB/1761810412286_750_700.png"
+                    },
+                    "style": {},
+                    "childrenData": [],
+                    "componentId": "_6e2044c1-bd42-470b-9ae3-2b7e60e13b57",
+                    "enableTrack": 1,
+                    "trackName": "首页banner-透亮霜",
+                    "action": {
+                        "code": "bind-promotion-plp",
+                        "data": {
+                            "params": {
+                                "sceneCode": "S20251030000006"
+                            }
+                        }
+                    }
+                },
+                {
+                    "anchorTitle": null,
+                    "componentCode": "image",
+                    "groupCode": "common",
+                    "groupName": "常用组件",
+                    "componentName": "图片",
+                    "editFlag": 0,
+                    "data": {
+                        "url": "https://static-d2s-prod.platform-loreal.cn/o2-resources/metadata/o2cms/2/O2-PUB/1761810430627_750_700.png",
+                        "width": "100%",
+                        "height": "100%",
+                        "objectFit": "scale-down",
+                        "objectPosition": "center",
+                        "hasCover": false,
+                        "cdnUrl": "https://static-d2s-prod.platform-loreal.cn/o2-resources/metadata/o2cms/2/O2-PUB/1761810430627_750_700.png",
+                        "path": "/o2-resources/metadata/o2cms/2/O2-PUB/1761810430627_750_700.png"
+                    },
+                    "style": {},
+                    "childrenData": [],
+                    "componentId": "_bf05f689-c4f0-493c-af2a-6a7a634014d7",
+                    "action": {
+                        "code": "bind-clp",
+                        "data": {
+                            "page": {},
+                            "params": {
+                                "pageCode": "O2_DTC:OW-1:CLP:CLP202312160002",
+                                "pageName": "欧莱雅PRO  3月进货指南"
+                            }
+                        }
+                    },
+                    "enableTrack": 1,
+                    "trackName": "首页banner-囤货指南"
+                },
+                {
+                    "anchorTitle": null,
+                    "componentCode": "image",
+                    "groupCode": "common",
+                    "groupName": "常用组件",
+                    "componentName": "图片",
+                    "editFlag": 0,
+                    "data": {
+                        "url": "https://static-d2s-prod.platform-loreal.cn/o2-resources/metadata/o2cms/2/O2-PUB/1761810446402_750_700.png",
+                        "width": "100%",
+                        "height": "100%",
+                        "objectFit": "scale-down",
+                        "objectPosition": "center",
+                        "hasCover": false,
+                        "cdnUrl": "https://static-d2s-prod.platform-loreal.cn/o2-resources/metadata/o2cms/2/O2-PUB/1761810446402_750_700.png",
+                        "path": "/o2-resources/metadata/o2cms/2/O2-PUB/1761810446402_750_700.png"
+                    },
+                    "style": {},
+                    "childrenData": [],
+                    "componentId": "_616797f6-7b90-4713-90ec-d92d4ee93b97",
+                    "enableTrack": 1,
+                    "trackName": "首页banner-无氨烫",
+                    "action": {
+                        "code": "bind-promotion-plp",
+                        "data": {
+                            "params": {
+                                "sceneCode": "S20251030000002"
+                            }
+                        }
+                    }
+                },
+                {
+                    "anchorTitle": null,
+                    "componentCode": "image",
+                    "groupCode": "common",
+                    "groupName": "常用组件",
+                    "componentName": "图片",
+                    "editFlag": 0,
+                    "data": {
+                        "url": "https://static-d2s-prod.platform-loreal.cn/o2-resources/metadata/o2cms/2/O2-PUB/1761810459795_染膏首页banner 750 700.jpg",
+                        "width": "100%",
+                        "height": "100%",
+                        "objectFit": "scale-down",
+                        "objectPosition": "center",
+                        "hasCover": false,
+                        "cdnUrl": "https://static-d2s-prod.platform-loreal.cn/o2-resources/metadata/o2cms/2/O2-PUB/1761810459795_染膏首页banner 750 700.jpg",
+                        "path": "/o2-resources/metadata/o2cms/2/O2-PUB/1761810459795_染膏首页banner 750 700.jpg"
+                    },
+                    "style": {},
+                    "childrenData": [],
+                    "componentId": "_605f2b5e-d15b-4e6f-86ad-44c89f58cbfd",
+                    "enableTrack": 1,
+                    "trackName": "首页banner-染膏",
+                    "action": {
+                        "code": "bind-promotion-plp",
+                        "data": {
+                            "params": {
+                                "sceneCode": "S20251030000001"
+                            }
+                        }
+                    }
+                },
+                {
+                    "anchorTitle": null,
+                    "componentCode": "image",
+                    "groupCode": "common",
+                    "groupName": "常用组件",
+                    "componentName": "图片",
+                    "editFlag": 0,
+                    "data": {
+                        "url": "https://static-d2s-prod.platform-loreal.cn/o2-resources/metadata/o2cms/2/O2-PUB/1761810472946_750_700.png",
+                        "width": "100%",
+                        "height": "100%",
+                        "objectFit": "scale-down",
+                        "objectPosition": "center",
+                        "hasCover": false,
+                        "cdnUrl": "https://static-d2s-prod.platform-loreal.cn/o2-resources/metadata/o2cms/2/O2-PUB/1761810472946_750_700.png",
+                        "path": "/o2-resources/metadata/o2cms/2/O2-PUB/1761810472946_750_700.png"
+                    },
+                    "style": {},
+                    "childrenData": [],
+                    "componentId": "_1691fa87-079c-4216-91d1-e5d0bc1b52c7",
+                    "action": {
+                        "code": "bind-promotion-plp",
+                        "data": {
+                            "params": {
+                                "sceneCode": "S20251030000003"
+                            }
+                        }
+                    },
+                    "enableTrack": 1,
+                    "trackName": "首页banner-染烫"
+                },
+                {
+                    "anchorTitle": null,
+                    "componentCode": "image",
+                    "groupCode": "common",
+                    "groupName": "常用组件",
+                    "componentName": "图片",
+                    "editFlag": 0,
+                    "data": {
+                        "url": "https://static-d2s-prod.platform-loreal.cn/o2-resources/metadata/o2cms/2/O2-PUB/1761810559280_750_700.png",
+                        "width": "100%",
+                        "height": "100%",
+                        "objectFit": "scale-down",
+                        "objectPosition": "center",
+                        "hasCover": false,
+                        "cdnUrl": "https://static-d2s-prod.platform-loreal.cn/o2-resources/metadata/o2cms/2/O2-PUB/1761810559280_750_700.png",
+                        "path": "/o2-resources/metadata/o2cms/2/O2-PUB/1761810559280_750_700.png"
+                    },
+                    "style": {},
+                    "childrenData": [],
+                    "componentId": "_fe46d258-947f-4c59-b50d-8d9110b7a743",
+                    "enableTrack": 1,
+                    "trackName": "首页banner-双抗精纯乳",
+                    "action": {
+                        "code": "bind-promotion-plp",
+                        "data": {
+                            "params": {
+                                "sceneCode": "S20251030000005"
+                            }
+                        }
+                    }
+                },
+                {
+                    "anchorTitle": null,
+                    "componentCode": "image",
+                    "groupCode": "common",
+                    "groupName": "常用组件",
+                    "componentName": "图片",
+                    "editFlag": 0,
+                    "data": {
+                        "url": "https://static-d2s-prod.platform-loreal.cn/o2-resources/metadata/o2cms/2/O2-PUB/1761810579738_10月造型品 首页banner 750 700.jpg",
+                        "width": "100%",
+                        "height": "100%",
+                        "objectFit": "scale-down",
+                        "objectPosition": "center",
+                        "hasCover": false,
+                        "cdnUrl": "https://static-d2s-prod.platform-loreal.cn/o2-resources/metadata/o2cms/2/O2-PUB/1761810579738_10月造型品 首页banner 750 700.jpg",
+                        "path": "/o2-resources/metadata/o2cms/2/O2-PUB/1761810579738_10月造型品 首页banner 750 700.jpg"
+                    },
+                    "style": {},
+                    "childrenData": [],
+                    "componentId": "_63c2bc83-a013-40f9-803d-1fef771b37ca",
+                    "enableTrack": 1,
+                    "action": {
+                        "code": "bind-promotion-plp",
+                        "data": {
+                            "params": {
+                                "sceneCode": "S20251030000007"
+                            }
+                        }
+                    },
+                    "trackName": "首页banner-造型品"
+                }
+            ],
+            "style": {
+                "backgroundColor": null
+            },
+            "componentId": "_0c42f748-631e-4543-b613-175d1b80b6f7",
+            "enableTrack": 0,
+            "trackName": ""
+        },
+        {
+            "anchorTitle": null,
+            "componentCode": "rows-container",
+            "groupCode": "container",
+            "groupName": "容器",
+            "componentName": "多行容器",
+            "editFlag": 0,
+            "style": {
+                "display": "block",
+                "height": "44px",
+                "marginTop": "45px"
+            },
+            "data": {
+                "rowsNum": 2
+            },
+            "childrenData": [
+                {
+                    "anchorTitle": null,
+                    "componentCode": "text",
+                    "groupCode": "common",
+                    "groupName": "常用组件",
+                    "componentName": "文字",
+                    "editFlag": 0,
+                    "data": {
+                        "text": "产品百科",
+                        "overflowMode": "unset"
+                    },
+                    "style": {
+                        "display": "block",
+                        "fontSize": "22px",
+                        "fontWeight": "500",
+                        "paddingLeft": "18px",
+                        "paddingRight": "17px",
+                        "color": "black",
+                        "height": "29px",
+                        "textAlign": "left"
+                    },
+                    "childrenData": [],
+                    "componentId": "_b3c47001-c513-4126-86a5-cd1599b3b21e"
+                },
+                {
+                    "anchorTitle": null,
+                    "componentCode": "column-container",
+                    "groupCode": "container",
+                    "groupName": "容器",
+                    "componentName": "多列容器",
+                    "editFlag": 0,
+                    "style": {
+                        "display": "flex",
+                        "flexDirection": "row",
+                        "alignItems": "stretch",
+                        "justifyContent": "flex-start",
+                        "backgroundColor": "#ffffff",
+                        "marginLeft": "18px",
+                        "marginRight": "17px"
+                    },
+                    "data": {
+                        "columnNum": 1
+                    },
+                    "childrenData": [
+                        {
+                            "anchorTitle": null,
+                            "componentCode": "text",
+                            "groupCode": "common",
+                            "groupName": "常用组件",
+                            "componentName": "文字",
+                            "editFlag": 0,
+                            "data": {
+                                "text": "PRO STAR PRODUCTS",
+                                "overflowMode": "unset",
+                                "fontFamily": "font-regular"
+                            },
+                            "style": {
+                                "display": "block",
+                                "fontSize": "14px",
+                                "fontWeight": 200,
+                                "color": "#333333",
+                                "flexDirection": "row",
+                                "justifyContent": "flex-start"
+                            },
+                            "childrenData": [],
+                            "componentId": "_f3f9f02f-5c34-4b62-a37d-4de43386ff8f"
+                        }
+                    ],
+                    "componentId": "_072c6438-a577-448b-87fc-4cf08df026c7"
+                }
+            ],
+            "componentId": "_6ce0946d-3038-4623-89a4-8a532569c072"
+        },
+        {
+            "anchorTitle": null,
+            "componentCode": "carousel-container",
+            "groupCode": "container",
+            "groupName": "容器",
+            "componentName": "轮播容器",
+            "editFlag": 0,
+            "data": {
+                "carouselNum": 6,
+                "height": 220,
+                "autoplay": true,
+                "hideButton": false,
+                "loop": true,
+                "scaleMode": true,
+                "paginationType": "",
+                "hidePagination": 1
+            },
+            "readonlyData": {
+                "activeIndex": 5
+            },
+            "childrenData": [
+                {
+                    "anchorTitle": null,
+                    "componentCode": "rows-container",
+                    "groupCode": "container",
+                    "groupName": "容器",
+                    "componentName": "多行容器",
+                    "editFlag": 0,
+                    "style": {
+                        "display": "flex",
+                        "backgroundImage": "https://static-d2s-test.platform-loreal.cn/o2-resources/metadata/o2cms/2/O2-PUB/1701673611332_矩形@2x.png",
+                        "textAlign": "center",
+                        "flexDirection": "column",
+                        "justifyContent": "center",
+                        "alignItems": "center",
+                        "backgroundSize": "100% 100%",
+                        "height": "209px",
+                        "width": "100%",
+                        "paddingBottom": "10px"
+                    },
+                    "data": {
+                        "rowsNum": 3
+                    },
+                    "childrenData": [
+                        {
+                            "anchorTitle": null,
+                            "componentCode": "image",
+                            "groupCode": "common",
+                            "groupName": "常用组件",
+                            "componentName": "图片",
+                            "editFlag": 0,
+                            "data": {
+                                "width": "100%",
+                                "height": "100%",
+                                "objectFit": "cover",
+                                "objectPosition": "center",
+                                "hasCover": false,
+                                "cdnUrl": "https://static-d2s-prod.platform-loreal.cn/o2-resources/metadata/o2cms/2/O2-PUB/1722417890752_透亮霜.gif",
+                                "path": "/o2-resources/metadata/o2cms/2/O2-PUB/1722417890752_透亮霜.gif",
+                                "url": "https://static-d2s-prod.platform-loreal.cn/o2-resources/metadata/o2cms/2/O2-PUB/1722417890752_透亮霜.gif"
+                            },
+                            "style": {
+                                "borderRadius": "8px",
+                                "paddingBottom": "3px",
+                                "display": "block",
+                                "height": "150px",
+                                "width": "150px"
+                            },
+                            "childrenData": [],
+                            "componentId": "_252db02b-3e25-4ec1-ace9-3d688f02b163",
+                            "enableTrack": 1,
+                            "trackName": "产品百科MajiFASHION"
+                        },
+                        {
+                            "anchorTitle": null,
+                            "componentCode": "text",
+                            "groupCode": "common",
+                            "groupName": "常用组件",
+                            "componentName": "文字",
+                            "editFlag": 0,
+                            "data": {
+                                "text": "欧莱雅PRO",
+                                "overflowMode": "unset",
+                                "fontFamily": "font-regular"
+                            },
+                            "style": {
+                                "display": "block",
+                                "fontSize": "12px",
+                                "fontWeight": "500",
+                                "color": "black",
+                                "textAlign": "center"
+                            },
+                            "childrenData": [],
+                            "componentId": "_ca77825d-0eba-4885-9a52-95f616b8f9dd"
+                        },
+                        {
+                            "anchorTitle": null,
+                            "componentCode": "text",
+                            "groupCode": "common",
+                            "groupName": "常用组件",
+                            "componentName": "文字",
+                            "editFlag": 0,
+                            "data": {
+                                "text": "「瞬顺透亮护理」",
+                                "overflowMode": "unset",
+                                "fontFamily": "font-regular"
+                            },
+                            "style": {
+                                "display": "block",
+                                "fontSize": "12px",
+                                "fontWeight": "500",
+                                "color": "black",
+                                "textAlign": "center"
+                            },
+                            "childrenData": [],
+                            "componentId": "_e3ec71ab-a957-4fe7-8250-65a98b9a185e"
+                        }
+                    ],
+                    "componentId": "_92406ff5-f00c-4c4f-8416-e8816865161f",
+                    "enableTrack": 1,
+                    "trackName": "产品百科-瞬顺透亮护理",
+                    "action": {
+                        "code": "bind-clp",
+                        "data": {
+                            "page": {},
+                            "params": {
+                                "pageCode": "O2_DTC:OW-1:CLP:CLP202406190001",
+                                "pageName": "瞬顺「透亮护理」"
+                            }
+                        }
+                    }
+                },
+                {
+                    "anchorTitle": null,
+                    "componentCode": "rows-container",
+                    "groupCode": "container",
+                    "groupName": "容器",
+                    "componentName": "多行容器",
+                    "editFlag": 0,
+                    "style": {
+                        "display": "flex",
+                        "backgroundImage": "https://static-d2s-test.platform-loreal.cn/o2-resources/metadata/o2cms/2/O2-PUB/1701673611332_矩形@2x.png",
+                        "textAlign": "center",
+                        "flexDirection": "column",
+                        "justifyContent": "center",
+                        "alignItems": "center",
+                        "backgroundSize": "100% 100%",
+                        "height": "209px",
+                        "width": "100%",
+                        "paddingBottom": "10px"
+                    },
+                    "data": {
+                        "rowsNum": 3
+                    },
+                    "childrenData": [
+                        {
+                            "anchorTitle": null,
+                            "componentCode": "image",
+                            "groupCode": "common",
+                            "groupName": "常用组件",
+                            "componentName": "图片",
+                            "editFlag": 0,
+                            "data": {
+                                "width": "100%",
+                                "height": "100%",
+                                "objectFit": "scale-down",
+                                "objectPosition": "center",
+                                "hasCover": false,
+                                "cdnUrl": "https://static-d2s-prod.platform-loreal.cn/o2-resources/metadata/o2cms/2/O2-PUB/1721621430637_产品百科.jpg",
+                                "path": "/o2-resources/metadata/o2cms/2/O2-PUB/1721621430637_产品百科.jpg",
+                                "url": "https://static-d2s-prod.platform-loreal.cn/o2-resources/metadata/o2cms/2/O2-PUB/1721621430637_产品百科.jpg"
+                            },
+                            "style": {
+                                "borderRadius": "8px",
+                                "paddingBottom": "3px",
+                                "display": "block",
+                                "height": "150px",
+                                "width": "150px"
+                            },
+                            "childrenData": [],
+                            "componentId": "_690e0451-dc9e-472f-815f-211ff6e5c1de",
+                            "enableTrack": 1,
+                            "trackName": "产品百科卡诗山茶花"
+                        },
+                        {
+                            "anchorTitle": null,
+                            "componentCode": "text",
+                            "groupCode": "common",
+                            "groupName": "常用组件",
+                            "componentName": "文字",
+                            "editFlag": 0,
+                            "data": {
+                                "text": "巴黎卡诗",
+                                "overflowMode": "unset",
+                                "fontFamily": "font-regular"
+                            },
+                            "style": {
+                                "display": "block",
+                                "fontSize": "12px",
+                                "fontWeight": "500",
+                                "color": "black",
+                                "textAlign": "center"
+                            },
+                            "childrenData": [],
+                            "componentId": "_e7a2c848-fddb-4073-91d7-1f1ee7b14ab4"
+                        },
+                        {
+                            "anchorTitle": null,
+                            "componentCode": "text",
+                            "groupCode": "common",
+                            "groupName": "常用组件",
+                            "componentName": "文字",
+                            "editFlag": 0,
+                            "data": {
+                                "text": "「鎏光山茶花」",
+                                "overflowMode": "unset",
+                                "fontFamily": "font-regular"
+                            },
+                            "style": {
+                                "display": "block",
+                                "fontSize": "12px",
+                                "fontWeight": "500",
+                                "color": "black",
+                                "textAlign": "center"
+                            },
+                            "childrenData": [],
+                            "componentId": "_c6cb2b9d-fe50-40f2-97be-de213dda052b"
+                        }
+                    ],
+                    "componentId": "_fd5e914a-87ea-4dec-8f70-9da68e59dfe5",
+                    "enableTrack": 1,
+                    "trackName": "产品百科-卡诗山茶花",
+                    "action": {
+                        "code": "bind-clp",
+                        "data": {
+                            "page": {},
+                            "params": {
+                                "pageCode": "O2_DTC:OW-1:CLP:CLP202407150001",
+                                "pageName": "巴黎卡诗全新鎏光山茶花原液精华护理"
+                            }
+                        }
+                    }
+                },
+                {
+                    "anchorTitle": null,
+                    "componentCode": "rows-container",
+                    "groupCode": "container",
+                    "groupName": "容器",
+                    "componentName": "多行容器",
+                    "editFlag": 0,
+                    "style": {
+                        "display": "flex",
+                        "backgroundImage": "https://static-d2s-test.platform-loreal.cn/o2-resources/metadata/o2cms/2/O2-PUB/1701673611332_矩形@2x.png",
+                        "textAlign": "center",
+                        "flexDirection": "column",
+                        "justifyContent": "center",
+                        "alignItems": "center",
+                        "backgroundSize": "100% 100%",
+                        "height": "209px",
+                        "width": "100%",
+                        "paddingBottom": "10px"
+                    },
+                    "data": {
+                        "rowsNum": 3
+                    },
+                    "childrenData": [
+                        {
+                            "anchorTitle": null,
+                            "componentCode": "image",
+                            "groupCode": "common",
+                            "groupName": "常用组件",
+                            "componentName": "图片",
+                            "editFlag": 0,
+                            "data": {
+                                "width": "100%",
+                                "height": "100%",
+                                "objectFit": "scale-down",
+                                "objectPosition": "center",
+                                "hasCover": false,
+                                "cdnUrl": "https://static-d2s-prod.platform-loreal.cn/o2-resources/metadata/o2cms/2/O2-PUB/1720509824450_烫发产品+质地.gif",
+                                "path": "/o2-resources/metadata/o2cms/2/O2-PUB/1720509824450_烫发产品+质地.gif",
+                                "url": "https://static-d2s-prod.platform-loreal.cn/o2-resources/metadata/o2cms/2/O2-PUB/1720509824450_烫发产品+质地.gif"
+                            },
+                            "style": {
+                                "borderRadius": "8px",
+                                "paddingBottom": "3px",
+                                "display": "block",
+                                "height": "150px",
+                                "width": "150px"
+                            },
+                            "childrenData": [],
+                            "componentId": "_01f7699f-9b65-4388-8909-b58636bb0af1",
+                            "enableTrack": 1,
+                            "trackName": "产品百科无氨烫"
+                        },
+                        {
+                            "anchorTitle": null,
+                            "componentCode": "text",
+                            "groupCode": "common",
+                            "groupName": "常用组件",
+                            "componentName": "文字",
+                            "editFlag": 0,
+                            "data": {
+                                "text": "欧莱雅PRO",
+                                "overflowMode": "unset",
+                                "fontFamily": "font-regular"
+                            },
+                            "style": {
+                                "display": "block",
+                                "fontSize": "12px",
+                                "fontWeight": "500",
+                                "color": "black",
+                                "textAlign": "center"
+                            },
+                            "childrenData": [],
+                            "componentId": "_30a6b27c-fe2a-4c0a-8a9a-ad6a471c5c25"
+                        },
+                        {
+                            "anchorTitle": null,
+                            "componentCode": "text",
+                            "groupCode": "common",
+                            "groupName": "常用组件",
+                            "componentName": "文字",
+                            "editFlag": 0,
+                            "data": {
+                                "text": "「无氨烫」",
+                                "overflowMode": "unset",
+                                "fontFamily": "font-regular"
+                            },
+                            "style": {
+                                "display": "block",
+                                "fontSize": "12px",
+                                "fontWeight": "500",
+                                "color": "black",
+                                "textAlign": "center"
+                            },
+                            "childrenData": [],
+                            "componentId": "_2346bf69-0c14-4da2-9132-f50d8882d9a6"
+                        }
+                    ],
+                    "componentId": "_be5c6669-4483-47af-a3ea-e610f9b3b398",
+                    "enableTrack": 0,
+                    "trackName": "产品百科MajiFASHION",
+                    "action": {
+                        "code": "bind-clp",
+                        "data": {
+                            "page": {},
+                            "params": {
+                                "pageCode": "O2_DTC:OW-1:CLP:CLP202406170001",
+                                "pageName": "欧莱雅PRO无氨烫 全球首发"
+                            }
+                        }
+                    }
+                },
+                {
+                    "anchorTitle": null,
+                    "componentCode": "rows-container",
+                    "groupCode": "container",
+                    "groupName": "容器",
+                    "componentName": "多行容器",
+                    "editFlag": 0,
+                    "style": {
+                        "display": "flex",
+                        "flexDirection": "row",
+                        "justifyContent": "center",
+                        "alignItems": "center",
+                        "paddingTop": "5px",
+                        "paddingBottom": "5px",
+                        "paddingLeft": "3px",
+                        "paddingRight": "3px"
+                    },
+                    "data": {
+                        "rowsNum": 1
+                    },
+                    "childrenData": [
+                        {
+                            "anchorTitle": null,
+                            "componentCode": "rows-container",
+                            "groupCode": "container",
+                            "groupName": "容器",
+                            "componentName": "多行容器",
+                            "editFlag": 0,
+                            "style": {
+                                "display": "flex",
+                                "flexDirection": "column",
+                                "justifyContent": "center",
+                                "alignItems": "center",
+                                "width": "100%",
+                                "backgroundImage": "https://static-d2s-test.platform-loreal.cn/o2-resources/metadata/o2cms/2/O2-PUB/1701672028734_矩形@2x (2).png",
+                                "backgroundSize": "100% 100%",
+                                "height": "209px",
+                                "paddingBottom": "10px"
+                            },
+                            "data": {
+                                "rowsNum": 3
+                            },
+                            "childrenData": [],
+                            "componentId": "_2e98aeb1-2a64-48b3-ac61-ef2c35e0e4d0",
+                            "enableTrack": 0,
+                            "trackName": "产品百科双抗护理",
+                            "action": {
+                                "code": "bind-clp",
+                                "data": {}
+                            }
+                        }
+                    ],
+                    "componentId": "_444c5f7f-f294-48fc-8f7a-40bb7f60bfde",
+                    "enableTrack": 0,
+                    "trackName": ""
+                },
+                {
+                    "anchorTitle": null,
+                    "componentCode": "rows-container",
+                    "groupCode": "container",
+                    "groupName": "容器",
+                    "componentName": "多行容器",
+                    "editFlag": 0,
+                    "style": {
+                        "display": "flex",
+                        "flexDirection": "row",
+                        "justifyContent": "center",
+                        "alignItems": "center",
+                        "paddingTop": "5px",
+                        "paddingBottom": "5px",
+                        "paddingLeft": "3px",
+                        "paddingRight": "3px"
+                    },
+                    "data": {
+                        "rowsNum": 1
+                    },
+                    "childrenData": [
+                        {
+                            "anchorTitle": null,
+                            "componentCode": "rows-container",
+                            "groupCode": "container",
+                            "groupName": "容器",
+                            "componentName": "多行容器",
+                            "editFlag": 0,
+                            "style": {
+                                "display": "flex",
+                                "flexDirection": "column",
+                                "justifyContent": "center",
+                                "alignItems": "center",
+                                "width": "100%",
+                                "backgroundImage": "https://static-d2s-test.platform-loreal.cn/o2-resources/metadata/o2cms/2/O2-PUB/1701671660319_矩形@2x (2).png",
+                                "backgroundSize": "100% 100%",
+                                "height": "209px",
+                                "paddingBottom": "10px"
+                            },
+                            "data": {
+                                "rowsNum": 3
+                            },
+                            "childrenData": [],
+                            "componentId": "_629614d4-db67-47f9-833f-beb3fb476b89",
+                            "enableTrack": 0,
+                            "trackName": "产品百科伊诺雅",
+                            "action": {
+                                "code": "bind-clp",
+                                "data": {}
+                            }
+                        }
+                    ],
+                    "componentId": "_b5355056-ef57-4856-af5e-80bdddd4a5d2",
+                    "enableTrack": 0,
+                    "trackName": ""
+                },
+                {
+                    "anchorTitle": null,
+                    "componentCode": "rows-container",
+                    "groupCode": "container",
+                    "groupName": "容器",
+                    "componentName": "多行容器",
+                    "editFlag": 0,
+                    "style": {
+                        "display": "flex",
+                        "flexDirection": "row",
+                        "justifyContent": "center",
+                        "alignItems": "center",
+                        "paddingTop": "5px",
+                        "paddingBottom": "5px",
+                        "paddingLeft": "3px",
+                        "paddingRight": "3px"
+                    },
+                    "data": {
+                        "rowsNum": 1
+                    },
+                    "childrenData": [
+                        {
+                            "anchorTitle": null,
+                            "componentCode": "rows-container",
+                            "groupCode": "container",
+                            "groupName": "容器",
+                            "componentName": "多行容器",
+                            "editFlag": 0,
+                            "style": {
+                                "display": "flex",
+                                "backgroundImage": "https://static-d2s-test.platform-loreal.cn/o2-resources/metadata/o2cms/2/O2-PUB/1701673611332_矩形@2x.png",
+                                "textAlign": "center",
+                                "flexDirection": "column",
+                                "justifyContent": "center",
+                                "alignItems": "center",
+                                "backgroundSize": "100% 100%",
+                                "height": "209px",
+                                "width": "100%",
+                                "paddingBottom": "10px"
+                            },
+                            "data": {
+                                "rowsNum": 3
+                            },
+                            "childrenData": [],
+                            "componentId": "_3e0a67a7-44f1-42e8-8834-92dd7f98d2b3",
+                            "enableTrack": 0,
+                            "trackName": "产品百科MajiFASHION",
+                            "action": {
+                                "code": "bind-clp",
+                                "data": {}
+                            }
+                        }
+                    ],
+                    "componentId": "_5ba24821-c542-4eaa-96eb-1f10e587ef7e",
+                    "enableTrack": 0,
+                    "trackName": ""
+                }
+            ],
+            "style": {
+                "width": "100%",
+                "marginTop": "10px"
+            },
+            "componentId": "_d7d5548a-4b98-44f4-8490-bb8d35f09bd6",
+            "enableTrack": 0,
+            "trackName": "产品百科"
+        },
+        {
+            "anchorTitle": null,
+            "componentCode": "rows-container",
+            "groupCode": "container",
+            "groupName": "容器",
+            "componentName": "多行容器",
+            "editFlag": 0,
+            "style": {
+                "display": "block",
+                "height": "44px",
+                "marginBottom": "12px",
+                "marginTop": "45px"
+            },
+            "data": {
+                "rowsNum": 2
+            },
+            "childrenData": [
+                {
+                    "anchorTitle": null,
+                    "componentCode": "text",
+                    "groupCode": "common",
+                    "groupName": "常用组件",
+                    "componentName": "文字",
+                    "editFlag": 0,
+                    "data": {
+                        "text": "使用助手",
+                        "overflowMode": "unset"
+                    },
+                    "style": {
+                        "display": "block",
+                        "fontSize": "22px",
+                        "fontWeight": "500",
+                        "paddingLeft": "18px",
+                        "paddingRight": "17px",
+                        "color": "black",
+                        "height": "29px"
+                    },
+                    "childrenData": [],
+                    "componentId": "_de445668-b486-4246-8e45-ca9519e7a364"
+                },
+                {
+                    "anchorTitle": null,
+                    "componentCode": "column-container",
+                    "groupCode": "container",
+                    "groupName": "容器",
+                    "componentName": "多列容器",
+                    "editFlag": 0,
+                    "style": {
+                        "display": "flex",
+                        "flexDirection": "row",
+                        "alignItems": "stretch",
+                        "justifyContent": "flex-start",
+                        "backgroundColor": "#ffffff",
+                        "marginLeft": "18px",
+                        "marginRight": "17px",
+                        "marginBottom": "9px"
+                    },
+                    "data": {
+                        "columnNum": 1
+                    },
+                    "childrenData": [
+                        {
+                            "anchorTitle": null,
+                            "componentCode": "text",
+                            "groupCode": "common",
+                            "groupName": "常用组件",
+                            "componentName": "文字",
+                            "editFlag": 0,
+                            "data": {
+                                "text": "PRO TOOLKIT",
+                                "overflowMode": "unset",
+                                "fontFamily": "font-regular"
+                            },
+                            "style": {
+                                "display": "block",
+                                "fontSize": "14px",
+                                "fontWeight": 200,
+                                "paddingRight": "2px",
+                                "color": "#333333"
+                            },
+                            "childrenData": [],
+                            "componentId": "_62f1924f-3ce8-4f32-af16-2279fc0c8105"
+                        }
+                    ],
+                    "componentId": "_2d971ad8-5736-4fba-93c4-6b0cd92fa413"
+                }
+            ],
+            "componentId": "_bdcba492-c0af-4266-a4e7-3c3e191bc344"
+        },
+        {
+            "anchorTitle": null,
+            "componentCode": "rows-container",
+            "groupCode": "container",
+            "groupName": "容器",
+            "componentName": "多行容器",
+            "editFlag": 0,
+            "style": {
+                "display": "flex",
+                "textAlign": "left",
+                "flexDirection": "column",
+                "justifyContent": "flex-start",
+                "paddingLeft": "18px",
+                "paddingRight": "17px"
+            },
+            "data": {
+                "rowsNum": 2,
+                "gutter": null
+            },
+            "childrenData": [
+                {
+                    "anchorTitle": null,
+                    "componentCode": "image",
+                    "groupCode": "common",
+                    "groupName": "常用组件",
+                    "componentName": "图片",
+                    "editFlag": 0,
+                    "data": {
+                        "url": "https://static-d2s-prod.platform-loreal.cn/o2-resources/metadata/o2cms/2/O2-PUB/1703579891795_1234.jpg",
+                        "width": "100%",
+                        "height": "100%",
+                        "objectFit": "scale-down",
+                        "objectPosition": "center",
+                        "hasCover": false,
+                        "cdnUrl": "https://static-d2s-prod.platform-loreal.cn/o2-resources/metadata/o2cms/2/O2-PUB/1703579891795_1234.jpg",
+                        "path": "/o2-resources/metadata/o2cms/2/O2-PUB/1703579891795_1234.jpg"
+                    },
+                    "style": {
+                        "borderRadius": "8px"
+                    },
+                    "childrenData": [
+                        {
+                            "anchorTitle": null,
+                            "componentName": "固定容器",
+                            "groupCode": "container",
+                            "groupName": "容器",
+                            "editFlag": 0,
+                            "componentCode": "fixed-size-container",
+                            "_token": "",
+                            "style": {},
+                            "data": {},
+                            "componentId": "_b6df1722-cdae-4d9b-b8aa-d78f5d0bcb6b",
+                            "childrenData": [
+                                {}
+                            ]
+                        }
+                    ],
+                    "componentId": "_6dab6313-4f21-4cfc-88fb-4519f847c382",
+                    "action": {
+                        "code": "bind-clp",
+                        "data": {
+                            "page": {},
+                            "params": {
+                                "pageCode": "O2_DTC:OW-1:CLP:CLP202312160004",
+                                "pageName": "色板大全"
+                            }
+                        }
+                    },
+                    "enableTrack": 1,
+                    "trackName": "染膏色板大全"
+                },
+                {
+                    "anchorTitle": null,
+                    "componentCode": "image",
+                    "groupCode": "common",
+                    "groupName": "常用组件",
+                    "componentName": "图片",
+                    "editFlag": 0,
+                    "data": {
+                        "url": "https://static-d2s-prod.platform-loreal.cn/o2-resources/metadata/o2cms/2/O2-PUB/1703663233160_搅染膏 - 1.gif",
+                        "width": "100%",
+                        "height": "100%",
+                        "objectFit": "scale-down",
+                        "objectPosition": "center",
+                        "hasCover": false,
+                        "cdnUrl": "https://static-d2s-prod.platform-loreal.cn/o2-resources/metadata/o2cms/2/O2-PUB/1703663233160_搅染膏 - 1.gif",
+                        "path": "/o2-resources/metadata/o2cms/2/O2-PUB/1703663233160_搅染膏 - 1.gif"
+                    },
+                    "style": {
+                        "borderRadius": "8px",
+                        "marginTop": "6px"
+                    },
+                    "childrenData": [
+                        {
+                            "anchorTitle": null,
+                            "componentName": "固定容器",
+                            "groupCode": "container",
+                            "groupName": "容器",
+                            "editFlag": 0,
+                            "componentCode": "fixed-size-container",
+                            "_token": "",
+                            "style": {},
+                            "data": {},
+                            "componentId": "_cfab9cbe-fdd9-4dbd-8a7d-0f476a6f5dcb",
+                            "childrenData": [
+                                {}
+                            ]
+                        }
+                    ],
+                    "componentId": "_8f6e8e03-9e4e-4459-8b35-6695efb10621",
+                    "enableTrack": 1,
+                    "trackName": "产品操作指南"
+                }
+            ],
+            "componentId": "_233b99c4-b542-459c-8530-a07c1a9d412b"
+        },
+        {
+            "anchorTitle": null,
+            "componentCode": "rows-container",
+            "groupCode": "container",
+            "groupName": "容器",
+            "componentName": "多行容器",
+            "editFlag": 0,
+            "style": {
+                "display": "block",
+                "height": "44px",
+                "marginBottom": "12px",
+                "marginTop": "45px"
+            },
+            "data": {
+                "rowsNum": 2
+            },
+            "childrenData": [
+                {
+                    "anchorTitle": null,
+                    "componentCode": "text",
+                    "groupCode": "common",
+                    "groupName": "常用组件",
+                    "componentName": "文字",
+                    "editFlag": 0,
+                    "data": {
+                        "text": "热门课程",
+                        "overflowMode": "unset"
+                    },
+                    "style": {
+                        "display": "block",
+                        "fontSize": "22px",
+                        "fontWeight": "500",
+                        "paddingLeft": "18px",
+                        "paddingRight": "17px",
+                        "color": "black",
+                        "height": "29px"
+                    },
+                    "childrenData": [],
+                    "componentId": "_05f7db0a-d50e-4ef2-8a6b-e7c389dec2cd"
+                },
+                {
+                    "anchorTitle": null,
+                    "componentCode": "column-container",
+                    "groupCode": "container",
+                    "groupName": "容器",
+                    "componentName": "多列容器",
+                    "editFlag": 0,
+                    "style": {
+                        "display": "flex",
+                        "flexDirection": "row",
+                        "alignItems": "center",
+                        "justifyContent": "flex-start",
+                        "backgroundColor": "#ffffff",
+                        "marginLeft": "18px",
+                        "marginRight": "17px",
+                        "height": "20px"
+                    },
+                    "data": {
+                        "columnNum": 3
+                    },
+                    "childrenData": [
+                        {
+                            "anchorTitle": null,
+                            "componentCode": "text",
+                            "groupCode": "common",
+                            "groupName": "常用组件",
+                            "componentName": "文字",
+                            "editFlag": 0,
+                            "data": {
+                                "text": "PRO COURSES",
+                                "overflowMode": "unset",
+                                "fontFamily": "font-regular"
+                            },
+                            "style": {
+                                "display": "block",
+                                "fontSize": "14px",
+                                "fontWeight": 200,
+                                "color": "#333333"
+                            },
+                            "childrenData": [],
+                            "componentId": "_dc1cf814-9980-48af-81a3-497cc29e9880"
+                        },
+                        null,
+                        null
+                    ],
+                    "componentId": "_b5595023-7c10-4986-87bc-e1a2718fc53a"
+                }
+            ],
+            "componentId": "_9852ffed-2271-4339-82fa-886420e81c43"
+        },
+        {
+            "anchorTitle": null,
+            "componentCode": "graphic-slide",
+            "groupCode": "picture-text",
+            "groupName": "图文",
+            "componentName": "左右滑动组件",
+            "editFlag": 0,
+            "data": {
+                "carouselNum": 5,
+                "scaleMode": true,
+                "height": 220
+            },
+            "readonlyData": {
+                "uid": "5bcc9ef5-ca0e-4da8-8999-2828f5a048ac",
+                "activeIndex": 1,
+                "currentHeight": 56
+            },
+            "childrenData": [
+                {
+                    "anchorTitle": null,
+                    "componentCode": "image",
+                    "groupCode": "common",
+                    "groupName": "常用组件",
+                    "componentName": "图片",
+                    "editFlag": 0,
+                    "data": {
+                        "url": "https://static-d2s-prod.platform-loreal.cn/o2-resources/metadata/o2cms/2/O2-PUB/1702970776554_WechatIMG1413.jpg",
+                        "objectFit": "scale-down",
+                        "objectPosition": "center",
+                        "hasCover": false,
+                        "cdnUrl": "https://static-d2s-prod.platform-loreal.cn/o2-resources/metadata/o2cms/2/O2-PUB/1702970776554_WechatIMG1413.jpg",
+                        "path": "/o2-resources/metadata/o2cms/2/O2-PUB/1702970776554_WechatIMG1413.jpg",
+                        "entityName": "光影染 90分钟无需漂发",
+                        "entityCode": "5890395",
+                        "entityId": 1500,
+                        "platformProductCode": "5890395",
+                        "mediaUrl": "/o2-resources/o2pcm/images/master/mp-5890395/zh_cn/2/O2-PUB/op_5890395_t_001_1703503706190.png",
+                        "lowedPrice": null,
+                        "onlineShopName": "发型师",
+                        "product": {
+                            "platformProductId": 1500,
+                            "platformProductCode": "5890395",
+                            "mediaUrl": "/o2-resources/o2pcm/images/master/mp-5890395/zh_cn/2/O2-PUB/op_5890395_t_001_1703503706190.png",
+                            "title": "光影染 90分钟无需漂发",
+                            "lowedPrice": null,
+                            "displayPrice": null,
+                            "currencyCode": null,
+                            "entityId": 1500,
+                            "entityCode": "5890395",
+                            "entityName": "光影染 90分钟无需漂发",
+                            "serialNum": null,
+                            "catalogCode": "OW-1",
+                            "catalogVersionCode": "OW-1",
+                            "entityStatus": null,
+                            "entityStatusMeaning": null,
+                            "mediaId": null,
+                            "activeFlag": 1,
+                            "shelfStatusCode": "ON",
+                            "shelfStatusMeaning": "已上架",
+                            "labelRelProductMap": null,
+                            "tenantId": 2,
+                            "tenantName": "欧莱雅",
+                            "onlineShopName": "发型师",
+                            "kindTypeCode": "VIRTUAL_COURSE",
+                            "courseAddressList": null,
+                            "speaker": "欧莱雅PRO",
+                            "liveTime": null,
+                            "courseForm": "ONLINE",
+                            "cartMediaUrl": null,
+                            "categoryName": null
+                        },
+                        "height": "190px",
+                        "width": "100%"
+                    },
+                    "style": {
+                        "borderRadius": "8px"
+                    },
+                    "childrenData": [],
+                    "componentId": "_a10ea072-8ef0-46d3-86e3-e57fe63e1bcc",
+                    "enableTrack": 1,
+                    "trackName": "万能提案公式 光影染全解析"
+                },
+                {
+                    "anchorTitle": null,
+                    "componentCode": "image",
+                    "groupCode": "common",
+                    "groupName": "常用组件",
+                    "componentName": "图片",
+                    "editFlag": 0,
+                    "data": {
+                        "url": "https://static-d2s-prod.platform-loreal.cn/o2-resources/metadata/o2cms/2/O2-PUB/1702958969583_首页-热门课程-全新法式染 沙龙明星服务.jpg",
+                        "width": "100%",
+                        "objectFit": "scale-down",
+                        "objectPosition": "center",
+                        "hasCover": false,
+                        "cdnUrl": "https://static-d2s-prod.platform-loreal.cn/o2-resources/metadata/o2cms/2/O2-PUB/1702958969583_首页-热门课程-全新法式染 沙龙明星服务.jpg",
+                        "path": "/o2-resources/metadata/o2cms/2/O2-PUB/1702958969583_首页-热门课程-全新法式染 沙龙明星服务.jpg",
+                        "product": {},
+                        "height": "190px",
+                        "name": "法式染",
+                        "code": "449189194",
+                        "imageUrl": "/o2-resources/o2pcm/images/special/17/2/O2-PUB/fn4gpe0knzfsst4dyhikdaflsyrr_1702605136906.jpg",
+                        "courseQuantity": 16,
+                        "viewQuantity": 0,
+                        "column": {
+                            "creationDate": null,
+                            "createdBy": null,
+                            "lastUpdateDate": null,
+                            "lastUpdatedBy": null,
+                            "objectVersionNumber": null,
+                            "_token": "UZ7lDxKqxeo0SxH+w9U5aUo3BoUaaFJ8r8XnzUcDn0JeIK5RIc0KyBk8TM2i0rICfsWp2P/ZnwD/tS/J9I/0+rGYzyYLdDyNKXplhnWkVwTn+5Grz7QgaTZZRofelfqS",
+                            "sepicalColumnId": 17,
+                            "code": "449189194",
+                            "name": "法式染",
+                            "typeCode": "VIDEO",
+                            "description": "",
+                            "onlineShopCodes": "OW-1,OW-DIRECTSALON",
+                            "postStatusCode": "POST",
+                            "shelfStatusCode": "ON",
+                            "tenantId": null,
+                            "groupVisibleFlag": null,
+                            "shareTitle": null,
+                            "typeMeaning": "视频",
+                            "postStatusMeaning": "已发布",
+                            "shelfStatusMeaning": "已上架",
+                            "courseList": null,
+                            "courseCodeList": null,
+                            "multimediaMap": null,
+                            "onlineShopCodeList": null,
+                            "scRelMultimediaDTO": null,
+                            "onlineShopNames": null,
+                            "imageUrl": "/o2-resources/o2pcm/images/special/17/2/O2-PUB/fn4gpe0knzfsst4dyhikdaflsyrr_1702605136906.jpg",
+                            "courseQuantity": 16,
+                            "viewQuantity": 0,
+                            "groupList": null,
+                            "autoOnlineDate": null,
+                            "autoOfflineDate": null,
+                            "labelList": null,
+                            "d2sSpecialRelLabelVOS": null
+                        }
+                    },
+                    "style": {
+                        "borderRadius": "8px"
+                    },
+                    "childrenData": [],
+                    "componentId": "_8da09aec-ab69-4fe6-8e79-b85266c44e48",
+                    "enableTrack": 1,
+                    "trackName": "全新法式染",
+                    "action": {
+                        "code": "bind-weapp-page",
+                        "data": {
+                            "page": {
+                                "path": "/pagesB/specialColumnDetail/index",
+                                "pageName": "专栏详情页",
+                                "code": "specialColumnDetail",
+                                "params": ""
+                            },
+                            "params": "",
+                            "targetSpecial": {
+                                "name": "法式染",
+                                "code": "449189194",
+                                "imageUrl": "/o2-resources/o2pcm/images/special/17/2/O2-PUB/fn4gpe0knzfsst4dyhikdaflsyrr_1702605136906.jpg",
+                                "courseQuantity": 17,
+                                "viewQuantity": 0
+                            }
+                        }
+                    }
+                },
+                {
+                    "anchorTitle": null,
+                    "componentCode": "image",
+                    "groupCode": "common",
+                    "groupName": "常用组件",
+                    "componentName": "图片",
+                    "editFlag": 0,
+                    "data": {
+                        "url": "https://static-d2s-prod.platform-loreal.cn/o2-resources/metadata/o2cms/2/O2-PUB/1702958988160_首页-热门课程-一次来店 三次提案-潘于兰.jpg",
+                        "width": "100%",
+                        "objectFit": "scale-down",
+                        "objectPosition": "center",
+                        "hasCover": false,
+                        "cdnUrl": "https://static-d2s-prod.platform-loreal.cn/o2-resources/metadata/o2cms/2/O2-PUB/1702958988160_首页-热门课程-一次来店 三次提案-潘于兰.jpg",
+                        "path": "/o2-resources/metadata/o2cms/2/O2-PUB/1702958988160_首页-热门课程-一次来店 三次提案-潘于兰.jpg",
+                        "entityName": "一次来店 三次提案 原生发顾客",
+                        "entityCode": "3728093",
+                        "entityId": 1030,
+                        "platformProductCode": "3728093",
+                        "mediaUrl": "/o2-resources/o2pcm/videos/online/dm/2/O2-PUB/cover/3728093.png",
+                        "lowedPrice": null,
+                        "onlineShopName": "发型师",
+                        "product": {
+                            "platformProductId": 1030,
+                            "platformProductCode": "3728093",
+                            "mediaUrl": "/o2-resources/o2pcm/videos/online/dm/2/O2-PUB/cover/3728093.png",
+                            "title": "一次来店 三次提案 原生发顾客",
+                            "lowedPrice": null,
+                            "displayPrice": null,
+                            "currencyCode": null,
+                            "entityId": 1030,
+                            "entityCode": "3728093",
+                            "entityName": "一次来店 三次提案 原生发顾客",
+                            "serialNum": null,
+                            "catalogCode": "OW-1",
+                            "catalogVersionCode": "OW-1",
+                            "entityStatus": null,
+                            "entityStatusMeaning": null,
+                            "mediaId": null,
+                            "activeFlag": 1,
+                            "shelfStatusCode": "ON",
+                            "shelfStatusMeaning": "已上架",
+                            "labelRelProductMap": {
+                                "CUSTOM": []
+                            },
+                            "tenantId": 2,
+                            "tenantName": "欧莱雅",
+                            "onlineShopName": "发型师",
+                            "kindTypeCode": "VIRTUAL_COURSE",
+                            "courseAddressList": null,
+                            "speaker": "欧莱雅PRO",
+                            "liveTime": null,
+                            "courseForm": "ONLINE"
+                        },
+                        "height": "190px"
+                    },
+                    "style": {
+                        "borderRadius": "8px"
+                    },
+                    "childrenData": [],
+                    "componentId": "_20d740e4-0fa1-4c62-81fa-c36e59b423de",
+                    "enableTrack": 1,
+                    "trackName": "一次来店 三次提案"
+                },
+                {
+                    "anchorTitle": null,
+                    "componentCode": "image",
+                    "groupCode": "common",
+                    "groupName": "常用组件",
+                    "componentName": "图片",
+                    "editFlag": 0,
+                    "data": {
+                        "url": "https://static-d2s-prod.platform-loreal.cn/o2-resources/metadata/o2cms/2/O2-PUB/1702959007335_首页-热门课程-剪发专栏.jpg",
+                        "width": "100%",
+                        "objectFit": "scale-down",
+                        "objectPosition": "center",
+                        "hasCover": false,
+                        "cdnUrl": "https://static-d2s-prod.platform-loreal.cn/o2-resources/metadata/o2cms/2/O2-PUB/1702959007335_首页-热门课程-剪发专栏.jpg",
+                        "path": "/o2-resources/metadata/o2cms/2/O2-PUB/1702959007335_首页-热门课程-剪发专栏.jpg",
+                        "height": "190px",
+                        "product": {}
+                    },
+                    "style": {
+                        "borderRadius": "8px"
+                    },
+                    "childrenData": [],
+                    "componentId": "_10cf23a6-51f6-49b2-8188-3d86ecc33e3b",
+                    "enableTrack": 1,
+                    "trackName": "中级进阶",
+                    "action": {
+                        "code": "bind-weapp-page",
+                        "data": {
+                            "page": {
+                                "path": "/pagesB/specialColumnDetail/index",
+                                "pageName": "专栏详情页",
+                                "code": "specialColumnDetail",
+                                "params": ""
+                            },
+                            "params": "",
+                            "targetSpecial": {
+                                "name": "中级进阶 高业绩剪发秘籍",
+                                "code": "SC0001",
+                                "imageUrl": "/o2-resources/o2pcm/images/special/65/2/O2-PUB/首页-热门课程-剪发专栏_1703224105818.jpg",
+                                "courseQuantity": 12,
+                                "viewQuantity": 0
+                            }
+                        }
+                    }
+                },
+                {
+                    "anchorTitle": null,
+                    "componentCode": "image",
+                    "groupCode": "common",
+                    "groupName": "常用组件",
+                    "componentName": "图片",
+                    "editFlag": 0,
+                    "data": {
+                        "url": "https://static-d2s-prod.platform-loreal.cn/o2-resources/metadata/o2cms/2/O2-PUB/1721980707463_7a7d4e31e1de20ef6ef63c602d8f828.jpg",
+                        "width": "100%",
+                        "height": "190px",
+                        "objectFit": "scale-down",
+                        "objectPosition": "center",
+                        "hasCover": false,
+                        "cdnUrl": "https://static-d2s-prod.platform-loreal.cn/o2-resources/metadata/o2cms/2/O2-PUB/1721980707463_7a7d4e31e1de20ef6ef63c602d8f828.jpg",
+                        "path": "/o2-resources/metadata/o2cms/2/O2-PUB/1721980707463_7a7d4e31e1de20ef6ef63c602d8f828.jpg",
+                        "entityName": "无氨烫发实操讲解",
+                        "entityCode": "C20240724000001",
+                        "entityId": 3622,
+                        "platformProductCode": "C20240724000001",
+                        "mediaUrl": "/o2-resources/o2pcm/images/master/mp-c20240724000001/zh_cn/2/O2-PUB/op_c20240724000001_t_001_1721976172838.jpg",
+                        "lowedPrice": "0.00",
+                        "onlineShopName": "发型师",
+                        "product": {
+                            "platformProductId": 3622,
+                            "platformProductCode": "C20240724000001",
+                            "mediaUrl": "/o2-resources/o2pcm/images/master/mp-c20240724000001/zh_cn/2/O2-PUB/op_c20240724000001_t_001_1721976172838.jpg",
+                            "title": "无氨烫发实操讲解",
+                            "lowedPrice": "0.00",
+                            "displayPrice": "0.00",
+                            "currencyCode": null,
+                            "entityId": 3622,
+                            "entityCode": "C20240724000001",
+                            "entityName": "无氨烫发实操讲解",
+                            "serialNum": null,
+                            "catalogCode": "OW-1",
+                            "catalogVersionCode": "OW-1",
+                            "entityStatus": null,
+                            "entityStatusMeaning": null,
+                            "mediaId": null,
+                            "activeFlag": 1,
+                            "shelfStatusCode": "ON",
+                            "shelfStatusMeaning": "已上架",
+                            "labelRelProductMap": null,
+                            "tenantId": 2,
+                            "tenantName": "欧莱雅",
+                            "onlineShopName": "发型师",
+                            "kindTypeCode": "VIRTUAL_COURSE",
+                            "courseAddressList": null,
+                            "speaker": "欧莱雅PRO",
+                            "liveTime": null,
+                            "courseForm": "ONLINE",
+                            "cartMediaUrl": "/o2-resources/o2pcm/images/master/mp-c20240724000001/zh_cn/2/O2-PUB/op_c20240724000001_t_001_1721976155809.jpg",
+                            "categoryName": null
+                        }
+                    },
+                    "style": {
+                        "borderRadius": "8px"
+                    },
+                    "childrenData": [],
+                    "componentId": "_7d081e8c-c9d3-43e8-86f6-7d045e157977"
+                },
+                {
+                    "anchorTitle": null,
+                    "componentCode": "rows-container",
+                    "groupCode": "container",
+                    "groupName": "容器",
+                    "componentName": "多行容器",
+                    "editFlag": 0,
+                    "style": {
+                        "display": "block"
+                    },
+                    "data": {
+                        "rowsNum": 2,
+                        "entityName": "万能提案公式 光影染全解析",
+                        "entityCode": "XCXZB121",
+                        "entityId": 2008,
+                        "platformProductCode": "XCXZB121",
+                        "mediaUrl": "/o2-resources/o2pcm/videos/living/dm/2/O2-PUB/cover/XCXZB121.png",
+                        "lowedPrice": null,
+                        "onlineShopName": "发型师",
+                        "product": {
+                            "platformProductId": 2008,
+                            "platformProductCode": "XCXZB121",
+                            "mediaUrl": "/o2-resources/o2pcm/videos/living/dm/2/O2-PUB/cover/XCXZB121.png",
+                            "title": "万能提案公式 光影染全解析",
+                            "lowedPrice": null,
+                            "displayPrice": null,
+                            "currencyCode": null,
+                            "entityId": 2008,
+                            "entityCode": "XCXZB121",
+                            "entityName": "万能提案公式 光影染全解析",
+                            "serialNum": null,
+                            "catalogCode": "OW-1",
+                            "catalogVersionCode": "OW-1",
+                            "entityStatus": null,
+                            "entityStatusMeaning": null,
+                            "mediaId": null,
+                            "activeFlag": 1,
+                            "shelfStatusCode": "ON",
+                            "shelfStatusMeaning": "已上架",
+                            "labelRelProductMap": null,
+                            "tenantId": 2,
+                            "tenantName": "欧莱雅",
+                            "onlineShopName": "发型师",
+                            "kindTypeCode": "VIRTUAL_COURSE",
+                            "courseAddressList": null,
+                            "speaker": "欧莱雅PRO",
+                            "liveTime": "2023-12-01 20:02:00",
+                            "courseForm": "LIVE_STREAMING"
+                        }
+                    },
+                    "childrenData": [
+                        {
+                            "anchorTitle": null,
+                            "componentCode": "text",
+                            "groupCode": "common",
+                            "groupName": "常用组件",
+                            "componentName": "文字",
+                            "editFlag": 0,
+                            "data": {
+                                "text": "万能提案公式 光影染全解析",
+                                "overflowMode": "unset",
+                                "fontFamily": "font-light"
+                            },
+                            "style": {
+                                "display": "block",
+                                "fontSize": "16px",
+                                "fontWeight": 300,
+                                "paddingTop": "8px",
+                                "paddingBottom": "3px",
+                                "paddingLeft": "32px",
+                                "paddingRight": "0px",
+                                "color": "black"
+                            },
+                            "childrenData": [],
+                            "componentId": "_3b6f307d-0ac6-4e28-84fb-ab64e509e2e9"
+                        },
+                        {
+                            "anchorTitle": null,
+                            "componentCode": "column-container",
+                            "groupCode": "container",
+                            "groupName": "容器",
+                            "componentName": "多列容器",
+                            "editFlag": 0,
+                            "style": {
+                                "display": "flex",
+                                "flexDirection": "row",
+                                "alignItems": "stretch",
+                                "justifyContent": "flex-start"
+                            },
+                            "data": {
+                                "columnNum": 1
+                            },
+                            "childrenData": [
+                                {}
+                            ],
+                            "componentId": "_8c077614-3aaf-4340-b830-8d0f4afc42b3"
+                        }
+                    ],
+                    "componentId": "_7a885433-c574-40dc-9bf1-7c62bccd0952",
+                    "action": {
+                        "code": "bind-product"
+                    }
+                },
+                {
+                    "anchorTitle": null,
+                    "componentCode": "rows-container",
+                    "groupCode": "container",
+                    "groupName": "容器",
+                    "componentName": "多行容器",
+                    "editFlag": 0,
+                    "style": {
+                        "display": "block"
+                    },
+                    "data": {
+                        "rowsNum": 2
+                    },
+                    "childrenData": [
+                        {
+                            "anchorTitle": null,
+                            "componentCode": "text",
+                            "groupCode": "common",
+                            "groupName": "常用组件",
+                            "componentName": "文字",
+                            "editFlag": 0,
+                            "data": {
+                                "text": "全新法式染 沙龙明星服务",
+                                "overflowMode": "unset",
+                                "fontFamily": "font-light"
+                            },
+                            "style": {
+                                "display": "block",
+                                "fontSize": "16px",
+                                "fontWeight": 300,
+                                "paddingTop": "8px",
+                                "paddingBottom": "3px",
+                                "paddingLeft": "32px",
+                                "paddingRight": "0px",
+                                "color": "black"
+                            },
+                            "childrenData": [],
+                            "componentId": "_487463e4-44f5-41d0-88e9-8d51d7d9302c"
+                        },
+                        {
+                            "anchorTitle": null,
+                            "componentCode": "column-container",
+                            "groupCode": "container",
+                            "groupName": "容器",
+                            "componentName": "多列容器",
+                            "editFlag": 0,
+                            "style": {
+                                "display": "flex",
+                                "flexDirection": "row",
+                                "alignItems": "stretch",
+                                "justifyContent": "flex-start"
+                            },
+                            "data": {
+                                "columnNum": 1
+                            },
+                            "childrenData": [
+                                {}
+                            ],
+                            "componentId": "_b2f69d19-69ec-438a-868b-3353740fbf3a"
+                        }
+                    ],
+                    "componentId": "_4746cf97-c391-4b39-8186-c0dca0ed8087",
+                    "action": {
+                        "code": "bind-weapp-page",
+                        "data": {
+                            "page": {
+                                "path": "/pagesB/specialColumnDetail/index",
+                                "pageName": "专栏详情页",
+                                "code": "specialColumnDetail",
+                                "params": ""
+                            },
+                            "params": "",
+                            "targetSpecial": {
+                                "name": "法式染",
+                                "code": "449189194",
+                                "imageUrl": "/o2-resources/o2pcm/images/special/17/2/O2-PUB/fn4gpe0knzfsst4dyhikdaflsyrr_1702605136906.jpg",
+                                "courseQuantity": 16,
+                                "viewQuantity": 0
+                            }
+                        }
+                    }
+                },
+                {
+                    "anchorTitle": null,
+                    "componentCode": "rows-container",
+                    "groupCode": "container",
+                    "groupName": "容器",
+                    "componentName": "多行容器",
+                    "editFlag": 0,
+                    "style": {
+                        "display": "block"
+                    },
+                    "data": {
+                        "rowsNum": 1
+                    },
+                    "childrenData": [
+                        {
+                            "anchorTitle": null,
+                            "componentCode": "rows-container",
+                            "groupCode": "container",
+                            "groupName": "容器",
+                            "componentName": "多行容器",
+                            "editFlag": 0,
+                            "style": {
+                                "display": "block"
+                            },
+                            "data": {
+                                "rowsNum": 2,
+                                "entityName": "一次来店 三次提案 原生发顾客",
+                                "entityCode": "3728093",
+                                "entityId": 1030,
+                                "platformProductCode": "3728093",
+                                "mediaUrl": "/o2-resources/o2pcm/videos/online/dm/2/O2-PUB/cover/3728093.png",
+                                "lowedPrice": null,
+                                "onlineShopName": "发型师",
+                                "product": {}
+                            },
+                            "childrenData": [
+                                {},
+                                {}
+                            ],
+                            "componentId": "_8bbd485f-4230-4f53-8047-9b7a5212e06e",
+                            "action": {
+                                "code": "bind-product"
+                            }
+                        }
+                    ],
+                    "componentId": "_ea5d60bf-c921-49f4-8d43-f47c4c31aa8a"
+                },
+                {
+                    "anchorTitle": null,
+                    "componentCode": "rows-container",
+                    "groupCode": "container",
+                    "groupName": "容器",
+                    "componentName": "多行容器",
+                    "editFlag": 0,
+                    "style": {
+                        "display": "block"
+                    },
+                    "data": {
+                        "rowsNum": 2
+                    },
+                    "childrenData": [
+                        {
+                            "anchorTitle": null,
+                            "componentCode": "text",
+                            "groupCode": "common",
+                            "groupName": "常用组件",
+                            "componentName": "文字",
+                            "editFlag": 0,
+                            "data": {
+                                "text": "中级进阶 高业绩剪发秘籍",
+                                "overflowMode": "unset",
+                                "fontFamily": "font-light"
+                            },
+                            "style": {
+                                "display": "block",
+                                "fontSize": "16px",
+                                "fontWeight": 300,
+                                "paddingTop": "8px",
+                                "paddingBottom": "3px",
+                                "paddingLeft": "32px",
+                                "paddingRight": "0px",
+                                "color": "black"
+                            },
+                            "childrenData": [],
+                            "componentId": "_3e6d6432-0ae8-4979-aa9e-06a21dd259ae"
+                        },
+                        {
+                            "anchorTitle": null,
+                            "componentCode": "column-container",
+                            "groupCode": "container",
+                            "groupName": "容器",
+                            "componentName": "多列容器",
+                            "editFlag": 0,
+                            "style": {
+                                "display": "flex",
+                                "flexDirection": "row",
+                                "alignItems": "stretch",
+                                "justifyContent": "flex-start"
+                            },
+                            "data": {
+                                "columnNum": 1
+                            },
+                            "childrenData": [
+                                {}
+                            ],
+                            "componentId": "_7ec5b69e-e072-47b7-83c4-5ee403af8914"
+                        }
+                    ],
+                    "componentId": "_7fffe716-f922-4dc7-8a1c-81ec973e5dcb"
+                },
+                {
+                    "anchorTitle": null,
+                    "componentCode": "rows-container",
+                    "groupCode": "container",
+                    "groupName": "容器",
+                    "componentName": "多行容器",
+                    "editFlag": 0,
+                    "style": {
+                        "display": "block"
+                    },
+                    "data": {
+                        "rowsNum": 2
+                    },
+                    "childrenData": [
+                        {
+                            "anchorTitle": null,
+                            "componentCode": "text",
+                            "groupCode": "common",
+                            "groupName": "常用组件",
+                            "componentName": "文字",
+                            "editFlag": 0,
+                            "data": {
+                                "text": "无氨烫发实操讲解",
+                                "overflowMode": "unset",
+                                "fontFamily": "font-light"
+                            },
+                            "style": {
+                                "display": "block",
+                                "fontSize": "16px",
+                                "fontWeight": 300,
+                                "paddingTop": "8px",
+                                "paddingBottom": "3px",
+                                "paddingLeft": "32px",
+                                "paddingRight": "0px",
+                                "color": "black"
+                            },
+                            "childrenData": [],
+                            "componentId": "_6b714012-691e-4059-b3a2-4b918efa7672"
+                        },
+                        {
+                            "anchorTitle": null,
+                            "componentCode": "text",
+                            "groupCode": "common",
+                            "groupName": "常用组件",
+                            "componentName": "文字",
+                            "editFlag": 0,
+                            "data": {
+                                "text": "任玉平",
+                                "overflowMode": "unset",
+                                "fontFamily": "font-light"
+                            },
+                            "style": {
+                                "display": "block",
+                                "fontSize": "10px",
+                                "fontWeight": 200,
+                                "paddingTop": "4px",
+                                "paddingLeft": "32px",
+                                "color": "black",
+                                "paddingBottom": "2px"
+                            },
+                            "childrenData": [],
+                            "componentId": "_0d8064ad-4fa8-4868-8587-d3c9b72c80f6"
+                        }
+                    ],
+                    "componentId": "_b0e4b82e-af57-42fa-a31f-576eaff8dec0"
+                }
+            ],
+            "style": {
+                "backgroundColor": null,
+                "height": "220px"
+            },
+            "componentId": "_ea7ba0d7-1d9a-472e-8ff1-29fccdb9f50c"
+        },
+        {
+            "anchorTitle": null,
+            "componentCode": "rows-container",
+            "groupCode": "container",
+            "groupName": "容器",
+            "componentName": "多行容器",
+            "editFlag": 0,
+            "style": {
+                "display": "block"
+            },
+            "data": {
+                "rowsNum": 1
+            },
+            "childrenData": [
+                {
+                    "anchorTitle": null,
+                    "componentCode": "rows-container",
+                    "groupCode": "container",
+                    "groupName": "容器",
+                    "componentName": "多行容器",
+                    "editFlag": 0,
+                    "style": {
+                        "display": "block",
+                        "height": "44px",
+                        "marginTop": "50px",
+                        "marginBottom": "20px"
+                    },
+                    "data": {
+                        "rowsNum": 2
+                    },
+                    "childrenData": [
+                        {
+                            "anchorTitle": null,
+                            "componentCode": "text",
+                            "groupCode": "common",
+                            "groupName": "常用组件",
+                            "componentName": "文字",
+                            "editFlag": 0,
+                            "data": {
+                                "text": "潮流资讯",
+                                "overflowMode": "unset"
+                            },
+                            "style": {
+                                "display": "block",
+                                "fontSize": "22px",
+                                "fontWeight": "500",
+                                "paddingLeft": "18px",
+                                "paddingRight": "17px",
+                                "color": "black",
+                                "height": "29px"
+                            },
+                            "childrenData": [],
+                            "componentId": "_36e3b3be-7f95-4f34-9554-b49e8536ba3f"
+                        },
+                        {
+                            "anchorTitle": null,
+                            "componentCode": "column-container",
+                            "groupCode": "container",
+                            "groupName": "容器",
+                            "componentName": "多列容器",
+                            "editFlag": 0,
+                            "style": {
+                                "display": "flex",
+                                "flexDirection": "row",
+                                "alignItems": "stretch",
+                                "justifyContent": "flex-start",
+                                "backgroundColor": "#ffffff",
+                                "marginLeft": "18px",
+                                "marginRight": "17px"
+                            },
+                            "data": {
+                                "columnNum": 1
+                            },
+                            "childrenData": [
+                                {}
+                            ],
+                            "componentId": "_ed2805f9-d10d-416e-8a05-6ca9f3efb952"
+                        }
+                    ],
+                    "componentId": "_4f0693a7-9f2e-473b-a26f-cbef30cef576"
+                }
+            ],
+            "componentId": "_3d4ad964-a401-4078-8667-3258bfab506d"
+        },
+        {
+            "anchorTitle": null,
+            "componentCode": "rows-container",
+            "groupCode": "container",
+            "groupName": "容器",
+            "componentName": "多行容器",
+            "editFlag": 0,
+            "style": {
+                "display": "block",
+                "marginTop": "20px"
+            },
+            "data": {
+                "rowsNum": 2
+            },
+            "childrenData": [
+                {
+                    "anchorTitle": null,
+                    "componentCode": "column-container",
+                    "groupCode": "container",
+                    "groupName": "容器",
+                    "componentName": "多列容器",
+                    "editFlag": 0,
+                    "style": {
+                        "display": "flex",
+                        "flexDirection": "row",
+                        "alignItems": "flex-start",
+                        "justifyContent": "flex-start",
+                        "paddingLeft": "18px",
+                        "paddingRight": "17px"
+                    },
+                    "data": {
+                        "columnNum": 2,
+                        "gutter": 0
+                    },
+                    "childrenData": [
+                        {
+                            "anchorTitle": null,
+                            "componentCode": "image",
+                            "groupCode": "common",
+                            "groupName": "常用组件",
+                            "componentName": "图片",
+                            "editFlag": 0,
+                            "data": {
+                                "url": "https://static-d2s-prod.platform-loreal.cn/o2-resources/metadata/o2cms/2/O2-PUB/1747206252256_【补充】首页-潮流资讯 美业赛事栏330 400.jpg",
+                                "width": "100%",
+                                "objectFit": "scale-down",
+                                "objectPosition": "center",
+                                "hasCover": false,
+                                "cdnUrl": "https://static-d2s-prod.platform-loreal.cn/o2-resources/metadata/o2cms/2/O2-PUB/1747206252256_【补充】首页-潮流资讯 美业赛事栏330 400.jpg",
+                                "path": "/o2-resources/metadata/o2cms/2/O2-PUB/1747206252256_【补充】首页-潮流资讯 美业赛事栏330 400.jpg"
+                            },
+                            "style": {
+                                "borderRadius": "8px",
+                                "marginRight": "10px"
+                            },
+                            "childrenData": [],
+                            "componentId": "_e4d1d6e4-6c4c-428b-86ea-e3721c22fa07",
+                            "action": {
+                                "code": "bind-clp",
+                                "data": {}
+                            },
+                            "enableTrack": 1,
+                            "trackName": "美业赛事"
+                        },
+                        {
+                            "anchorTitle": null,
+                            "componentCode": "image",
+                            "groupCode": "common",
+                            "groupName": "常用组件",
+                            "componentName": "图片",
+                            "editFlag": 0,
+                            "data": {
+                                "url": "https://static-d2s-prod.platform-loreal.cn/o2-resources/metadata/o2cms/2/O2-PUB/1711545287072_1702462323096_12.12 潮流资讯v1 330 440 (1).jpg",
+                                "width": "100%",
+                                "height": "100%",
+                                "objectFit": "scale-down",
+                                "objectPosition": "center",
+                                "hasCover": false,
+                                "cdnUrl": "https://static-d2s-prod.platform-loreal.cn/o2-resources/metadata/o2cms/2/O2-PUB/1711545287072_1702462323096_12.12 潮流资讯v1 330 440 (1).jpg",
+                                "path": "/o2-resources/metadata/o2cms/2/O2-PUB/1711545287072_1702462323096_12.12 潮流资讯v1 330 440 (1).jpg"
+                            },
+                            "style": {
+                                "borderRadius": "8px"
+                            },
+                            "childrenData": [],
+                            "componentId": "_8e26c19c-a2f9-4cc6-9a3d-5a1e3ce24615",
+                            "action": {
+                                "code": "@@fixed",
+                                "data": "https://mp.weixin.qq.com/s/EMiRYNTZ3uE91AcFZe-H6Q"
+                            },
+                            "enableTrack": 1,
+                            "trackName": "美业灵感"
+                        }
+                    ],
+                    "componentId": "_5329f30c-d8dd-4da5-8805-ca0621f0c543"
+                },
+                {
+                    "anchorTitle": null,
+                    "componentCode": "column-container",
+                    "groupCode": "container",
+                    "groupName": "容器",
+                    "componentName": "多列容器",
+                    "editFlag": 0,
+                    "style": {
+                        "display": "flex",
+                        "flexDirection": "row",
+                        "alignItems": "stretch",
+                        "justifyContent": "flex-start",
+                        "paddingLeft": "18px",
+                        "paddingRight": "17px"
+                    },
+                    "data": {
+                        "columnNum": 2
+                    },
+                    "childrenData": [
+                        {
+                            "anchorTitle": null,
+                            "componentCode": "image",
+                            "groupCode": "common",
+                            "groupName": "常用组件",
+                            "componentName": "图片",
+                            "editFlag": 0,
+                            "data": {
+                                "url": "https://static-d2s-prod.platform-loreal.cn/o2-resources/metadata/o2cms/2/O2-PUB/1711545190664_1702101444660_12.8 潮流资讯 美业公益 330 440.jpg",
+                                "width": "100%",
+                                "height": "100%",
+                                "objectFit": "scale-down",
+                                "objectPosition": "top",
+                                "hasCover": false,
+                                "cdnUrl": "https://static-d2s-prod.platform-loreal.cn/o2-resources/metadata/o2cms/2/O2-PUB/1711545190664_1702101444660_12.8 潮流资讯 美业公益 330 440.jpg",
+                                "path": "/o2-resources/metadata/o2cms/2/O2-PUB/1711545190664_1702101444660_12.8 潮流资讯 美业公益 330 440.jpg"
+                            },
+                            "style": {
+                                "borderRadius": "8px",
+                                "marginRight": "10px",
+                                "marginTop": "-10px"
+                            },
+                            "childrenData": [],
+                            "componentId": "_a2051ae8-4829-4241-bf46-ea9233a98962",
+                            "enableTrack": 1,
+                            "trackName": "美业公益",
+                            "action": {
+                                "code": "@@fixed",
+                                "data": "https://mp.weixin.qq.com/s/63y6Ja0eYJS1pOjBJ3ftog"
+                            }
+                        },
+                        {
+                            "anchorTitle": null,
+                            "componentCode": "image",
+                            "groupCode": "common",
+                            "groupName": "常用组件",
+                            "componentName": "图片",
+                            "editFlag": 0,
+                            "data": {
+                                "url": "https://static-d2s-prod.platform-loreal.cn/o2-resources/metadata/o2cms/2/O2-PUB/1714387449344_1711545314239_1702101420340_12.8 潮流资讯 美业综艺 330 400.jpg",
+                                "width": "100%",
+                                "height": "100%",
+                                "objectFit": "scale-down",
+                                "objectPosition": "top left",
+                                "hasCover": false,
+                                "cdnUrl": "https://static-d2s-prod.platform-loreal.cn/o2-resources/metadata/o2cms/2/O2-PUB/1714387449344_1711545314239_1702101420340_12.8 潮流资讯 美业综艺 330 400.jpg",
+                                "path": "/o2-resources/metadata/o2cms/2/O2-PUB/1714387449344_1711545314239_1702101420340_12.8 潮流资讯 美业综艺 330 400.jpg"
+                            },
+                            "style": {
+                                "borderRadius": "8px",
+                                "marginTop": "10px"
+                            },
+                            "childrenData": [],
+                            "componentId": "_5e277378-35f9-4c57-bde6-67609389c9a2",
+                            "enableTrack": 1,
+                            "trackName": "美业综艺",
+                            "action": {
+                                "code": "bind-clp",
+                                "data": {}
+                            }
+                        }
+                    ],
+                    "componentId": "_6213dcee-bdd7-424d-b3a5-038875503071"
+                }
+            ],
+            "componentId": "_06e5e87b-5a69-4add-8d4e-2a471b537cdc"
+        },
+        {
+            "anchorTitle": null,
+            "componentCode": "rows-container",
+            "groupCode": "container",
+            "groupName": "容器",
+            "componentName": "多行容器",
+            "editFlag": 0,
+            "style": {
+                "display": "block",
+                "height": "44px",
+                "marginBottom": "12px",
+                "marginTop": "45px"
+            },
+            "data": {
+                "rowsNum": 2
+            },
+            "childrenData": [
+                {
+                    "anchorTitle": null,
+                    "componentCode": "text",
+                    "groupCode": "common",
+                    "groupName": "常用组件",
+                    "componentName": "文字",
+                    "editFlag": 0,
+                    "data": {
+                        "text": "欧莱雅PRO",
+                        "overflowMode": "unset"
+                    },
+                    "style": {
+                        "display": "block",
+                        "fontSize": "20px",
+                        "fontWeight": "500",
+                        "paddingLeft": "18px",
+                        "paddingRight": "17px",
+                        "color": "black",
+                        "height": "29px"
+                    },
+                    "childrenData": [],
+                    "componentId": "_94042d5c-a2a2-447d-8061-48a76ea6a4e3"
+                },
+                {
+                    "anchorTitle": null,
+                    "componentCode": "column-container",
+                    "groupCode": "container",
+                    "groupName": "容器",
+                    "componentName": "多列容器",
+                    "editFlag": 0,
+                    "style": {
+                        "display": "flex",
+                        "flexDirection": "row",
+                        "alignItems": "stretch",
+                        "justifyContent": "flex-start",
+                        "backgroundColor": "#ffffff",
+                        "marginLeft": "18px",
+                        "marginRight": "17px"
+                    },
+                    "data": {
+                        "columnNum": 1
+                    },
+                    "childrenData": [
+                        {
+                            "anchorTitle": null,
+                            "componentCode": "text",
+                            "groupCode": "common",
+                            "groupName": "常用组件",
+                            "componentName": "文字",
+                            "editFlag": 0,
+                            "data": {
+                                "text": "BRAND ZONE",
+                                "overflowMode": "unset",
+                                "fontFamily": "font-regular"
+                            },
+                            "style": {
+                                "display": "block",
+                                "fontSize": "14px",
+                                "fontWeight": 200,
+                                "color": "#333333"
+                            },
+                            "childrenData": [],
+                            "componentId": "_e1e0fea6-da22-409c-8bd7-68cd4c21a19e"
+                        }
+                    ],
+                    "componentId": "_95419d9f-099e-460b-b304-5a330eedcb8e"
+                }
+            ],
+            "componentId": "_b03ac4b1-3458-4cbb-9a66-5ca478bcd1ae"
+        },
+        {
+            "anchorTitle": null,
+            "componentCode": "card-stack",
+            "groupCode": "picture",
+            "groupName": "图片",
+            "componentName": "卡片堆叠",
+            "editFlag": 0,
+            "data": {
+                "cardNum": 3
+            },
+            "readonlyData": {
+                "activeIndex": 0
+            },
+            "childrenData": [
+                {
+                    "anchorTitle": null,
+                    "componentCode": "image",
+                    "groupCode": "common",
+                    "groupName": "常用组件",
+                    "componentName": "图片",
+                    "editFlag": 0,
+                    "data": {
+                        "url": "https://static-d2s-prod.platform-loreal.cn/o2-resources/metadata/o2cms/2/O2-PUB/1712823310674_1711545166011_1702464533973_品牌故事600_820-1.png",
+                        "width": "100%",
+                        "height": "100%",
+                        "objectFit": "scale-down",
+                        "objectPosition": "center",
+                        "hasCover": false,
+                        "cdnUrl": "https://static-d2s-prod.platform-loreal.cn/o2-resources/metadata/o2cms/2/O2-PUB/1712823310674_1711545166011_1702464533973_品牌故事600_820-1.png",
+                        "path": "/o2-resources/metadata/o2cms/2/O2-PUB/1712823310674_1711545166011_1702464533973_品牌故事600_820-1.png"
+                    },
+                    "style": {},
+                    "childrenData": [],
+                    "componentId": "_9114d71b-dfcc-471e-81db-843db4269310",
+                    "action": {
+                        "code": "bind-clp",
+                        "data": {
+                            "page": {},
+                            "params": {
+                                "pageCode": "O2_DTC:OW-1:CLP:CLP202312170002",
+                                "pageName": "品牌专区"
+                            }
+                        }
+                    },
+                    "enableTrack": 1,
+                    "trackName": "PRO故事"
+                },
+                {
+                    "anchorTitle": null,
+                    "componentCode": "image",
+                    "groupCode": "common",
+                    "groupName": "常用组件",
+                    "componentName": "图片",
+                    "editFlag": 0,
+                    "data": {
+                        "url": "https://static-d2s-prod.platform-loreal.cn/o2-resources/metadata/o2cms/2/O2-PUB/1711545151080_1702464522886_品牌故事600_820-3.png",
+                        "width": "100%",
+                        "height": "100%",
+                        "objectFit": "scale-down",
+                        "objectPosition": "center",
+                        "hasCover": false,
+                        "cdnUrl": "https://static-d2s-prod.platform-loreal.cn/o2-resources/metadata/o2cms/2/O2-PUB/1711545151080_1702464522886_品牌故事600_820-3.png",
+                        "path": "/o2-resources/metadata/o2cms/2/O2-PUB/1711545151080_1702464522886_品牌故事600_820-3.png"
+                    },
+                    "style": {},
+                    "childrenData": [],
+                    "componentId": "_2ece586c-ca59-4535-817e-a5aaf8259c9e",
+                    "enableTrack": 1,
+                    "trackName": "PRO故事2",
+                    "action": {
+                        "code": "bind-clp",
+                        "data": {
+                            "page": {},
+                            "params": {
+                                "pageCode": "O2_DTC:OW-1:CLP:CLP202312170002",
+                                "pageName": "品牌专区"
+                            }
+                        }
+                    }
+                },
+                {
+                    "anchorTitle": null,
+                    "componentCode": "image",
+                    "groupCode": "common",
+                    "groupName": "常用组件",
+                    "componentName": "图片",
+                    "editFlag": 0,
+                    "data": {
+                        "url": "https://static-d2s-prod.platform-loreal.cn/o2-resources/metadata/o2cms/2/O2-PUB/1711545079401_1702464510286_品牌故事600_820-2.png",
+                        "width": "100%",
+                        "height": "100%",
+                        "objectFit": "scale-down",
+                        "objectPosition": "center",
+                        "hasCover": false,
+                        "cdnUrl": "https://static-d2s-prod.platform-loreal.cn/o2-resources/metadata/o2cms/2/O2-PUB/1711545079401_1702464510286_品牌故事600_820-2.png",
+                        "path": "/o2-resources/metadata/o2cms/2/O2-PUB/1711545079401_1702464510286_品牌故事600_820-2.png"
+                    },
+                    "style": {},
+                    "childrenData": [],
+                    "componentId": "_ff809e00-5b9c-4b7f-86c3-834ba7c85b2d",
+                    "enableTrack": 1,
+                    "trackName": "PRO故事3",
+                    "action": {
+                        "code": "bind-clp",
+                        "data": {
+                            "page": {},
+                            "params": {
+                                "pageCode": "O2_DTC:OW-1:CLP:CLP202312170002",
+                                "pageName": "品牌专区"
+                            }
+                        }
+                    }
+                }
+            ],
+            "style": {
+                "marginBottom": "40px",
+                "marginLeft": "1px"
+            },
+            "componentId": "_fb3f4b4d-19d7-4e5f-a762-387cb491ffa6",
+            "action": {
+                "code": "bind-weapp-page",
+                "data": {
+                    "page": {
+                        "path": "/pages/classification/classification",
+                        "pageName": "分类页",
+                        "code": "classification",
+                        "params": ""
+                    },
+                    "params": "",
+                    "targetSpecial": {}
+                }
+            }
+        },
+        {
+            "anchorTitle": null,
+            "componentCode": "dialog-container",
+            "groupCode": "container",
+            "groupName": "容器",
+            "componentName": "弹框容器",
+            "editFlag": 0,
+            "style": {
+                "borderRadius": "15px"
+            },
+            "childrenData": [
+                {
+                    "anchorTitle": null,
+                    "componentCode": "image",
+                    "groupCode": "common",
+                    "groupName": "常用组件",
+                    "componentName": "图片",
+                    "editFlag": 0,
+                    "data": {
+                        "url": "https://static-d2s-prod.platform-loreal.cn/o2-resources/metadata/o2cms/2/O2-PUB/1761810783298_弹窗.gif",
+                        "width": "100%",
+                        "height": "100%",
+                        "objectFit": "scale-down",
+                        "objectPosition": "center",
+                        "hasCover": false,
+                        "cdnUrl": "https://static-d2s-prod.platform-loreal.cn/o2-resources/metadata/o2cms/2/O2-PUB/1761810783298_弹窗.gif",
+                        "path": "/o2-resources/metadata/o2cms/2/O2-PUB/1761810783298_弹窗.gif"
+                    },
+                    "style": {
+                        "borderRadius": "15px"
+                    },
+                    "childrenData": [],
+                    "componentId": "_6236bbe5-8f6b-4db3-98ca-0463a6cfcf58",
+                    "action": {
+                        "code": "bind-promotion-plp",
+                        "data": {
+                            "params": {
+                                "sceneCode": "S20251030000002"
+                            }
+                        }
+                    },
+                    "enableTrack": 1,
+                    "trackName": "首页-无氨烫弹窗"
+                }
+            ],
+            "data": {
+                "datetimeList": [
+                    {
+                        "date": [
+                            "2025-11-01",
+                            "2025-11-02",
+                            "2025-11-03",
+                            "2025-11-04",
+                            "2025-11-05",
+                            "2025-11-06",
+                            "2025-11-07",
+                            "2025-11-08",
+                            "2025-11-09",
+                            "2025-11-10",
+                            "2025-11-11",
+                            "2025-11-12",
+                            "2025-11-13",
+                            "2025-11-14",
+                            "2025-11-15",
+                            "2025-11-16",
+                            "2025-11-17",
+                            "2025-11-18",
+                            "2025-11-19",
+                            "2025-11-20",
+                            "2025-11-21",
+                            "2025-11-22",
+                            "2025-11-23",
+                            "2025-11-24",
+                            "2025-11-25",
+                            "2025-11-26",
+                            "2025-11-27",
+                            "2025-11-28",
+                            "2025-11-29",
+                            "2025-11-30"
+                        ],
+                        "time": [
+                            {
+                                "start": "00:00:00",
+                                "end": "09:00:00",
+                                "num": 1
+                            }
+                        ]
+                    }
+                ]
+            },
+            "componentId": "_4e70accf-8788-4ab9-88f6-069f915b57f6",
+            "enableTrack": 0,
+            "trackName": null
+        },
+        {
+            "anchorTitle": null,
+            "componentCode": "dialog-container",
+            "groupCode": "container",
+            "groupName": "容器",
+            "componentName": "弹框容器",
+            "editFlag": 0,
+            "style": {},
+            "childrenData": [
+                {
+                    "anchorTitle": null,
+                    "componentCode": "image",
+                    "groupCode": "common",
+                    "groupName": "常用组件",
+                    "componentName": "图片",
+                    "editFlag": 0,
+                    "data": {
+                        "url": "https://static-d2s-prod.platform-loreal.cn/o2-resources/metadata/o2cms/2/O2-PUB/1761810916323_弹窗.gif",
+                        "width": "100%",
+                        "height": "100%",
+                        "objectFit": "scale-down",
+                        "objectPosition": "center",
+                        "hasCover": false,
+                        "cdnUrl": "https://static-d2s-prod.platform-loreal.cn/o2-resources/metadata/o2cms/2/O2-PUB/1761810916323_弹窗.gif",
+                        "path": "/o2-resources/metadata/o2cms/2/O2-PUB/1761810916323_弹窗.gif"
+                    },
+                    "style": {
+                        "borderRadius": "15px"
+                    },
+                    "childrenData": [],
+                    "componentId": "_9d66c1cf-d5e0-4daa-bccd-9b8d43c81423",
+                    "enableTrack": 1,
+                    "trackName": "首页-透亮霜弹窗",
+                    "action": {
+                        "code": "bind-promotion-plp",
+                        "data": {
+                            "params": {
+                                "sceneCode": "S20251030000006"
+                            }
+                        }
+                    }
+                }
+            ],
+            "data": {
+                "datetimeList": [
+                    {
+                        "date": [
+                            "2025-11-01",
+                            "2025-11-02",
+                            "2025-11-03",
+                            "2025-11-04",
+                            "2025-11-05",
+                            "2025-11-06",
+                            "2025-11-07",
+                            "2025-11-08",
+                            "2025-11-09",
+                            "2025-11-10",
+                            "2025-11-11",
+                            "2025-11-12",
+                            "2025-11-13",
+                            "2025-11-14",
+                            "2025-11-15",
+                            "2025-11-16",
+                            "2025-11-17",
+                            "2025-11-18",
+                            "2025-11-19",
+                            "2025-11-20",
+                            "2025-11-21",
+                            "2025-11-22",
+                            "2025-11-23",
+                            "2025-11-24",
+                            "2025-11-25",
+                            "2025-11-26",
+                            "2025-11-27",
+                            "2025-11-28",
+                            "2025-11-29",
+                            "2025-11-30"
+                        ],
+                        "time": [
+                            {
+                                "start": "09:00:00",
+                                "end": "10:00:00",
+                                "num": 1
+                            }
+                        ]
+                    }
+                ]
+            },
+            "componentId": "_b2569470-7701-49e4-98e7-16563e0a4971"
+        },
+        {
+            "anchorTitle": null,
+            "componentCode": "dialog-container",
+            "groupCode": "container",
+            "groupName": "容器",
+            "componentName": "弹框容器",
+            "editFlag": 0,
+            "style": {},
+            "childrenData": [
+                {
+                    "anchorTitle": null,
+                    "componentCode": "image",
+                    "groupCode": "common",
+                    "groupName": "常用组件",
+                    "componentName": "图片",
+                    "editFlag": 0,
+                    "data": {
+                        "url": "https://static-d2s-prod.platform-loreal.cn/o2-resources/metadata/o2cms/2/O2-PUB/1755253615685_7.24-光能吹风机-弹窗-1125-840.gif",
+                        "width": "100%",
+                        "height": "100%",
+                        "objectFit": "scale-down",
+                        "objectPosition": "center",
+                        "hasCover": false,
+                        "cdnUrl": "https://static-d2s-prod.platform-loreal.cn/o2-resources/metadata/o2cms/2/O2-PUB/1755253615685_7.24-光能吹风机-弹窗-1125-840.gif",
+                        "path": "/o2-resources/metadata/o2cms/2/O2-PUB/1755253615685_7.24-光能吹风机-弹窗-1125-840.gif"
+                    },
+                    "style": {},
+                    "childrenData": [],
+                    "componentId": "_56592cac-7611-40cb-82fa-42f399f0abbd",
+                    "enableTrack": 1,
+                    "trackName": "首页弹窗-光能吹风机",
+                    "action": {
+                        "code": "pdp",
+                        "data": {
+                            "entityName": "欧莱雅PRO 光能吹风机",
+                            "entityCode": "P20250610000001",
+                            "entityId": 9722,
+                            "platformProductCode": "P20250610000001",
+                            "mediaUrl": "/o2-resources/o2pcm/images/ow-1/op-p20250610000001/zh_cn/2/O2-PUB/op_p20250610000001_m_001_1750909411140.jpg",
+                            "lowedPrice": "2980.00"
+                        }
+                    }
+                }
+            ],
+            "data": {
+                "datetimeList": [
+                    {
+                        "date": [
+                            "2025-11-01",
+                            "2025-11-02",
+                            "2025-11-03",
+                            "2025-11-04",
+                            "2025-11-05",
+                            "2025-11-06",
+                            "2025-11-07",
+                            "2025-11-08",
+                            "2025-11-09",
+                            "2025-11-10",
+                            "2025-11-11",
+                            "2025-11-12",
+                            "2025-11-13",
+                            "2025-11-14",
+                            "2025-11-15",
+                            "2025-11-16",
+                            "2025-11-17",
+                            "2025-11-18",
+                            "2025-11-19",
+                            "2025-11-20",
+                            "2025-11-21",
+                            "2025-11-22",
+                            "2025-11-23",
+                            "2025-11-24",
+                            "2025-11-25",
+                            "2025-11-26",
+                            "2025-11-27",
+                            "2025-11-28",
+                            "2025-11-29",
+                            "2025-11-30"
+                        ],
+                        "time": [
+                            {
+                                "start": "10:00:00",
+                                "end": "12:00:00",
+                                "num": 1
+                            },
+                            {
+                                "start": "21:00:00",
+                                "end": "23:59:59",
+                                "num": 1
+                            }
+                        ]
+                    }
+                ]
+            },
+            "componentId": "_f88a3c69-6613-4f87-b012-947331fa91a5"
+        },
+        {
+            "anchorTitle": null,
+            "componentCode": "dialog-container",
+            "groupCode": "container",
+            "groupName": "容器",
+            "componentName": "弹框容器",
+            "editFlag": 0,
+            "style": {},
+            "childrenData": [
+                {
+                    "anchorTitle": null,
+                    "componentCode": "image",
+                    "groupCode": "common",
+                    "groupName": "常用组件",
+                    "componentName": "图片",
+                    "editFlag": 0,
+                    "data": {
+                        "url": "https://static-d2s-prod.platform-loreal.cn/o2-resources/metadata/o2cms/2/O2-PUB/1761810929293_弹窗.gif",
+                        "width": "100%",
+                        "height": "100%",
+                        "objectFit": "scale-down",
+                        "objectPosition": "center",
+                        "hasCover": false,
+                        "cdnUrl": "https://static-d2s-prod.platform-loreal.cn/o2-resources/metadata/o2cms/2/O2-PUB/1761810929293_弹窗.gif",
+                        "path": "/o2-resources/metadata/o2cms/2/O2-PUB/1761810929293_弹窗.gif"
+                    },
+                    "style": {
+                        "borderRadius": "15px"
+                    },
+                    "childrenData": [],
+                    "componentId": "_5c3ee176-fe55-4e4b-878d-3c3bb743832f",
+                    "enableTrack": 1,
+                    "trackName": "首页-进货指南弹窗",
+                    "action": {
+                        "code": "bind-clp",
+                        "data": {
+                            "page": {},
+                            "params": {
+                                "pageCode": "O2_DTC:OW-1:CLP:CLP202312160002",
+                                "pageName": "欧莱雅PRO  3月进货指南"
+                            }
+                        }
+                    }
+                }
+            ],
+            "data": {
+                "datetimeList": [
+                    {
+                        "date": [
+                            "2025-11-01",
+                            "2025-11-02",
+                            "2025-11-03",
+                            "2025-11-04",
+                            "2025-11-05",
+                            "2025-11-06",
+                            "2025-11-07",
+                            "2025-11-08",
+                            "2025-11-09",
+                            "2025-11-10",
+                            "2025-11-11",
+                            "2025-11-12",
+                            "2025-11-13",
+                            "2025-11-14",
+                            "2025-11-15",
+                            "2025-11-16",
+                            "2025-11-17",
+                            "2025-11-18",
+                            "2025-11-19",
+                            "2025-11-20",
+                            "2025-11-21",
+                            "2025-11-22",
+                            "2025-11-23",
+                            "2025-11-24",
+                            "2025-11-25",
+                            "2025-11-26",
+                            "2025-11-27",
+                            "2025-11-28",
+                            "2025-11-29",
+                            "2025-11-30"
+                        ],
+                        "time": [
+                            {
+                                "start": "12:00:00",
+                                "end": "13:00:00",
+                                "num": 1
+                            }
+                        ]
+                    }
+                ]
+            },
+            "componentId": "_6ba30cb2-4af7-460b-b2a2-10d74d4be1b8"
+        },
+        {
+            "anchorTitle": null,
+            "componentCode": "dialog-container",
+            "groupCode": "container",
+            "groupName": "容器",
+            "componentName": "弹框容器",
+            "editFlag": 0,
+            "style": {},
+            "childrenData": [
+                {
+                    "anchorTitle": null,
+                    "componentCode": "image",
+                    "groupCode": "common",
+                    "groupName": "常用组件",
+                    "componentName": "图片",
+                    "editFlag": 0,
+                    "data": {
+                        "url": "https://static-d2s-prod.platform-loreal.cn/o2-resources/metadata/o2cms/2/O2-PUB/1747040085168_0428-sct弹窗-1125-840（动色轮）.gif",
+                        "width": "100%",
+                        "height": "100%",
+                        "objectFit": "scale-down",
+                        "objectPosition": "center",
+                        "hasCover": false,
+                        "cdnUrl": "https://static-d2s-prod.platform-loreal.cn/o2-resources/metadata/o2cms/2/O2-PUB/1747040085168_0428-sct弹窗-1125-840（动色轮）.gif",
+                        "path": "/o2-resources/metadata/o2cms/2/O2-PUB/1747040085168_0428-sct弹窗-1125-840（动色轮）.gif"
+                    },
+                    "style": {},
+                    "childrenData": [],
+                    "componentId": "_4ae68c56-bddc-4985-9004-9616e59a6bd8",
+                    "action": {
+                        "code": "bind-clp",
+                        "data": {
+                            "page": {},
+                            "params": {
+                                "pageCode": "O2_DTC:OW-1:CLP:CLP202404240001",
+                                "pageName": "全球发艺设计师大赛"
+                            }
+                        }
+                    },
+                    "enableTrack": 1,
+                    "trackName": "首页弹窗-发艺设计师大赛"
+                }
+            ],
+            "data": {
+                "datetimeList": [
+                    {
+                        "date": [
+                            "2025-11-01",
+                            "2025-11-02",
+                            "2025-11-03",
+                            "2025-11-04",
+                            "2025-11-05",
+                            "2025-11-06",
+                            "2025-11-07",
+                            "2025-11-08",
+                            "2025-11-09",
+                            "2025-11-10",
+                            "2025-11-11",
+                            "2025-11-12",
+                            "2025-11-13",
+                            "2025-11-14",
+                            "2025-11-15",
+                            "2025-11-16",
+                            "2025-11-17",
+                            "2025-11-18",
+                            "2025-11-19",
+                            "2025-11-20",
+                            "2025-11-21",
+                            "2025-11-22",
+                            "2025-11-23",
+                            "2025-11-24",
+                            "2025-11-25",
+                            "2025-11-26",
+                            "2025-11-27",
+                            "2025-11-28",
+                            "2025-11-29",
+                            "2025-11-30"
+                        ],
+                        "time": [
+                            {
+                                "start": "13:00:00",
+                                "end": "14:00:00",
+                                "num": 1
+                            }
+                        ]
+                    }
+                ]
+            },
+            "componentId": "_f11231de-7cb4-4481-976f-40798c98d3e0"
+        },
+        {
+            "anchorTitle": null,
+            "componentCode": "dialog-container",
+            "groupCode": "container",
+            "groupName": "容器",
+            "componentName": "弹框容器",
+            "editFlag": 0,
+            "style": {},
+            "childrenData": [
+                {
+                    "anchorTitle": null,
+                    "componentCode": "dialog-container",
+                    "groupCode": "container",
+                    "groupName": "容器",
+                    "componentName": "弹框容器",
+                    "editFlag": 0,
+                    "style": {},
+                    "childrenData": [
+                        {
+                            "anchorTitle": null,
+                            "componentCode": "image",
+                            "groupCode": "common",
+                            "groupName": "常用组件",
+                            "componentName": "图片",
+                            "editFlag": 0,
+                            "data": {
+                                "url": "https://static-d2s-prod.platform-loreal.cn/o2-resources/metadata/o2cms/2/O2-PUB/1748586110481_弹窗.jpg",
+                                "width": "100%",
+                                "height": "100%",
+                                "objectFit": "scale-down",
+                                "objectPosition": "center",
+                                "hasCover": false,
+                                "cdnUrl": "https://static-d2s-prod.platform-loreal.cn/o2-resources/metadata/o2cms/2/O2-PUB/1748586110481_弹窗.jpg",
+                                "path": "/o2-resources/metadata/o2cms/2/O2-PUB/1748586110481_弹窗.jpg"
+                            },
+                            "style": {},
+                            "childrenData": [],
+                            "componentId": "_56d040e1-584b-48f6-81db-fc96e6647fad",
+                            "action": {
+                                "code": "bind-clp",
+                                "data": {}
+                            },
+                            "enableTrack": 1,
+                            "trackName": "首页弹窗-发艺设计师大赛直播回放"
+                        }
+                    ],
+                    "data": {
+                        "datetimeList": [
+                            {
+                                "date": [],
+                                "time": []
+                            }
+                        ]
+                    },
+                    "componentId": "_e674ecd8-1d86-403b-929d-7a11c7a7d882"
+                }
+            ],
+            "data": {
+                "datetimeList": [
+                    {
+                        "date": [
+                            "2025-05-15",
+                            "2025-05-16",
+                            "2025-05-17",
+                            "2025-05-18",
+                            "2025-05-19",
+                            "2025-05-20",
+                            "2025-05-21"
+                        ],
+                        "time": [
+                            {
+                                "start": "15:00:00",
+                                "end": "17:00:00",
+                                "num": 1
+                            }
+                        ]
+                    }
+                ]
+            },
+            "componentId": "_a601c0f2-07cc-4c7e-beec-dc97a29d1ea7"
+        },
+        {
+            "anchorTitle": null,
+            "componentCode": "dialog-container",
+            "groupCode": "container",
+            "groupName": "容器",
+            "componentName": "弹框容器",
+            "editFlag": 0,
+            "style": {},
+            "childrenData": [
+                {
+                    "anchorTitle": null,
+                    "componentCode": "image",
+                    "groupCode": "common",
+                    "groupName": "常用组件",
+                    "componentName": "图片",
+                    "editFlag": 0,
+                    "data": {
+                        "url": "https://static-d2s-prod.platform-loreal.cn/o2-resources/metadata/o2cms/2/O2-PUB/1751620640470_冠军答疑弹窗.jpg",
+                        "width": "100%",
+                        "height": "100%",
+                        "objectFit": "scale-down",
+                        "objectPosition": "center",
+                        "hasCover": false,
+                        "cdnUrl": "https://static-d2s-prod.platform-loreal.cn/o2-resources/metadata/o2cms/2/O2-PUB/1751620640470_冠军答疑弹窗.jpg",
+                        "path": "/o2-resources/metadata/o2cms/2/O2-PUB/1751620640470_冠军答疑弹窗.jpg"
+                    },
+                    "style": {},
+                    "childrenData": [],
+                    "componentId": "_a70e8704-eebc-44ac-8bc4-211c4665e587",
+                    "action": {
+                        "code": "bind-clp",
+                        "data": {
+                            "page": {},
+                            "params": {
+                                "pageCode": "O2_DTC:OW-1:CLP:CLP202506040002",
+                                "pageName": "全球发艺设计师大赛-冠军直播答疑"
+                            }
+                        }
+                    },
+                    "enableTrack": 1,
+                    "trackName": "首页弹窗-发艺设计师大赛直播回放"
+                }
+            ],
+            "data": {
+                "datetimeList": [
+                    {
+                        "date": [
+                            "2025-11-01",
+                            "2025-11-02",
+                            "2025-11-03",
+                            "2025-11-04",
+                            "2025-11-05",
+                            "2025-11-06",
+                            "2025-11-07",
+                            "2025-11-08",
+                            "2025-11-09",
+                            "2025-11-10",
+                            "2025-11-11",
+                            "2025-11-12",
+                            "2025-11-13",
+                            "2025-11-14",
+                            "2025-11-15",
+                            "2025-11-16",
+                            "2025-11-17",
+                            "2025-11-18",
+                            "2025-11-19",
+                            "2025-11-20",
+                            "2025-11-21",
+                            "2025-11-22",
+                            "2025-11-23",
+                            "2025-11-24",
+                            "2025-11-25",
+                            "2025-11-26",
+                            "2025-11-27",
+                            "2025-11-28",
+                            "2025-11-29",
+                            "2025-11-30"
+                        ],
+                        "time": [
+                            {
+                                "start": "14:30:00",
+                                "end": "15:00:00",
+                                "num": 1
+                            }
+                        ]
+                    }
+                ]
+            },
+            "componentId": "_beea9e3e-f651-4503-b919-29f5ba9535ad"
+        },
+        {
+            "anchorTitle": null,
+            "componentCode": "dialog-container",
+            "groupCode": "container",
+            "groupName": "容器",
+            "componentName": "弹框容器",
+            "editFlag": 0,
+            "style": {},
+            "childrenData": [
+                {
+                    "anchorTitle": null,
+                    "componentCode": "image",
+                    "groupCode": "common",
+                    "groupName": "常用组件",
+                    "componentName": "图片",
+                    "editFlag": 0,
+                    "data": {
+                        "url": "https://static-d2s-prod.platform-loreal.cn/o2-resources/metadata/o2cms/2/O2-PUB/1761810948269_10月新客550送瞬顺-弹窗.gif",
+                        "width": "100%",
+                        "height": "100%",
+                        "objectFit": "scale-down",
+                        "objectPosition": "center",
+                        "hasCover": false,
+                        "cdnUrl": "https://static-d2s-prod.platform-loreal.cn/o2-resources/metadata/o2cms/2/O2-PUB/1761810948269_10月新客550送瞬顺-弹窗.gif",
+                        "path": "/o2-resources/metadata/o2cms/2/O2-PUB/1761810948269_10月新客550送瞬顺-弹窗.gif"
+                    },
+                    "style": {},
+                    "childrenData": [],
+                    "componentId": "_be8ca037-0612-4d59-8e0a-7d6cf4cc682c",
+                    "enableTrack": 1,
+                    "trackName": "首页弹窗-新客礼"
+                }
+            ],
+            "data": {
+                "datetimeList": [
+                    {
+                        "date": [
+                            "2025-11-01",
+                            "2025-11-02",
+                            "2025-11-03",
+                            "2025-11-04",
+                            "2025-11-05",
+                            "2025-11-06",
+                            "2025-11-07",
+                            "2025-11-08",
+                            "2025-11-09",
+                            "2025-11-10",
+                            "2025-11-11",
+                            "2025-11-12",
+                            "2025-11-13",
+                            "2025-11-14",
+                            "2025-11-15",
+                            "2025-11-16",
+                            "2025-11-17",
+                            "2025-11-18",
+                            "2025-11-19",
+                            "2025-11-20",
+                            "2025-11-21",
+                            "2025-11-22",
+                            "2025-11-23",
+                            "2025-11-24",
+                            "2025-11-25",
+                            "2025-11-26",
+                            "2025-11-27",
+                            "2025-11-28",
+                            "2025-11-29",
+                            "2025-11-30"
+                        ],
+                        "time": [
+                            {
+                                "start": "15:00:00",
+                                "end": "16:00:00",
+                                "num": 1
+                            }
+                        ]
+                    }
+                ]
+            },
+            "componentId": "_fbff8855-49b1-4fea-8ae7-c664f22c444e"
+        },
+        {
+            "anchorTitle": null,
+            "componentCode": "dialog-container",
+            "groupCode": "container",
+            "groupName": "容器",
+            "componentName": "弹框容器",
+            "editFlag": 0,
+            "style": {},
+            "childrenData": [
+                {
+                    "anchorTitle": null,
+                    "componentCode": "image",
+                    "groupCode": "common",
+                    "groupName": "常用组件",
+                    "componentName": "图片",
+                    "editFlag": 0,
+                    "data": {
+                        "url": "https://static-d2s-prod.platform-loreal.cn/o2-resources/metadata/o2cms/2/O2-PUB/1761810964401_弹窗.gif",
+                        "width": "100%",
+                        "height": "100%",
+                        "objectFit": "scale-down",
+                        "objectPosition": "center",
+                        "hasCover": false,
+                        "cdnUrl": "https://static-d2s-prod.platform-loreal.cn/o2-resources/metadata/o2cms/2/O2-PUB/1761810964401_弹窗.gif",
+                        "path": "/o2-resources/metadata/o2cms/2/O2-PUB/1761810964401_弹窗.gif"
+                    },
+                    "style": {},
+                    "childrenData": [],
+                    "componentId": "_e05c56d2-81df-4638-8a97-e91a50831d03",
+                    "enableTrack": 1,
+                    "trackName": "首页弹窗-双抗精纯乳",
+                    "action": {
+                        "code": "bind-promotion-plp",
+                        "data": {
+                            "params": {
+                                "sceneCode": "S20251030000005"
+                            }
+                        }
+                    }
+                }
+            ],
+            "data": {
+                "datetimeList": [
+                    {
+                        "date": [
+                            "2025-11-01",
+                            "2025-11-02",
+                            "2025-11-03",
+                            "2025-11-04",
+                            "2025-11-05",
+                            "2025-11-06",
+                            "2025-11-07",
+                            "2025-11-08",
+                            "2025-11-09",
+                            "2025-11-10",
+                            "2025-11-11",
+                            "2025-11-12",
+                            "2025-11-13",
+                            "2025-11-14",
+                            "2025-11-15",
+                            "2025-11-16",
+                            "2025-11-17",
+                            "2025-11-18",
+                            "2025-11-19",
+                            "2025-11-20",
+                            "2025-11-21",
+                            "2025-11-22",
+                            "2025-11-23",
+                            "2025-11-24",
+                            "2025-11-25",
+                            "2025-11-26",
+                            "2025-11-27",
+                            "2025-11-28",
+                            "2025-11-29",
+                            "2025-11-30"
+                        ],
+                        "time": [
+                            {
+                                "start": "16:00:00",
+                                "end": "17:00:00",
+                                "num": 1
+                            }
+                        ]
+                    }
+                ]
+            },
+            "componentId": "_01c735e3-f91e-49b1-bd93-2be78e9bf6ad"
+        },
+        {
+            "anchorTitle": null,
+            "componentCode": "dialog-container",
+            "groupCode": "container",
+            "groupName": "容器",
+            "componentName": "弹框容器",
+            "editFlag": 0,
+            "style": {
+                "borderRadius": "15px"
+            },
+            "childrenData": [
+                {
+                    "anchorTitle": null,
+                    "componentCode": "image",
+                    "groupCode": "common",
+                    "groupName": "常用组件",
+                    "componentName": "图片",
+                    "editFlag": 0,
+                    "data": {
+                        "url": "https://static-d2s-prod.platform-loreal.cn/o2-resources/metadata/o2cms/2/O2-PUB/1761810976405_弹窗.gif",
+                        "width": "100%",
+                        "height": "100%",
+                        "objectFit": "scale-down",
+                        "objectPosition": "center",
+                        "hasCover": false,
+                        "cdnUrl": "https://static-d2s-prod.platform-loreal.cn/o2-resources/metadata/o2cms/2/O2-PUB/1761810976405_弹窗.gif",
+                        "path": "/o2-resources/metadata/o2cms/2/O2-PUB/1761810976405_弹窗.gif"
+                    },
+                    "style": {
+                        "borderRadius": "15px"
+                    },
+                    "childrenData": [],
+                    "componentId": "_f6e340dc-6f96-4a4c-8a56-1a47f460c1f8",
+                    "enableTrack": 1,
+                    "trackName": "首页-染烫弹窗",
+                    "action": {
+                        "code": "bind-promotion-plp",
+                        "data": {
+                            "params": {
+                                "sceneCode": "S20251030000003"
+                            }
+                        }
+                    }
+                }
+            ],
+            "data": {
+                "datetimeList": [
+                    {
+                        "date": [
+                            "2025-11-01",
+                            "2025-11-02",
+                            "2025-11-03",
+                            "2025-11-04",
+                            "2025-11-05",
+                            "2025-11-06",
+                            "2025-11-07",
+                            "2025-11-08",
+                            "2025-11-09",
+                            "2025-11-10",
+                            "2025-11-11",
+                            "2025-11-12",
+                            "2025-11-13",
+                            "2025-11-14",
+                            "2025-11-15",
+                            "2025-11-16",
+                            "2025-11-17",
+                            "2025-11-18",
+                            "2025-11-19",
+                            "2025-11-20",
+                            "2025-11-21",
+                            "2025-11-22",
+                            "2025-11-23",
+                            "2025-11-24",
+                            "2025-11-25",
+                            "2025-11-26",
+                            "2025-11-27",
+                            "2025-11-28",
+                            "2025-11-29",
+                            "2025-11-30"
+                        ],
+                        "time": [
+                            {
+                                "start": "17:00:00",
+                                "end": "18:00:00",
+                                "num": 1
+                            }
+                        ]
+                    }
+                ]
+            },
+            "componentId": "_d36cab4c-e90b-434c-91a4-7175ae171c7e",
+            "enableTrack": 0,
+            "trackName": "开屏-发膜5送1"
+        },
+        {
+            "anchorTitle": null,
+            "componentCode": "dialog-container",
+            "groupCode": "container",
+            "groupName": "容器",
+            "componentName": "弹框容器",
+            "editFlag": 0,
+            "style": {},
+            "childrenData": [
+                {
+                    "anchorTitle": null,
+                    "componentCode": "image",
+                    "groupCode": "common",
+                    "groupName": "常用组件",
+                    "componentName": "图片",
+                    "editFlag": 0,
+                    "data": {
+                        "url": "https://static-d2s-prod.platform-loreal.cn/o2-resources/metadata/o2cms/2/O2-PUB/1761810989357_10月造型品弹窗1125_840.gif",
+                        "width": "100%",
+                        "height": "100%",
+                        "objectFit": "scale-down",
+                        "objectPosition": "center",
+                        "hasCover": false,
+                        "cdnUrl": "https://static-d2s-prod.platform-loreal.cn/o2-resources/metadata/o2cms/2/O2-PUB/1761810989357_10月造型品弹窗1125_840.gif",
+                        "path": "/o2-resources/metadata/o2cms/2/O2-PUB/1761810989357_10月造型品弹窗1125_840.gif"
+                    },
+                    "style": {},
+                    "childrenData": [],
+                    "componentId": "_47d20cbc-fc62-4704-8040-36954b3d8382",
+                    "enableTrack": 1,
+                    "trackName": "首页弹窗-造型品",
+                    "action": {
+                        "code": "bind-promotion-plp",
+                        "data": {
+                            "params": {
+                                "sceneCode": "S20251030000007"
+                            }
+                        }
+                    }
+                }
+            ],
+            "data": {
+                "datetimeList": [
+                    {
+                        "date": [
+                            "2025-11-01",
+                            "2025-11-02",
+                            "2025-11-03",
+                            "2025-11-04",
+                            "2025-11-05",
+                            "2025-11-06",
+                            "2025-11-07",
+                            "2025-11-08",
+                            "2025-11-09",
+                            "2025-11-10",
+                            "2025-11-11",
+                            "2025-11-12",
+                            "2025-11-13",
+                            "2025-11-14",
+                            "2025-11-15",
+                            "2025-11-16",
+                            "2025-11-17",
+                            "2025-11-18",
+                            "2025-11-19",
+                            "2025-11-20",
+                            "2025-11-21",
+                            "2025-11-22",
+                            "2025-11-23",
+                            "2025-11-24",
+                            "2025-11-25",
+                            "2025-11-26",
+                            "2025-11-27",
+                            "2025-11-28",
+                            "2025-11-29",
+                            "2025-11-30"
+                        ],
+                        "time": [
+                            {
+                                "start": "18:00:00",
+                                "end": "19:00:00",
+                                "num": 1
+                            }
+                        ]
+                    }
+                ]
+            },
+            "componentId": "_70f0fa8c-7c38-461f-821f-efd01495b61e"
+        },
+        {
+            "anchorTitle": null,
+            "componentCode": "dialog-container",
+            "groupCode": "container",
+            "groupName": "容器",
+            "componentName": "弹框容器",
+            "editFlag": 0,
+            "style": {
+                "borderRadius": "15px"
+            },
+            "childrenData": [
+                {
+                    "anchorTitle": null,
+                    "componentCode": "image",
+                    "groupCode": "common",
+                    "groupName": "常用组件",
+                    "componentName": "图片",
+                    "editFlag": 0,
+                    "data": {
+                        "url": "https://static-d2s-prod.platform-loreal.cn/o2-resources/metadata/o2cms/2/O2-PUB/1761811001358_染膏弹窗.gif",
+                        "width": "100%",
+                        "height": "100%",
+                        "objectFit": "scale-down",
+                        "objectPosition": "center",
+                        "hasCover": false,
+                        "cdnUrl": "https://static-d2s-prod.platform-loreal.cn/o2-resources/metadata/o2cms/2/O2-PUB/1761811001358_染膏弹窗.gif",
+                        "path": "/o2-resources/metadata/o2cms/2/O2-PUB/1761811001358_染膏弹窗.gif"
+                    },
+                    "style": {
+                        "borderRadius": "15px"
+                    },
+                    "childrenData": [],
+                    "componentId": "_49a08351-d71e-45ce-a36b-1b167d22392e",
+                    "action": {
+                        "code": "bind-promotion-plp",
+                        "data": {
+                            "params": {
+                                "sceneCode": "S20251030000001"
+                            }
+                        }
+                    },
+                    "enableTrack": 1,
+                    "trackName": "首页-染膏弹窗"
+                }
+            ],
+            "data": {
+                "datetimeList": [
+                    {
+                        "date": [
+                            "2025-11-01",
+                            "2025-11-02",
+                            "2025-11-03",
+                            "2025-11-04",
+                            "2025-11-05",
+                            "2025-11-06",
+                            "2025-11-07",
+                            "2025-11-08",
+                            "2025-11-09",
+                            "2025-11-10",
+                            "2025-11-11",
+                            "2025-11-12",
+                            "2025-11-13",
+                            "2025-11-14",
+                            "2025-11-15",
+                            "2025-11-16",
+                            "2025-11-17",
+                            "2025-11-18",
+                            "2025-11-19",
+                            "2025-11-20",
+                            "2025-11-21",
+                            "2025-11-22",
+                            "2025-11-23",
+                            "2025-11-24",
+                            "2025-11-25",
+                            "2025-11-26",
+                            "2025-11-27",
+                            "2025-11-28",
+                            "2025-11-29",
+                            "2025-11-30"
+                        ],
+                        "time": [
+                            {
+                                "start": "19:00:00",
+                                "end": "20:00:00",
+                                "num": 1
+                            }
+                        ]
+                    }
+                ]
+            },
+            "componentId": "_25a32ca1-cbca-47f9-8019-96ede8dc5a5a",
+            "enableTrack": 0,
+            "trackName": "开屏-发膜5送1"
+        },
+        {
+            "anchorTitle": null,
+            "componentCode": "dialog-container",
+            "groupCode": "container",
+            "groupName": "容器",
+            "componentName": "弹框容器",
+            "editFlag": 0,
+            "style": {},
+            "childrenData": [
+                {
+                    "anchorTitle": null,
+                    "componentCode": "image",
+                    "groupCode": "common",
+                    "groupName": "常用组件",
+                    "componentName": "图片",
+                    "editFlag": 0,
+                    "data": {
+                        "url": "https://static-d2s-prod.platform-loreal.cn/o2-resources/metadata/o2cms/2/O2-PUB/1761811018225_弹窗.gif",
+                        "width": "100%",
+                        "height": "100%",
+                        "objectFit": "scale-down",
+                        "objectPosition": "center",
+                        "hasCover": false,
+                        "cdnUrl": "https://static-d2s-prod.platform-loreal.cn/o2-resources/metadata/o2cms/2/O2-PUB/1761811018225_弹窗.gif",
+                        "path": "/o2-resources/metadata/o2cms/2/O2-PUB/1761811018225_弹窗.gif"
+                    },
+                    "style": {},
+                    "childrenData": [],
+                    "componentId": "_3a2f49a4-51b1-4edd-81fc-7f3117e76ab3",
+                    "enableTrack": 1,
+                    "trackName": "首页弹窗-零售洗",
+                    "action": {
+                        "code": "bind-promotion-plp",
+                        "data": {
+                            "params": {
+                                "sceneCode": "S20251030000008"
+                            }
+                        }
+                    }
+                }
+            ],
+            "data": {
+                "datetimeList": [
+                    {
+                        "date": [
+                            "2025-11-01",
+                            "2025-11-02",
+                            "2025-11-03",
+                            "2025-11-04",
+                            "2025-11-05",
+                            "2025-11-06",
+                            "2025-11-07",
+                            "2025-11-08",
+                            "2025-11-09",
+                            "2025-11-10",
+                            "2025-11-11",
+                            "2025-11-12",
+                            "2025-11-13",
+                            "2025-11-14",
+                            "2025-11-15",
+                            "2025-11-16",
+                            "2025-11-17",
+                            "2025-11-18",
+                            "2025-11-19",
+                            "2025-11-20",
+                            "2025-11-21",
+                            "2025-11-22",
+                            "2025-11-23",
+                            "2025-11-24",
+                            "2025-11-25",
+                            "2025-11-26",
+                            "2025-11-27",
+                            "2025-11-28",
+                            "2025-11-29",
+                            "2025-11-30"
+                        ],
+                        "time": [
+                            {
+                                "start": "20:00:00",
+                                "end": "21:00:00",
+                                "num": 1
+                            }
+                        ]
+                    }
+                ]
+            },
+            "componentId": "_911f6661-ae96-4adf-9183-b71e0ed1b108"
+        },
+        {
+            "anchorTitle": null,
+            "componentCode": "column-container",
+            "groupCode": "container",
+            "groupName": "容器",
+            "componentName": "多列容器",
+            "editFlag": 0,
+            "style": {
+                "display": "flex",
+                "flexDirection": "row",
+                "alignItems": "stretch",
+                "justifyContent": "flex-start",
+                "marginLeft": "18px",
+                "marginBottom": "60px",
+                "marginTop": "40px"
+            },
+            "data": {
+                "columnNum": 4
+            },
+            "childrenData": [
+                {
+                    "anchorTitle": null,
+                    "componentCode": "image",
+                    "groupCode": "common",
+                    "groupName": "常用组件",
+                    "componentName": "图片",
+                    "editFlag": 0,
+                    "data": {
+                        "url": "https://static-d2s-test.platform-loreal.cn/o2-resources/metadata/o2cms/2/O2-PUB/1701832081969_head-logo2.4d29d9b1.png",
+                        "width": "12px",
+                        "height": "12px",
+                        "objectFit": "scale-down",
+                        "objectPosition": "center",
+                        "hasCover": false,
+                        "cdnUrl": "https://static-d2s-test.platform-loreal.cn/o2-resources/metadata/o2cms/2/O2-PUB/1701832081969_head-logo2.4d29d9b1.png",
+                        "path": "/o2-resources/metadata/o2cms/2/O2-PUB/1701832081969_head-logo2.4d29d9b1.png"
+                    },
+                    "style": {
+                        "width": "12px",
+                        "height": "12px"
+                    },
+                    "childrenData": [],
+                    "componentId": "_feb16b39-3c16-400c-80f3-74a873846d0c"
+                },
+                {
+                    "anchorTitle": null,
+                    "componentCode": "text",
+                    "groupCode": "common",
+                    "groupName": "常用组件",
+                    "componentName": "文字",
+                    "editFlag": 0,
+                    "data": {
+                        "text": "沪ICP备08100043号-73",
+                        "overflowMode": "unset"
+                    },
+                    "style": {
+                        "display": "block",
+                        "fontSize": "10px",
+                        "fontWeight": "500",
+                        "paddingTop": "0px",
+                        "paddingBottom": "0px",
+                        "paddingLeft": "0px",
+                        "color": "#000000",
+                        "marginLeft": "7px"
+                    },
+                    "childrenData": [],
+                    "componentId": "_298e0e6c-2148-4971-9d67-1cd6f22bc961",
+                    "action": {
+                        "code": "@@fixed",
+                        "data": "https://static-d2s-prod.platform-loreal.cn/o2-resources/static/0/O2-PUB/ICP.png"
+                    }
+                },
+                {
+                    "anchorTitle": null,
+                    "componentCode": "image",
+                    "groupCode": "common",
+                    "groupName": "常用组件",
+                    "componentName": "图片",
+                    "editFlag": 0,
+                    "data": {
+                        "url": "https://static-d2s-test.platform-loreal.cn/o2-resources/metadata/o2cms/2/O2-PUB/1701832081969_head-logo2.4d29d9b1.png",
+                        "width": "12px",
+                        "height": "12px",
+                        "objectFit": "scale-down",
+                        "objectPosition": "center",
+                        "hasCover": false,
+                        "cdnUrl": "https://static-d2s-test.platform-loreal.cn/o2-resources/metadata/o2cms/2/O2-PUB/1701832081969_head-logo2.4d29d9b1.png",
+                        "path": "/o2-resources/metadata/o2cms/2/O2-PUB/1701832081969_head-logo2.4d29d9b1.png"
+                    },
+                    "style": {
+                        "width": "12px",
+                        "height": "12px"
+                    },
+                    "childrenData": [],
+                    "componentId": "_1fa11b35-442c-4b9a-8f33-82aabdac7ee4"
+                },
+                {
+                    "anchorTitle": null,
+                    "componentCode": "text",
+                    "groupCode": "common",
+                    "groupName": "常用组件",
+                    "componentName": "文字",
+                    "editFlag": 0,
+                    "data": {
+                        "text": "沪公网安备31010602006113号",
+                        "overflowMode": "unset"
+                    },
+                    "style": {
+                        "display": "block",
+                        "fontSize": "10px",
+                        "fontWeight": "500",
+                        "paddingTop": "0px",
+                        "paddingBottom": "0px",
+                        "color": "#000000",
+                        "marginLeft": "7px"
+                    },
+                    "childrenData": [],
+                    "componentId": "_0a0dd914-0c91-4103-89a6-1932a6a657bf",
+                    "action": {
+                        "code": "@@fixed",
+                        "data": "https://static-d2s-prod.platform-loreal.cn/o2-resources/static/0/O2-PUB/gongan.png"
+                    },
+                    "enableTrack": 1,
+                    "trackName": "备案信息"
+                }
+            ],
+            "componentId": "_7b0d70fe-6a44-4b55-8817-41affea4b9a1"
+        }
+    ],
+    "style": {},
+    "screenTypeCode": "MOBILE",
+    "shareInfo": {
+        "title": "",
+        "shareFlag": 1
+    }
+}
