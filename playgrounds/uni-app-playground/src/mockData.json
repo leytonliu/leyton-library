@@ -384,6 +384,29 @@
         },
         {
             "anchorTitle": null,
+            "componentCode": "text",
+            "groupCode": "common",
+            "groupName": "常用组件",
+            "componentName": "文字",
+            "editFlag": 0,
+            "data": {
+                "text": "使用助手",
+                "overflowMode": "unset"
+            },
+            "style": {
+                "display": "block",
+                "fontSize": "22px",
+                "fontWeight": "500",
+                "paddingLeft": "18px",
+                "paddingRight": "17px",
+                "color": "black",
+                "height": "29px"
+            },
+            "childrenData": [],
+            "componentId": "_de445668-b486-4246-8e45-ca9519e7a364"
+        },
+        {
+            "anchorTitle": null,
             "componentCode": "rows-container",
             "groupCode": "container",
             "groupName": "容器",

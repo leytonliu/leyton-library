@@ -13,10 +13,11 @@
 
 <script lang="ts" setup>
 import { computed, provide, Ref, toRef } from 'vue';
-import { CmsPageConfig, CmsEnvConfig } from '../cms';
+import { CmsPageConfig, CmsEnvConfig, CmsBindingValueManager } from '../cms';
 import { convertStyleToString } from './utils/utils';
 import cmsBaseComponent from './cms-base-component.vue';
 import { defaultCmsEnvConfig, defaultCmsPageConfig } from './utils/constants';
+import { createCmsBindingValue } from './binding/createCmsBindValue';
 
 const props = withDefaults(
   defineProps<{
@@ -32,6 +33,16 @@ const props = withDefaults(
 defineOptions({
   name: 'CmsPreview',
 });
+
+/**
+ * 创建数据绑定管理器
+ */
+const bindingValue = createCmsBindingValue(props.data);
+
+/**
+ * 值绑定管理对象
+ */
+provide<CmsBindingValueManager>('bindingValue', bindingValue);
 
 /**
  * 环境变量

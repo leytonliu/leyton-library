@@ -1,5 +1,5 @@
-import { PropType } from 'vue';
-import { CmsComponentConfig, CmsStyleObject } from '../../cms';
+import { CSSProperties, PropType } from 'vue';
+import { CmsComponentConfig } from '../../cms';
 
 export const defaultCmsPageConfig = {
   name: '',
@@ -27,7 +27,7 @@ export const cmsBaseComponentProps = {
     required: true,
   },
   childrenStyles: {
-    type: Object as PropType<CmsStyleObject>,
+    type: Object as PropType<CSSProperties>,
   },
   autoGetRect: { type: String },
   isFirstFloorNode: { type: Boolean, default: false },

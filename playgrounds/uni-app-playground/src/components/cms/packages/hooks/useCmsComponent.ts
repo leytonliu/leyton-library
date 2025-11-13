@@ -1,6 +1,14 @@
-import { computed, CSSProperties, getCurrentInstance, inject, Ref } from 'vue';
+import {
+  computed,
+  CSSProperties,
+  getCurrentInstance,
+  inject,
+  onMounted,
+  Ref,
+} from 'vue';
 import {
   CmsBaseComponentProps,
+  CmsBindingValueManager,
   CmsEnvConfig,
   CmsPageConfig,
   UseCmsComponentOptions,
@@ -14,6 +22,7 @@ const useCmsComponent = (
   const instance = getCurrentInstance();
   const envConfig = inject<Ref<CmsEnvConfig>>('envConfig');
   const cmsPageConfig = inject<Ref<CmsPageConfig>>('cmsPageConfig');
+  const bindingValue = inject<CmsBindingValueManager>('bindingValue');
 
   /**
    * 样式合并策略
@@ -57,19 +66,40 @@ const useCmsComponent = (
   /**
    * 组件样式类名
    */
-  const classes = computed(() =>
-    [
-      kebabCase(instance?.type?.name || ''),
+  const classes = computed(() => {
+    const componentName = instance?.type?.name || '';
+    return [
+      kebabCase(componentName),
       'cms-visual-editor-base-container',
       props.data.componentId,
-    ].filter(Boolean)
-  );
+    ].filter(Boolean);
+  });
 
   /**
    * 是否为BaseComponent
    */
   const isBaseComponent = computed(() => {
     return !!options?.isBaseComponent;
+  });
+
+  const getRect = () => {
+    return new Promise((resolve) => {
+      uni
+        .createSelectorQuery()
+        .in(instance)
+        .select('.cms-visual-editor-base-container')
+        .boundingClientRect()
+        .exec((rect = []) => resolve(rect));
+    });
+  };
+
+  const getBindingValue = (value: string) => {
+    return bindingValue?.getBindingValue(value, props.data);
+  };
+
+  onMounted(async () => {
+    const rect = await getRect();
+    console.log('rect', rect);
   });
 
   return {
@@ -79,6 +109,7 @@ const useCmsComponent = (
     styles,
     classes,
     isBaseComponent,
+    getBindingValue,
   };
 };
 export default useCmsComponent;

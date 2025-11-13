@@ -1,0 +1,62 @@
+<template>
+  <view
+    v-if="displayText"
+    :class="classes"
+    :data-component="data.componentCode"
+    :style="styles"
+  >
+    <view :style="textStyles">
+      {{ displayText }}
+    </view>
+  </view>
+</template>
+
+<script lang="ts" setup>
+import { computed } from 'vue';
+
+import { CmsBaseComponentProps } from '../../cms';
+import { cmsBaseComponentDefaults } from '../utils/constants';
+import useCmsComponent from '../hooks/useCmsComponent';
+import { convertStyleToString } from '../utils/utils';
+
+defineOptions({
+  name: 'CmsText',
+});
+
+const props = withDefaults(defineProps<CmsBaseComponentProps>(), {
+  ...cmsBaseComponentDefaults,
+});
+
+const { classes, styles, getBindingValue } = useCmsComponent(props);
+
+const displayText = computed(() => {
+  const boundValue = getBindingValue(props.data.data.text);
+  return boundValue || props.data.data.text;
+});
+
+const textStyles = computed(() => {
+  const mode = props.data.data.overflowMode;
+
+  const styleMap = {
+    single: {
+      overflow: 'hidden',
+      'text-overflow': 'ellipsis',
+      display: '-webkit-box',
+      '-webkit-box-orient': 'vertical',
+      '-webkit-line-clamp': '1',
+    },
+    multiple: {
+      overflow: 'hidden',
+      'text-overflow': 'ellipsis',
+      display: '-webkit-box',
+      '-webkit-box-orient': 'vertical',
+      '-webkit-line-clamp': '2',
+      height: 'inherit',
+    },
+  } as const;
+
+  const textStyle = styleMap[mode as 'single' | 'multiple'] || {};
+
+  return convertStyleToString(textStyle);
+});
+</script>

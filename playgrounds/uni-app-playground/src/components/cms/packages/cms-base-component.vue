@@ -1,13 +1,21 @@
 <template>
   <view @click="haneleClick">
     cmsBaseComponent
-    <cms-button
-      v-if="data.componentCode === 'button'"
+    <cms-text
+      v-if="data.componentCode === 'text'"
       :data="data"
       :index="index"
-      :key="data.componentId"
+      :key="`text-${data.componentId}`"
       :children-styles="childrenStyles"
     />
+    <cms-button
+      v-else-if="data.componentCode === 'button'"
+      :data="data"
+      :index="index"
+      :key="`button-${data.componentId}`"
+      :children-styles="childrenStyles"
+    />
+    <view v-else> ss </view>
   </view>
 </template>
 
@@ -15,6 +23,7 @@
 import { CmsBaseComponentProps } from '../cms';
 import { cmsBaseComponentDefaults } from './utils/constants';
 import useCmsComponent from './hooks/useCmsComponent';
+import CmsText from './components/cms-text.vue';
 import CmsButton from './components/cms-button.vue';
 
 defineOptions({

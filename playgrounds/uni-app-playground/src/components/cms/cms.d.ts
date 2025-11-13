@@ -71,3 +71,21 @@ export interface UseCmsComponentOptions {
    */
   isBaseComponent?: boolean;
 }
+
+export interface CmsBindingValueConfig {
+  code: string;
+  name: string;
+  getter: (data: CmsComponentData) => { done: boolean; val: any };
+}
+
+export interface CmsBindingValueManager {
+  state: { configs: CmsBindingValueConfig[] };
+  registry: (config: CmsBindingValueConfig) => void;
+  getBindingValue: (value: string, data: CmsComponentData) => any;
+  actualParentMapper: ParentMapperWrapper;
+  // (以后还可以加上 fakeDataManager)
+}
+
+export type CmsBindingPlugin = (params: {
+  bindingValue: CmsBindingValueManager;
+}) => void;
