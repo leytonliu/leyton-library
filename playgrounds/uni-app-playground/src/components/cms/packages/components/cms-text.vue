@@ -32,8 +32,7 @@ const { classes, styles, getBindingValue, handleTapBaseContainer } =
   useCmsComponent(props);
 
 const displayText = computed(() => {
-  const boundValue = getBindingValue(props.data.data.text);
-  return boundValue || props.data.data.text;
+  return getBindingValue(props.data.data.text);
 });
 
 const textStyles = computed(() => {

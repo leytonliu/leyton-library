@@ -16,7 +16,7 @@ import CmsPage from '@/components/cms/cms-page.vue';
 <style lang="scss" scoped>
 .cms-test-page {
   min-height: 100vh;
-  background-color: #f5f5f5;
+  background-color: #fff;
 }
 
 .test-header {

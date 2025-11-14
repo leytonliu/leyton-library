@@ -3,6 +3,7 @@ import {
   CSSProperties,
   getCurrentInstance,
   inject,
+  nextTick,
   onMounted,
   onUnmounted,
   Ref,
@@ -16,18 +17,19 @@ import {
   UseCmsComponentOptions,
 } from '../../cms';
 import { convertStyleToString, kebabCase } from '../utils/utils';
-import { HeightCoordinator, heightCoordinatorKey } from './useAdaptiveHeight';
+import { HeightCoordinator } from './useAdaptiveHeight';
+import { actionRenderKey, bindingValueKey, cmsPageConfigKey, envConfigKey, heightCoordinatorKey } from '../utils/keys';
 
 const useCmsComponent = (
   props: CmsBaseComponentProps,
   options?: UseCmsComponentOptions
 ) => {
   const instance = getCurrentInstance();
-  const envConfig = inject<Ref<CmsEnvConfig>>('envConfig');
-  const cmsPageConfig = inject<Ref<CmsPageConfig>>('cmsPageConfig');
-  const bindingValue = inject<CmsBindingValueManager>('bindingValue');
-  const actionRender = inject<CmsActionRenderManager>('actionRender');
-  const coordinator = inject<HeightCoordinator>(heightCoordinatorKey);
+  const envConfig = inject<Ref<CmsEnvConfig>>(envConfigKey);
+  const cmsPageConfig = inject<Ref<CmsPageConfig>>(cmsPageConfigKey);
+  const bindingValue = inject<CmsBindingValueManager>(bindingValueKey);
+  const actionRender = inject<CmsActionRenderManager>(actionRenderKey);
+  const coordinator = inject<HeightCoordinator | null>(heightCoordinatorKey, null);
 
   /**
    * 样式合并策略
@@ -101,23 +103,34 @@ const useCmsComponent = (
     actionRender?.handleTapBaseContainer(props.data);
   };
 
-  onMounted(async () => {
+  /**
+   * 收集当前容器高度并上报
+   * @returns 
+   */
+  const measureAndReportHeight = () => {
     // 如果父组件没有“要求”上报身高(coordinator为null)，则跳过(并且跳过 BaseComponent)
     if (!coordinator || isBaseComponent.value || !instance) {
       return;
     }
-    uni
-      .createSelectorQuery()
-      .in(instance) // 确保在当前组件实例内查找
-      .select('.cms-visual-editor-base-container')
-      .boundingClientRect()
-      .exec((res) => {
-        // 3. 上报身高
-        if (res && res[0] && res[0].height) {
-          // [!] 使用 componentId 作为唯一的标识符
-          coordinator.reportHeight(props.data.componentId, res[0].height);
-        }
-      });
+    // TODO: 研究移除setTimeout
+    setTimeout(() => {
+      uni.createSelectorQuery().in(instance)
+        .select('.cms-visual-editor-base-container')
+        .boundingClientRect()
+        .exec((res) => {
+          if (res && res[0] && res[0].height) {
+            coordinator.reportHeight(props.data.componentId, res[0].height);
+          }
+        });
+    }, 300)
+
+  };
+
+  onMounted(async () => {
+    const { autoReportHeightOnMounted = true } = options || {};
+    if (autoReportHeightOnMounted) {
+      measureAndReportHeight();
+    }
   });
 
   onUnmounted(() => {
@@ -135,6 +148,7 @@ const useCmsComponent = (
     isBaseComponent,
     getBindingValue,
     handleTapBaseContainer,
+    measureAndReportHeight
   };
 };
 export default useCmsComponent;

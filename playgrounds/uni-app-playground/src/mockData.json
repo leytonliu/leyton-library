@@ -384,40 +384,6 @@
         },
         {
             "anchorTitle": null,
-            "componentCode": "text",
-            "groupCode": "common",
-            "groupName": "常用组件",
-            "componentName": "文字",
-            "editFlag": 0,
-            "data": {
-                "text": "使用助手",
-                "overflowMode": "unset"
-            },
-            "style": {
-                "display": "block",
-                "fontSize": "22px",
-                "fontWeight": "500",
-                "paddingLeft": "18px",
-                "paddingRight": "17px",
-                "color": "black",
-                "height": "29px"
-            },
-            "childrenData": [],
-            "componentId": "_de445668-b486-4246-8e45-ca9519e7a364",
-            "action": {
-                "code": "pdp",
-                "data": {
-                    "entityName": "欧莱雅PRO 光能吹风机",
-                    "entityCode": "P20250610000001",
-                    "entityId": 9722,
-                    "platformProductCode": "P20250610000001",
-                    "mediaUrl": "/o2-resources/o2pcm/images/ow-1/op-p20250610000001/zh_cn/2/O2-PUB/op_p20250610000001_m_001_1750909411140.jpg",
-                    "lowedPrice": "2980.00"
-                }
-            }
-        },
-        {
-            "anchorTitle": null,
             "componentCode": "rows-container",
             "groupCode": "container",
             "groupName": "容器",
@@ -3770,7 +3736,7 @@
                     "componentName": "图片",
                     "editFlag": 0,
                     "data": {
-                        "url": "https://static-d2s-test.platform-loreal.cn/o2-resources/metadata/o2cms/2/O2-PUB/1701832081969_head-logo2.4d29d9b1.png",
+                        "url": "https://static-d2s-prod.platform-loreal.cn/o2-resources/metadata/o2cms/2/O2-PUB/1761811018225_弹窗.gif",
                         "width": "12px",
                         "height": "12px",
                         "objectFit": "scale-down",

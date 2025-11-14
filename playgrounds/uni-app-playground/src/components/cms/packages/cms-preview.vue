@@ -25,6 +25,12 @@ import { defaultCmsEnvConfig, defaultCmsPageConfig } from './utils/constants';
 import { createCmsBindingValue } from './binding/createCmsBindValue';
 import { createCmsActionRender } from './action/createCmsActionRender';
 import { customActionRender } from './action/customActionRender';
+import {
+  actionRenderKey,
+  bindingValueKey,
+  cmsPageConfigKey,
+  envConfigKey,
+} from './utils/keys';
 
 const props = withDefaults(
   defineProps<{
@@ -42,32 +48,27 @@ defineOptions({
 });
 
 /**
+ * 环境变量
+ */
+provide<Ref<CmsEnvConfig>>(envConfigKey, toRef(props, 'envConfig'));
+
+/**
+ * 页面配置
+ */
+provide<Ref<CmsPageConfig>>(cmsPageConfigKey, toRef(props, 'data'));
+
+/**
  * 创建数据绑定管理器
  */
 const bindingValue = createCmsBindingValue(props.data);
-provide<CmsBindingValueManager>('bindingValue', bindingValue);
+provide<CmsBindingValueManager>(bindingValueKey, bindingValue);
 
 /**
  * 创建动作管理器
  */
 const actionRender = createCmsActionRender(bindingValue);
 customActionRender({ actionRender }); // 注册自定义动作
-provide<CmsActionRenderManager>('actionRender', actionRender);
-
-/**
- * 值绑定管理对象
- */
-provide<CmsBindingValueManager>('bindingValue', bindingValue);
-
-/**
- * 环境变量
- */
-provide<Ref<CmsEnvConfig>>('envConfig', toRef(props, 'envConfig'));
-
-/**
- * 页面配置
- */
-provide<Ref<CmsPageConfig>>('cmsPageConfig', toRef(props, 'data'));
+provide<CmsActionRenderManager>(actionRenderKey, actionRender);
 
 /**
  * 当前组件样式

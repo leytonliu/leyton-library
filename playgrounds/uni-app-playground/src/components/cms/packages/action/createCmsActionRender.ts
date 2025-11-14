@@ -28,8 +28,7 @@ export const createCmsActionRender = (
     if (!!data && !!data.action && !!data.action.code) {
       const handler = state.configs[data.action.code];
       if (!handler) {
-        // 没有处理action code：${data.action.code} 的动作配置！
-        uni.showModal({ content: `${data.action.code}` });
+        console.log(`没有注册 ${data.action.code} 的动作配置！`);
       } else {
         handler(data, bindValue);
       }

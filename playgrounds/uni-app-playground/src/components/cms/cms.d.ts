@@ -70,6 +70,10 @@ export interface UseCmsComponentOptions {
    *
    */
   isBaseComponent?: boolean;
+  /**
+   * 是否在 onMounted 中向父组件自动上报当前容器高度（图片类型组件需要在@load中手动上报）
+   */
+  autoReportHeightOnMounted?: boolean
 }
 
 export interface CmsBindingValueConfig {
