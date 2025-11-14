@@ -1,8 +1,8 @@
 <template>
   <view :class="classes" :data-component="data.componentCode" :style="styles">
     <button :class="buttonClasses" :style="buttonStyles">
-      <!-- {{ getBindingValue(data.data.text) }} -->
-      <text v-if="!!data.data.arrow" class="iconfont icon-right" />
+      {{ getBindingValue(data.data.text) }}
+      <!-- <text v-if="!!data.data.arrow" class="iconfont icon-right" /> -->
     </button>
   </view>
 </template>
@@ -23,7 +23,7 @@ const props = withDefaults(defineProps<CmsBaseComponentProps>(), {
 });
 
 // 注入cms组件上下文
-const { classes, styles } = useCmsComponent(props);
+const { classes, styles, getBindingValue } = useCmsComponent(props);
 
 const buttonClasses = computed(() => {
   return [

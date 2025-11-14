@@ -1,6 +1,5 @@
 <template>
-  <view @click="haneleClick">
-    cmsBaseComponent
+  <view>
     <cms-text
       v-if="data.componentCode === 'text'"
       :data="data"
@@ -15,7 +14,14 @@
       :key="`button-${data.componentId}`"
       :children-styles="childrenStyles"
     />
-    <view v-else> ss </view>
+    <cms-column-container
+      v-else-if="data.componentCode === 'column-container'"
+      :data="data"
+      :index="index"
+      :key="`column-container-${data.componentId}`"
+      :children-styles="childrenStyles"
+    />
+    <view v-else> {{ data.componentCode }} </view>
   </view>
 </template>
 
@@ -25,6 +31,7 @@ import { cmsBaseComponentDefaults } from './utils/constants';
 import useCmsComponent from './hooks/useCmsComponent';
 import CmsText from './components/cms-text.vue';
 import CmsButton from './components/cms-button.vue';
+import cmsColumnContainer from './components/cms-column-container.vue';
 
 defineOptions({
   name: 'CmsBaseComponent',
@@ -41,12 +48,6 @@ const props = withDefaults(defineProps<CmsBaseComponentProps>(), {
 const { envConfig, cmsPageConfig } = useCmsComponent(props, {
   isBaseComponent: true, // 当前组件为 cms-base-component
 });
-
-const haneleClick = () => {
-  console.log('props.data', props.data);
-  console.log('envConfig', envConfig?.value);
-  console.log('cmsPageConfig', cmsPageConfig?.value);
-};
 </script>
 
 <style lang="scss">

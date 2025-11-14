@@ -403,7 +403,18 @@
                 "height": "29px"
             },
             "childrenData": [],
-            "componentId": "_de445668-b486-4246-8e45-ca9519e7a364"
+            "componentId": "_de445668-b486-4246-8e45-ca9519e7a364",
+            "action": {
+                "code": "pdp",
+                "data": {
+                    "entityName": "欧莱雅PRO 光能吹风机",
+                    "entityCode": "P20250610000001",
+                    "entityId": 9722,
+                    "platformProductCode": "P20250610000001",
+                    "mediaUrl": "/o2-resources/o2pcm/images/ow-1/op-p20250610000001/zh_cn/2/O2-PUB/op_p20250610000001_m_001_1750909411140.jpg",
+                    "lowedPrice": "2980.00"
+                }
+            }
         },
         {
             "anchorTitle": null,

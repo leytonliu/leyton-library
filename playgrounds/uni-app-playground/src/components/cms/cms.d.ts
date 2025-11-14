@@ -1,4 +1,4 @@
-// cms.d.ts
+// cms.ts
 import type { CSSProperties } from 'vue';
 
 /**
@@ -77,15 +77,40 @@ export interface CmsBindingValueConfig {
   name: string;
   getter: (data: CmsComponentData) => { done: boolean; val: any };
 }
+export type CmsParentMapperWrapper = {
+  value: Record<string, CmsComponentData>;
+};
 
 export interface CmsBindingValueManager {
   state: { configs: CmsBindingValueConfig[] };
   registry: (config: CmsBindingValueConfig) => void;
   getBindingValue: (value: string, data: CmsComponentData) => any;
-  actualParentMapper: ParentMapperWrapper;
+  actualParentMapper: CmsParentMapperWrapper;
   // (以后还可以加上 fakeDataManager)
 }
 
 export type CmsBindingPlugin = (params: {
   bindingValue: CmsBindingValueManager;
 }) => void;
+
+/**
+ * Cms Action 相关
+ */
+export interface CmsActionState {
+  configs: Record<string, CmsActionHandler>;
+}
+
+export type CmsActionHandler = (
+  data: CmsComponentData,
+  bindValue?: CmsBindingValueManager
+) => void;
+export interface CmsActionRenderManager {
+  registryActionRender: (
+    actionCode: string, // 动作的唯一标识 (如 'bind-weapp-page')
+    handler: CmsActionHandler // 触发时执行的函数
+  ) => void;
+  handleTapBaseContainer: (data: CmsComponentData) => void;
+}
+export interface CmsCustomActionParams {
+  actionRender: CmsActionRenderManager;
+}

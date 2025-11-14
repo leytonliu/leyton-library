@@ -2,6 +2,21 @@ import { CSSProperties } from 'vue';
 import { CmsComponentData } from '../../cms';
 
 /**
+ * 按顺序获取第一个“有效”的值 (即非 null 且非 undefined 的值)。
+ * @param args - 任意数量的参数
+ * @returns 第一个有效值，如果全无效则返回 undefined
+ */
+export const getFirstDefinedValue = (...args: any[]): any => {
+  for (const arg of args) {
+    // 检查非 null 且非 undefined 的值
+    if (arg !== null && arg !== undefined) {
+      return arg; // 立即返回
+    }
+  }
+  return undefined;
+};
+
+/**
  * 将驼峰命名（camelCase / PascalCase）字符串
  * 转换为中划线命名（kebab-case）字符串。
  *

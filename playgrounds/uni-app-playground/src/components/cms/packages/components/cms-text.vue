@@ -4,6 +4,7 @@
     :class="classes"
     :data-component="data.componentCode"
     :style="styles"
+    @tap="handleTapBaseContainer"
   >
     <view :style="textStyles">
       {{ displayText }}
@@ -27,7 +28,8 @@ const props = withDefaults(defineProps<CmsBaseComponentProps>(), {
   ...cmsBaseComponentDefaults,
 });
 
-const { classes, styles, getBindingValue } = useCmsComponent(props);
+const { classes, styles, getBindingValue, handleTapBaseContainer } =
+  useCmsComponent(props);
 
 const displayText = computed(() => {
   const boundValue = getBindingValue(props.data.data.text);

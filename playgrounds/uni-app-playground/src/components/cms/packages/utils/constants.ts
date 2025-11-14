@@ -1,5 +1,5 @@
 import { CSSProperties, PropType } from 'vue';
-import { CmsComponentConfig } from '../../cms';
+import { CmsComponentConfig, CmsComponentData } from '../../cms';
 
 export const defaultCmsPageConfig = {
   name: '',

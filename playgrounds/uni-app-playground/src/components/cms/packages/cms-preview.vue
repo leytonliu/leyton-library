@@ -13,11 +13,18 @@
 
 <script lang="ts" setup>
 import { computed, provide, Ref, toRef } from 'vue';
-import { CmsPageConfig, CmsEnvConfig, CmsBindingValueManager } from '../cms';
+import {
+  CmsPageConfig,
+  CmsEnvConfig,
+  CmsBindingValueManager,
+  CmsActionRenderManager,
+} from '../cms';
 import { convertStyleToString } from './utils/utils';
 import cmsBaseComponent from './cms-base-component.vue';
 import { defaultCmsEnvConfig, defaultCmsPageConfig } from './utils/constants';
 import { createCmsBindingValue } from './binding/createCmsBindValue';
+import { createCmsActionRender } from './action/createCmsActionRender';
+import { customActionRender } from './action/customActionRender';
 
 const props = withDefaults(
   defineProps<{
@@ -38,6 +45,14 @@ defineOptions({
  * 创建数据绑定管理器
  */
 const bindingValue = createCmsBindingValue(props.data);
+provide<CmsBindingValueManager>('bindingValue', bindingValue);
+
+/**
+ * 创建动作管理器
+ */
+const actionRender = createCmsActionRender(bindingValue);
+customActionRender({ actionRender }); // 注册自定义动作
+provide<CmsActionRenderManager>('actionRender', actionRender);
 
 /**
  * 值绑定管理对象
