@@ -8,7 +8,7 @@
     },
     "design": {
         "width": "375px",
-        "minHeight": "751px"
+        "minHeight": "750px"
     },
     "childrenData": [
         {
@@ -19,7 +19,7 @@
             "componentName": "轮播容器",
             "editFlag": 0,
             "data": {
-                "carouselNum": 11,
+                "carouselNum": 12,
                 "height": 350,
                 "autoplay": true,
                 "hideButton": true,
@@ -31,9 +31,40 @@
                 "inActiveColor": "#b3b3b3"
             },
             "readonlyData": {
-                "activeIndex": 2
+                "activeIndex": 0
             },
             "childrenData": [
+                {
+                    "anchorTitle": null,
+                    "componentCode": "image",
+                    "groupCode": "common",
+                    "groupName": "常用组件",
+                    "componentName": "图片",
+                    "editFlag": 0,
+                    "data": {
+                        "url": "https://static-d2s-prod.platform-loreal.cn/o2-resources/metadata/o2cms/2/O2-PUB/1762918765027_首页banner 750 700.png",
+                        "width": "100%",
+                        "height": "100%",
+                        "objectFit": "scale-down",
+                        "objectPosition": "center",
+                        "hasCover": false,
+                        "cdnUrl": "https://static-d2s-prod.platform-loreal.cn/o2-resources/metadata/o2cms/2/O2-PUB/1762918765027_首页banner 750 700.png",
+                        "path": "/o2-resources/metadata/o2cms/2/O2-PUB/1762918765027_首页banner 750 700.png"
+                    },
+                    "style": {},
+                    "childrenData": [],
+                    "componentId": "_ae8e250b-e263-4ac0-9505-1e693e95c245",
+                    "enableTrack": 1,
+                    "trackName": "首页banner-疯四",
+                    "action": {
+                        "code": "bind-promotion-plp",
+                        "data": {
+                            "params": {
+                                "sceneCode": "S20250521000001"
+                            }
+                        }
+                    }
+                },
                 {
                     "anchorTitle": null,
                     "componentCode": "image",
@@ -867,13 +898,93 @@
                             "data": {
                                 "rowsNum": 3
                             },
-                            "childrenData": [],
+                            "childrenData": [
+                                {
+                                    "anchorTitle": null,
+                                    "componentCode": "image",
+                                    "groupCode": "common",
+                                    "groupName": "常用组件",
+                                    "componentName": "图片",
+                                    "editFlag": 0,
+                                    "data": {
+                                        "width": "100%",
+                                        "height": "100%",
+                                        "objectFit": "scale-down",
+                                        "objectPosition": "center",
+                                        "hasCover": false,
+                                        "cdnUrl": "https://static-d2s-prod.platform-loreal.cn/o2-resources/metadata/o2cms/2/O2-PUB/1711544705691_d2s 2.0-动态分子-双抗.gif",
+                                        "path": "/o2-resources/metadata/o2cms/2/O2-PUB/1711544705691_d2s 2.0-动态分子-双抗.gif",
+                                        "url": "https://static-d2s-prod.platform-loreal.cn/o2-resources/metadata/o2cms/2/O2-PUB/1711544705691_d2s 2.0-动态分子-双抗.gif"
+                                    },
+                                    "style": {
+                                        "borderRadius": "8px 8px 8px 8px",
+                                        "marginBottom": "3px",
+                                        "height": "150px",
+                                        "width": "150px"
+                                    },
+                                    "childrenData": [],
+                                    "componentId": "_2d303c2f-83e5-4f38-b0d7-b924ed7d3e05",
+                                    "enableTrack": 1,
+                                    "trackName": "产品百科双抗护理"
+                                },
+                                {
+                                    "anchorTitle": null,
+                                    "componentCode": "text",
+                                    "groupCode": "common",
+                                    "groupName": "常用组件",
+                                    "componentName": "文字",
+                                    "editFlag": 0,
+                                    "data": {
+                                        "text": "欧莱雅PRO",
+                                        "overflowMode": "unset",
+                                        "fontFamily": "font-regular"
+                                    },
+                                    "style": {
+                                        "display": "block",
+                                        "fontSize": "12px",
+                                        "fontWeight": "500",
+                                        "paddingLeft": "7px",
+                                        "paddingRight": "7px",
+                                        "color": "black"
+                                    },
+                                    "childrenData": [],
+                                    "componentId": "_12a26a72-8181-4b2b-a161-02327bbf7edb"
+                                },
+                                {
+                                    "anchorTitle": null,
+                                    "componentCode": "text",
+                                    "groupCode": "common",
+                                    "groupName": "常用组件",
+                                    "componentName": "文字",
+                                    "editFlag": 0,
+                                    "data": {
+                                        "text": "「双抗护理」",
+                                        "overflowMode": "unset",
+                                        "fontFamily": "font-regular"
+                                    },
+                                    "style": {
+                                        "display": "block",
+                                        "fontSize": "12px",
+                                        "fontWeight": "500",
+                                        "color": "black",
+                                        "textAlign": "center"
+                                    },
+                                    "childrenData": [],
+                                    "componentId": "_1a29f884-0108-45d6-8c29-b8d69b229b97"
+                                }
+                            ],
                             "componentId": "_2e98aeb1-2a64-48b3-ac61-ef2c35e0e4d0",
                             "enableTrack": 0,
                             "trackName": "产品百科双抗护理",
                             "action": {
                                 "code": "bind-clp",
-                                "data": {}
+                                "data": {
+                                    "page": {},
+                                    "params": {
+                                        "pageCode": "O2_DTC:OW-1:CLP:CLP202312160006",
+                                        "pageName": "欧莱雅PRO「双抗空间」"
+                                    }
+                                }
                             }
                         }
                     ],
@@ -923,13 +1034,89 @@
                             "data": {
                                 "rowsNum": 3
                             },
-                            "childrenData": [],
+                            "childrenData": [
+                                {
+                                    "anchorTitle": null,
+                                    "componentCode": "image",
+                                    "groupCode": "common",
+                                    "groupName": "常用组件",
+                                    "componentName": "图片",
+                                    "editFlag": 0,
+                                    "data": {
+                                        "url": "https://static-d2s-prod.platform-loreal.cn/o2-resources/metadata/o2cms/2/O2-PUB/1726732474296_iNOA-1.gif",
+                                        "width": "100%",
+                                        "height": "100%",
+                                        "objectFit": "cover",
+                                        "objectPosition": "center",
+                                        "hasCover": false,
+                                        "cdnUrl": "https://static-d2s-prod.platform-loreal.cn/o2-resources/metadata/o2cms/2/O2-PUB/1726732474296_iNOA-1.gif",
+                                        "path": "/o2-resources/metadata/o2cms/2/O2-PUB/1726732474296_iNOA-1.gif"
+                                    },
+                                    "style": {
+                                        "marginBottom": "3px",
+                                        "height": "150px",
+                                        "width": "150px"
+                                    },
+                                    "childrenData": [],
+                                    "componentId": "_9f0ca6cf-cb52-4d1b-9d43-bc045c198ea2",
+                                    "enableTrack": 1,
+                                    "trackName": "产品百科伊诺雅"
+                                },
+                                {
+                                    "anchorTitle": null,
+                                    "componentCode": "text",
+                                    "groupCode": "common",
+                                    "groupName": "常用组件",
+                                    "componentName": "文字",
+                                    "editFlag": 0,
+                                    "data": {
+                                        "text": "欧莱雅PRO",
+                                        "overflowMode": "unset",
+                                        "fontFamily": "font-regular"
+                                    },
+                                    "style": {
+                                        "display": "block",
+                                        "fontSize": "12px",
+                                        "fontWeight": "500",
+                                        "color": "black"
+                                    },
+                                    "childrenData": [],
+                                    "componentId": "_5afb2fda-917d-492d-8d4e-f8a5ceabc68d"
+                                },
+                                {
+                                    "anchorTitle": null,
+                                    "componentCode": "text",
+                                    "groupCode": "common",
+                                    "groupName": "常用组件",
+                                    "componentName": "文字",
+                                    "editFlag": 0,
+                                    "data": {
+                                        "text": "伊诺雅",
+                                        "overflowMode": "unset",
+                                        "fontFamily": "font-regular"
+                                    },
+                                    "style": {
+                                        "display": "block",
+                                        "fontSize": "12px",
+                                        "fontWeight": "500",
+                                        "color": "black"
+                                    },
+                                    "childrenData": [],
+                                    "componentId": "_c0620a18-8314-4b55-83a1-6c5644be40ae"
+                                }
+                            ],
                             "componentId": "_629614d4-db67-47f9-833f-beb3fb476b89",
                             "enableTrack": 0,
                             "trackName": "产品百科伊诺雅",
                             "action": {
                                 "code": "bind-clp",
-                                "data": {}
+                                "data": {
+                                    "page": {},
+                                    "params": {
+                                        "pageCode": "O2_DTC:OW-1:CLP:CLP202401240001",
+                                        "pageName": "伊诺雅「无氨染」"
+                                    }
+                                }
                             }
                         }
                     ],
@@ -980,13 +1167,93 @@
                             "data": {
                                 "rowsNum": 3
                             },
-                            "childrenData": [],
+                            "childrenData": [
+                                {
+                                    "anchorTitle": null,
+                                    "componentCode": "image",
+                                    "groupCode": "common",
+                                    "groupName": "常用组件",
+                                    "componentName": "图片",
+                                    "editFlag": 0,
+                                    "data": {
+                                        "width": "100%",
+                                        "height": "100%",
+                                        "objectFit": "cover",
+                                        "objectPosition": "center",
+                                        "hasCover": false,
+                                        "cdnUrl": "https://static-d2s-prod.platform-loreal.cn/o2-resources/metadata/o2cms/2/O2-PUB/1711544678683_d2s-2.0-动态分子-Maji.gif",
+                                        "path": "/o2-resources/metadata/o2cms/2/O2-PUB/1711544678683_d2s-2.0-动态分子-Maji.gif",
+                                        "url": "https://static-d2s-prod.platform-loreal.cn/o2-resources/metadata/o2cms/2/O2-PUB/1711544678683_d2s-2.0-动态分子-Maji.gif"
+                                    },
+                                    "style": {
+                                        "borderRadius": "8px",
+                                        "paddingBottom": "3px",
+                                        "display": "block",
+                                        "height": "150px",
+                                        "width": "150px"
+                                    },
+                                    "childrenData": [],
+                                    "componentId": "_c7165ce2-b3e3-4f51-b220-65aa21b6a644",
+                                    "enableTrack": 1,
+                                    "trackName": "产品百科MajiFASHION"
+                                },
+                                {
+                                    "anchorTitle": null,
+                                    "componentCode": "text",
+                                    "groupCode": "common",
+                                    "groupName": "常用组件",
+                                    "componentName": "文字",
+                                    "editFlag": 0,
+                                    "data": {
+                                        "text": "欧莱雅PRO",
+                                        "overflowMode": "unset",
+                                        "fontFamily": "font-regular"
+                                    },
+                                    "style": {
+                                        "display": "block",
+                                        "fontSize": "12px",
+                                        "fontWeight": "500",
+                                        "color": "black",
+                                        "textAlign": "center"
+                                    },
+                                    "childrenData": [],
+                                    "componentId": "_1ea59fe2-3e2b-4b57-a91d-fec1a107584d"
+                                },
+                                {
+                                    "anchorTitle": null,
+                                    "componentCode": "text",
+                                    "groupCode": "common",
+                                    "groupName": "常用组件",
+                                    "componentName": "文字",
+                                    "editFlag": 0,
+                                    "data": {
+                                        "text": "MajiFASHION",
+                                        "overflowMode": "unset",
+                                        "fontFamily": "font-regular"
+                                    },
+                                    "style": {
+                                        "display": "block",
+                                        "fontSize": "12px",
+                                        "fontWeight": "500",
+                                        "color": "black",
+                                        "textAlign": "center"
+                                    },
+                                    "childrenData": [],
+                                    "componentId": "_8a078270-96c9-47e8-89ea-2f0def9ad034"
+                                }
+                            ],
                             "componentId": "_3e0a67a7-44f1-42e8-8834-92dd7f98d2b3",
                             "enableTrack": 0,
                             "trackName": "产品百科MajiFASHION",
                             "action": {
                                 "code": "bind-clp",
-                                "data": {}
+                                "data": {
+                                    "page": {},
+                                    "params": {
+                                        "pageCode": "O2_DTC:OW-1:CLP:CLP202407030001",
+                                        "pageName": "MajiFASHION 染发"
+                                    }
+                                }
                             }
                         }
                     ],
@@ -1145,7 +1412,101 @@
                             "data": {},
                             "componentId": "_b6df1722-cdae-4d9b-b8aa-d78f5d0bcb6b",
                             "childrenData": [
-                                {}
+                                {
+                                    "anchorTitle": null,
+                                    "componentCode": "rows-container",
+                                    "groupCode": "container",
+                                    "groupName": "容器",
+                                    "componentName": "多行容器",
+                                    "editFlag": 0,
+                                    "style": {
+                                        "display": "flex",
+                                        "backgroundImage": "",
+                                        "backgroundSize": "",
+                                        "flexDirection": "column",
+                                        "justifyContent": "center",
+                                        "alignItems": "flex-start",
+                                        "borderRadius": "8px 8px 8px 8px"
+                                    },
+                                    "data": {
+                                        "rowsNum": 2,
+                                        "gutter": null
+                                    },
+                                    "childrenData": [
+                                        {
+                                            "anchorTitle": null,
+                                            "componentCode": "text",
+                                            "groupCode": "common",
+                                            "groupName": "常用组件",
+                                            "componentName": "文字",
+                                            "editFlag": 0,
+                                            "data": {
+                                                "text": "染膏色板大全",
+                                                "overflowMode": "unset",
+                                                "fontFamily": "font-regular"
+                                            },
+                                            "style": {
+                                                "display": "flex",
+                                                "fontSize": "20px",
+                                                "fontWeight": "500",
+                                                "color": "black",
+                                                "textAlign": "left",
+                                                "flexDirection": "row",
+                                                "justifyContent": "flex-start",
+                                                "alignItems": "flex-start",
+                                                "width": "150px",
+                                                "height": "30px",
+                                                "marginLeft": "20px",
+                                                "marginTop": "23px"
+                                            },
+                                            "childrenData": [],
+                                            "componentId": "_1a7458da-351e-43c3-9baf-ef0ede1f7a69"
+                                        },
+                                        {
+                                            "anchorTitle": null,
+                                            "componentCode": "text",
+                                            "groupCode": "common",
+                                            "groupName": "常用组件",
+                                            "componentName": "文字",
+                                            "editFlag": 0,
+                                            "data": {
+                                                "text": "立即挑选",
+                                                "overflowMode": "unset",
+                                                "fontFamily": "font-regular"
+                                            },
+                                            "style": {
+                                                "display": "flex",
+                                                "fontSize": "12px",
+                                                "fontWeight": "500",
+                                                "color": "black",
+                                                "width": "68px",
+                                                "height": "24px",
+                                                "border": "1px solid",
+                                                "borderRadius": "12px",
+                                                "textAlign": "center",
+                                                "marginLeft": "20px",
+                                                "flexDirection": "row",
+                                                "justifyContent": "center",
+                                                "alignItems": "center",
+                                                "marginTop": "10px",
+                                                "marginBottom": "23px"
+                                            },
+                                            "childrenData": [],
+                                            "componentId": "_9f4b4f8e-ebbe-4147-80da-1c47b97914a1"
+                                        }
+                                    ],
+                                    "componentId": "_66b5d8fa-bc29-4623-8b46-22f74e04822b",
+                                    "action": {
+                                        "code": "bind-clp",
+                                        "data": {
+                                            "page": {},
+                                            "params": {
+                                                "pageCode": "O2_DTC:OW-1:CLP:CLP202312160004",
+                                                "pageName": "色板大全"
+                                            }
+                                        }
+                                    }
+                                }
                             ]
                         }
                     ],
@@ -1197,7 +1558,101 @@
                             "data": {},
                             "componentId": "_cfab9cbe-fdd9-4dbd-8a7d-0f476a6f5dcb",
                             "childrenData": [
-                                {}
+                                {
+                                    "anchorTitle": null,
+                                    "componentCode": "rows-container",
+                                    "groupCode": "container",
+                                    "groupName": "容器",
+                                    "componentName": "多行容器",
+                                    "editFlag": 0,
+                                    "style": {
+                                        "display": "flex",
+                                        "backgroundImage": "",
+                                        "backgroundSize": "",
+                                        "flexDirection": "column",
+                                        "justifyContent": "center",
+                                        "alignItems": "flex-start",
+                                        "borderRadius": "8px"
+                                    },
+                                    "data": {
+                                        "rowsNum": 2,
+                                        "gutter": null
+                                    },
+                                    "childrenData": [
+                                        {
+                                            "anchorTitle": null,
+                                            "componentCode": "text",
+                                            "groupCode": "common",
+                                            "groupName": "常用组件",
+                                            "componentName": "文字",
+                                            "editFlag": 0,
+                                            "data": {
+                                                "text": "产品操作指南",
+                                                "overflowMode": "unset",
+                                                "fontFamily": "font-regular"
+                                            },
+                                            "style": {
+                                                "display": "flex",
+                                                "fontSize": "20px",
+                                                "fontWeight": "500",
+                                                "color": "black",
+                                                "textAlign": "left",
+                                                "marginTop": "23px",
+                                                "flexDirection": "row",
+                                                "justifyContent": "flex-start",
+                                                "alignItems": "flex-start",
+                                                "width": "150px",
+                                                "height": "30px",
+                                                "marginLeft": "20px"
+                                            },
+                                            "childrenData": [],
+                                            "componentId": "_a19d112d-9116-4e35-8a65-6db6a26b31d2"
+                                        },
+                                        {
+                                            "anchorTitle": null,
+                                            "componentCode": "text",
+                                            "groupCode": "common",
+                                            "groupName": "常用组件",
+                                            "componentName": "文字",
+                                            "editFlag": 0,
+                                            "data": {
+                                                "text": "即刻掌握",
+                                                "overflowMode": "unset",
+                                                "fontFamily": "font-regular"
+                                            },
+                                            "style": {
+                                                "display": "flex",
+                                                "fontSize": "12px",
+                                                "fontWeight": "500",
+                                                "color": "black",
+                                                "width": "68px",
+                                                "height": "24px",
+                                                "border": "1px solid",
+                                                "borderRadius": "12px",
+                                                "textAlign": "center",
+                                                "marginLeft": "20px",
+                                                "flexDirection": "row",
+                                                "justifyContent": "center",
+                                                "alignItems": "center",
+                                                "marginBottom": "23px",
+                                                "marginTop": "10px"
+                                            },
+                                            "childrenData": [],
+                                            "componentId": "_593e8b6e-b5fc-4b88-8a36-6aeaf29c131e"
+                                        }
+                                    ],
+                                    "componentId": "_06954e36-9d22-4182-8f16-792d86574c6e",
+                                    "action": {
+                                        "code": "bind-clp",
+                                        "data": {
+                                            "page": {},
+                                            "params": {
+                                                "pageCode": "O2_DTC:OW-1:CLP:CLP202312160003",
+                                                "pageName": "欧莱雅PRO产品操作指南"
+                                            }
+                                        }
+                                    }
+                                }
                             ]
                         }
                     ],
@@ -1413,7 +1868,7 @@
                             "code": "449189194",
                             "name": "法式染",
                             "typeCode": "VIDEO",
-                            "description": "",
+                            "description": "<h3 style=\"text-align: justify;\"><strong>概念篇</strong></h3><p style=\"text-align: justify;\"><span style=\"font-size: 14px;\"><strong> &nbsp; &nbsp;美感提升与作品构思</strong></span></p><p style=\"text-align: justify;\"><span style=\"font-size: 14px;\"><strong> &nbsp; &nbsp;教你在沙龙拍出法式大片</strong></span></p><p style=\"text-align: justify;\"><span style=\"font-size: 14px;\"><strong> &nbsp; &nbsp;中和亚洲发色号选择指南</strong></span></p><p style=\"text-align: justify;\"><span style=\"font-size: 14px;\"><strong> &nbsp; &nbsp;法式染助你业绩翻倍</strong></span></p><p style=\"text-align: justify;\"><span style=\"font-size: 14px;\"><strong> &nbsp; &nbsp;客人的痛点你解决了吗</strong></span></p><p style=\"text-align: justify;\"><span style=\"font-size: 14px;\"><strong> &nbsp; &nbsp;必学法式染的四大理由</strong></span></p><p style=\"text-align: justify;\"><span style=\"font-size: 14px;\"><strong> &nbsp; &nbsp;漂粉，你用对了吗？</strong></span></p><h3 style=\"text-align: justify;\"><strong>基础篇</strong></h3><p style=\"text-align: justify;\"><span style=\"font-size: 14px;\"><strong> &nbsp; &nbsp;微潮法式染-上</strong></span></p><p style=\"text-align: justify;\"><span style=\"font-size: 14px;\"><strong> &nbsp; &nbsp;微潮法式染-下</strong></span></p><p style=\"text-align: justify;\"><span style=\"font-size: 14px;\"><strong> &nbsp; &nbsp;漂出光感底色</strong></span></p><h3 style=\"text-align: justify;\"><strong>进阶篇</strong></h3><p style=\"text-align: justify;\"><span style=\"font-size: 14px;\"><strong> &nbsp; &nbsp;法式妆容与服装搭配</strong></span></p><p style=\"text-align: justify;\"><span style=\"font-size: 14px;\"><strong> &nbsp; &nbsp;最全法式染技巧进阶</strong></span></p><p style=\"text-align: justify;\"><span style=\"font-size: 14px;\"><strong> &nbsp; &nbsp;全球视野看法式染</strong></span></p><p style=\"text-align: justify;\"><span style=\"font-size: 14px;\"><strong> &nbsp; &nbsp;法式染大师Sasha全球直播</strong></span></p>",
                             "onlineShopCodes": "OW-1,OW-DIRECTSALON",
                             "postStatusCode": "POST",
                             "shelfStatusCode": "ON",
@@ -1509,7 +1964,32 @@
                             "shelfStatusCode": "ON",
                             "shelfStatusMeaning": "已上架",
                             "labelRelProductMap": {
-                                "CUSTOM": []
+                                "CUSTOM": [
+                                    {
+                                        "objectVersionNumber": 1,
+                                        "_token": "UZ7lDxKqxeo0SxH+w9U5aT7QzETbk0weA1umDQkZiczDLn7y+ityXNIzOVpFvv4SAYwyy2d+VRbC6iUvLk5k4e6EZcm/BcDxNKejPslwNEo=",
+                                        "labelId": 319,
+                                        "labelCode": "LABEL2023121458",
+                                        "labelName": "业绩提升篇",
+                                        "labelTypeCode": "CUSTOM",
+                                        "showFlag": 1,
+                                        "tenantId": 2,
+                                        "labelRelId": 486,
+                                        "platformProductId": 1030
+                                    },
+                                    {
+                                        "objectVersionNumber": 1,
+                                        "_token": "UZ7lDxKqxeo0SxH+w9U5aT7QzETbk0weA1umDQkZiczDLn7y+ityXNIzOVpFvv4SAYwyy2d+VRbC6iUvLk5k4dfcPVC1v2hY+x1foXKuhis=",
+                                        "labelId": 283,
+                                        "labelCode": "LABEL2023121422",
+                                        "labelName": "提案",
+                                        "labelTypeCode": "CUSTOM",
+                                        "showFlag": 1,
+                                        "tenantId": 2,
+                                        "labelRelId": 67,
+                                        "platformProductId": 1030
+                                    }
+                                ]
                             },
                             "tenantId": 2,
                             "tenantName": "欧莱雅",
@@ -1730,7 +2210,30 @@
                                 "columnNum": 1
                             },
                             "childrenData": [
-                                {}
+                                {
+                                    "anchorTitle": null,
+                                    "componentCode": "text",
+                                    "groupCode": "common",
+                                    "groupName": "常用组件",
+                                    "componentName": "文字",
+                                    "editFlag": 0,
+                                    "data": {
+                                        "text": "潘于兰",
+                                        "overflowMode": "unset",
+                                        "fontFamily": "font-light"
+                                    },
+                                    "style": {
+                                        "display": "block",
+                                        "fontSize": "10px",
+                                        "fontWeight": 200,
+                                        "paddingTop": "4px",
+                                        "paddingLeft": "32px",
+                                        "color": "black",
+                                        "paddingBottom": "2px"
+                                    },
+                                    "childrenData": [],
+                                    "componentId": "_21f74bb8-b06f-41e9-a42d-e9bb9c62bf21"
+                                }
                             ],
                             "componentId": "_8c077614-3aaf-4340-b830-8d0f4afc42b3"
                         }
@@ -1796,7 +2299,30 @@
                                 "columnNum": 1
                             },
                             "childrenData": [
-                                {}
+                                {
+                                    "anchorTitle": null,
+                                    "componentCode": "text",
+                                    "groupCode": "common",
+                                    "groupName": "常用组件",
+                                    "componentName": "文字",
+                                    "editFlag": 0,
+                                    "data": {
+                                        "text": "欧莱雅PRO认证色彩师",
+                                        "overflowMode": "unset",
+                                        "fontFamily": "font-light"
+                                    },
+                                    "style": {
+                                        "display": "block",
+                                        "fontSize": "10px",
+                                        "fontWeight": 200,
+                                        "paddingTop": "4px",
+                                        "paddingLeft": "32px",
+                                        "color": "black",
+                                        "paddingBottom": "2px"
+                                    },
+                                    "childrenData": [],
+                                    "componentId": "_eb189ac1-4287-4bd6-9ff2-bd59bc3b4021"
+                                }
                             ],
                             "componentId": "_b2f69d19-69ec-438a-868b-3353740fbf3a"
                         }
@@ -1855,11 +2381,134 @@
                                 "mediaUrl": "/o2-resources/o2pcm/videos/online/dm/2/O2-PUB/cover/3728093.png",
                                 "lowedPrice": null,
                                 "onlineShopName": "发型师",
-                                "product": {}
+                                "product": {
+                                    "platformProductId": 1030,
+                                    "platformProductCode": "3728093",
+                                    "mediaUrl": "/o2-resources/o2pcm/videos/online/dm/2/O2-PUB/cover/3728093.png",
+                                    "title": "一次来店 三次提案 原生发顾客",
+                                    "lowedPrice": null,
+                                    "displayPrice": null,
+                                    "currencyCode": null,
+                                    "entityId": 1030,
+                                    "entityCode": "3728093",
+                                    "entityName": "一次来店 三次提案 原生发顾客",
+                                    "serialNum": null,
+                                    "catalogCode": "OW-1",
+                                    "catalogVersionCode": "OW-1",
+                                    "entityStatus": null,
+                                    "entityStatusMeaning": null,
+                                    "mediaId": null,
+                                    "activeFlag": 1,
+                                    "shelfStatusCode": "ON",
+                                    "shelfStatusMeaning": "已上架",
+                                    "labelRelProductMap": {
+                                        "CUSTOM": [
+                                            {
+                                                "objectVersionNumber": 1,
+                                                "_token": "UZ7lDxKqxeo0SxH+w9U5aT7QzETbk0weA1umDQkZiczDLn7y+ityXNIzOVpFvv4SAYwyy2d+VRbC6iUvLk5k4e6EZcm/BcDxNKejPslwNEo=",
+                                                "labelId": 319,
+                                                "labelCode": "LABEL2023121458",
+                                                "labelName": "业绩提升篇",
+                                                "labelTypeCode": "CUSTOM",
+                                                "showFlag": 1,
+                                                "tenantId": 2,
+                                                "labelRelId": 486,
+                                                "platformProductId": 1030
+                                            },
+                                            {
+                                                "objectVersionNumber": 1,
+                                                "_token": "UZ7lDxKqxeo0SxH+w9U5aT7QzETbk0weA1umDQkZiczDLn7y+ityXNIzOVpFvv4SAYwyy2d+VRbC6iUvLk5k4dfcPVC1v2hY+x1foXKuhis=",
+                                                "labelId": 283,
+                                                "labelCode": "LABEL2023121422",
+                                                "labelName": "提案",
+                                                "labelTypeCode": "CUSTOM",
+                                                "showFlag": 1,
+                                                "tenantId": 2,
+                                                "labelRelId": 67,
+                                                "platformProductId": 1030
+                                            }
+                                        ]
+                                    },
+                                    "tenantId": 2,
+                                    "tenantName": "欧莱雅",
+                                    "onlineShopName": "发型师",
+                                    "kindTypeCode": "VIRTUAL_COURSE",
+                                    "courseAddressList": null,
+                                    "speaker": "欧莱雅PRO",
+                                    "liveTime": null,
+                                    "courseForm": "ONLINE"
+                                }
                             },
                             "childrenData": [
-                                {},
-                                {}
+                                {
+                                    "anchorTitle": null,
+                                    "componentCode": "text",
+                                    "groupCode": "common",
+                                    "groupName": "常用组件",
+                                    "componentName": "文字",
+                                    "editFlag": 0,
+                                    "data": {
+                                        "text": "一次来店 三次提案 业绩突破",
+                                        "overflowMode": "unset",
+                                        "fontFamily": "font-light"
+                                    },
+                                    "style": {
+                                        "display": "block",
+                                        "fontSize": "16px",
+                                        "fontWeight": 300,
+                                        "paddingTop": "8px",
+                                        "paddingBottom": "3px",
+                                        "paddingLeft": "32px",
+                                        "paddingRight": "0px",
+                                        "color": "black"
+                                    },
+                                    "childrenData": [],
+                                    "componentId": "_d9ec9c2a-23f8-4429-a168-6660e4c4ffe5"
+                                },
+                                {
+                                    "anchorTitle": null,
+                                    "componentCode": "column-container",
+                                    "groupCode": "container",
+                                    "groupName": "容器",
+                                    "componentName": "多列容器",
+                                    "editFlag": 0,
+                                    "style": {
+                                        "display": "flex",
+                                        "flexDirection": "row",
+                                        "alignItems": "stretch",
+                                        "justifyContent": "flex-start"
+                                    },
+                                    "data": {
+                                        "columnNum": 1
+                                    },
+                                    "childrenData": [
+                                        {
+                                            "anchorTitle": null,
+                                            "componentCode": "text",
+                                            "groupCode": "common",
+                                            "groupName": "常用组件",
+                                            "componentName": "文字",
+                                            "editFlag": 0,
+                                            "data": {
+                                                "text": "潘于兰",
+                                                "overflowMode": "unset",
+                                                "fontFamily": "font-light"
+                                            },
+                                            "style": {
+                                                "display": "block",
+                                                "fontSize": "10px",
+                                                "fontWeight": 200,
+                                                "paddingTop": "4px",
+                                                "paddingLeft": "32px",
+                                                "color": "black",
+                                                "paddingBottom": "2px"
+                                            },
+                                            "childrenData": [],
+                                            "componentId": "_7b73e414-1047-461f-992f-9d08f056c08f"
+                                        }
+                                    ],
+                                    "componentId": "_fa618dfe-deca-4c8c-84b0-876aa7996852"
+                                }
                             ],
                             "componentId": "_8bbd485f-4230-4f53-8047-9b7a5212e06e",
                             "action": {
@@ -1925,7 +2574,30 @@
                                 "columnNum": 1
                             },
                             "childrenData": [
-                                {}
+                                {
+                                    "anchorTitle": null,
+                                    "componentCode": "text",
+                                    "groupCode": "common",
+                                    "groupName": "常用组件",
+                                    "componentName": "文字",
+                                    "editFlag": 0,
+                                    "data": {
+                                        "text": "付军剪艺",
+                                        "overflowMode": "unset",
+                                        "fontFamily": "font-light"
+                                    },
+                                    "style": {
+                                        "display": "block",
+                                        "fontSize": "10px",
+                                        "fontWeight": 200,
+                                        "paddingTop": "4px",
+                                        "paddingLeft": "32px",
+                                        "color": "black",
+                                        "paddingBottom": "2px"
+                                    },
+                                    "childrenData": [],
+                                    "componentId": "_f13c6fec-f968-4866-81cb-465f6d438a09"
+                                }
                             ],
                             "componentId": "_7ec5b69e-e072-47b7-83c4-5ee403af8914"
                         }
@@ -2079,7 +2751,27 @@
                                 "columnNum": 1
                             },
                             "childrenData": [
-                                {}
+                                {
+                                    "anchorTitle": null,
+                                    "componentCode": "text",
+                                    "groupCode": "common",
+                                    "groupName": "常用组件",
+                                    "componentName": "文字",
+                                    "editFlag": 0,
+                                    "data": {
+                                        "text": "PRO TREND",
+                                        "overflowMode": "unset",
+                                        "fontFamily": "font-regular"
+                                    },
+                                    "style": {
+                                        "display": "block",
+                                        "fontSize": "14px",
+                                        "fontWeight": 200,
+                                        "color": "#333333"
+                                    },
+                                    "childrenData": [],
+                                    "componentId": "_136a0f48-7b83-4628-93bd-34436eac7e18"
+                                }
                             ],
                             "componentId": "_ed2805f9-d10d-416e-8a05-6ca9f3efb952"
                         }
@@ -2148,7 +2840,13 @@
                             "componentId": "_e4d1d6e4-6c4c-428b-86ea-e3721c22fa07",
                             "action": {
                                 "code": "bind-clp",
-                                "data": {}
+                                "data": {
+                                    "page": {},
+                                    "params": {
+                                        "pageCode": "O2_DTC:OW-1:CLP:CLP202404240001",
+                                        "pageName": "全球发艺设计师大赛"
+                                    }
+                                }
                             },
                             "enableTrack": 1,
                             "trackName": "美业赛事"
@@ -2262,7 +2960,13 @@
                             "trackName": "美业综艺",
                             "action": {
                                 "code": "bind-clp",
-                                "data": {}
+                                "data": {
+                                    "page": {},
+                                    "params": {
+                                        "pageCode": "O2_DTC:OW-1:CLP:CLP202312160010",
+                                        "pageName": "寻找先锋合伙人"
+                                    }
+                                }
                             }
                         }
                     ],
@@ -2759,11 +3463,6 @@
                                 "start": "10:00:00",
                                 "end": "12:00:00",
                                 "num": 1
-                            },
-                            {
-                                "start": "21:00:00",
-                                "end": "23:59:59",
-                                "num": 1
                             }
                         ]
                     }
@@ -2993,7 +3692,13 @@
                             "componentId": "_56d040e1-584b-48f6-81db-fc96e6647fad",
                             "action": {
                                 "code": "bind-clp",
-                                "data": {}
+                                "data": {
+                                    "page": {},
+                                    "params": {
+                                        "pageCode": "O2_DTC:OW-1:CLP:CLP202505300001",
+                                        "pageName": "全球发艺设计师大赛-备赛活动"
+                                    }
+                                }
                             },
                             "enableTrack": 1,
                             "trackName": "首页弹窗-发艺设计师大赛直播回放"
@@ -3002,8 +3707,45 @@
                     "data": {
                         "datetimeList": [
                             {
-                                "date": [],
-                                "time": []
+                                "date": [
+                                    "2025-11-01",
+                                    "2025-11-02",
+                                    "2025-11-03",
+                                    "2025-11-04",
+                                    "2025-11-05",
+                                    "2025-11-06",
+                                    "2025-11-07",
+                                    "2025-11-08",
+                                    "2025-11-09",
+                                    "2025-11-10",
+                                    "2025-11-11",
+                                    "2025-11-12",
+                                    "2025-11-13",
+                                    "2025-11-14",
+                                    "2025-11-15",
+                                    "2025-11-16",
+                                    "2025-11-17",
+                                    "2025-11-18",
+                                    "2025-11-19",
+                                    "2025-11-20",
+                                    "2025-11-21",
+                                    "2025-11-22",
+                                    "2025-11-23",
+                                    "2025-11-24",
+                                    "2025-11-25",
+                                    "2025-11-26",
+                                    "2025-11-27",
+                                    "2025-11-28",
+                                    "2025-11-29",
+                                    "2025-11-30"
+                                ],
+                                "time": [
+                                    {
+                                        "start": "14:00:00",
+                                        "end": "14:30:00",
+                                        "num": 1
+                                    }
+                                ]
                             }
                         ]
                     },
@@ -3658,6 +4400,68 @@
         },
         {
             "anchorTitle": null,
+            "componentCode": "dialog-container",
+            "groupCode": "container",
+            "groupName": "容器",
+            "componentName": "弹框容器",
+            "editFlag": 0,
+            "style": {},
+            "childrenData": [
+                {
+                    "anchorTitle": null,
+                    "componentCode": "image",
+                    "groupCode": "common",
+                    "groupName": "常用组件",
+                    "componentName": "图片",
+                    "editFlag": 0,
+                    "data": {
+                        "url": "https://static-d2s-prod.platform-loreal.cn/o2-resources/metadata/o2cms/2/O2-PUB/1762918787956_异形礼盒弹窗.gif",
+                        "width": "100%",
+                        "height": "100%",
+                        "objectFit": "scale-down",
+                        "objectPosition": "center",
+                        "hasCover": false,
+                        "cdnUrl": "https://static-d2s-prod.platform-loreal.cn/o2-resources/metadata/o2cms/2/O2-PUB/1762918787956_异形礼盒弹窗.gif",
+                        "path": "/o2-resources/metadata/o2cms/2/O2-PUB/1762918787956_异形礼盒弹窗.gif"
+                    },
+                    "style": {},
+                    "childrenData": [],
+                    "componentId": "_17d93ae6-a78c-4e81-83d0-c4f5cdf68a24",
+                    "enableTrack": 1,
+                    "trackName": "首页弹窗-疯四",
+                    "action": {
+                        "code": "bind-promotion-plp",
+                        "data": {
+                            "params": {
+                                "sceneCode": "S20250521000001"
+                            }
+                        }
+                    }
+                }
+            ],
+            "data": {
+                "datetimeList": [
+                    {
+                        "date": [
+                            "2025-11-06",
+                            "2025-11-13",
+                            "2025-11-20",
+                            "2025-11-27"
+                        ],
+                        "time": [
+                            {
+                                "start": "21:00:00",
+                                "end": "23:59:59",
+                                "num": 1
+                            }
+                        ]
+                    }
+                ]
+            },
+            "componentId": "_366345f1-a090-4ae4-833e-607910b83c64"
+        },
+        {
+            "anchorTitle": null,
             "componentCode": "column-container",
             "groupCode": "container",
             "groupName": "容器",
@@ -3736,7 +4540,7 @@
                     "componentName": "图片",
                     "editFlag": 0,
                     "data": {
-                        "url": "https://static-d2s-prod.platform-loreal.cn/o2-resources/metadata/o2cms/2/O2-PUB/1761811018225_弹窗.gif",
+                        "url": "https://static-d2s-test.platform-loreal.cn/o2-resources/metadata/o2cms/2/O2-PUB/1701832081969_head-logo2.4d29d9b1.png",
                         "width": "12px",
                         "height": "12px",
                         "objectFit": "scale-down",

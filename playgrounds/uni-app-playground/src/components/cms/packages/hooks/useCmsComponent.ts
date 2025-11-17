@@ -3,7 +3,6 @@ import {
   CSSProperties,
   getCurrentInstance,
   inject,
-  nextTick,
   onMounted,
   onUnmounted,
   Ref,
@@ -112,18 +111,14 @@ const useCmsComponent = (
     if (!coordinator || isBaseComponent.value || !instance) {
       return;
     }
-    // TODO: 研究移除setTimeout
-    setTimeout(() => {
-      uni.createSelectorQuery().in(instance)
-        .select('.cms-visual-editor-base-container')
-        .boundingClientRect()
-        .exec((res) => {
-          if (res && res[0] && res[0].height) {
-            coordinator.reportHeight(props.data.componentId, res[0].height);
-          }
-        });
-    }, 300)
-
+    uni.createSelectorQuery().in(instance)
+      .select('.cms-visual-editor-base-container')
+      .boundingClientRect()
+      .exec((res) => {
+        if (res && res[0] && res[0].height) {
+          coordinator.reportHeight(props.data.componentId, res[0].height);
+        }
+      });
   };
 
   onMounted(async () => {

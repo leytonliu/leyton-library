@@ -8,7 +8,6 @@
     <cms-base-component
       v-for="(item, index) in data.childrenData.filter((i) => i)"
       :key="item.componentId"
-      :children-styles="childrenStyles"
       :data="item"
       :index="index"
     />
@@ -43,15 +42,16 @@ const layoutStyle = computed(() => {
 
   return {
     display: 'flex',
-    flexWrap: 'nowrap', // 您的“不换行”设计
-    flexDirection: 'row', // 使用 camelCase
-    columnGap: `${gutterValue}px`, // 使用 camelCase
+    flexWrap: 'nowrap', // 不换行
+    flexDirection: 'row',
+    columnGap: `${gutterValue}px`,
   } as const;
 });
 </script>
 
 <style lang="scss">
 .cms-column-container {
+  // width: 100%;
   & > .cms-visual-editor-base-container {
     flex: 1;
   }

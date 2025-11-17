@@ -29,7 +29,6 @@ export const cmsBaseComponentProps = {
   childrenStyles: {
     type: Object as PropType<CSSProperties>,
   },
-  autoGetRect: { type: String },
   isFirstFloorNode: { type: Boolean, default: false },
   isHidden: { type: Boolean, default: null },
 };

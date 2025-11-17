@@ -96,7 +96,7 @@ const swiperStyles = computed(() => {
     style.borderRadius = props.data.style.borderRadius;
     style.overflow = 'hidden';
   }
-  
+
   return convertStyleToString(style);
 });
 

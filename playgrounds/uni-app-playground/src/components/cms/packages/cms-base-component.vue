@@ -1,56 +1,61 @@
 <template>
-  <view>
-    <cms-text
-      v-if="data.componentCode === 'text'"
-      :data="data"
-      :index="index"
-      :key="`text-${data.componentId}`"
-      :children-styles="childrenStyles"
-    />
-    <cms-image
-      v-else-if="data.componentCode === 'image'"
-      :data="data"
-      :index="index"
-      :key="`image-${data.componentId}`"
-      :children-styles="childrenStyles"
-    />
-    <cms-button
-      v-else-if="data.componentCode === 'button'"
-      :data="data"
-      :index="index"
-      :key="`button-${data.componentId}`"
-      :children-styles="childrenStyles"
-    />
-    <cms-carousel-container
-      v-else-if="data.componentCode === 'carousel-container'"
-      :data="data"
-      :index="index"
-      :key="`carousel-container-${data.componentId}`"
-      :children-styles="childrenStyles"
-    />
-    <cms-rows-container
-      v-else-if="data.componentCode === 'rows-container'"
-      :data="data"
-      :index="index"
-      :key="`row-container-${data.componentId}`"
-      :children-styles="childrenStyles"
-    />
-    <cms-column-container
-      v-else-if="data.componentCode === 'column-container'"
-      :data="data"
-      :index="index"
-      :key="`column-container-${data.componentId}`"
-      :children-styles="childrenStyles"
-    />
-    <cms-fixed-size-container
-      v-else-if="data.componentCode === 'fixed-size-container'"
-      :data="data"
-      :index="index"
-      :key="`fixed-size-container-${data.componentId}`"
-      :children-styles="childrenStyles"
-    />
-    <view v-else> {{ data.componentCode }} </view>
-  </view>
+  <cms-text
+    v-if="data.componentCode === 'text'"
+    :data="data"
+    :index="index"
+    :key="`text-${data.componentId}`"
+    :children-styles="childrenStyles"
+  />
+  <cms-image
+    v-else-if="data.componentCode === 'image'"
+    :data="data"
+    :index="index"
+    :key="`image-${data.componentId}`"
+    :children-styles="childrenStyles"
+  />
+  <cms-button
+    v-else-if="data.componentCode === 'button'"
+    :data="data"
+    :index="index"
+    :key="`button-${data.componentId}`"
+    :children-styles="childrenStyles"
+  />
+  <cms-carousel-container
+    v-else-if="data.componentCode === 'carousel-container'"
+    :data="data"
+    :index="index"
+    :key="`carousel-container-${data.componentId}`"
+    :children-styles="childrenStyles"
+  />
+  <cms-rows-container
+    v-else-if="data.componentCode === 'rows-container'"
+    :data="data"
+    :index="index"
+    :key="`row-container-${data.componentId}`"
+    :children-styles="childrenStyles"
+  />
+  <cms-column-container
+    v-else-if="data.componentCode === 'column-container'"
+    :data="data"
+    :index="index"
+    :key="`column-container-${data.componentId}`"
+    :children-styles="childrenStyles"
+  />
+  <cms-fixed-size-container
+    v-else-if="data.componentCode === 'fixed-size-container'"
+    :data="data"
+    :index="index"
+    :key="`fixed-size-container-${data.componentId}`"
+    :children-styles="childrenStyles"
+  />
+  <cms-card-stack
+    v-else-if="data.componentCode === 'card-stack'"
+    :data="data"
+    :index="index"
+    :key="`card-stack-${data.componentId}`"
+    :children-styles="childrenStyles"
+  />
+  <view v-else> {{ data.componentCode }} </view>
 </template>
 
 <script lang="ts" setup>
@@ -64,6 +69,7 @@ import CmsRowsContainer from './components/cms-rows-container.vue';
 import CmsColumnContainer from './components/cms-column-container.vue';
 import CmsCarouselContainer from './components/cms-carousel-container.vue';
 import cmsFixedSizeContainer from './components/cms-fixed-size-container.vue';
+import CmsCardStack from './components/cms-card-stack.vue';
 
 defineOptions({
   name: 'CmsBaseComponent',

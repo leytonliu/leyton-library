@@ -6,7 +6,7 @@
     @tap="handleTapBaseContainer"
   >
     <image
-      :key="data.componentId"
+      key="@@image"
       :mode="imageMode"
       :src="imageUrl"
       :style="imageStyle"
@@ -65,8 +65,8 @@ const imageStyle = computed(() => {
   if (props.data.data.width) {
     styles.width = props.data.data.width;
   }
-  // 为图片自身设置圆角
   if (props.data.style.borderRadius) {
+    // 为图片自身设置圆角
     styles.borderRadius = props.data.style.borderRadius;
   }
   styles.height = props.data.data.height;
@@ -115,10 +115,13 @@ const onImageLoad = () => {
   position: relative;
   display: flex;
 
+  //   width: 100%;
+  //   height: 100%;
   .cms-image-inner {
     align-self: center;
   }
 }
+
 image {
   will-change: transform;
 }

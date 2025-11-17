@@ -8,7 +8,6 @@
     <cms-base-component
       v-for="(item, index) in data.childrenData.filter((i) => i)"
       :key="item.componentId"
-      :children-styles="childrenStyles"
       :data="item"
       :index="index"
     />
