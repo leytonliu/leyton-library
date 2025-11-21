@@ -55,6 +55,13 @@
     :key="`card-stack-${data.componentId}`"
     :children-styles="childrenStyles"
   />
+  <cms-dialog-container
+    v-else-if="data.componentCode === 'dialog-container'"
+    :data="data"
+    :index="index"
+    :key="`dialog-container-${data.componentId}`"
+    :children-styles="childrenStyles"
+  />
   <view v-else> {{ data.componentCode }} </view>
 </template>
 
@@ -68,8 +75,9 @@ import CmsButton from './components/cms-button.vue';
 import CmsRowsContainer from './components/cms-rows-container.vue';
 import CmsColumnContainer from './components/cms-column-container.vue';
 import CmsCarouselContainer from './components/cms-carousel-container.vue';
-import cmsFixedSizeContainer from './components/cms-fixed-size-container.vue';
+import CmsFixedSizeContainer from './components/cms-fixed-size-container.vue';
 import CmsCardStack from './components/cms-card-stack.vue';
+import cmsDialogContainer from './components/cms-dialog-container.vue';
 
 defineOptions({
   name: 'CmsBaseComponent',
@@ -83,7 +91,7 @@ const props = withDefaults(defineProps<CmsBaseComponentProps>(), {
   ...cmsBaseComponentDefaults, // 应用公用默认值
 });
 
-const { envConfig, cmsPageConfig } = useCmsComponent(props, {
+useCmsComponent(props, {
   isBaseComponent: true, // 当前组件为 cms-base-component
 });
 </script>

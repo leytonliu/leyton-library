@@ -8,7 +8,7 @@
 <script setup lang="ts">
 import { onMounted, ref } from 'vue';
 import CmsPreview from './packages/cms-preview.vue';
-import mockData from '../../mockData.json';
+import mockData from '../../courseData.json';
 import { CmsPageConfig } from './cms';
 
 const envConfig = ref({});
@@ -24,7 +24,7 @@ onMounted(async () => {
     pageConfigEmpty.value = true;
     setTimeout(() => {
       // 直接使用 mockData
-      pageConfig.value = mockData as CmsPageConfig;
+      pageConfig.value = mockData as unknown as CmsPageConfig;
       // 设置环境配置
       envConfig.value = {
         // 根据需要添加环境配置

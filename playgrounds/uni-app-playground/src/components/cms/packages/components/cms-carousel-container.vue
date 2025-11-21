@@ -80,7 +80,7 @@ const { classes, styles, handleTapBaseContainer } = useCmsComponent(props);
 
 const activeIndex = ref<number>(0);
 
-const { maxHeight } = useAdaptiveHeight();
+const { maxHeight, childrenHeights } = useAdaptiveHeight();
 
 const swiperStyles = computed(() => {
   const style: CSSProperties = {};

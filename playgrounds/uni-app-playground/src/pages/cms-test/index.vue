@@ -1,9 +1,9 @@
 <template>
   <view class="cms-test-page">
-    <view class="test-header">
+    <!-- <view class="test-header">
       <text class="test-title">CMS Vue3 组件测试页面</text>
       <text class="test-subtitle">使用 mockData.json 测试</text>
-    </view>
+    </view> -->
 
     <cms-page />
   </view>

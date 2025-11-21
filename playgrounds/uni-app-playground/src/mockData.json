@@ -517,7 +517,9 @@
                 "loop": true,
                 "scaleMode": true,
                 "paginationType": "",
-                "hidePagination": 1
+                "hidePagination": 1,
+                "prevMargin": "200rpx",
+                "nextMargin": "200rpx"
             },
             "readonlyData": {
                 "activeIndex": 5
@@ -3278,8 +3280,8 @@
                         "time": [
                             {
                                 "start": "00:00:00",
-                                "end": "09:00:00",
-                                "num": 1
+                                "end": "23:00:00",
+                                "num": 10
                             }
                         ]
                     }
