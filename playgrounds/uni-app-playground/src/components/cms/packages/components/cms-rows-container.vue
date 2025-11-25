@@ -2,7 +2,7 @@
   <view
     :class="classes"
     :data-component="data.componentCode"
-    :style="[styles, layoutStyle]"
+    :style="[layoutStyle, styles]"
     @tap="handleTapBaseContainer"
   >
     <cms-base-component
@@ -46,7 +46,6 @@ const layoutStyle = computed(() => {
 
   return {
     display: 'flex',
-    flexDirection: 'column', // 使用 camelCase
     rowGap: `${gutterValue}px`, // 使用 camelCase
   } as const;
 });

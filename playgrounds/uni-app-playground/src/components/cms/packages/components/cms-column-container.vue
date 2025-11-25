@@ -2,7 +2,7 @@
   <view
     :class="classes"
     :data-component="data.componentCode"
-    :style="[styles, layoutStyle]"
+    :style="[layoutStyle, styles]"
     @tap="handleTapBaseContainer"
   >
     <cms-base-component

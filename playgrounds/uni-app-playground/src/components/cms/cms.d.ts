@@ -1,5 +1,6 @@
 // cms.ts
 import type { CSSProperties } from 'vue';
+import { CmsFakeDataManager } from './packages/binding/createFakeDateManager';
 
 /**
  * 页面配置（最外层 CMS 页面结构）
@@ -90,7 +91,7 @@ export interface CmsBindingValueManager {
   registry: (config: CmsBindingValueConfig) => void;
   getBindingValue: (value: string, data: CmsComponentData) => any;
   actualParentMapper: CmsParentMapperWrapper;
-  // (以后还可以加上 fakeDataManager)
+  fakeDataManager: CmsFakeDataManager;
 }
 
 export type CmsBindingPlugin = (params: {
