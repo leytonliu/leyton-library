@@ -62,7 +62,9 @@
     :key="`dialog-container-${data.componentId}`"
     :children-styles="childrenStyles"
   />
-  <view v-else-if="isVisible"> {{ data.componentCode }} </view>
+  <view v-else-if="isVisible" class="cms-unknown-component" v-bind="$attrs">
+    未注册组件 {{ data.componentCode }}
+  </view>
 </template>
 
 <script lang="ts" setup>
@@ -78,8 +80,6 @@ import CmsCarouselContainer from './components/cms-carousel-container.vue';
 import CmsFixedSizeContainer from './components/cms-fixed-size-container.vue';
 import CmsCardStack from './components/cms-card-stack.vue';
 import cmsDialogContainer from './components/cms-dialog-container.vue';
-import { computed } from 'vue';
-import { checkComponentVisible } from './utils/cmsUtils';
 
 defineOptions({
   name: 'CmsBaseComponent',
@@ -118,5 +118,12 @@ const { isVisible } = useCmsComponent(props, {
     width: 100%;
     height: 100%;
   }
+}
+.cms-unknown-component {
+  color: #999;
+  font-size: 24rpx;
+  padding: 10rpx;
+  text-align: center;
+  border: 1px dashed #ccc;
 }
 </style>

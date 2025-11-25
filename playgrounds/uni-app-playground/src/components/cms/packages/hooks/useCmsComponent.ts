@@ -6,6 +6,7 @@ import {
   onMounted,
   onUnmounted,
   Ref,
+  useAttrs,
 } from 'vue';
 import {
   CmsActionRenderManager,
@@ -40,11 +41,18 @@ const useCmsComponent = (
     null
   );
 
+  const { style: attrStyles } = useAttrs();
+
   /**
    * 样式合并策略
    */
   const styleObject = computed(() => {
     let styles: CSSProperties = {};
+
+    console.log('attrStyles', attrStyles);
+    if (attrStyles) {
+      Object.assign(styles, attrStyles);
+    }
 
     // 如果父节点有设置子节点样式，则应用父节点设置的子节点样式
     if (props.childrenStyles) {
