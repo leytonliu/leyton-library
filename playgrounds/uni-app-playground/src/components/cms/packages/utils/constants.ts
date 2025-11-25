@@ -30,7 +30,6 @@ export const cmsBaseComponentProps = {
     type: Object as PropType<CSSProperties>,
   },
   isFirstFloorNode: { type: Boolean, default: false },
-  isHidden: { type: Boolean, default: null },
 };
 
 export const cmsBaseComponentDefaults = {
@@ -39,7 +38,4 @@ export const cmsBaseComponentDefaults = {
 
   // 是否为顶层组件
   isFirstFloorNode: false,
-
-  // 是否隐藏
-  isHidden: null,
 };

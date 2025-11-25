@@ -17,7 +17,14 @@ import {
 } from '../../cms';
 import { convertStyleToString, kebabCase } from '../utils/utils';
 import { HeightCoordinator } from './useAdaptiveHeight';
-import { actionRenderKey, bindingValueKey, cmsPageConfigKey, envConfigKey, heightCoordinatorKey } from '../utils/keys';
+import {
+  actionRenderKey,
+  bindingValueKey,
+  cmsPageConfigKey,
+  envConfigKey,
+  heightCoordinatorKey,
+} from '../utils/keys';
+import { checkComponentVisible } from '../utils/cmsUtils';
 
 const useCmsComponent = (
   props: CmsBaseComponentProps,
@@ -28,7 +35,10 @@ const useCmsComponent = (
   const cmsPageConfig = inject<Ref<CmsPageConfig>>(cmsPageConfigKey);
   const bindingValue = inject<CmsBindingValueManager>(bindingValueKey);
   const actionRender = inject<CmsActionRenderManager>(actionRenderKey);
-  const coordinator = inject<HeightCoordinator | null>(heightCoordinatorKey, null);
+  const coordinator = inject<HeightCoordinator | null>(
+    heightCoordinatorKey,
+    null
+  );
 
   /**
    * 样式合并策略
@@ -89,6 +99,13 @@ const useCmsComponent = (
   });
 
   /**
+   * 当前组件是否渲染
+   */
+  const isVisible = computed(() => {
+    return checkComponentVisible(props.data, bindingValue);
+  });
+
+  /**
    * 获取绑定值
    */
   const getBindingValue = (value: string) => {
@@ -104,14 +121,16 @@ const useCmsComponent = (
 
   /**
    * 收集当前容器高度并上报
-   * @returns 
+   * @returns
    */
   const measureAndReportHeight = () => {
     // 如果父组件没有“要求”上报身高(coordinator为null)，则跳过(并且跳过 BaseComponent)
     if (!coordinator || isBaseComponent.value || !instance) {
       return;
     }
-    uni.createSelectorQuery().in(instance)
+    uni
+      .createSelectorQuery()
+      .in(instance)
       .select('.cms-visual-editor-base-container')
       .boundingClientRect()
       .exec((res) => {
@@ -137,13 +156,15 @@ const useCmsComponent = (
   return {
     envConfig,
     cmsPageConfig,
+    bindingValue,
     styleObject,
     styles,
     classes,
     isBaseComponent,
+    isVisible,
     getBindingValue,
     handleTapBaseContainer,
-    measureAndReportHeight
+    measureAndReportHeight,
   };
 };
 export default useCmsComponent;

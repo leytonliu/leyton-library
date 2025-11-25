@@ -55,7 +55,6 @@ export interface CmsBaseComponentProps {
   childrenStyles?: CSSProperties; // 父节点设置子节点（当前节点的）样式
   autoGetRect?: string; // 父组件是否需要当前子节点自动获取高度
   isFirstFloorNode?: boolean; // 是否是第一层节点
-  isHidden?: boolean | null; // 节点是否隐藏
 }
 
 export interface UseCmsComponentOptions {

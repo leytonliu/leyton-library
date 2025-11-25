@@ -67,6 +67,7 @@ import cmsBaseComponent from '../cms-base-component.vue';
 import { computed, CSSProperties, ref } from 'vue';
 import { convertStyleToString } from '../utils/utils';
 import { useAdaptiveHeight } from '../hooks/useAdaptiveHeight';
+import { checkComponentVisible } from '../utils/cmsUtils';
 
 defineOptions({
   name: 'CmsCarouselContainer',
@@ -76,7 +77,8 @@ const props = withDefaults(defineProps<CmsBaseComponentProps>(), {
   ...cmsBaseComponentDefaults,
 });
 
-const { classes, styles, handleTapBaseContainer } = useCmsComponent(props);
+const { classes, styles, handleTapBaseContainer, bindingValue } =
+  useCmsComponent(props);
 
 const activeIndex = ref<number>(0);
 
@@ -120,7 +122,11 @@ const carouselChildrenStyles = computed(() => {
  * 过滤处理可以展示的 swiper-item
  */
 const displayChildren = computed(() => {
-  return props.data.childrenData;
+  if (!props.data.childrenData) return [];
+
+  return props.data.childrenData?.filter((child) => {
+    return checkComponentVisible(child, bindingValue);
+  });
 });
 /**
  * indicator Width

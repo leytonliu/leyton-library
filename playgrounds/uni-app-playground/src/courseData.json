@@ -725,7 +725,7 @@
                 "path": "/o2-resources/metadata/o2cms/2/O2-PUB/1761190292835_巴黎卡诗防脱护理.png",
                 "taskLovValue": {},
                 "trackingFlag": 0,
-                "visibleFlag": 1,
+                "visibleFlag": 0,
                 "visibleUserGroup": [
                     {
                         "userGroupName": "院线级防脱护理人群",
@@ -819,7 +819,7 @@
                 "hasCover": false,
                 "cdnUrl": "https://static-d2s-prod.platform-loreal.cn/o2-resources/metadata/o2cms/2/O2-PUB/1741003878757_菁英班banner.png",
                 "path": "/o2-resources/metadata/o2cms/2/O2-PUB/1741003878757_菁英班banner.png",
-                "visibleFlag": 1,
+                "visibleFlag": 0,
                 "visibleUserGroup": [
                     {
                         "userGroupName": "菁英班可见人群",
@@ -4069,31 +4069,6 @@
                 }
             ],
             "componentId": "_67120e8f-bceb-431f-b056-7fc4771a8496"
-        },
-        {
-            "anchorTitle": null,
-            "componentCode": "image",
-            "groupCode": "common",
-            "groupName": "常用组件",
-            "componentName": "图片",
-            "editFlag": 0,
-            "data": {
-                "url": "https://static-d2s-prod.platform-loreal.cn/o2-resources/metadata/o2cms/2/O2-PUB/1747360078458_1711552181143_1.png",
-                "width": "100%",
-                "height": "100%",
-                "objectFit": "scale-down",
-                "objectPosition": "center",
-                "hasCover": false,
-                "cdnUrl": "https://static-d2s-prod.platform-loreal.cn/o2-resources/metadata/o2cms/2/O2-PUB/1747360078458_1711552181143_1.png",
-                "path": "/o2-resources/metadata/o2cms/2/O2-PUB/1747360078458_1711552181143_1.png"
-            },
-            "style": {
-                "width": "16px",
-                "height": "16px",
-                "paddingTop": "3px"
-            },
-            "childrenData": [],
-            "componentId": "_ad3d9663-2082-4321-8f97-126e1226ce2e"
         },
         {
             "anchorTitle": null,

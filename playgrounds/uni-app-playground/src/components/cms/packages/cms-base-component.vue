@@ -1,68 +1,68 @@
 <template>
   <cms-text
-    v-if="data.componentCode === 'text'"
+    v-if="data.componentCode === 'text' && isVisible"
     :data="data"
     :index="index"
     :key="`text-${data.componentId}`"
     :children-styles="childrenStyles"
   />
   <cms-image
-    v-else-if="data.componentCode === 'image'"
+    v-else-if="data.componentCode === 'image' && isVisible"
     :data="data"
     :index="index"
     :key="`image-${data.componentId}`"
     :children-styles="childrenStyles"
   />
   <cms-button
-    v-else-if="data.componentCode === 'button'"
+    v-else-if="data.componentCode === 'button' && isVisible"
     :data="data"
     :index="index"
     :key="`button-${data.componentId}`"
     :children-styles="childrenStyles"
   />
   <cms-carousel-container
-    v-else-if="data.componentCode === 'carousel-container'"
+    v-else-if="data.componentCode === 'carousel-container' && isVisible"
     :data="data"
     :index="index"
     :key="`carousel-container-${data.componentId}`"
     :children-styles="childrenStyles"
   />
   <cms-rows-container
-    v-else-if="data.componentCode === 'rows-container'"
+    v-else-if="data.componentCode === 'rows-container' && isVisible"
     :data="data"
     :index="index"
     :key="`row-container-${data.componentId}`"
     :children-styles="childrenStyles"
   />
   <cms-column-container
-    v-else-if="data.componentCode === 'column-container'"
+    v-else-if="data.componentCode === 'column-container' && isVisible"
     :data="data"
     :index="index"
     :key="`column-container-${data.componentId}`"
     :children-styles="childrenStyles"
   />
   <cms-fixed-size-container
-    v-else-if="data.componentCode === 'fixed-size-container'"
+    v-else-if="data.componentCode === 'fixed-size-container' && isVisible"
     :data="data"
     :index="index"
     :key="`fixed-size-container-${data.componentId}`"
     :children-styles="childrenStyles"
   />
   <cms-card-stack
-    v-else-if="data.componentCode === 'card-stack'"
+    v-else-if="data.componentCode === 'card-stack' && isVisible"
     :data="data"
     :index="index"
     :key="`card-stack-${data.componentId}`"
     :children-styles="childrenStyles"
   />
   <cms-dialog-container
-    v-else-if="data.componentCode === 'dialog-container'"
+    v-else-if="data.componentCode === 'dialog-container' && isVisible"
     :data="data"
     :index="index"
     :key="`dialog-container-${data.componentId}`"
     :children-styles="childrenStyles"
   />
-  <view v-else> {{ data.componentCode }} </view>
+  <view v-else-if="isVisible"> {{ data.componentCode }} </view>
 </template>
 
 <script lang="ts" setup>
@@ -78,6 +78,8 @@ import CmsCarouselContainer from './components/cms-carousel-container.vue';
 import CmsFixedSizeContainer from './components/cms-fixed-size-container.vue';
 import CmsCardStack from './components/cms-card-stack.vue';
 import cmsDialogContainer from './components/cms-dialog-container.vue';
+import { computed } from 'vue';
+import { checkComponentVisible } from './utils/cmsUtils';
 
 defineOptions({
   name: 'CmsBaseComponent',
@@ -91,7 +93,7 @@ const props = withDefaults(defineProps<CmsBaseComponentProps>(), {
   ...cmsBaseComponentDefaults, // 应用公用默认值
 });
 
-useCmsComponent(props, {
+const { isVisible } = useCmsComponent(props, {
   isBaseComponent: true, // 当前组件为 cms-base-component
 });
 </script>
