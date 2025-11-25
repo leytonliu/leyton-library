@@ -11,6 +11,10 @@ import useCmsComponent from '../hooks/useCmsComponent';
 
 defineOptions({
   name: 'CmsComponentTemplate',
+  options: {
+    virtualHost: true,
+    styleIsolation: 'shared',
+  },
 });
 
 const props = withDefaults(defineProps<CmsBaseComponentProps>(), {

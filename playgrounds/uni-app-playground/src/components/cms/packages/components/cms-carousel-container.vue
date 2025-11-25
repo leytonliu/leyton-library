@@ -71,6 +71,10 @@ import { checkComponentVisible } from '../utils/cmsUtils';
 
 defineOptions({
   name: 'CmsCarouselContainer',
+  options: {
+    virtualHost: true,
+    styleIsolation: 'shared',
+  },
 });
 
 const props = withDefaults(defineProps<CmsBaseComponentProps>(), {

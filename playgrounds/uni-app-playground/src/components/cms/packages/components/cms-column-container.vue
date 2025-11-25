@@ -10,6 +10,7 @@
       :key="item.componentId"
       :data="item"
       :index="index"
+      :children-styles="columnChildrenStyle"
     />
   </view>
 </template>
@@ -19,7 +20,7 @@ import { CmsBaseComponentProps } from '../../cms';
 import { cmsBaseComponentDefaults } from '../utils/constants';
 import cmsBaseComponent from '../cms-base-component.vue';
 import useCmsComponent from '../hooks/useCmsComponent';
-import { computed } from 'vue';
+import { computed, CSSProperties } from 'vue';
 import { getFirstDefinedValue } from '../utils/utils';
 
 defineOptions({
@@ -47,13 +48,20 @@ const layoutStyle = computed(() => {
     columnGap: `${gutterValue}px`,
   } as const;
 });
+
+const columnChildrenStyle = computed(() => {
+  const style: CSSProperties = {
+    flex: 1,
+  };
+  return style;
+});
 </script>
 
 <style lang="scss">
-.cms-column-container {
-  // width: 100%;
-  & > .cms-visual-editor-base-container {
-    flex: 1;
-  }
-}
+// .cms-column-container {
+//   // width: 100%;
+//   & > .cms-visual-editor-base-container {
+//     flex: 1;
+//   }
+// }
 </style>

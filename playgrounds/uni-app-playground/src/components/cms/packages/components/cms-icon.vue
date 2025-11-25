@@ -12,6 +12,10 @@ import { computed, CSSProperties } from 'vue';
 
 defineOptions({
   name: 'CmsIcon',
+  options: {
+    virtualHost: true,
+    styleIsolation: 'shared',
+  },
 });
 
 interface Props {

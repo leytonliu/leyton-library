@@ -35,6 +35,10 @@ import cmsBaseComponent from '../cms-base-component.vue';
 
 defineOptions({
   name: 'CmsImage',
+  options: {
+    virtualHost: true,
+    styleIsolation: 'shared',
+  },
 });
 
 const props = withDefaults(defineProps<CmsBaseComponentProps>(), {

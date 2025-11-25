@@ -23,7 +23,11 @@ import useCmsComponent from '../hooks/useCmsComponent';
 import cmsBaseComponent from '../cms-base-component.vue';
 
 defineOptions({
-  name: 'CmsComponentTemplate',
+  name: 'CmsFixedSizeContainer',
+  options: {
+    virtualHost: true,
+    styleIsolation: 'shared',
+  },
 });
 
 const props = withDefaults(defineProps<CmsBaseComponentProps>(), {

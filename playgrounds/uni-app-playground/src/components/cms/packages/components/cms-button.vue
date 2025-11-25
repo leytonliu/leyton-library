@@ -15,6 +15,10 @@ import { convertStyleToString } from '../utils/utils';
 
 defineOptions({
   name: 'CmsButton',
+  options: {
+    virtualHost: true,
+    styleIsolation: 'shared',
+  },
 });
 
 const props = withDefaults(defineProps<CmsBaseComponentProps>(), {

@@ -62,7 +62,7 @@
     :key="`dialog-container-${data.componentId}`"
     :children-styles="childrenStyles"
   />
-  <view v-else-if="isVisible" class="cms-unknown-component" v-bind="$attrs">
+  <view v-else-if="isVisible" class="cms-unknown-component">
     未注册组件 {{ data.componentCode }}
   </view>
 </template>

@@ -24,6 +24,10 @@ import { getFirstDefinedValue } from '../utils/utils';
 
 defineOptions({
   name: 'CmsRowsContainer',
+  options: {
+    virtualHost: true,
+    styleIsolation: 'shared',
+  },
 });
 
 const props = withDefaults(defineProps<CmsBaseComponentProps>(), {

@@ -41,6 +41,10 @@ const HORIZONTAL = 102;
 
 defineOptions({
   name: 'CmsCardStack',
+  options: {
+    virtualHost: true,
+    styleIsolation: 'shared',
+  },
 });
 
 const props = withDefaults(defineProps<CmsBaseComponentProps>(), {

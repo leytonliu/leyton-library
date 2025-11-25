@@ -46,6 +46,10 @@ import CmsIcon from './cms-icon.vue';
 
 defineOptions({
   name: 'CmsDialogContainer',
+  options: {
+    virtualHost: true,
+    styleIsolation: 'shared',
+  },
 });
 
 const props = withDefaults(defineProps<CmsBaseComponentProps>(), {
