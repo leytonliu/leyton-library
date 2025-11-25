@@ -110,6 +110,7 @@ const changeFirstPos: any = inject('changeFirstPos', () => {});
 
 // --- 状态定义 ---
 const statusBarHeight = uni.getSystemInfoSync().statusBarHeight || 0;
+// console.log('getSystemSetting, uni.getDeviceInfo());
 // 假设 envConfig 中有这些配置，如果没有则给默认值
 const env = computed(() => ({
   fixedTopHeight: envConfig?.value?.fixedTopHeight || 0,
