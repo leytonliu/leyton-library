@@ -86,7 +86,7 @@ const { classes, styles, handleTapBaseContainer, bindingValue } =
 
 const activeIndex = ref<number>(0);
 
-const { maxHeight, childrenHeights } = useAdaptiveHeight();
+const { maxHeight } = useAdaptiveHeight();
 
 const swiperStyles = computed(() => {
   const style: CSSProperties = {};

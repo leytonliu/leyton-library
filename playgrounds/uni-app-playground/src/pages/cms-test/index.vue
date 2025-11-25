@@ -1,16 +1,14 @@
 <template>
   <view class="cms-test-page">
-    <!-- <view class="test-header">
-      <text class="test-title">CMS Vue3 组件测试页面</text>
-      <text class="test-subtitle">使用 mockData.json 测试</text>
-    </view> -->
-
     <cms-page />
   </view>
 </template>
 
 <script setup>
 import CmsPage from '@/components/cms/cms-page.vue';
+import { usePageScrollProvider } from '../../components/cms/packages/hooks/usePageScroll';
+
+usePageScrollProvider();
 </script>
 
 <style lang="scss" scoped>

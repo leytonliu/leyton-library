@@ -1,83 +1,60 @@
 <template>
   <view
-    :id="tabId"
     :class="classes"
     :data-component="data.componentCode"
-    :style="styles"
+    :style="[containerStyles, cssVars]"
+    class="cms-tab-container"
     @tap="handleTapBaseContainer"
   >
-    <scroll-view
-      :scroll-into-view="`${
-        activeTab.index ? `tab-${activeTab.index - 1}` : ''
-      }`"
-      :style="headerStyles"
-      class="cms-tab-header-wrapper"
-      scroll-with-animation
-      scroll-x
-    >
-      <view class="cms-tab-header-title">
-        <view
-          v-for="(tab, index) in tabsTitleChildrenData.filter((i) => i)"
-          :id="`tab-${index}`"
-          :key="tab.componentId"
-          :style="
-            tabs[index].active
-              ? innerStyles.activeStyles
-              : innerStyles.inactiveStyles
-          "
-          class="cms-tab-header-item"
-          :class="
-            tabs[index].active &&
-            data.data.underlineWidth &&
-            data.data.underlineHeight &&
-            data.data.underlineColor
-              ? 'cms-tab-header-item-active-underLine'
-              : ''
-          "
-          @tap="showTab(tabs[index])"
-        >
-          <cms-base-component :data="tab" :index="index" />
+    <view class="cms-tab-header-wrapper">
+      <scroll-view class="cms-tab-header-scroll" scroll-with-animation scroll-x>
+        <view class="cms-tab-header-flex">
+          <view
+            v-for="(tab, index) in processedTabs"
+            :id="`tab-item-${index}`"
+            :key="tab.uniqueKey"
+            class="cms-tab-header-item"
+            :class="{
+              'is-active': activeIndex === index,
+              'has-underline': hasUnderline,
+            }"
+            @tap="handleSwitchTab(index)"
+          >
+            <cms-base-component
+              :data="tab.headerComponentData"
+              :index="index"
+            />
+          </view>
         </view>
-      </view>
-    </scroll-view>
-    <template v-for="(tab, tabIndex) in tabs">
-      <view
-        v-if="!!tab.init"
-        :key="tab.title"
-        :style="tabStyles[tabIndex]"
-        class="cms-tab-content"
-      >
-        <cms-base-component
-          v-for="(item, index) in tab.childrenData.filter((i) => i)"
-          :key="item.componentId"
-          :data="item"
-          :index="index"
-          :is-hidden="!tab.active || !tab.init"
-        />
-      </view>
-    </template>
+      </scroll-view>
+    </view>
+
+    <view class="cms-tab-content-wrapper">
+      <template v-for="(tab, index) in processedTabs" :key="tab.uniqueKey">
+        <view
+          v-if="tab.hasBeenRendered"
+          v-show="activeIndex === index"
+          class="cms-tab-content-pane"
+        >
+          <cms-base-component
+            v-for="(item, i) in tab.contentChildren"
+            :key="item.componentId"
+            :data="item"
+            :index="i"
+          />
+        </view>
+      </template>
+    </view>
   </view>
 </template>
 
 <script lang="ts" setup>
-import { CmsBaseComponentProps } from '../../cms';
+import { ref, computed, watch, provide, type CSSProperties } from 'vue';
+import { CmsBaseComponentProps, CmsComponentData } from '../../cms';
 import { cmsBaseComponentDefaults } from '../utils/constants';
 import useCmsComponent from '../hooks/useCmsComponent';
-import {
-  computed,
-  getCurrentInstance,
-  inject,
-  nextTick,
-  onMounted,
-  onUnmounted,
-  provide,
-  reactive,
-  ref,
-} from 'vue';
-import { convertStyleToString, iterateComponentData } from '../utils/utils';
-import { deepcopy } from '../utils/deepcopy';
-import { defer } from '../utils/defer';
 import CmsBaseComponent from '../cms-base-component.vue';
+import { deepcopy } from '../utils/deepcopy';
 
 defineOptions({
   name: 'CmsTabContainer',
@@ -91,381 +68,226 @@ const props = withDefaults(defineProps<CmsBaseComponentProps>(), {
   ...cmsBaseComponentDefaults,
 });
 
-const { classes, styles, handleTapBaseContainer, envConfig, bindingValue } =
-  useCmsComponent(props);
+// --- Hook 集成 ---
+const {
+  classes,
+  styles: containerStyles,
+  handleTapBaseContainer,
+  bindingValue,
+} = useCmsComponent(props);
 
-const instance = getCurrentInstance();
+// --- 状态管理 ---
+const activeIndex = ref(0);
+const scrollIntoViewId = ref('');
 
-// --- ID 生成 ---
-const nextTabId = (() => {
-  let count = 0;
-  return () => `tab_header_${count++}`;
-})();
-const tabId = ref(nextTabId());
+// --- 数据结构定义 ---
+interface ProcessedTab {
+  uniqueKey: string;
+  headerComponentData: CmsComponentData;
+  contentChildren: CmsComponentData[];
+  hasBeenRendered: boolean;
+}
 
-// --- 注入依赖 ---
-const pageScrollEvent: any = inject('pageScrollEvent', {});
-const tabPos: any = inject('tabPos', () => ({}));
-const changeFirstPos: any = inject('changeFirstPos', () => {});
+const processedTabs = ref<ProcessedTab[]>([]);
 
-// --- 状态定义 ---
-const statusBarHeight = uni.getSystemInfoSync().statusBarHeight || 0;
-// console.log('getSystemSetting, uni.getDeviceInfo());
-// 假设 envConfig 中有这些配置，如果没有则给默认值
-const env = computed(() => ({
-  fixedTopHeight: envConfig?.value?.fixedTopHeight || 0,
-  navHeight: envConfig?.value?.navHeight || 44,
-}));
+// --- 核心逻辑：数据处理 ---
+// 监听数据变化，生成 Tab 结构。使用 watch 而不是 computed 以便处理 fakeData 副作用
+watch(
+  () => props.data,
+  (newData) => {
+    if (!newData.childrenData || !newData.childrenData[0]) return;
 
-const headerStickyTop = ref(0);
-const headerStickyTopStyles = ref('');
+    const templateData = newData.childrenData[0]; // 标题模板组件
+    const panes = newData.readonlyData?.panes || [];
 
-const tabs = reactive(
-  (props.data.readonlyData?.panes || []).map((item: any, index: number) => ({
-    ...item,
-    index,
-    active: false,
-    init: false,
-    scrollTop: null as number | null,
-  }))
+    const list: ProcessedTab[] = panes.map((pane: any, index: number) => {
+      // 基于模板，构造标题组件的数据
+      const headerData = deepcopy({
+        ...templateData,
+        data: { ...templateData.data, tab: pane },
+      });
+
+      return {
+        uniqueKey: pane.id || `tab_${index}`,
+        headerComponentData: headerData,
+        // 过滤无效子组件
+        contentChildren: (pane.childrenData || []).filter((i: any) => i),
+        // 初始化策略：默认只渲染第 0 个，其他的懒加载
+        hasBeenRendered: index === 0,
+      };
+    });
+
+    // 处理编辑器模式下的伪造数据 ID (关键)
+    if (bindingValue?.fakeDataManager) {
+      bindingValue.fakeDataManager.resetFakeData(newData);
+      const headerList = list.map((t) => t.headerComponentData);
+      bindingValue.fakeDataManager.processFakeData(newData, headerList);
+    }
+
+    processedTabs.value = list;
+
+    // 越界修正（防止数据更新后 activeIndex 超出范围）
+    if (activeIndex.value >= list.length) {
+      activeIndex.value = 0;
+    }
+  },
+  { immediate: true, deep: true }
 );
 
-const activeTab = ref<any>({});
-const videoDataMap = reactive<Record<number, any>>({});
-const minHeight = ref<string | null>(null);
-
-const opacityState = reactive({
-  opacity: 1,
-  transition: 'opacity .05s',
-});
-const opacityControl = {
-  show: () => {
-    opacityState.opacity = 1;
-  },
-  hide: () => {
-    opacityState.opacity = 0.3;
-  },
-};
-
-provide(
-  'activeTabIndex',
-  computed(() => activeTab.value.index)
-);
-
-const headerStyles = computed(() => {
-  return convertStyleToString({ top: headerStickyTopStyles.value });
-});
-
+// --- 样式逻辑：CSS 变量 ---
 const hasUnderline = computed(() => {
   const d = props.data.data;
-  return d && d.underlineWidth && d.underlineHeight && d.underlineColor;
+  return !!(d && d.underlineWidth && d.underlineHeight && d.underlineColor);
 });
 
-const tabStyles = computed(() => {
-  // 获取当前路由名称 (需要根据您的路由插件调整)
-  const pages = getCurrentPages();
-  const currentRoute = pages[pages.length - 1]?.route || '';
-  const isCourseCLP = currentRoute.includes('cmsCourseCLP');
-
-  return tabs.map((item: any) =>
-    convertStyleToString({
-      display: item.active && item.init ? 'block' : 'none',
-      left: 0,
-      top: 0,
-      opacity: opacityState.opacity,
-      transition: isCourseCLP ? 'unset' : opacityState.transition,
-      minHeight: minHeight.value || 0,
-    })
-  );
-});
-
-const innerStyles = computed(() => {
+const cssVars = computed(() => {
   const d = props.data.data || {};
-  const publicStyles = {
-    lineHeight: d.textLineHeight,
-    fontSize: d.textFontSize,
-    borderRadius: d.textBorderRadius,
-    paddingLeft: d.textPaddingX,
-    paddingRight: d.textPaddingX,
-    marginRight: d.textMarginX,
+
+  // 将所有配置样式映射为 CSS 变量，极大简化模板
+  return {
+    // 字体与间距
+    '--tab-font-size': d.textFontSize,
+    '--tab-line-height': d.textLineHeight,
+    '--tab-border-radius': d.textBorderRadius,
+    '--tab-padding-x': d.textPaddingX,
+    '--tab-margin-x': d.textMarginX,
+
+    // 激活状态
+    '--active-bg': d.textBackgroundActive,
+    '--active-color': d.textColorActive,
+    '--active-border-color': d.borderColorActive || 'transparent',
+    '--active-border-width': d.borderWeightActive || '0px',
+
+    // 未激活状态
+    '--inactive-bg': d.textBackgroundInactive,
+    '--inactive-color': d.textColorInactive,
+    '--inactive-border-color': d.borderColorInactive || 'transparent',
+    '--inactive-border-width': d.borderWeightInactive || '0px',
+
+    // 下划线
     '--underline-width': d.underlineWidth,
     '--underline-height': d.underlineHeight,
     '--underline-color': d.underlineColor,
-    '--underline-border-radius': d.underlineBorderRadius,
-  };
-
-  const activeStyles = {
-    ...publicStyles,
-    backgroundColor: d.textBackgroundActive,
-    color: d.textColorActive,
-    borderColor: d.borderColorActive,
-    borderWidth: d.borderWeightActive,
-    ...(d.borderColorActive && d.borderWeightActive
-      ? { borderStyle: 'solid' }
-      : {}),
-  };
-
-  const inactiveStyles = {
-    ...publicStyles,
-    backgroundColor: d.textBackgroundInactive,
-    color: d.textColorInactive,
-    borderColor: d.borderColorInactive,
-    borderWidth: d.borderWeightInactive,
-    ...(d.borderColorInactive && d.borderWeightInactive
-      ? { borderStyle: 'solid' }
-      : {}),
-  };
-
-  return {
-    activeStyles: convertStyleToString(activeStyles),
-    inactiveStyles: convertStyleToString(inactiveStyles),
-  };
+    '--underline-radius': d.underlineBorderRadius,
+  } as CSSProperties;
 });
 
-/**
- * 标题子节点数据 (包含伪造数据逻辑)
- */
-const tabsTitleChildrenData = computed(() => {
-  if (!props.data.childrenData || !props.data.childrenData[0]) {
-    console.error('tab-container：当前未配置标签容器标题模板');
-    return [];
-  }
+// 向下提供当前激活的 index，子组件(如Video)可能需要知道自己是否显示
+provide('activeTabIndex', activeIndex);
 
-  const templateData = props.data.childrenData[0];
-  const list = (props.data.readonlyData?.panes || []).map((item: any) =>
-    deepcopy({
-      ...templateData,
-      data: {
-        ...templateData.data,
-        tab: item,
-      },
-    })
-  );
+// --- 交互逻辑 ---
+const handleSwitchTab = (index: number) => {
+  if (index === activeIndex.value) return;
 
-  // [!重要] 这里使用了 bindingValue 中的伪造数据管理器
-  if (bindingValue?.fakeDataManager) {
-    bindingValue.fakeDataManager.resetFakeData(props.data);
-    bindingValue.fakeDataManager.processFakeData(props.data, list);
-  }
+  // 1. 触发懒加载：标记该 tab 为“已渲染”
+  processedTabs.value[index]!.hasBeenRendered = true;
 
-  return list;
-});
+  // 2. 切换视图
+  activeIndex.value = index;
 
-const initTab = () => {
-  tabs.forEach((item: any, index: number) => {
-    item.active = index === 0;
-    item.init = index === 0;
-  });
-  activeTab.value = tabs[0];
+  // // 3. 头部自动滚动居中 (简单策略：滚到前一个 item)
+  // // 这样当前 item 会靠左或居中显示
+  // scrollIntoViewId.value = index > 0 ? `tab-item-${index - 1}` : `tab-item-0`;
 };
-
-const getTabHeight = async () => {
-  // 确保在组件实例范围内查询
-  if (!instance) return;
-  return new Promise((resolve, reject) => {
-    uni
-      .createSelectorQuery()
-      .in(instance)
-      .select('.cms-tab-content')
-      .boundingClientRect()
-      .exec((res) => {
-        if (res && res[0]) {
-          minHeight.value = `${res[0].height}px`;
-          resolve(res[0]);
-        } else {
-          // 可能是第一次渲染还未完成，不 reject，直接返回
-          resolve(null);
-        }
-      });
-  });
-};
-
-const getScrollTop = () => {
-  if (pageScrollEvent && pageScrollEvent.getScrollTop) {
-    return pageScrollEvent.getScrollTop();
-  }
-  return 0;
-};
-
-const getHeadOffsetTop = () => {
-  const dfd = defer();
-  if (instance) {
-    uni
-      .createSelectorQuery()
-      .in(instance)
-      .select('.cms-tab-header-wrapper')
-      .boundingClientRect()
-      .exec((res) => {
-        if (res && res[0]) {
-          dfd.resolve(res[0].top);
-        } else {
-          dfd.resolve(0);
-        }
-      });
-  } else {
-    dfd.resolve(0);
-  }
-  return dfd.promise;
-};
-
-const showTab = async (tab: any) => {
-  if (tab.active) return;
-
-  // 路由判断 (替换原有的 this.$Route)
-  const pages = getCurrentPages();
-  const currentRoute = pages[pages.length - 1]?.route || '';
-  const isCourseCLP = currentRoute.includes('cmsCourseCLP');
-
-  if (!isCourseCLP) {
-    await getTabHeight();
-  }
-
-  const currentActive = tabs.find((i) => i.active) || tabs[0];
-
-  // 隐藏旧 Tab
-  opacityControl.hide();
-
-  if (!isCourseCLP) {
-    const pageScrollTop = getScrollTop();
-    const headOffsetTop: any = await getHeadOffsetTop();
-
-    // 判断是否吸顶
-    // 注意：这里可能存在精度问题，原代码用 ===，建议允许微小误差
-    if (Math.abs(headOffsetTop - headerStickyTop.value) < 2) {
-      setTimeout(() => {
-        if (tab.scrollTop != null) {
-          uni.pageScrollTo({ scrollTop: tab.scrollTop, duration: 0 });
-        } else {
-          // 滚动到 Tab 容器顶部
-          uni.pageScrollTo({
-            selector: `.cms-page >>> #${tabId.value}`,
-            duration: 0,
-          });
-        }
-        opacityControl.show();
-      }, 10);
-      // 记录旧 Tab 的滚动位置
-      tabs[currentActive.index].scrollTop = pageScrollTop;
-    } else {
-      setTimeout(() => {
-        opacityControl.show();
-      }, 10);
-      tabs[currentActive.index].scrollTop = null;
-    }
-  } else {
-    setTimeout(() => {
-      opacityControl.show();
-    }, 10);
-    tabs[currentActive.index].scrollTop = null;
-  }
-
-  // 切换状态
-  tabs[currentActive.index].active = false;
-  if (!tab.init) {
-    tabs[tab.index].init = true;
-  }
-  tabs[tab.index].active = true;
-  activeTab.value = tabs[tab.index];
-
-  uni.$emit('switchTab', {
-    videoComponentId: videoDataMap[tab.index]?.componentId,
-  });
-
-  if (changeFirstPos && typeof changeFirstPos === 'function') {
-    changeFirstPos(tab.title);
-  }
-};
-
-// --- 生命周期 ---
-
-onMounted(() => {
-  // 计算吸顶高度初始值
-  headerStickyTop.value =
-    env.value.fixedTopHeight + env.value.navHeight + statusBarHeight;
-  headerStickyTopStyles.value = `calc(${
-    (env.value.fixedTopHeight + env.value.navHeight) * 2
-  }rpx + ${statusBarHeight}px)`;
-
-  // 处理初始定位
-  if (tabPos && typeof tabPos === 'function') {
-    const { firstPos = '' } = tabPos() || {};
-    if (firstPos) {
-      const targetTab = tabs.find((i) => i.title === firstPos);
-      if (targetTab) {
-        tabs[targetTab.index].active = true;
-        activeTab.value = tabs[targetTab.index];
-        if (!targetTab.init) {
-          tabs[targetTab.index].init = true;
-        }
-        // 延迟一下 emit，确保子组件已挂载
-        nextTick(() => {
-          uni.$emit('switchTab', {
-            videoComponentId: videoDataMap[activeTab.value.index]?.componentId,
-          });
-        });
-      } else {
-        initTab();
-      }
-    } else {
-      initTab();
-    }
-  } else {
-    initTab();
-  }
-
-  // 监听吸顶高度变化
-  uni.$on('hasFixedContainer', ({ height }) => {
-    headerStickyTopStyles.value = `calc(${
-      (env.value.fixedTopHeight + env.value.navHeight) * 2
-    }rpx + ${height}px + ${statusBarHeight}px)`;
-    headerStickyTop.value =
-      height + env.value.navHeight + env.value.fixedTopHeight + statusBarHeight;
-  });
-
-  // 收集 Video 数据
-  tabs.forEach((tab: any) => {
-    iterateComponentData((data) => {
-      if (data.componentCode === 'video') {
-        videoDataMap[tab.index] = deepcopy(data);
-      }
-    }, tab.childrenData || []);
-  });
-});
-
-onUnmounted(() => {
-  uni.$off('hasFixedContainer');
-  uni.$off('cmsVideoData'); // 原代码有这个 off，但没看到 on，保留以防万一
-});
 </script>
 
-<style lang="scss">
+<style lang="scss" scoped>
 .cms-tab-container {
-  .cms-tab-header-wrapper {
+  position: relative;
+  // [!删除] 不要写 width: 100%;
+  // 因为 useCmsComponent 的 styles 可能包含 margin/padding
+  // 块级元素默认会自动填满剩余空间，写了 100% 反而会撑破
+
+  // [!新增] 确保内边距不撑大容器
+  box-sizing: border-box;
+
+  // --- 头部样式 ---
+  .cms-tab-header-sticky-wrapper {
+    position: sticky;
+    top: var(--sticky-top);
+    z-index: 10;
+    background-color: #fff;
+
+    // [!修改] 头部必须限制宽度，否则 scroll-view 无法滚动
+    width: 100%;
+    max-width: 100vw;
+    overflow: hidden;
+  }
+
+  .cms-tab-header-scroll {
     white-space: nowrap;
     width: 100%;
-    position: sticky;
-    z-index: 3;
+
+    .cms-tab-header-flex {
+      display: flex;
+      align-items: center;
+    }
+
     .cms-tab-header-item {
       flex-shrink: 0;
       display: inline-flex;
       align-items: center;
       justify-content: center;
-      &:last-child {
-        margin-right: 0 !important;
-      }
-    }
-    .cms-tab-header-item-active-underLine {
       position: relative;
-      &::after {
+
+      // 应用 CSS 变量
+      font-size: var(--tab-font-size);
+      line-height: var(--tab-line-height);
+      border-radius: var(--tab-border-radius);
+      padding: 0 var(--tab-padding-x);
+      margin-right: var(--tab-margin-x);
+
+      // 默认样式
+      border-style: solid;
+      background-color: var(--inactive-bg);
+      color: var(--inactive-color);
+      border-color: var(--inactive-border-color);
+      border-width: var(--inactive-border-width);
+
+      // 确保盒模型正确
+      box-sizing: border-box;
+
+      &:last-child {
+        margin-right: 0;
+      }
+
+      // 激活样式
+      &.is-active {
+        background-color: var(--active-bg);
+        color: var(--active-color);
+        border-color: var(--active-border-color);
+        border-width: var(--active-border-width);
+      }
+
+      // 下划线样式
+      &.is-active.has-underline::after {
         content: '';
         position: absolute;
         bottom: 0;
-        left: calc(50% - 1 / 2 * var(--underline-width));
+        left: 50%;
+        transform: translateX(-50%);
         width: var(--underline-width);
         height: var(--underline-height);
-        border-radius: var(--underline-border-radius);
+        border-radius: var(--underline-radius);
         background-color: var(--underline-color);
       }
+    }
+  }
+
+  // --- 内容样式 ---
+  .cms-tab-content-wrapper {
+    // [!修改] 同样去掉 width: 100% 或者加上 box-sizing
+    // 建议直接用 100% 配合 border-box
+    width: 100%;
+    box-sizing: border-box;
+
+    // [!新增] 防止子元素意外撑开导致页面横向滚动
+    overflow-x: hidden;
+
+    .cms-tab-content-pane {
+      width: 100%;
+      box-sizing: border-box;
+      min-height: 100rpx;
     }
   }
 }
