@@ -69,6 +69,14 @@
     :key="`tab-container-${data.componentId}`"
     :children-styles="childrenStyles"
   />
+  <cms-product-list
+    v-else-if="data.componentCode === 'product-list' && isVisible"
+    :data="data"
+    :index="index"
+    :key="`product-list-${data.componentId}`"
+    :children-styles="childrenStyles"
+  />
+
   <view v-else-if="isVisible" class="cms-unknown-component">
     未注册组件 {{ data.componentCode }}
   </view>
@@ -88,6 +96,7 @@ import CmsFixedSizeContainer from './components/cms-fixed-size-container.vue';
 import CmsCardStack from './components/cms-card-stack.vue';
 import CmsDialogContainer from './components/cms-dialog-container.vue';
 import CmsTabContainer from './components/cms-tab-container.vue';
+import CmsProductList from './components/cms-product-list.vue';
 
 defineOptions({
   name: 'CmsBaseComponent',

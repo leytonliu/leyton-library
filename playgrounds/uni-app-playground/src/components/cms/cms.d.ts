@@ -47,6 +47,7 @@ export interface CmsActionConfig {
  * 环境配置（全局 CMS 运行环境）
  */
 export interface CmsEnvConfig {
+  getProductList?: (options: { params: { codes: string[] } }) => Promise<any[]>;
   [key: string]: any;
 }
 
