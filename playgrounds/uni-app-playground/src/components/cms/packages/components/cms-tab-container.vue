@@ -1,8 +1,9 @@
 <template>
   <view
+    :id="containerId"
     :class="classes"
     :data-component="data.componentCode"
-    :style="[containerStyles, cssVars]"
+    :style="[containerStyles, cssVars, { minHeight: containerMinHeight }]"
     class="cms-tab-container"
     @tap="handleTapBaseContainer"
   >
@@ -49,12 +50,21 @@
 </template>
 
 <script lang="ts" setup>
-import { ref, computed, watch, provide, type CSSProperties } from 'vue';
+import {
+  ref,
+  computed,
+  watch,
+  provide,
+  getCurrentInstance,
+  nextTick,
+  type CSSProperties,
+} from 'vue';
 import { CmsBaseComponentProps, CmsComponentData } from '../../cms';
 import { cmsBaseComponentDefaults } from '../utils/constants';
 import useCmsComponent from '../hooks/useCmsComponent';
 import CmsBaseComponent from '../cms-base-component.vue';
 import { deepcopy } from '../utils/deepcopy';
+import { usePageScroll } from '../hooks/usePageScroll';
 
 defineOptions({
   name: 'CmsTabContainer',
@@ -76,9 +86,22 @@ const {
   bindingValue,
 } = useCmsComponent(props);
 
-// --- 状态管理 ---
+const instance = getCurrentInstance();
+// 生成唯一ID用于滚动定位
+const containerId = `cms-tab-container-${
+  instance?.uid || Math.random().toString(36).slice(2)
+}`;
+
+// (保留滚动监听，如果业务需要)
+const { onScroll } = usePageScroll();
+onScroll(({ scrollTop }) => {
+  // console.log('onScroll', scrollTop);
+});
+
 const activeIndex = ref(0);
 const scrollIntoViewId = ref('');
+// [!新增] 用于动态撑住容器高度
+const containerMinHeight = ref('');
 
 // --- 数据结构定义 ---
 interface ProcessedTab {
@@ -91,17 +114,15 @@ interface ProcessedTab {
 const processedTabs = ref<ProcessedTab[]>([]);
 
 // --- 核心逻辑：数据处理 ---
-// 监听数据变化，生成 Tab 结构。使用 watch 而不是 computed 以便处理 fakeData 副作用
 watch(
   () => props.data,
   (newData) => {
     if (!newData.childrenData || !newData.childrenData[0]) return;
 
-    const templateData = newData.childrenData[0]; // 标题模板组件
+    const templateData = newData.childrenData[0];
     const panes = newData.readonlyData?.panes || [];
 
     const list: ProcessedTab[] = panes.map((pane: any, index: number) => {
-      // 基于模板，构造标题组件的数据
       const headerData = deepcopy({
         ...templateData,
         data: { ...templateData.data, tab: pane },
@@ -110,14 +131,11 @@ watch(
       return {
         uniqueKey: pane.id || `tab_${index}`,
         headerComponentData: headerData,
-        // 过滤无效子组件
         contentChildren: (pane.childrenData || []).filter((i: any) => i),
-        // 初始化策略：默认只渲染第 0 个，其他的懒加载
         hasBeenRendered: index === 0,
       };
     });
 
-    // 处理编辑器模式下的伪造数据 ID (关键)
     if (bindingValue?.fakeDataManager) {
       bindingValue.fakeDataManager.resetFakeData(newData);
       const headerList = list.map((t) => t.headerComponentData);
@@ -126,7 +144,6 @@ watch(
 
     processedTabs.value = list;
 
-    // 越界修正（防止数据更新后 activeIndex 超出范围）
     if (activeIndex.value >= list.length) {
       activeIndex.value = 0;
     }
@@ -134,7 +151,7 @@ watch(
   { immediate: true, deep: true }
 );
 
-// --- 样式逻辑：CSS 变量 ---
+// --- 样式逻辑 ---
 const hasUnderline = computed(() => {
   const d = props.data.data;
   return !!(d && d.underlineWidth && d.underlineHeight && d.underlineColor);
@@ -143,50 +160,94 @@ const hasUnderline = computed(() => {
 const cssVars = computed(() => {
   const d = props.data.data || {};
 
-  // 将所有配置样式映射为 CSS 变量，极大简化模板
+  // 假设吸顶高度是固定的或者动态计算的，这里填入您实际的逻辑
+  const stickyTopVal = 0;
+
   return {
-    // 字体与间距
     '--tab-font-size': d.textFontSize,
     '--tab-line-height': d.textLineHeight,
     '--tab-border-radius': d.textBorderRadius,
     '--tab-padding-x': d.textPaddingX,
     '--tab-margin-x': d.textMarginX,
-
-    // 激活状态
     '--active-bg': d.textBackgroundActive,
     '--active-color': d.textColorActive,
     '--active-border-color': d.borderColorActive || 'transparent',
     '--active-border-width': d.borderWeightActive || '0px',
-
-    // 未激活状态
     '--inactive-bg': d.textBackgroundInactive,
     '--inactive-color': d.textColorInactive,
     '--inactive-border-color': d.borderColorInactive || 'transparent',
     '--inactive-border-width': d.borderWeightInactive || '0px',
-
-    // 下划线
     '--underline-width': d.underlineWidth,
     '--underline-height': d.underlineHeight,
     '--underline-color': d.underlineColor,
     '--underline-radius': d.underlineBorderRadius,
+    '--sticky-top': `${stickyTopVal}px`,
   } as CSSProperties;
 });
 
-// 向下提供当前激活的 index，子组件(如Video)可能需要知道自己是否显示
 provide('activeTabIndex', activeIndex);
 
-// --- 交互逻辑 ---
-const handleSwitchTab = (index: number) => {
+// --- 交互逻辑 (核心修改) ---
+const handleSwitchTab = async (index: number) => {
   if (index === activeIndex.value) return;
 
-  // 1. 触发懒加载：标记该 tab 为“已渲染”
-  processedTabs.value[index]!.hasBeenRendered = true;
+  // 1. [撑杆跳策略] 切换前，先测量当前高度
+  if (instance) {
+    const rect = await new Promise<UniApp.NodeInfo>((resolve) => {
+      uni
+        .createSelectorQuery()
+        .in(instance)
+        .select(`#${containerId}`) // 选中最外层容器
+        .boundingClientRect(resolve)
+        .exec();
+    });
 
-  // 2. 切换视图
+    // 如果当前高度很高，先把它锁死！
+    // 防止切换瞬间页面高度塌陷，导致浏览器强行重置滚动条
+    if (rect && rect.height) {
+      containerMinHeight.value = `${rect.height}px`;
+    }
+  }
+
+  // 2. 强制等待 DOM 更新，确保 min-height 生效
+  await nextTick();
+
+  // 3. 触发懒加载并切换显示
+  if (processedTabs.value[index]) {
+    processedTabs.value[index]!.hasBeenRendered = true;
+  }
   activeIndex.value = index;
 
-  // // 3. 头部自动滚动居中 (简单策略：滚到前一个 item)
-  // // 这样当前 item 会靠左或居中显示
+  // 4. [智能回滚] 检查是否需要滚回顶部
+  if (instance) {
+    uni
+      .createSelectorQuery()
+      .in(instance)
+      .select('.cms-tab-header-sticky-wrapper')
+      .boundingClientRect((res) => {
+        const headerRect = res as UniApp.NodeInfo;
+        const stickyTop = parseInt(String(cssVars.value['--sticky-top'])) || 0;
+
+        // 如果头部已经滚出去了（top < stickyTop），或者滚得太远
+        if (headerRect && headerRect.top <= stickyTop + 5) {
+          uni.pageScrollTo({
+            selector: `#${containerId}`, // 滚回容器顶部
+            duration: 0, // 瞬时完成
+            offsetTop: -stickyTop,
+          });
+        }
+      })
+      .exec();
+  }
+
+  // 5. [撤销撑杆] 延迟解锁高度
+  // 稍微延迟一点，确保滚动动作完成，且新 Tab 已经渲染
+  setTimeout(() => {
+    // 清空内联样式，让 CSS 接管 (回退到默认的 min-height)
+    containerMinHeight.value = '';
+  }, 100);
+
+  // 6. 头部横向滚动 (可选)
   // scrollIntoViewId.value = index > 0 ? `tab-item-${index - 1}` : `tab-item-0`;
 };
 </script>
@@ -194,12 +255,11 @@ const handleSwitchTab = (index: number) => {
 <style lang="scss" scoped>
 .cms-tab-container {
   position: relative;
-  // [!删除] 不要写 width: 100%;
-  // 因为 useCmsComponent 的 styles 可能包含 margin/padding
-  // 块级元素默认会自动填满剩余空间，写了 100% 反而会撑破
-
-  // [!新增] 确保内边距不撑大容器
+  // 确保内边距不撑大容器
   box-sizing: border-box;
+
+  // [!关键] 默认给一个最小高度，防止解锁后变为0
+  min-height: 60vh;
 
   // --- 头部样式 ---
   .cms-tab-header-sticky-wrapper {
@@ -207,8 +267,6 @@ const handleSwitchTab = (index: number) => {
     top: var(--sticky-top);
     z-index: 10;
     background-color: #fff;
-
-    // [!修改] 头部必须限制宽度，否则 scroll-view 无法滚动
     width: 100%;
     max-width: 100vw;
     overflow: hidden;
@@ -230,28 +288,23 @@ const handleSwitchTab = (index: number) => {
       justify-content: center;
       position: relative;
 
-      // 应用 CSS 变量
       font-size: var(--tab-font-size);
       line-height: var(--tab-line-height);
       border-radius: var(--tab-border-radius);
       padding: 0 var(--tab-padding-x);
       margin-right: var(--tab-margin-x);
-
-      // 默认样式
       border-style: solid;
+      box-sizing: border-box;
+
       background-color: var(--inactive-bg);
       color: var(--inactive-color);
       border-color: var(--inactive-border-color);
       border-width: var(--inactive-border-width);
 
-      // 确保盒模型正确
-      box-sizing: border-box;
-
       &:last-child {
         margin-right: 0;
       }
 
-      // 激活样式
       &.is-active {
         background-color: var(--active-bg);
         color: var(--active-color);
@@ -259,7 +312,6 @@ const handleSwitchTab = (index: number) => {
         border-width: var(--active-border-width);
       }
 
-      // 下划线样式
       &.is-active.has-underline::after {
         content: '';
         position: absolute;
@@ -276,18 +328,24 @@ const handleSwitchTab = (index: number) => {
 
   // --- 内容样式 ---
   .cms-tab-content-wrapper {
-    // [!修改] 同样去掉 width: 100% 或者加上 box-sizing
-    // 建议直接用 100% 配合 border-box
     width: 100%;
     box-sizing: border-box;
-
-    // [!新增] 防止子元素意外撑开导致页面横向滚动
     overflow-x: hidden;
+    transition: min-height 0.3s ease-out;
 
     .cms-tab-content-pane {
       width: 100%;
       box-sizing: border-box;
       min-height: 100rpx;
+      animation: fadeIn 0.3s ease-out;
+    }
+  }
+  @keyframes fadeIn {
+    from {
+      opacity: 0;
+    }
+    to {
+      opacity: 1;
     }
   }
 }

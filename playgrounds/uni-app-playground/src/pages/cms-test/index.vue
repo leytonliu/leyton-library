@@ -9,6 +9,7 @@ import CmsPage from '@/components/cms/cms-page.vue';
 import { usePageScrollProvider } from '../../components/cms/packages/hooks/usePageScroll';
 
 usePageScrollProvider();
+// onPageScroll(() => {});
 </script>
 
 <style lang="scss" scoped>

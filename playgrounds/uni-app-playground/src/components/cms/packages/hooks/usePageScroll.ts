@@ -28,6 +28,8 @@ export function usePageScrollProvider() {
 
   // 监听 Uni-app 的页面滚动
   onPageScroll((e) => {
+    // console.log('onPageScroll', e);
+
     currentScrollTop = e.scrollTop;
     // 触发所有订阅者
     for (const listener of listeners) {

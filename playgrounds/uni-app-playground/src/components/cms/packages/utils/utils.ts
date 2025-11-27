@@ -52,10 +52,28 @@ export const convertStyleToString = (styleObject: CSSProperties) => {
   }
   return Object.entries(styleObject)
     .reduce<string[]>((prev, [key, value]) => {
-      // 忽略 undefined 或 null 值
-      if (value != null) {
-        prev.push(`${kebabCase(key)}:${value}`);
+      // 忽略 undefined 或 null 值, 优化 url('undefined') 问题
+      if (value === null || value === undefined) {
+        return prev;
       }
+      const strValue = String(value).trim();
+      if (strValue === '') {
+        return prev;
+      }
+      if (
+        strValue === 'undefined' ||
+        strValue === 'null' ||
+        strValue.includes("('undefined')") || // 针对 url('undefined')
+        strValue.includes('("undefined")') ||
+        strValue.includes("('null')")
+      ) {
+        console.warn(`[Style Warn] 忽略了无效样式: ${key}: ${value}`);
+        return prev;
+      }
+      if (typeof value === 'number' && isNaN(value)) {
+        return prev;
+      }
+      prev.push(`${kebabCase(key)}:${strValue}`);
       return prev;
     }, [])
     .join(';');
