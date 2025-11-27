@@ -7,7 +7,7 @@
     class="cms-tab-container"
     @tap="handleTapBaseContainer"
   >
-    <view class="cms-tab-header-wrapper">
+    <view class="cms-tab-header-sticky-wrapper">
       <scroll-view
         class="cms-tab-header-scroll"
         scroll-with-animation
@@ -97,6 +97,7 @@ const props = withDefaults(defineProps<CmsBaseComponentProps>(), {
 // --- 1. 基础 Hook 集成 ---
 const {
   classes,
+  envConfig,
   styles: containerStyles,
   handleTapBaseContainer,
   bindingValue,
@@ -179,8 +180,35 @@ const hasUnderline = computed(() => {
 
 const cssVars = computed(() => {
   const d = props.data.data || {};
-  // 假设吸顶距离逻辑 (这里可替换为实际业务逻辑)
-  const stickyTopVal = 0;
+
+  // [!核心逻辑] 计算吸顶的 Top 阈值
+  const sysInfo = uni.getSystemInfoSync();
+  const navStyle = envConfig?.value?.navigationStyle || 'default';
+  const isCustom = navStyle === 'custom';
+  let baseStickyTop = 0;
+
+  // #ifdef H5
+  // H5 不需要判断 custom，因为 windowTop 会自动处理导航栏高度
+  baseStickyTop = sysInfo.windowTop || 0;
+  // #endif
+
+  // #ifndef H5
+  if (isCustom) {
+    // 如果是自定义导航栏，吸顶需要避开：状态栏 + 胶囊栏(44px)
+    const statusBarH = sysInfo.statusBarHeight || 0;
+    const navBarH = 44; // 胶囊高度通常固定为44，也可动态计算
+    baseStickyTop = statusBarH + navBarH;
+  } else {
+    // 如果是默认导航栏，内容从导航栏下方开始，top 为 0 即可
+    baseStickyTop = 0;
+  }
+  // #endif
+
+  const fixedTopH = envConfig?.value?.fixedTopHeight || 0;
+  const totalStickyTop = baseStickyTop + fixedTopH;
+
+  // 总吸顶距离
+  console.log('totalStickyTop', totalStickyTop);
 
   const activeW = parseInt(d.borderWeightActive) || 0;
   const inactiveW = parseInt(d.borderWeightInactive) || 0;
@@ -207,7 +235,8 @@ const cssVars = computed(() => {
     '--underline-height': d.underlineHeight,
     '--underline-color': d.underlineColor,
     '--underline-radius': d.underlineBorderRadius,
-    '--sticky-top': `${stickyTopVal}px`,
+    '--sticky-top': `${totalStickyTop}px`,
+    '--header-bg': '#ffffff',
   } as CSSProperties;
 });
 
@@ -292,21 +321,26 @@ const handleSwitchTab = async (index: number) => {
   min-height: 60vh;
 
   // --- 头部样式 ---
-  .cms-tab-header-wrapper {
-    // 粘性定位容器
-    .cms-tab-header-sticky-wrapper {
-      position: sticky;
-      top: var(--sticky-top);
-      z-index: 10;
-      background-color: #fff;
-      width: 100%;
-      max-width: 100vw;
-      overflow: hidden;
-    }
+  .cms-tab-header-sticky-wrapper {
+    position: sticky;
+    top: var(--sticky-top);
+    z-index: 100;
+    background-color: var(--header-bg, #fff);
+    width: 100%;
+    max-width: 100vw;
+    overflow: hidden;
+    padding: 20rpx 0 20rpx;
 
     .cms-tab-header-scroll {
       white-space: nowrap;
       width: 100%;
+      ::-webkit-scrollbar {
+        display: none;
+        width: 0 !important;
+        height: 0 !important;
+        -webkit-appearance: none;
+        background: transparent;
+      }
 
       .cms-tab-header-flex {
         display: flex;

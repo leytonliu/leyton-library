@@ -45,10 +45,10 @@ const props = withDefaults(
 
 defineOptions({
   name: 'CmsPreview',
-  // options: {
-  //   styleIsolation: 'shared', // 解除自定义组件的样式隔离
-  //   virtualHost: true, // 启用虚拟的宿主节点，以避免实体宿主节点影响样式布局
-  // },
+  options: {
+    styleIsolation: 'shared', // 解除自定义组件的样式隔离
+    virtualHost: true, // 启用虚拟的宿主节点，以避免实体宿主节点影响样式布局
+  },
 });
 
 /**

@@ -7669,7 +7669,2744 @@
                                     }
                                 ],
                                 "componentId": "_50eb6a1a-b042-4fa4-8eda-5878309fb965"
-                            }
+                            },
+                            {
+                                "anchorTitle": null,
+                                "componentCode": "column-container",
+                                "groupCode": "container",
+                                "groupName": "容器",
+                                "componentName": "多列容器",
+                                "editFlag": 0,
+                                "style": {
+                                    "display": "flex",
+                                    "flexDirection": "row",
+                                    "alignItems": "stretch",
+                                    "justifyContent": "flex-start",
+                                    "marginTop": "24px"
+                                },
+                                "data": {
+                                    "columnNum": 2,
+                                    "gutter": 17
+                                },
+                                "childrenData": [
+                                    {
+                                        "anchorTitle": null,
+                                        "componentCode": "rows-container",
+                                        "groupCode": "container",
+                                        "groupName": "容器",
+                                        "componentName": "多行容器",
+                                        "editFlag": 0,
+                                        "style": {
+                                            "display": "block"
+                                        },
+                                        "data": {
+                                            "rowsNum": 3,
+                                            "gutter": null,
+                                            "entityName": "剪发中的剪裁结构和思维 by sunny",
+                                            "entityCode": "3651108",
+                                            "entityId": 944,
+                                            "platformProductCode": "3651108",
+                                            "mediaUrl": "/o2-resources/o2pcm/videos/online/dm/2/O2-PUB/cover/3651108.png",
+                                            "lowedPrice": null,
+                                            "onlineShopName": "发型师",
+                                            "product": {
+                                                "platformProductId": 944,
+                                                "platformProductCode": "3651108",
+                                                "mediaUrl": "/o2-resources/o2pcm/videos/online/dm/2/O2-PUB/cover/3651108.png",
+                                                "title": "剪发中的剪裁结构和思维 by sunny",
+                                                "lowedPrice": null,
+                                                "displayPrice": null,
+                                                "currencyCode": null,
+                                                "entityId": 944,
+                                                "entityCode": "3651108",
+                                                "entityName": "剪发中的剪裁结构和思维 by sunny",
+                                                "serialNum": null,
+                                                "catalogCode": "OW-1",
+                                                "catalogVersionCode": "OW-1",
+                                                "entityStatus": null,
+                                                "entityStatusMeaning": null,
+                                                "mediaId": null,
+                                                "activeFlag": 1,
+                                                "shelfStatusCode": "ON",
+                                                "shelfStatusMeaning": "已上架",
+                                                "labelRelProductMap": {
+                                                    "CUSTOM": [
+                                                        {
+                                                            "objectVersionNumber": 1,
+                                                            "_token": "UZ7lDxKqxeo0SxH+w9U5aT7QzETbk0weA1umDQkZiczDLn7y+ityXNIzOVpFvv4SAYwyy2d+VRbC6iUvLk5k4TBhLNA+cfSZ78nHZzm6m9U=",
+                                                            "labelId": 273,
+                                                            "labelCode": "LABEL2023121412",
+                                                            "labelName": "裁剪思维",
+                                                            "labelTypeCode": "CUSTOM",
+                                                            "showFlag": 1,
+                                                            "tenantId": 2,
+                                                            "labelRelId": 51,
+                                                            "platformProductId": 944
+                                                        }
+                                                    ]
+                                                },
+                                                "tenantId": 2,
+                                                "tenantName": "欧莱雅",
+                                                "onlineShopName": "发型师",
+                                                "kindTypeCode": "VIRTUAL_COURSE",
+                                                "courseAddressList": null,
+                                                "speaker": "欧莱雅PRO",
+                                                "liveTime": null,
+                                                "courseForm": "ONLINE"
+                                            }
+                                        },
+                                        "childrenData": [
+                                            {
+                                                "anchorTitle": null,
+                                                "componentCode": "image",
+                                                "groupCode": "common",
+                                                "groupName": "常用组件",
+                                                "componentName": "图片",
+                                                "editFlag": 0,
+                                                "data": {
+                                                    "url": "https://static-d2s-prod.platform-loreal.cn/o2-resources/metadata/o2cms/2/O2-PUB/1711550354301_00000000.jpeg",
+                                                    "width": "100%",
+                                                    "height": "100%",
+                                                    "objectFit": "scale-down",
+                                                    "objectPosition": "center",
+                                                    "hasCover": false,
+                                                    "cdnUrl": "https://static-d2s-prod.platform-loreal.cn/o2-resources/metadata/o2cms/2/O2-PUB/1711550354301_00000000.jpeg",
+                                                    "path": "/o2-resources/metadata/o2cms/2/O2-PUB/1711550354301_00000000.jpeg"
+                                                },
+                                                "style": {
+                                                    "borderRadius": "8px 8px 8px 8px"
+                                                },
+                                                "childrenData": [],
+                                                "componentId": "_9656a43e-fe7d-4db2-8452-53ecce251294"
+                                            },
+                                            {
+                                                "anchorTitle": null,
+                                                "componentCode": "text",
+                                                "groupCode": "common",
+                                                "groupName": "常用组件",
+                                                "componentName": "文字",
+                                                "editFlag": 0,
+                                                "data": {
+                                                    "text": "剪发中的剪裁结构和思维",
+                                                    "overflowMode": "unset",
+                                                    "fontFamily": "font-regular"
+                                                },
+                                                "style": {
+                                                    "display": "block",
+                                                    "fontSize": "14px",
+                                                    "fontWeight": "500",
+                                                    "color": "black",
+                                                    "marginTop": "8px"
+                                                },
+                                                "childrenData": [],
+                                                "componentId": "_1396cd3f-3090-420e-8146-2db3fb497956"
+                                            },
+                                            {
+                                                "anchorTitle": null,
+                                                "componentCode": "rows-container",
+                                                "groupCode": "container",
+                                                "groupName": "容器",
+                                                "componentName": "多行容器",
+                                                "editFlag": 0,
+                                                "style": {
+                                                    "display": "flex",
+                                                    "marginTop": "8px"
+                                                },
+                                                "data": {
+                                                    "rowsNum": 2
+                                                },
+                                                "childrenData": [
+                                                    {
+                                                        "anchorTitle": null,
+                                                        "componentCode": "image",
+                                                        "groupCode": "common",
+                                                        "groupName": "常用组件",
+                                                        "componentName": "图片",
+                                                        "editFlag": 0,
+                                                        "data": {
+                                                            "url": "https://static-d2s-prod.platform-loreal.cn/o2-resources/metadata/o2cms/2/O2-PUB/1702958276239_WechatIMG295.jpg",
+                                                            "width": "16px",
+                                                            "height": "16px",
+                                                            "objectFit": "scale-down",
+                                                            "objectPosition": "center",
+                                                            "hasCover": false,
+                                                            "cdnUrl": "https://static-d2s-prod.platform-loreal.cn/o2-resources/metadata/o2cms/2/O2-PUB/1702958276239_WechatIMG295.jpg",
+                                                            "path": "/o2-resources/metadata/o2cms/2/O2-PUB/1702958276239_WechatIMG295.jpg"
+                                                        },
+                                                        "style": {
+                                                            "marginRight": "4px",
+                                                            "borderRadius": "30px"
+                                                        },
+                                                        "childrenData": [],
+                                                        "componentId": "_be8d177e-29c4-400b-b294-d5af0874bcf3"
+                                                    },
+                                                    {
+                                                        "anchorTitle": null,
+                                                        "componentCode": "text",
+                                                        "groupCode": "common",
+                                                        "groupName": "常用组件",
+                                                        "componentName": "文字",
+                                                        "editFlag": 0,
+                                                        "data": {
+                                                            "text": "Sunny",
+                                                            "overflowMode": "unset",
+                                                            "fontFamily": "font-regular"
+                                                        },
+                                                        "style": {
+                                                            "display": "block",
+                                                            "fontSize": "12px",
+                                                            "fontWeight": "500",
+                                                            "color": "black"
+                                                        },
+                                                        "childrenData": [],
+                                                        "componentId": "_46a699e4-d657-42a0-827e-f96a07675426"
+                                                    }
+                                                ],
+                                                "componentId": "_92e6eed9-899c-4821-8239-e9b690589e8f"
+                                            }
+                                        ],
+                                        "componentId": "_e1853d45-f341-46aa-8aac-b5e26dc116e6",
+                                        "action": {
+                                            "code": "bind-product",
+                                            "data": {
+                                                "page": {},
+                                                "params": {}
+                                            }
+                                        }
+                                    },
+                                    {
+                                        "anchorTitle": null,
+                                        "componentCode": "rows-container",
+                                        "groupCode": "container",
+                                        "groupName": "容器",
+                                        "componentName": "多行容器",
+                                        "editFlag": 0,
+                                        "style": {
+                                            "display": "block"
+                                        },
+                                        "data": {
+                                            "rowsNum": 3,
+                                            "entityName": "烫发高业绩秘籍商业潮流法式烫",
+                                            "entityCode": "3340532",
+                                            "entityId": 1248,
+                                            "platformProductCode": "3340532",
+                                            "mediaUrl": "/o2-resources/o2pcm/videos/online/dm/2/O2-PUB/cover/3340532.png",
+                                            "lowedPrice": null,
+                                            "onlineShopName": "发型师",
+                                            "product": {
+                                                "platformProductId": 1248,
+                                                "platformProductCode": "3340532",
+                                                "mediaUrl": "/o2-resources/o2pcm/videos/online/dm/2/O2-PUB/cover/3340532.png",
+                                                "title": "烫发高业绩秘籍商业潮流法式烫",
+                                                "lowedPrice": null,
+                                                "displayPrice": null,
+                                                "currencyCode": null,
+                                                "entityId": 1248,
+                                                "entityCode": "3340532",
+                                                "entityName": "烫发高业绩秘籍商业潮流法式烫",
+                                                "serialNum": null,
+                                                "catalogCode": "OW-1",
+                                                "catalogVersionCode": "OW-1",
+                                                "entityStatus": null,
+                                                "entityStatusMeaning": null,
+                                                "mediaId": null,
+                                                "activeFlag": 1,
+                                                "shelfStatusCode": "ON",
+                                                "shelfStatusMeaning": "已上架",
+                                                "labelRelProductMap": {
+                                                    "CUSTOM": [
+                                                        {
+                                                            "objectVersionNumber": 1,
+                                                            "_token": "UZ7lDxKqxeo0SxH+w9U5aT7QzETbk0weA1umDQkZiczDLn7y+ityXNIzOVpFvv4SAYwyy2d+VRbC6iUvLk5k4fcY9f7tRRBQR2RAjZrmZwU=",
+                                                            "labelId": 275,
+                                                            "labelCode": "LABEL2023121414",
+                                                            "labelName": "法式烫",
+                                                            "labelTypeCode": "CUSTOM",
+                                                            "showFlag": 1,
+                                                            "tenantId": 2,
+                                                            "labelRelId": 60,
+                                                            "platformProductId": 1248
+                                                        }
+                                                    ]
+                                                },
+                                                "tenantId": 2,
+                                                "tenantName": "欧莱雅",
+                                                "onlineShopName": "发型师",
+                                                "kindTypeCode": "VIRTUAL_COURSE",
+                                                "courseAddressList": null,
+                                                "speaker": "欧莱雅PRO",
+                                                "liveTime": null,
+                                                "courseForm": "ONLINE"
+                                            }
+                                        },
+                                        "childrenData": [
+                                            {
+                                                "anchorTitle": null,
+                                                "componentCode": "image",
+                                                "groupCode": "common",
+                                                "groupName": "常用组件",
+                                                "componentName": "图片",
+                                                "editFlag": 0,
+                                                "data": {
+                                                    "url": "https://static-d2s-prod.platform-loreal.cn/o2-resources/metadata/o2cms/2/O2-PUB/1711550363534_000000000000000.jpeg",
+                                                    "width": "100%",
+                                                    "height": "100%",
+                                                    "objectFit": "scale-down",
+                                                    "objectPosition": "center",
+                                                    "hasCover": false,
+                                                    "cdnUrl": "https://static-d2s-prod.platform-loreal.cn/o2-resources/metadata/o2cms/2/O2-PUB/1711550363534_000000000000000.jpeg",
+                                                    "path": "/o2-resources/metadata/o2cms/2/O2-PUB/1711550363534_000000000000000.jpeg"
+                                                },
+                                                "style": {
+                                                    "borderRadius": "8px 8px 8px 8px"
+                                                },
+                                                "childrenData": [],
+                                                "componentId": "_574aa0cc-8c3f-44a2-b1ea-fb1c838340ea"
+                                            },
+                                            {
+                                                "anchorTitle": null,
+                                                "componentCode": "text",
+                                                "groupCode": "common",
+                                                "groupName": "常用组件",
+                                                "componentName": "文字",
+                                                "editFlag": 0,
+                                                "data": {
+                                                    "text": "商业潮流法式烫",
+                                                    "overflowMode": "unset",
+                                                    "fontFamily": "font-regular"
+                                                },
+                                                "style": {
+                                                    "display": "block",
+                                                    "fontSize": "14px",
+                                                    "fontWeight": "500",
+                                                    "color": "black",
+                                                    "marginTop": "8px"
+                                                },
+                                                "childrenData": [],
+                                                "componentId": "_eac8b4fe-8d09-41ca-8214-69de63deb712"
+                                            },
+                                            {
+                                                "anchorTitle": null,
+                                                "componentCode": "rows-container",
+                                                "groupCode": "container",
+                                                "groupName": "容器",
+                                                "componentName": "多行容器",
+                                                "editFlag": 0,
+                                                "style": {
+                                                    "display": "flex",
+                                                    "marginTop": "8px"
+                                                },
+                                                "data": {
+                                                    "rowsNum": 2
+                                                },
+                                                "childrenData": [
+                                                    {
+                                                        "anchorTitle": null,
+                                                        "componentCode": "image",
+                                                        "groupCode": "common",
+                                                        "groupName": "常用组件",
+                                                        "componentName": "图片",
+                                                        "editFlag": 0,
+                                                        "data": {
+                                                            "url": "https://static-d2s-prod.platform-loreal.cn/o2-resources/metadata/o2cms/2/O2-PUB/1702959787131_任玉平.jpg",
+                                                            "width": "16px",
+                                                            "height": "16px",
+                                                            "objectFit": "scale-down",
+                                                            "objectPosition": "center",
+                                                            "hasCover": false,
+                                                            "cdnUrl": "https://static-d2s-prod.platform-loreal.cn/o2-resources/metadata/o2cms/2/O2-PUB/1702959787131_任玉平.jpg",
+                                                            "path": "/o2-resources/metadata/o2cms/2/O2-PUB/1702959787131_任玉平.jpg"
+                                                        },
+                                                        "style": {
+                                                            "marginRight": "4px",
+                                                            "borderRadius": "30px"
+                                                        },
+                                                        "childrenData": [],
+                                                        "componentId": "_846da644-3788-436c-85e5-b1040e8e8662"
+                                                    },
+                                                    {
+                                                        "anchorTitle": null,
+                                                        "componentCode": "text",
+                                                        "groupCode": "common",
+                                                        "groupName": "常用组件",
+                                                        "componentName": "文字",
+                                                        "editFlag": 0,
+                                                        "data": {
+                                                            "text": "任玉平",
+                                                            "overflowMode": "unset",
+                                                            "fontFamily": "font-regular"
+                                                        },
+                                                        "style": {
+                                                            "display": "block",
+                                                            "fontSize": "12px",
+                                                            "fontWeight": "500",
+                                                            "color": "black"
+                                                        },
+                                                        "childrenData": [],
+                                                        "componentId": "_362496e5-1a12-4a92-8655-1205d43ff4dc"
+                                                    }
+                                                ],
+                                                "componentId": "_f50b2991-f95e-4a86-87ed-def213828a19"
+                                            }
+                                        ],
+                                        "componentId": "_185c3604-cc32-487d-bae5-591e42552f38",
+                                        "action": {
+                                            "code": "bind-product",
+                                            "data": {
+                                                "page": {},
+                                                "params": {}
+                                            }
+                                        }
+                                    }
+                                ],
+                                "componentId": "_a9423106-aa1b-4a1d-89f8-72e2518ea1a6"
+                            },
+                            {
+                                "anchorTitle": null,
+                                "componentCode": "column-container",
+                                "groupCode": "container",
+                                "groupName": "容器",
+                                "componentName": "多列容器",
+                                "editFlag": 0,
+                                "style": {
+                                    "display": "flex",
+                                    "flexDirection": "row",
+                                    "alignItems": "stretch",
+                                    "justifyContent": "flex-start",
+                                    "marginTop": "24px"
+                                },
+                                "data": {
+                                    "columnNum": 2,
+                                    "gutter": 17
+                                },
+                                "childrenData": [
+                                    {
+                                        "anchorTitle": null,
+                                        "componentCode": "rows-container",
+                                        "groupCode": "container",
+                                        "groupName": "容器",
+                                        "componentName": "多行容器",
+                                        "editFlag": 0,
+                                        "style": {
+                                            "display": "block"
+                                        },
+                                        "data": {
+                                            "rowsNum": 3,
+                                            "gutter": null,
+                                            "entityName": "剪发中的剪裁结构和思维 by sunny",
+                                            "entityCode": "3651108",
+                                            "entityId": 944,
+                                            "platformProductCode": "3651108",
+                                            "mediaUrl": "/o2-resources/o2pcm/videos/online/dm/2/O2-PUB/cover/3651108.png",
+                                            "lowedPrice": null,
+                                            "onlineShopName": "发型师",
+                                            "product": {
+                                                "platformProductId": 944,
+                                                "platformProductCode": "3651108",
+                                                "mediaUrl": "/o2-resources/o2pcm/videos/online/dm/2/O2-PUB/cover/3651108.png",
+                                                "title": "剪发中的剪裁结构和思维 by sunny",
+                                                "lowedPrice": null,
+                                                "displayPrice": null,
+                                                "currencyCode": null,
+                                                "entityId": 944,
+                                                "entityCode": "3651108",
+                                                "entityName": "剪发中的剪裁结构和思维 by sunny",
+                                                "serialNum": null,
+                                                "catalogCode": "OW-1",
+                                                "catalogVersionCode": "OW-1",
+                                                "entityStatus": null,
+                                                "entityStatusMeaning": null,
+                                                "mediaId": null,
+                                                "activeFlag": 1,
+                                                "shelfStatusCode": "ON",
+                                                "shelfStatusMeaning": "已上架",
+                                                "labelRelProductMap": {
+                                                    "CUSTOM": [
+                                                        {
+                                                            "objectVersionNumber": 1,
+                                                            "_token": "UZ7lDxKqxeo0SxH+w9U5aT7QzETbk0weA1umDQkZiczDLn7y+ityXNIzOVpFvv4SAYwyy2d+VRbC6iUvLk5k4TBhLNA+cfSZ78nHZzm6m9U=",
+                                                            "labelId": 273,
+                                                            "labelCode": "LABEL2023121412",
+                                                            "labelName": "裁剪思维",
+                                                            "labelTypeCode": "CUSTOM",
+                                                            "showFlag": 1,
+                                                            "tenantId": 2,
+                                                            "labelRelId": 51,
+                                                            "platformProductId": 944
+                                                        }
+                                                    ]
+                                                },
+                                                "tenantId": 2,
+                                                "tenantName": "欧莱雅",
+                                                "onlineShopName": "发型师",
+                                                "kindTypeCode": "VIRTUAL_COURSE",
+                                                "courseAddressList": null,
+                                                "speaker": "欧莱雅PRO",
+                                                "liveTime": null,
+                                                "courseForm": "ONLINE"
+                                            }
+                                        },
+                                        "childrenData": [
+                                            {
+                                                "anchorTitle": null,
+                                                "componentCode": "image",
+                                                "groupCode": "common",
+                                                "groupName": "常用组件",
+                                                "componentName": "图片",
+                                                "editFlag": 0,
+                                                "data": {
+                                                    "url": "https://static-d2s-prod.platform-loreal.cn/o2-resources/metadata/o2cms/2/O2-PUB/1711550354301_00000000.jpeg",
+                                                    "width": "100%",
+                                                    "height": "100%",
+                                                    "objectFit": "scale-down",
+                                                    "objectPosition": "center",
+                                                    "hasCover": false,
+                                                    "cdnUrl": "https://static-d2s-prod.platform-loreal.cn/o2-resources/metadata/o2cms/2/O2-PUB/1711550354301_00000000.jpeg",
+                                                    "path": "/o2-resources/metadata/o2cms/2/O2-PUB/1711550354301_00000000.jpeg"
+                                                },
+                                                "style": {
+                                                    "borderRadius": "8px 8px 8px 8px"
+                                                },
+                                                "childrenData": [],
+                                                "componentId": "_9656a43e-fe7d-4db2-8452-53ecce251294"
+                                            },
+                                            {
+                                                "anchorTitle": null,
+                                                "componentCode": "text",
+                                                "groupCode": "common",
+                                                "groupName": "常用组件",
+                                                "componentName": "文字",
+                                                "editFlag": 0,
+                                                "data": {
+                                                    "text": "剪发中的剪裁结构和思维",
+                                                    "overflowMode": "unset",
+                                                    "fontFamily": "font-regular"
+                                                },
+                                                "style": {
+                                                    "display": "block",
+                                                    "fontSize": "14px",
+                                                    "fontWeight": "500",
+                                                    "color": "black",
+                                                    "marginTop": "8px"
+                                                },
+                                                "childrenData": [],
+                                                "componentId": "_1396cd3f-3090-420e-8146-2db3fb497956"
+                                            },
+                                            {
+                                                "anchorTitle": null,
+                                                "componentCode": "rows-container",
+                                                "groupCode": "container",
+                                                "groupName": "容器",
+                                                "componentName": "多行容器",
+                                                "editFlag": 0,
+                                                "style": {
+                                                    "display": "flex",
+                                                    "marginTop": "8px"
+                                                },
+                                                "data": {
+                                                    "rowsNum": 2
+                                                },
+                                                "childrenData": [
+                                                    {
+                                                        "anchorTitle": null,
+                                                        "componentCode": "image",
+                                                        "groupCode": "common",
+                                                        "groupName": "常用组件",
+                                                        "componentName": "图片",
+                                                        "editFlag": 0,
+                                                        "data": {
+                                                            "url": "https://static-d2s-prod.platform-loreal.cn/o2-resources/metadata/o2cms/2/O2-PUB/1702958276239_WechatIMG295.jpg",
+                                                            "width": "16px",
+                                                            "height": "16px",
+                                                            "objectFit": "scale-down",
+                                                            "objectPosition": "center",
+                                                            "hasCover": false,
+                                                            "cdnUrl": "https://static-d2s-prod.platform-loreal.cn/o2-resources/metadata/o2cms/2/O2-PUB/1702958276239_WechatIMG295.jpg",
+                                                            "path": "/o2-resources/metadata/o2cms/2/O2-PUB/1702958276239_WechatIMG295.jpg"
+                                                        },
+                                                        "style": {
+                                                            "marginRight": "4px",
+                                                            "borderRadius": "30px"
+                                                        },
+                                                        "childrenData": [],
+                                                        "componentId": "_be8d177e-29c4-400b-b294-d5af0874bcf3"
+                                                    },
+                                                    {
+                                                        "anchorTitle": null,
+                                                        "componentCode": "text",
+                                                        "groupCode": "common",
+                                                        "groupName": "常用组件",
+                                                        "componentName": "文字",
+                                                        "editFlag": 0,
+                                                        "data": {
+                                                            "text": "Sunny",
+                                                            "overflowMode": "unset",
+                                                            "fontFamily": "font-regular"
+                                                        },
+                                                        "style": {
+                                                            "display": "block",
+                                                            "fontSize": "12px",
+                                                            "fontWeight": "500",
+                                                            "color": "black"
+                                                        },
+                                                        "childrenData": [],
+                                                        "componentId": "_46a699e4-d657-42a0-827e-f96a07675426"
+                                                    }
+                                                ],
+                                                "componentId": "_92e6eed9-899c-4821-8239-e9b690589e8f"
+                                            }
+                                        ],
+                                        "componentId": "_e1853d45-f341-46aa-8aac-b5e26dc116e6",
+                                        "action": {
+                                            "code": "bind-product",
+                                            "data": {
+                                                "page": {},
+                                                "params": {}
+                                            }
+                                        }
+                                    },
+                                    {
+                                        "anchorTitle": null,
+                                        "componentCode": "rows-container",
+                                        "groupCode": "container",
+                                        "groupName": "容器",
+                                        "componentName": "多行容器",
+                                        "editFlag": 0,
+                                        "style": {
+                                            "display": "block"
+                                        },
+                                        "data": {
+                                            "rowsNum": 3,
+                                            "entityName": "烫发高业绩秘籍商业潮流法式烫",
+                                            "entityCode": "3340532",
+                                            "entityId": 1248,
+                                            "platformProductCode": "3340532",
+                                            "mediaUrl": "/o2-resources/o2pcm/videos/online/dm/2/O2-PUB/cover/3340532.png",
+                                            "lowedPrice": null,
+                                            "onlineShopName": "发型师",
+                                            "product": {
+                                                "platformProductId": 1248,
+                                                "platformProductCode": "3340532",
+                                                "mediaUrl": "/o2-resources/o2pcm/videos/online/dm/2/O2-PUB/cover/3340532.png",
+                                                "title": "烫发高业绩秘籍商业潮流法式烫",
+                                                "lowedPrice": null,
+                                                "displayPrice": null,
+                                                "currencyCode": null,
+                                                "entityId": 1248,
+                                                "entityCode": "3340532",
+                                                "entityName": "烫发高业绩秘籍商业潮流法式烫",
+                                                "serialNum": null,
+                                                "catalogCode": "OW-1",
+                                                "catalogVersionCode": "OW-1",
+                                                "entityStatus": null,
+                                                "entityStatusMeaning": null,
+                                                "mediaId": null,
+                                                "activeFlag": 1,
+                                                "shelfStatusCode": "ON",
+                                                "shelfStatusMeaning": "已上架",
+                                                "labelRelProductMap": {
+                                                    "CUSTOM": [
+                                                        {
+                                                            "objectVersionNumber": 1,
+                                                            "_token": "UZ7lDxKqxeo0SxH+w9U5aT7QzETbk0weA1umDQkZiczDLn7y+ityXNIzOVpFvv4SAYwyy2d+VRbC6iUvLk5k4fcY9f7tRRBQR2RAjZrmZwU=",
+                                                            "labelId": 275,
+                                                            "labelCode": "LABEL2023121414",
+                                                            "labelName": "法式烫",
+                                                            "labelTypeCode": "CUSTOM",
+                                                            "showFlag": 1,
+                                                            "tenantId": 2,
+                                                            "labelRelId": 60,
+                                                            "platformProductId": 1248
+                                                        }
+                                                    ]
+                                                },
+                                                "tenantId": 2,
+                                                "tenantName": "欧莱雅",
+                                                "onlineShopName": "发型师",
+                                                "kindTypeCode": "VIRTUAL_COURSE",
+                                                "courseAddressList": null,
+                                                "speaker": "欧莱雅PRO",
+                                                "liveTime": null,
+                                                "courseForm": "ONLINE"
+                                            }
+                                        },
+                                        "childrenData": [
+                                            {
+                                                "anchorTitle": null,
+                                                "componentCode": "image",
+                                                "groupCode": "common",
+                                                "groupName": "常用组件",
+                                                "componentName": "图片",
+                                                "editFlag": 0,
+                                                "data": {
+                                                    "url": "https://static-d2s-prod.platform-loreal.cn/o2-resources/metadata/o2cms/2/O2-PUB/1711550363534_000000000000000.jpeg",
+                                                    "width": "100%",
+                                                    "height": "100%",
+                                                    "objectFit": "scale-down",
+                                                    "objectPosition": "center",
+                                                    "hasCover": false,
+                                                    "cdnUrl": "https://static-d2s-prod.platform-loreal.cn/o2-resources/metadata/o2cms/2/O2-PUB/1711550363534_000000000000000.jpeg",
+                                                    "path": "/o2-resources/metadata/o2cms/2/O2-PUB/1711550363534_000000000000000.jpeg"
+                                                },
+                                                "style": {
+                                                    "borderRadius": "8px 8px 8px 8px"
+                                                },
+                                                "childrenData": [],
+                                                "componentId": "_574aa0cc-8c3f-44a2-b1ea-fb1c838340ea"
+                                            },
+                                            {
+                                                "anchorTitle": null,
+                                                "componentCode": "text",
+                                                "groupCode": "common",
+                                                "groupName": "常用组件",
+                                                "componentName": "文字",
+                                                "editFlag": 0,
+                                                "data": {
+                                                    "text": "商业潮流法式烫",
+                                                    "overflowMode": "unset",
+                                                    "fontFamily": "font-regular"
+                                                },
+                                                "style": {
+                                                    "display": "block",
+                                                    "fontSize": "14px",
+                                                    "fontWeight": "500",
+                                                    "color": "black",
+                                                    "marginTop": "8px"
+                                                },
+                                                "childrenData": [],
+                                                "componentId": "_eac8b4fe-8d09-41ca-8214-69de63deb712"
+                                            },
+                                            {
+                                                "anchorTitle": null,
+                                                "componentCode": "rows-container",
+                                                "groupCode": "container",
+                                                "groupName": "容器",
+                                                "componentName": "多行容器",
+                                                "editFlag": 0,
+                                                "style": {
+                                                    "display": "flex",
+                                                    "marginTop": "8px"
+                                                },
+                                                "data": {
+                                                    "rowsNum": 2
+                                                },
+                                                "childrenData": [
+                                                    {
+                                                        "anchorTitle": null,
+                                                        "componentCode": "image",
+                                                        "groupCode": "common",
+                                                        "groupName": "常用组件",
+                                                        "componentName": "图片",
+                                                        "editFlag": 0,
+                                                        "data": {
+                                                            "url": "https://static-d2s-prod.platform-loreal.cn/o2-resources/metadata/o2cms/2/O2-PUB/1702959787131_任玉平.jpg",
+                                                            "width": "16px",
+                                                            "height": "16px",
+                                                            "objectFit": "scale-down",
+                                                            "objectPosition": "center",
+                                                            "hasCover": false,
+                                                            "cdnUrl": "https://static-d2s-prod.platform-loreal.cn/o2-resources/metadata/o2cms/2/O2-PUB/1702959787131_任玉平.jpg",
+                                                            "path": "/o2-resources/metadata/o2cms/2/O2-PUB/1702959787131_任玉平.jpg"
+                                                        },
+                                                        "style": {
+                                                            "marginRight": "4px",
+                                                            "borderRadius": "30px"
+                                                        },
+                                                        "childrenData": [],
+                                                        "componentId": "_846da644-3788-436c-85e5-b1040e8e8662"
+                                                    },
+                                                    {
+                                                        "anchorTitle": null,
+                                                        "componentCode": "text",
+                                                        "groupCode": "common",
+                                                        "groupName": "常用组件",
+                                                        "componentName": "文字",
+                                                        "editFlag": 0,
+                                                        "data": {
+                                                            "text": "任玉平",
+                                                            "overflowMode": "unset",
+                                                            "fontFamily": "font-regular"
+                                                        },
+                                                        "style": {
+                                                            "display": "block",
+                                                            "fontSize": "12px",
+                                                            "fontWeight": "500",
+                                                            "color": "black"
+                                                        },
+                                                        "childrenData": [],
+                                                        "componentId": "_362496e5-1a12-4a92-8655-1205d43ff4dc"
+                                                    }
+                                                ],
+                                                "componentId": "_f50b2991-f95e-4a86-87ed-def213828a19"
+                                            }
+                                        ],
+                                        "componentId": "_185c3604-cc32-487d-bae5-591e42552f38",
+                                        "action": {
+                                            "code": "bind-product",
+                                            "data": {
+                                                "page": {},
+                                                "params": {}
+                                            }
+                                        }
+                                    }
+                                ],
+                                "componentId": "_a9423106-aa1b-4a1d-89f8-72e2518ea1a6"
+                            },
+                            {
+                                "anchorTitle": null,
+                                "componentCode": "column-container",
+                                "groupCode": "container",
+                                "groupName": "容器",
+                                "componentName": "多列容器",
+                                "editFlag": 0,
+                                "style": {
+                                    "display": "flex",
+                                    "flexDirection": "row",
+                                    "alignItems": "stretch",
+                                    "justifyContent": "flex-start",
+                                    "marginTop": "24px"
+                                },
+                                "data": {
+                                    "columnNum": 2,
+                                    "gutter": 17
+                                },
+                                "childrenData": [
+                                    {
+                                        "anchorTitle": null,
+                                        "componentCode": "rows-container",
+                                        "groupCode": "container",
+                                        "groupName": "容器",
+                                        "componentName": "多行容器",
+                                        "editFlag": 0,
+                                        "style": {
+                                            "display": "block"
+                                        },
+                                        "data": {
+                                            "rowsNum": 3,
+                                            "gutter": null,
+                                            "entityName": "剪发中的剪裁结构和思维 by sunny",
+                                            "entityCode": "3651108",
+                                            "entityId": 944,
+                                            "platformProductCode": "3651108",
+                                            "mediaUrl": "/o2-resources/o2pcm/videos/online/dm/2/O2-PUB/cover/3651108.png",
+                                            "lowedPrice": null,
+                                            "onlineShopName": "发型师",
+                                            "product": {
+                                                "platformProductId": 944,
+                                                "platformProductCode": "3651108",
+                                                "mediaUrl": "/o2-resources/o2pcm/videos/online/dm/2/O2-PUB/cover/3651108.png",
+                                                "title": "剪发中的剪裁结构和思维 by sunny",
+                                                "lowedPrice": null,
+                                                "displayPrice": null,
+                                                "currencyCode": null,
+                                                "entityId": 944,
+                                                "entityCode": "3651108",
+                                                "entityName": "剪发中的剪裁结构和思维 by sunny",
+                                                "serialNum": null,
+                                                "catalogCode": "OW-1",
+                                                "catalogVersionCode": "OW-1",
+                                                "entityStatus": null,
+                                                "entityStatusMeaning": null,
+                                                "mediaId": null,
+                                                "activeFlag": 1,
+                                                "shelfStatusCode": "ON",
+                                                "shelfStatusMeaning": "已上架",
+                                                "labelRelProductMap": {
+                                                    "CUSTOM": [
+                                                        {
+                                                            "objectVersionNumber": 1,
+                                                            "_token": "UZ7lDxKqxeo0SxH+w9U5aT7QzETbk0weA1umDQkZiczDLn7y+ityXNIzOVpFvv4SAYwyy2d+VRbC6iUvLk5k4TBhLNA+cfSZ78nHZzm6m9U=",
+                                                            "labelId": 273,
+                                                            "labelCode": "LABEL2023121412",
+                                                            "labelName": "裁剪思维",
+                                                            "labelTypeCode": "CUSTOM",
+                                                            "showFlag": 1,
+                                                            "tenantId": 2,
+                                                            "labelRelId": 51,
+                                                            "platformProductId": 944
+                                                        }
+                                                    ]
+                                                },
+                                                "tenantId": 2,
+                                                "tenantName": "欧莱雅",
+                                                "onlineShopName": "发型师",
+                                                "kindTypeCode": "VIRTUAL_COURSE",
+                                                "courseAddressList": null,
+                                                "speaker": "欧莱雅PRO",
+                                                "liveTime": null,
+                                                "courseForm": "ONLINE"
+                                            }
+                                        },
+                                        "childrenData": [
+                                            {
+                                                "anchorTitle": null,
+                                                "componentCode": "image",
+                                                "groupCode": "common",
+                                                "groupName": "常用组件",
+                                                "componentName": "图片",
+                                                "editFlag": 0,
+                                                "data": {
+                                                    "url": "https://static-d2s-prod.platform-loreal.cn/o2-resources/metadata/o2cms/2/O2-PUB/1711550354301_00000000.jpeg",
+                                                    "width": "100%",
+                                                    "height": "100%",
+                                                    "objectFit": "scale-down",
+                                                    "objectPosition": "center",
+                                                    "hasCover": false,
+                                                    "cdnUrl": "https://static-d2s-prod.platform-loreal.cn/o2-resources/metadata/o2cms/2/O2-PUB/1711550354301_00000000.jpeg",
+                                                    "path": "/o2-resources/metadata/o2cms/2/O2-PUB/1711550354301_00000000.jpeg"
+                                                },
+                                                "style": {
+                                                    "borderRadius": "8px 8px 8px 8px"
+                                                },
+                                                "childrenData": [],
+                                                "componentId": "_9656a43e-fe7d-4db2-8452-53ecce251294"
+                                            },
+                                            {
+                                                "anchorTitle": null,
+                                                "componentCode": "text",
+                                                "groupCode": "common",
+                                                "groupName": "常用组件",
+                                                "componentName": "文字",
+                                                "editFlag": 0,
+                                                "data": {
+                                                    "text": "剪发中的剪裁结构和思维",
+                                                    "overflowMode": "unset",
+                                                    "fontFamily": "font-regular"
+                                                },
+                                                "style": {
+                                                    "display": "block",
+                                                    "fontSize": "14px",
+                                                    "fontWeight": "500",
+                                                    "color": "black",
+                                                    "marginTop": "8px"
+                                                },
+                                                "childrenData": [],
+                                                "componentId": "_1396cd3f-3090-420e-8146-2db3fb497956"
+                                            },
+                                            {
+                                                "anchorTitle": null,
+                                                "componentCode": "rows-container",
+                                                "groupCode": "container",
+                                                "groupName": "容器",
+                                                "componentName": "多行容器",
+                                                "editFlag": 0,
+                                                "style": {
+                                                    "display": "flex",
+                                                    "marginTop": "8px"
+                                                },
+                                                "data": {
+                                                    "rowsNum": 2
+                                                },
+                                                "childrenData": [
+                                                    {
+                                                        "anchorTitle": null,
+                                                        "componentCode": "image",
+                                                        "groupCode": "common",
+                                                        "groupName": "常用组件",
+                                                        "componentName": "图片",
+                                                        "editFlag": 0,
+                                                        "data": {
+                                                            "url": "https://static-d2s-prod.platform-loreal.cn/o2-resources/metadata/o2cms/2/O2-PUB/1702958276239_WechatIMG295.jpg",
+                                                            "width": "16px",
+                                                            "height": "16px",
+                                                            "objectFit": "scale-down",
+                                                            "objectPosition": "center",
+                                                            "hasCover": false,
+                                                            "cdnUrl": "https://static-d2s-prod.platform-loreal.cn/o2-resources/metadata/o2cms/2/O2-PUB/1702958276239_WechatIMG295.jpg",
+                                                            "path": "/o2-resources/metadata/o2cms/2/O2-PUB/1702958276239_WechatIMG295.jpg"
+                                                        },
+                                                        "style": {
+                                                            "marginRight": "4px",
+                                                            "borderRadius": "30px"
+                                                        },
+                                                        "childrenData": [],
+                                                        "componentId": "_be8d177e-29c4-400b-b294-d5af0874bcf3"
+                                                    },
+                                                    {
+                                                        "anchorTitle": null,
+                                                        "componentCode": "text",
+                                                        "groupCode": "common",
+                                                        "groupName": "常用组件",
+                                                        "componentName": "文字",
+                                                        "editFlag": 0,
+                                                        "data": {
+                                                            "text": "Sunny",
+                                                            "overflowMode": "unset",
+                                                            "fontFamily": "font-regular"
+                                                        },
+                                                        "style": {
+                                                            "display": "block",
+                                                            "fontSize": "12px",
+                                                            "fontWeight": "500",
+                                                            "color": "black"
+                                                        },
+                                                        "childrenData": [],
+                                                        "componentId": "_46a699e4-d657-42a0-827e-f96a07675426"
+                                                    }
+                                                ],
+                                                "componentId": "_92e6eed9-899c-4821-8239-e9b690589e8f"
+                                            }
+                                        ],
+                                        "componentId": "_e1853d45-f341-46aa-8aac-b5e26dc116e6",
+                                        "action": {
+                                            "code": "bind-product",
+                                            "data": {
+                                                "page": {},
+                                                "params": {}
+                                            }
+                                        }
+                                    },
+                                    {
+                                        "anchorTitle": null,
+                                        "componentCode": "rows-container",
+                                        "groupCode": "container",
+                                        "groupName": "容器",
+                                        "componentName": "多行容器",
+                                        "editFlag": 0,
+                                        "style": {
+                                            "display": "block"
+                                        },
+                                        "data": {
+                                            "rowsNum": 3,
+                                            "entityName": "烫发高业绩秘籍商业潮流法式烫",
+                                            "entityCode": "3340532",
+                                            "entityId": 1248,
+                                            "platformProductCode": "3340532",
+                                            "mediaUrl": "/o2-resources/o2pcm/videos/online/dm/2/O2-PUB/cover/3340532.png",
+                                            "lowedPrice": null,
+                                            "onlineShopName": "发型师",
+                                            "product": {
+                                                "platformProductId": 1248,
+                                                "platformProductCode": "3340532",
+                                                "mediaUrl": "/o2-resources/o2pcm/videos/online/dm/2/O2-PUB/cover/3340532.png",
+                                                "title": "烫发高业绩秘籍商业潮流法式烫",
+                                                "lowedPrice": null,
+                                                "displayPrice": null,
+                                                "currencyCode": null,
+                                                "entityId": 1248,
+                                                "entityCode": "3340532",
+                                                "entityName": "烫发高业绩秘籍商业潮流法式烫",
+                                                "serialNum": null,
+                                                "catalogCode": "OW-1",
+                                                "catalogVersionCode": "OW-1",
+                                                "entityStatus": null,
+                                                "entityStatusMeaning": null,
+                                                "mediaId": null,
+                                                "activeFlag": 1,
+                                                "shelfStatusCode": "ON",
+                                                "shelfStatusMeaning": "已上架",
+                                                "labelRelProductMap": {
+                                                    "CUSTOM": [
+                                                        {
+                                                            "objectVersionNumber": 1,
+                                                            "_token": "UZ7lDxKqxeo0SxH+w9U5aT7QzETbk0weA1umDQkZiczDLn7y+ityXNIzOVpFvv4SAYwyy2d+VRbC6iUvLk5k4fcY9f7tRRBQR2RAjZrmZwU=",
+                                                            "labelId": 275,
+                                                            "labelCode": "LABEL2023121414",
+                                                            "labelName": "法式烫",
+                                                            "labelTypeCode": "CUSTOM",
+                                                            "showFlag": 1,
+                                                            "tenantId": 2,
+                                                            "labelRelId": 60,
+                                                            "platformProductId": 1248
+                                                        }
+                                                    ]
+                                                },
+                                                "tenantId": 2,
+                                                "tenantName": "欧莱雅",
+                                                "onlineShopName": "发型师",
+                                                "kindTypeCode": "VIRTUAL_COURSE",
+                                                "courseAddressList": null,
+                                                "speaker": "欧莱雅PRO",
+                                                "liveTime": null,
+                                                "courseForm": "ONLINE"
+                                            }
+                                        },
+                                        "childrenData": [
+                                            {
+                                                "anchorTitle": null,
+                                                "componentCode": "image",
+                                                "groupCode": "common",
+                                                "groupName": "常用组件",
+                                                "componentName": "图片",
+                                                "editFlag": 0,
+                                                "data": {
+                                                    "url": "https://static-d2s-prod.platform-loreal.cn/o2-resources/metadata/o2cms/2/O2-PUB/1711550363534_000000000000000.jpeg",
+                                                    "width": "100%",
+                                                    "height": "100%",
+                                                    "objectFit": "scale-down",
+                                                    "objectPosition": "center",
+                                                    "hasCover": false,
+                                                    "cdnUrl": "https://static-d2s-prod.platform-loreal.cn/o2-resources/metadata/o2cms/2/O2-PUB/1711550363534_000000000000000.jpeg",
+                                                    "path": "/o2-resources/metadata/o2cms/2/O2-PUB/1711550363534_000000000000000.jpeg"
+                                                },
+                                                "style": {
+                                                    "borderRadius": "8px 8px 8px 8px"
+                                                },
+                                                "childrenData": [],
+                                                "componentId": "_574aa0cc-8c3f-44a2-b1ea-fb1c838340ea"
+                                            },
+                                            {
+                                                "anchorTitle": null,
+                                                "componentCode": "text",
+                                                "groupCode": "common",
+                                                "groupName": "常用组件",
+                                                "componentName": "文字",
+                                                "editFlag": 0,
+                                                "data": {
+                                                    "text": "商业潮流法式烫",
+                                                    "overflowMode": "unset",
+                                                    "fontFamily": "font-regular"
+                                                },
+                                                "style": {
+                                                    "display": "block",
+                                                    "fontSize": "14px",
+                                                    "fontWeight": "500",
+                                                    "color": "black",
+                                                    "marginTop": "8px"
+                                                },
+                                                "childrenData": [],
+                                                "componentId": "_eac8b4fe-8d09-41ca-8214-69de63deb712"
+                                            },
+                                            {
+                                                "anchorTitle": null,
+                                                "componentCode": "rows-container",
+                                                "groupCode": "container",
+                                                "groupName": "容器",
+                                                "componentName": "多行容器",
+                                                "editFlag": 0,
+                                                "style": {
+                                                    "display": "flex",
+                                                    "marginTop": "8px"
+                                                },
+                                                "data": {
+                                                    "rowsNum": 2
+                                                },
+                                                "childrenData": [
+                                                    {
+                                                        "anchorTitle": null,
+                                                        "componentCode": "image",
+                                                        "groupCode": "common",
+                                                        "groupName": "常用组件",
+                                                        "componentName": "图片",
+                                                        "editFlag": 0,
+                                                        "data": {
+                                                            "url": "https://static-d2s-prod.platform-loreal.cn/o2-resources/metadata/o2cms/2/O2-PUB/1702959787131_任玉平.jpg",
+                                                            "width": "16px",
+                                                            "height": "16px",
+                                                            "objectFit": "scale-down",
+                                                            "objectPosition": "center",
+                                                            "hasCover": false,
+                                                            "cdnUrl": "https://static-d2s-prod.platform-loreal.cn/o2-resources/metadata/o2cms/2/O2-PUB/1702959787131_任玉平.jpg",
+                                                            "path": "/o2-resources/metadata/o2cms/2/O2-PUB/1702959787131_任玉平.jpg"
+                                                        },
+                                                        "style": {
+                                                            "marginRight": "4px",
+                                                            "borderRadius": "30px"
+                                                        },
+                                                        "childrenData": [],
+                                                        "componentId": "_846da644-3788-436c-85e5-b1040e8e8662"
+                                                    },
+                                                    {
+                                                        "anchorTitle": null,
+                                                        "componentCode": "text",
+                                                        "groupCode": "common",
+                                                        "groupName": "常用组件",
+                                                        "componentName": "文字",
+                                                        "editFlag": 0,
+                                                        "data": {
+                                                            "text": "任玉平",
+                                                            "overflowMode": "unset",
+                                                            "fontFamily": "font-regular"
+                                                        },
+                                                        "style": {
+                                                            "display": "block",
+                                                            "fontSize": "12px",
+                                                            "fontWeight": "500",
+                                                            "color": "black"
+                                                        },
+                                                        "childrenData": [],
+                                                        "componentId": "_362496e5-1a12-4a92-8655-1205d43ff4dc"
+                                                    }
+                                                ],
+                                                "componentId": "_f50b2991-f95e-4a86-87ed-def213828a19"
+                                            }
+                                        ],
+                                        "componentId": "_185c3604-cc32-487d-bae5-591e42552f38",
+                                        "action": {
+                                            "code": "bind-product",
+                                            "data": {
+                                                "page": {},
+                                                "params": {}
+                                            }
+                                        }
+                                    }
+                                ],
+                                "componentId": "_a9423106-aa1b-4a1d-89f8-72e2518ea1a6"
+                            },
+                            {
+                                "anchorTitle": null,
+                                "componentCode": "column-container",
+                                "groupCode": "container",
+                                "groupName": "容器",
+                                "componentName": "多列容器",
+                                "editFlag": 0,
+                                "style": {
+                                    "display": "flex",
+                                    "flexDirection": "row",
+                                    "alignItems": "stretch",
+                                    "justifyContent": "flex-start",
+                                    "marginTop": "24px"
+                                },
+                                "data": {
+                                    "columnNum": 2,
+                                    "gutter": 17
+                                },
+                                "childrenData": [
+                                    {
+                                        "anchorTitle": null,
+                                        "componentCode": "rows-container",
+                                        "groupCode": "container",
+                                        "groupName": "容器",
+                                        "componentName": "多行容器",
+                                        "editFlag": 0,
+                                        "style": {
+                                            "display": "block"
+                                        },
+                                        "data": {
+                                            "rowsNum": 3,
+                                            "gutter": null,
+                                            "entityName": "剪发中的剪裁结构和思维 by sunny",
+                                            "entityCode": "3651108",
+                                            "entityId": 944,
+                                            "platformProductCode": "3651108",
+                                            "mediaUrl": "/o2-resources/o2pcm/videos/online/dm/2/O2-PUB/cover/3651108.png",
+                                            "lowedPrice": null,
+                                            "onlineShopName": "发型师",
+                                            "product": {
+                                                "platformProductId": 944,
+                                                "platformProductCode": "3651108",
+                                                "mediaUrl": "/o2-resources/o2pcm/videos/online/dm/2/O2-PUB/cover/3651108.png",
+                                                "title": "剪发中的剪裁结构和思维 by sunny",
+                                                "lowedPrice": null,
+                                                "displayPrice": null,
+                                                "currencyCode": null,
+                                                "entityId": 944,
+                                                "entityCode": "3651108",
+                                                "entityName": "剪发中的剪裁结构和思维 by sunny",
+                                                "serialNum": null,
+                                                "catalogCode": "OW-1",
+                                                "catalogVersionCode": "OW-1",
+                                                "entityStatus": null,
+                                                "entityStatusMeaning": null,
+                                                "mediaId": null,
+                                                "activeFlag": 1,
+                                                "shelfStatusCode": "ON",
+                                                "shelfStatusMeaning": "已上架",
+                                                "labelRelProductMap": {
+                                                    "CUSTOM": [
+                                                        {
+                                                            "objectVersionNumber": 1,
+                                                            "_token": "UZ7lDxKqxeo0SxH+w9U5aT7QzETbk0weA1umDQkZiczDLn7y+ityXNIzOVpFvv4SAYwyy2d+VRbC6iUvLk5k4TBhLNA+cfSZ78nHZzm6m9U=",
+                                                            "labelId": 273,
+                                                            "labelCode": "LABEL2023121412",
+                                                            "labelName": "裁剪思维",
+                                                            "labelTypeCode": "CUSTOM",
+                                                            "showFlag": 1,
+                                                            "tenantId": 2,
+                                                            "labelRelId": 51,
+                                                            "platformProductId": 944
+                                                        }
+                                                    ]
+                                                },
+                                                "tenantId": 2,
+                                                "tenantName": "欧莱雅",
+                                                "onlineShopName": "发型师",
+                                                "kindTypeCode": "VIRTUAL_COURSE",
+                                                "courseAddressList": null,
+                                                "speaker": "欧莱雅PRO",
+                                                "liveTime": null,
+                                                "courseForm": "ONLINE"
+                                            }
+                                        },
+                                        "childrenData": [
+                                            {
+                                                "anchorTitle": null,
+                                                "componentCode": "image",
+                                                "groupCode": "common",
+                                                "groupName": "常用组件",
+                                                "componentName": "图片",
+                                                "editFlag": 0,
+                                                "data": {
+                                                    "url": "https://static-d2s-prod.platform-loreal.cn/o2-resources/metadata/o2cms/2/O2-PUB/1711550354301_00000000.jpeg",
+                                                    "width": "100%",
+                                                    "height": "100%",
+                                                    "objectFit": "scale-down",
+                                                    "objectPosition": "center",
+                                                    "hasCover": false,
+                                                    "cdnUrl": "https://static-d2s-prod.platform-loreal.cn/o2-resources/metadata/o2cms/2/O2-PUB/1711550354301_00000000.jpeg",
+                                                    "path": "/o2-resources/metadata/o2cms/2/O2-PUB/1711550354301_00000000.jpeg"
+                                                },
+                                                "style": {
+                                                    "borderRadius": "8px 8px 8px 8px"
+                                                },
+                                                "childrenData": [],
+                                                "componentId": "_9656a43e-fe7d-4db2-8452-53ecce251294"
+                                            },
+                                            {
+                                                "anchorTitle": null,
+                                                "componentCode": "text",
+                                                "groupCode": "common",
+                                                "groupName": "常用组件",
+                                                "componentName": "文字",
+                                                "editFlag": 0,
+                                                "data": {
+                                                    "text": "剪发中的剪裁结构和思维",
+                                                    "overflowMode": "unset",
+                                                    "fontFamily": "font-regular"
+                                                },
+                                                "style": {
+                                                    "display": "block",
+                                                    "fontSize": "14px",
+                                                    "fontWeight": "500",
+                                                    "color": "black",
+                                                    "marginTop": "8px"
+                                                },
+                                                "childrenData": [],
+                                                "componentId": "_1396cd3f-3090-420e-8146-2db3fb497956"
+                                            },
+                                            {
+                                                "anchorTitle": null,
+                                                "componentCode": "rows-container",
+                                                "groupCode": "container",
+                                                "groupName": "容器",
+                                                "componentName": "多行容器",
+                                                "editFlag": 0,
+                                                "style": {
+                                                    "display": "flex",
+                                                    "marginTop": "8px"
+                                                },
+                                                "data": {
+                                                    "rowsNum": 2
+                                                },
+                                                "childrenData": [
+                                                    {
+                                                        "anchorTitle": null,
+                                                        "componentCode": "image",
+                                                        "groupCode": "common",
+                                                        "groupName": "常用组件",
+                                                        "componentName": "图片",
+                                                        "editFlag": 0,
+                                                        "data": {
+                                                            "url": "https://static-d2s-prod.platform-loreal.cn/o2-resources/metadata/o2cms/2/O2-PUB/1702958276239_WechatIMG295.jpg",
+                                                            "width": "16px",
+                                                            "height": "16px",
+                                                            "objectFit": "scale-down",
+                                                            "objectPosition": "center",
+                                                            "hasCover": false,
+                                                            "cdnUrl": "https://static-d2s-prod.platform-loreal.cn/o2-resources/metadata/o2cms/2/O2-PUB/1702958276239_WechatIMG295.jpg",
+                                                            "path": "/o2-resources/metadata/o2cms/2/O2-PUB/1702958276239_WechatIMG295.jpg"
+                                                        },
+                                                        "style": {
+                                                            "marginRight": "4px",
+                                                            "borderRadius": "30px"
+                                                        },
+                                                        "childrenData": [],
+                                                        "componentId": "_be8d177e-29c4-400b-b294-d5af0874bcf3"
+                                                    },
+                                                    {
+                                                        "anchorTitle": null,
+                                                        "componentCode": "text",
+                                                        "groupCode": "common",
+                                                        "groupName": "常用组件",
+                                                        "componentName": "文字",
+                                                        "editFlag": 0,
+                                                        "data": {
+                                                            "text": "Sunny",
+                                                            "overflowMode": "unset",
+                                                            "fontFamily": "font-regular"
+                                                        },
+                                                        "style": {
+                                                            "display": "block",
+                                                            "fontSize": "12px",
+                                                            "fontWeight": "500",
+                                                            "color": "black"
+                                                        },
+                                                        "childrenData": [],
+                                                        "componentId": "_46a699e4-d657-42a0-827e-f96a07675426"
+                                                    }
+                                                ],
+                                                "componentId": "_92e6eed9-899c-4821-8239-e9b690589e8f"
+                                            }
+                                        ],
+                                        "componentId": "_e1853d45-f341-46aa-8aac-b5e26dc116e6",
+                                        "action": {
+                                            "code": "bind-product",
+                                            "data": {
+                                                "page": {},
+                                                "params": {}
+                                            }
+                                        }
+                                    },
+                                    {
+                                        "anchorTitle": null,
+                                        "componentCode": "rows-container",
+                                        "groupCode": "container",
+                                        "groupName": "容器",
+                                        "componentName": "多行容器",
+                                        "editFlag": 0,
+                                        "style": {
+                                            "display": "block"
+                                        },
+                                        "data": {
+                                            "rowsNum": 3,
+                                            "entityName": "烫发高业绩秘籍商业潮流法式烫",
+                                            "entityCode": "3340532",
+                                            "entityId": 1248,
+                                            "platformProductCode": "3340532",
+                                            "mediaUrl": "/o2-resources/o2pcm/videos/online/dm/2/O2-PUB/cover/3340532.png",
+                                            "lowedPrice": null,
+                                            "onlineShopName": "发型师",
+                                            "product": {
+                                                "platformProductId": 1248,
+                                                "platformProductCode": "3340532",
+                                                "mediaUrl": "/o2-resources/o2pcm/videos/online/dm/2/O2-PUB/cover/3340532.png",
+                                                "title": "烫发高业绩秘籍商业潮流法式烫",
+                                                "lowedPrice": null,
+                                                "displayPrice": null,
+                                                "currencyCode": null,
+                                                "entityId": 1248,
+                                                "entityCode": "3340532",
+                                                "entityName": "烫发高业绩秘籍商业潮流法式烫",
+                                                "serialNum": null,
+                                                "catalogCode": "OW-1",
+                                                "catalogVersionCode": "OW-1",
+                                                "entityStatus": null,
+                                                "entityStatusMeaning": null,
+                                                "mediaId": null,
+                                                "activeFlag": 1,
+                                                "shelfStatusCode": "ON",
+                                                "shelfStatusMeaning": "已上架",
+                                                "labelRelProductMap": {
+                                                    "CUSTOM": [
+                                                        {
+                                                            "objectVersionNumber": 1,
+                                                            "_token": "UZ7lDxKqxeo0SxH+w9U5aT7QzETbk0weA1umDQkZiczDLn7y+ityXNIzOVpFvv4SAYwyy2d+VRbC6iUvLk5k4fcY9f7tRRBQR2RAjZrmZwU=",
+                                                            "labelId": 275,
+                                                            "labelCode": "LABEL2023121414",
+                                                            "labelName": "法式烫",
+                                                            "labelTypeCode": "CUSTOM",
+                                                            "showFlag": 1,
+                                                            "tenantId": 2,
+                                                            "labelRelId": 60,
+                                                            "platformProductId": 1248
+                                                        }
+                                                    ]
+                                                },
+                                                "tenantId": 2,
+                                                "tenantName": "欧莱雅",
+                                                "onlineShopName": "发型师",
+                                                "kindTypeCode": "VIRTUAL_COURSE",
+                                                "courseAddressList": null,
+                                                "speaker": "欧莱雅PRO",
+                                                "liveTime": null,
+                                                "courseForm": "ONLINE"
+                                            }
+                                        },
+                                        "childrenData": [
+                                            {
+                                                "anchorTitle": null,
+                                                "componentCode": "image",
+                                                "groupCode": "common",
+                                                "groupName": "常用组件",
+                                                "componentName": "图片",
+                                                "editFlag": 0,
+                                                "data": {
+                                                    "url": "https://static-d2s-prod.platform-loreal.cn/o2-resources/metadata/o2cms/2/O2-PUB/1711550363534_000000000000000.jpeg",
+                                                    "width": "100%",
+                                                    "height": "100%",
+                                                    "objectFit": "scale-down",
+                                                    "objectPosition": "center",
+                                                    "hasCover": false,
+                                                    "cdnUrl": "https://static-d2s-prod.platform-loreal.cn/o2-resources/metadata/o2cms/2/O2-PUB/1711550363534_000000000000000.jpeg",
+                                                    "path": "/o2-resources/metadata/o2cms/2/O2-PUB/1711550363534_000000000000000.jpeg"
+                                                },
+                                                "style": {
+                                                    "borderRadius": "8px 8px 8px 8px"
+                                                },
+                                                "childrenData": [],
+                                                "componentId": "_574aa0cc-8c3f-44a2-b1ea-fb1c838340ea"
+                                            },
+                                            {
+                                                "anchorTitle": null,
+                                                "componentCode": "text",
+                                                "groupCode": "common",
+                                                "groupName": "常用组件",
+                                                "componentName": "文字",
+                                                "editFlag": 0,
+                                                "data": {
+                                                    "text": "商业潮流法式烫",
+                                                    "overflowMode": "unset",
+                                                    "fontFamily": "font-regular"
+                                                },
+                                                "style": {
+                                                    "display": "block",
+                                                    "fontSize": "14px",
+                                                    "fontWeight": "500",
+                                                    "color": "black",
+                                                    "marginTop": "8px"
+                                                },
+                                                "childrenData": [],
+                                                "componentId": "_eac8b4fe-8d09-41ca-8214-69de63deb712"
+                                            },
+                                            {
+                                                "anchorTitle": null,
+                                                "componentCode": "rows-container",
+                                                "groupCode": "container",
+                                                "groupName": "容器",
+                                                "componentName": "多行容器",
+                                                "editFlag": 0,
+                                                "style": {
+                                                    "display": "flex",
+                                                    "marginTop": "8px"
+                                                },
+                                                "data": {
+                                                    "rowsNum": 2
+                                                },
+                                                "childrenData": [
+                                                    {
+                                                        "anchorTitle": null,
+                                                        "componentCode": "image",
+                                                        "groupCode": "common",
+                                                        "groupName": "常用组件",
+                                                        "componentName": "图片",
+                                                        "editFlag": 0,
+                                                        "data": {
+                                                            "url": "https://static-d2s-prod.platform-loreal.cn/o2-resources/metadata/o2cms/2/O2-PUB/1702959787131_任玉平.jpg",
+                                                            "width": "16px",
+                                                            "height": "16px",
+                                                            "objectFit": "scale-down",
+                                                            "objectPosition": "center",
+                                                            "hasCover": false,
+                                                            "cdnUrl": "https://static-d2s-prod.platform-loreal.cn/o2-resources/metadata/o2cms/2/O2-PUB/1702959787131_任玉平.jpg",
+                                                            "path": "/o2-resources/metadata/o2cms/2/O2-PUB/1702959787131_任玉平.jpg"
+                                                        },
+                                                        "style": {
+                                                            "marginRight": "4px",
+                                                            "borderRadius": "30px"
+                                                        },
+                                                        "childrenData": [],
+                                                        "componentId": "_846da644-3788-436c-85e5-b1040e8e8662"
+                                                    },
+                                                    {
+                                                        "anchorTitle": null,
+                                                        "componentCode": "text",
+                                                        "groupCode": "common",
+                                                        "groupName": "常用组件",
+                                                        "componentName": "文字",
+                                                        "editFlag": 0,
+                                                        "data": {
+                                                            "text": "任玉平",
+                                                            "overflowMode": "unset",
+                                                            "fontFamily": "font-regular"
+                                                        },
+                                                        "style": {
+                                                            "display": "block",
+                                                            "fontSize": "12px",
+                                                            "fontWeight": "500",
+                                                            "color": "black"
+                                                        },
+                                                        "childrenData": [],
+                                                        "componentId": "_362496e5-1a12-4a92-8655-1205d43ff4dc"
+                                                    }
+                                                ],
+                                                "componentId": "_f50b2991-f95e-4a86-87ed-def213828a19"
+                                            }
+                                        ],
+                                        "componentId": "_185c3604-cc32-487d-bae5-591e42552f38",
+                                        "action": {
+                                            "code": "bind-product",
+                                            "data": {
+                                                "page": {},
+                                                "params": {}
+                                            }
+                                        }
+                                    }
+                                ],
+                                "componentId": "_a9423106-aa1b-4a1d-89f8-72e2518ea1a6"
+                            },
+                            {
+                                "anchorTitle": null,
+                                "componentCode": "column-container",
+                                "groupCode": "container",
+                                "groupName": "容器",
+                                "componentName": "多列容器",
+                                "editFlag": 0,
+                                "style": {
+                                    "display": "flex",
+                                    "flexDirection": "row",
+                                    "alignItems": "stretch",
+                                    "justifyContent": "flex-start",
+                                    "marginTop": "24px"
+                                },
+                                "data": {
+                                    "columnNum": 2,
+                                    "gutter": 17
+                                },
+                                "childrenData": [
+                                    {
+                                        "anchorTitle": null,
+                                        "componentCode": "rows-container",
+                                        "groupCode": "container",
+                                        "groupName": "容器",
+                                        "componentName": "多行容器",
+                                        "editFlag": 0,
+                                        "style": {
+                                            "display": "block"
+                                        },
+                                        "data": {
+                                            "rowsNum": 3,
+                                            "gutter": null,
+                                            "entityName": "剪发中的剪裁结构和思维 by sunny",
+                                            "entityCode": "3651108",
+                                            "entityId": 944,
+                                            "platformProductCode": "3651108",
+                                            "mediaUrl": "/o2-resources/o2pcm/videos/online/dm/2/O2-PUB/cover/3651108.png",
+                                            "lowedPrice": null,
+                                            "onlineShopName": "发型师",
+                                            "product": {
+                                                "platformProductId": 944,
+                                                "platformProductCode": "3651108",
+                                                "mediaUrl": "/o2-resources/o2pcm/videos/online/dm/2/O2-PUB/cover/3651108.png",
+                                                "title": "剪发中的剪裁结构和思维 by sunny",
+                                                "lowedPrice": null,
+                                                "displayPrice": null,
+                                                "currencyCode": null,
+                                                "entityId": 944,
+                                                "entityCode": "3651108",
+                                                "entityName": "剪发中的剪裁结构和思维 by sunny",
+                                                "serialNum": null,
+                                                "catalogCode": "OW-1",
+                                                "catalogVersionCode": "OW-1",
+                                                "entityStatus": null,
+                                                "entityStatusMeaning": null,
+                                                "mediaId": null,
+                                                "activeFlag": 1,
+                                                "shelfStatusCode": "ON",
+                                                "shelfStatusMeaning": "已上架",
+                                                "labelRelProductMap": {
+                                                    "CUSTOM": [
+                                                        {
+                                                            "objectVersionNumber": 1,
+                                                            "_token": "UZ7lDxKqxeo0SxH+w9U5aT7QzETbk0weA1umDQkZiczDLn7y+ityXNIzOVpFvv4SAYwyy2d+VRbC6iUvLk5k4TBhLNA+cfSZ78nHZzm6m9U=",
+                                                            "labelId": 273,
+                                                            "labelCode": "LABEL2023121412",
+                                                            "labelName": "裁剪思维",
+                                                            "labelTypeCode": "CUSTOM",
+                                                            "showFlag": 1,
+                                                            "tenantId": 2,
+                                                            "labelRelId": 51,
+                                                            "platformProductId": 944
+                                                        }
+                                                    ]
+                                                },
+                                                "tenantId": 2,
+                                                "tenantName": "欧莱雅",
+                                                "onlineShopName": "发型师",
+                                                "kindTypeCode": "VIRTUAL_COURSE",
+                                                "courseAddressList": null,
+                                                "speaker": "欧莱雅PRO",
+                                                "liveTime": null,
+                                                "courseForm": "ONLINE"
+                                            }
+                                        },
+                                        "childrenData": [
+                                            {
+                                                "anchorTitle": null,
+                                                "componentCode": "image",
+                                                "groupCode": "common",
+                                                "groupName": "常用组件",
+                                                "componentName": "图片",
+                                                "editFlag": 0,
+                                                "data": {
+                                                    "url": "https://static-d2s-prod.platform-loreal.cn/o2-resources/metadata/o2cms/2/O2-PUB/1711550354301_00000000.jpeg",
+                                                    "width": "100%",
+                                                    "height": "100%",
+                                                    "objectFit": "scale-down",
+                                                    "objectPosition": "center",
+                                                    "hasCover": false,
+                                                    "cdnUrl": "https://static-d2s-prod.platform-loreal.cn/o2-resources/metadata/o2cms/2/O2-PUB/1711550354301_00000000.jpeg",
+                                                    "path": "/o2-resources/metadata/o2cms/2/O2-PUB/1711550354301_00000000.jpeg"
+                                                },
+                                                "style": {
+                                                    "borderRadius": "8px 8px 8px 8px"
+                                                },
+                                                "childrenData": [],
+                                                "componentId": "_9656a43e-fe7d-4db2-8452-53ecce251294"
+                                            },
+                                            {
+                                                "anchorTitle": null,
+                                                "componentCode": "text",
+                                                "groupCode": "common",
+                                                "groupName": "常用组件",
+                                                "componentName": "文字",
+                                                "editFlag": 0,
+                                                "data": {
+                                                    "text": "剪发中的剪裁结构和思维",
+                                                    "overflowMode": "unset",
+                                                    "fontFamily": "font-regular"
+                                                },
+                                                "style": {
+                                                    "display": "block",
+                                                    "fontSize": "14px",
+                                                    "fontWeight": "500",
+                                                    "color": "black",
+                                                    "marginTop": "8px"
+                                                },
+                                                "childrenData": [],
+                                                "componentId": "_1396cd3f-3090-420e-8146-2db3fb497956"
+                                            },
+                                            {
+                                                "anchorTitle": null,
+                                                "componentCode": "rows-container",
+                                                "groupCode": "container",
+                                                "groupName": "容器",
+                                                "componentName": "多行容器",
+                                                "editFlag": 0,
+                                                "style": {
+                                                    "display": "flex",
+                                                    "marginTop": "8px"
+                                                },
+                                                "data": {
+                                                    "rowsNum": 2
+                                                },
+                                                "childrenData": [
+                                                    {
+                                                        "anchorTitle": null,
+                                                        "componentCode": "image",
+                                                        "groupCode": "common",
+                                                        "groupName": "常用组件",
+                                                        "componentName": "图片",
+                                                        "editFlag": 0,
+                                                        "data": {
+                                                            "url": "https://static-d2s-prod.platform-loreal.cn/o2-resources/metadata/o2cms/2/O2-PUB/1702958276239_WechatIMG295.jpg",
+                                                            "width": "16px",
+                                                            "height": "16px",
+                                                            "objectFit": "scale-down",
+                                                            "objectPosition": "center",
+                                                            "hasCover": false,
+                                                            "cdnUrl": "https://static-d2s-prod.platform-loreal.cn/o2-resources/metadata/o2cms/2/O2-PUB/1702958276239_WechatIMG295.jpg",
+                                                            "path": "/o2-resources/metadata/o2cms/2/O2-PUB/1702958276239_WechatIMG295.jpg"
+                                                        },
+                                                        "style": {
+                                                            "marginRight": "4px",
+                                                            "borderRadius": "30px"
+                                                        },
+                                                        "childrenData": [],
+                                                        "componentId": "_be8d177e-29c4-400b-b294-d5af0874bcf3"
+                                                    },
+                                                    {
+                                                        "anchorTitle": null,
+                                                        "componentCode": "text",
+                                                        "groupCode": "common",
+                                                        "groupName": "常用组件",
+                                                        "componentName": "文字",
+                                                        "editFlag": 0,
+                                                        "data": {
+                                                            "text": "Sunny",
+                                                            "overflowMode": "unset",
+                                                            "fontFamily": "font-regular"
+                                                        },
+                                                        "style": {
+                                                            "display": "block",
+                                                            "fontSize": "12px",
+                                                            "fontWeight": "500",
+                                                            "color": "black"
+                                                        },
+                                                        "childrenData": [],
+                                                        "componentId": "_46a699e4-d657-42a0-827e-f96a07675426"
+                                                    }
+                                                ],
+                                                "componentId": "_92e6eed9-899c-4821-8239-e9b690589e8f"
+                                            }
+                                        ],
+                                        "componentId": "_e1853d45-f341-46aa-8aac-b5e26dc116e6",
+                                        "action": {
+                                            "code": "bind-product",
+                                            "data": {
+                                                "page": {},
+                                                "params": {}
+                                            }
+                                        }
+                                    },
+                                    {
+                                        "anchorTitle": null,
+                                        "componentCode": "rows-container",
+                                        "groupCode": "container",
+                                        "groupName": "容器",
+                                        "componentName": "多行容器",
+                                        "editFlag": 0,
+                                        "style": {
+                                            "display": "block"
+                                        },
+                                        "data": {
+                                            "rowsNum": 3,
+                                            "entityName": "烫发高业绩秘籍商业潮流法式烫",
+                                            "entityCode": "3340532",
+                                            "entityId": 1248,
+                                            "platformProductCode": "3340532",
+                                            "mediaUrl": "/o2-resources/o2pcm/videos/online/dm/2/O2-PUB/cover/3340532.png",
+                                            "lowedPrice": null,
+                                            "onlineShopName": "发型师",
+                                            "product": {
+                                                "platformProductId": 1248,
+                                                "platformProductCode": "3340532",
+                                                "mediaUrl": "/o2-resources/o2pcm/videos/online/dm/2/O2-PUB/cover/3340532.png",
+                                                "title": "烫发高业绩秘籍商业潮流法式烫",
+                                                "lowedPrice": null,
+                                                "displayPrice": null,
+                                                "currencyCode": null,
+                                                "entityId": 1248,
+                                                "entityCode": "3340532",
+                                                "entityName": "烫发高业绩秘籍商业潮流法式烫",
+                                                "serialNum": null,
+                                                "catalogCode": "OW-1",
+                                                "catalogVersionCode": "OW-1",
+                                                "entityStatus": null,
+                                                "entityStatusMeaning": null,
+                                                "mediaId": null,
+                                                "activeFlag": 1,
+                                                "shelfStatusCode": "ON",
+                                                "shelfStatusMeaning": "已上架",
+                                                "labelRelProductMap": {
+                                                    "CUSTOM": [
+                                                        {
+                                                            "objectVersionNumber": 1,
+                                                            "_token": "UZ7lDxKqxeo0SxH+w9U5aT7QzETbk0weA1umDQkZiczDLn7y+ityXNIzOVpFvv4SAYwyy2d+VRbC6iUvLk5k4fcY9f7tRRBQR2RAjZrmZwU=",
+                                                            "labelId": 275,
+                                                            "labelCode": "LABEL2023121414",
+                                                            "labelName": "法式烫",
+                                                            "labelTypeCode": "CUSTOM",
+                                                            "showFlag": 1,
+                                                            "tenantId": 2,
+                                                            "labelRelId": 60,
+                                                            "platformProductId": 1248
+                                                        }
+                                                    ]
+                                                },
+                                                "tenantId": 2,
+                                                "tenantName": "欧莱雅",
+                                                "onlineShopName": "发型师",
+                                                "kindTypeCode": "VIRTUAL_COURSE",
+                                                "courseAddressList": null,
+                                                "speaker": "欧莱雅PRO",
+                                                "liveTime": null,
+                                                "courseForm": "ONLINE"
+                                            }
+                                        },
+                                        "childrenData": [
+                                            {
+                                                "anchorTitle": null,
+                                                "componentCode": "image",
+                                                "groupCode": "common",
+                                                "groupName": "常用组件",
+                                                "componentName": "图片",
+                                                "editFlag": 0,
+                                                "data": {
+                                                    "url": "https://static-d2s-prod.platform-loreal.cn/o2-resources/metadata/o2cms/2/O2-PUB/1711550363534_000000000000000.jpeg",
+                                                    "width": "100%",
+                                                    "height": "100%",
+                                                    "objectFit": "scale-down",
+                                                    "objectPosition": "center",
+                                                    "hasCover": false,
+                                                    "cdnUrl": "https://static-d2s-prod.platform-loreal.cn/o2-resources/metadata/o2cms/2/O2-PUB/1711550363534_000000000000000.jpeg",
+                                                    "path": "/o2-resources/metadata/o2cms/2/O2-PUB/1711550363534_000000000000000.jpeg"
+                                                },
+                                                "style": {
+                                                    "borderRadius": "8px 8px 8px 8px"
+                                                },
+                                                "childrenData": [],
+                                                "componentId": "_574aa0cc-8c3f-44a2-b1ea-fb1c838340ea"
+                                            },
+                                            {
+                                                "anchorTitle": null,
+                                                "componentCode": "text",
+                                                "groupCode": "common",
+                                                "groupName": "常用组件",
+                                                "componentName": "文字",
+                                                "editFlag": 0,
+                                                "data": {
+                                                    "text": "商业潮流法式烫",
+                                                    "overflowMode": "unset",
+                                                    "fontFamily": "font-regular"
+                                                },
+                                                "style": {
+                                                    "display": "block",
+                                                    "fontSize": "14px",
+                                                    "fontWeight": "500",
+                                                    "color": "black",
+                                                    "marginTop": "8px"
+                                                },
+                                                "childrenData": [],
+                                                "componentId": "_eac8b4fe-8d09-41ca-8214-69de63deb712"
+                                            },
+                                            {
+                                                "anchorTitle": null,
+                                                "componentCode": "rows-container",
+                                                "groupCode": "container",
+                                                "groupName": "容器",
+                                                "componentName": "多行容器",
+                                                "editFlag": 0,
+                                                "style": {
+                                                    "display": "flex",
+                                                    "marginTop": "8px"
+                                                },
+                                                "data": {
+                                                    "rowsNum": 2
+                                                },
+                                                "childrenData": [
+                                                    {
+                                                        "anchorTitle": null,
+                                                        "componentCode": "image",
+                                                        "groupCode": "common",
+                                                        "groupName": "常用组件",
+                                                        "componentName": "图片",
+                                                        "editFlag": 0,
+                                                        "data": {
+                                                            "url": "https://static-d2s-prod.platform-loreal.cn/o2-resources/metadata/o2cms/2/O2-PUB/1702959787131_任玉平.jpg",
+                                                            "width": "16px",
+                                                            "height": "16px",
+                                                            "objectFit": "scale-down",
+                                                            "objectPosition": "center",
+                                                            "hasCover": false,
+                                                            "cdnUrl": "https://static-d2s-prod.platform-loreal.cn/o2-resources/metadata/o2cms/2/O2-PUB/1702959787131_任玉平.jpg",
+                                                            "path": "/o2-resources/metadata/o2cms/2/O2-PUB/1702959787131_任玉平.jpg"
+                                                        },
+                                                        "style": {
+                                                            "marginRight": "4px",
+                                                            "borderRadius": "30px"
+                                                        },
+                                                        "childrenData": [],
+                                                        "componentId": "_846da644-3788-436c-85e5-b1040e8e8662"
+                                                    },
+                                                    {
+                                                        "anchorTitle": null,
+                                                        "componentCode": "text",
+                                                        "groupCode": "common",
+                                                        "groupName": "常用组件",
+                                                        "componentName": "文字",
+                                                        "editFlag": 0,
+                                                        "data": {
+                                                            "text": "任玉平",
+                                                            "overflowMode": "unset",
+                                                            "fontFamily": "font-regular"
+                                                        },
+                                                        "style": {
+                                                            "display": "block",
+                                                            "fontSize": "12px",
+                                                            "fontWeight": "500",
+                                                            "color": "black"
+                                                        },
+                                                        "childrenData": [],
+                                                        "componentId": "_362496e5-1a12-4a92-8655-1205d43ff4dc"
+                                                    }
+                                                ],
+                                                "componentId": "_f50b2991-f95e-4a86-87ed-def213828a19"
+                                            }
+                                        ],
+                                        "componentId": "_185c3604-cc32-487d-bae5-591e42552f38",
+                                        "action": {
+                                            "code": "bind-product",
+                                            "data": {
+                                                "page": {},
+                                                "params": {}
+                                            }
+                                        }
+                                    }
+                                ],
+                                "componentId": "_a9423106-aa1b-4a1d-89f8-72e2518ea1a6"
+                            },
+                            {
+                                "anchorTitle": null,
+                                "componentCode": "column-container",
+                                "groupCode": "container",
+                                "groupName": "容器",
+                                "componentName": "多列容器",
+                                "editFlag": 0,
+                                "style": {
+                                    "display": "flex",
+                                    "flexDirection": "row",
+                                    "alignItems": "stretch",
+                                    "justifyContent": "flex-start",
+                                    "marginTop": "24px"
+                                },
+                                "data": {
+                                    "columnNum": 2,
+                                    "gutter": 17
+                                },
+                                "childrenData": [
+                                    {
+                                        "anchorTitle": null,
+                                        "componentCode": "rows-container",
+                                        "groupCode": "container",
+                                        "groupName": "容器",
+                                        "componentName": "多行容器",
+                                        "editFlag": 0,
+                                        "style": {
+                                            "display": "block"
+                                        },
+                                        "data": {
+                                            "rowsNum": 3,
+                                            "gutter": null,
+                                            "entityName": "剪发中的剪裁结构和思维 by sunny",
+                                            "entityCode": "3651108",
+                                            "entityId": 944,
+                                            "platformProductCode": "3651108",
+                                            "mediaUrl": "/o2-resources/o2pcm/videos/online/dm/2/O2-PUB/cover/3651108.png",
+                                            "lowedPrice": null,
+                                            "onlineShopName": "发型师",
+                                            "product": {
+                                                "platformProductId": 944,
+                                                "platformProductCode": "3651108",
+                                                "mediaUrl": "/o2-resources/o2pcm/videos/online/dm/2/O2-PUB/cover/3651108.png",
+                                                "title": "剪发中的剪裁结构和思维 by sunny",
+                                                "lowedPrice": null,
+                                                "displayPrice": null,
+                                                "currencyCode": null,
+                                                "entityId": 944,
+                                                "entityCode": "3651108",
+                                                "entityName": "剪发中的剪裁结构和思维 by sunny",
+                                                "serialNum": null,
+                                                "catalogCode": "OW-1",
+                                                "catalogVersionCode": "OW-1",
+                                                "entityStatus": null,
+                                                "entityStatusMeaning": null,
+                                                "mediaId": null,
+                                                "activeFlag": 1,
+                                                "shelfStatusCode": "ON",
+                                                "shelfStatusMeaning": "已上架",
+                                                "labelRelProductMap": {
+                                                    "CUSTOM": [
+                                                        {
+                                                            "objectVersionNumber": 1,
+                                                            "_token": "UZ7lDxKqxeo0SxH+w9U5aT7QzETbk0weA1umDQkZiczDLn7y+ityXNIzOVpFvv4SAYwyy2d+VRbC6iUvLk5k4TBhLNA+cfSZ78nHZzm6m9U=",
+                                                            "labelId": 273,
+                                                            "labelCode": "LABEL2023121412",
+                                                            "labelName": "裁剪思维",
+                                                            "labelTypeCode": "CUSTOM",
+                                                            "showFlag": 1,
+                                                            "tenantId": 2,
+                                                            "labelRelId": 51,
+                                                            "platformProductId": 944
+                                                        }
+                                                    ]
+                                                },
+                                                "tenantId": 2,
+                                                "tenantName": "欧莱雅",
+                                                "onlineShopName": "发型师",
+                                                "kindTypeCode": "VIRTUAL_COURSE",
+                                                "courseAddressList": null,
+                                                "speaker": "欧莱雅PRO",
+                                                "liveTime": null,
+                                                "courseForm": "ONLINE"
+                                            }
+                                        },
+                                        "childrenData": [
+                                            {
+                                                "anchorTitle": null,
+                                                "componentCode": "image",
+                                                "groupCode": "common",
+                                                "groupName": "常用组件",
+                                                "componentName": "图片",
+                                                "editFlag": 0,
+                                                "data": {
+                                                    "url": "https://static-d2s-prod.platform-loreal.cn/o2-resources/metadata/o2cms/2/O2-PUB/1711550354301_00000000.jpeg",
+                                                    "width": "100%",
+                                                    "height": "100%",
+                                                    "objectFit": "scale-down",
+                                                    "objectPosition": "center",
+                                                    "hasCover": false,
+                                                    "cdnUrl": "https://static-d2s-prod.platform-loreal.cn/o2-resources/metadata/o2cms/2/O2-PUB/1711550354301_00000000.jpeg",
+                                                    "path": "/o2-resources/metadata/o2cms/2/O2-PUB/1711550354301_00000000.jpeg"
+                                                },
+                                                "style": {
+                                                    "borderRadius": "8px 8px 8px 8px"
+                                                },
+                                                "childrenData": [],
+                                                "componentId": "_9656a43e-fe7d-4db2-8452-53ecce251294"
+                                            },
+                                            {
+                                                "anchorTitle": null,
+                                                "componentCode": "text",
+                                                "groupCode": "common",
+                                                "groupName": "常用组件",
+                                                "componentName": "文字",
+                                                "editFlag": 0,
+                                                "data": {
+                                                    "text": "剪发中的剪裁结构和思维",
+                                                    "overflowMode": "unset",
+                                                    "fontFamily": "font-regular"
+                                                },
+                                                "style": {
+                                                    "display": "block",
+                                                    "fontSize": "14px",
+                                                    "fontWeight": "500",
+                                                    "color": "black",
+                                                    "marginTop": "8px"
+                                                },
+                                                "childrenData": [],
+                                                "componentId": "_1396cd3f-3090-420e-8146-2db3fb497956"
+                                            },
+                                            {
+                                                "anchorTitle": null,
+                                                "componentCode": "rows-container",
+                                                "groupCode": "container",
+                                                "groupName": "容器",
+                                                "componentName": "多行容器",
+                                                "editFlag": 0,
+                                                "style": {
+                                                    "display": "flex",
+                                                    "marginTop": "8px"
+                                                },
+                                                "data": {
+                                                    "rowsNum": 2
+                                                },
+                                                "childrenData": [
+                                                    {
+                                                        "anchorTitle": null,
+                                                        "componentCode": "image",
+                                                        "groupCode": "common",
+                                                        "groupName": "常用组件",
+                                                        "componentName": "图片",
+                                                        "editFlag": 0,
+                                                        "data": {
+                                                            "url": "https://static-d2s-prod.platform-loreal.cn/o2-resources/metadata/o2cms/2/O2-PUB/1702958276239_WechatIMG295.jpg",
+                                                            "width": "16px",
+                                                            "height": "16px",
+                                                            "objectFit": "scale-down",
+                                                            "objectPosition": "center",
+                                                            "hasCover": false,
+                                                            "cdnUrl": "https://static-d2s-prod.platform-loreal.cn/o2-resources/metadata/o2cms/2/O2-PUB/1702958276239_WechatIMG295.jpg",
+                                                            "path": "/o2-resources/metadata/o2cms/2/O2-PUB/1702958276239_WechatIMG295.jpg"
+                                                        },
+                                                        "style": {
+                                                            "marginRight": "4px",
+                                                            "borderRadius": "30px"
+                                                        },
+                                                        "childrenData": [],
+                                                        "componentId": "_be8d177e-29c4-400b-b294-d5af0874bcf3"
+                                                    },
+                                                    {
+                                                        "anchorTitle": null,
+                                                        "componentCode": "text",
+                                                        "groupCode": "common",
+                                                        "groupName": "常用组件",
+                                                        "componentName": "文字",
+                                                        "editFlag": 0,
+                                                        "data": {
+                                                            "text": "Sunny",
+                                                            "overflowMode": "unset",
+                                                            "fontFamily": "font-regular"
+                                                        },
+                                                        "style": {
+                                                            "display": "block",
+                                                            "fontSize": "12px",
+                                                            "fontWeight": "500",
+                                                            "color": "black"
+                                                        },
+                                                        "childrenData": [],
+                                                        "componentId": "_46a699e4-d657-42a0-827e-f96a07675426"
+                                                    }
+                                                ],
+                                                "componentId": "_92e6eed9-899c-4821-8239-e9b690589e8f"
+                                            }
+                                        ],
+                                        "componentId": "_e1853d45-f341-46aa-8aac-b5e26dc116e6",
+                                        "action": {
+                                            "code": "bind-product",
+                                            "data": {
+                                                "page": {},
+                                                "params": {}
+                                            }
+                                        }
+                                    },
+                                    {
+                                        "anchorTitle": null,
+                                        "componentCode": "rows-container",
+                                        "groupCode": "container",
+                                        "groupName": "容器",
+                                        "componentName": "多行容器",
+                                        "editFlag": 0,
+                                        "style": {
+                                            "display": "block"
+                                        },
+                                        "data": {
+                                            "rowsNum": 3,
+                                            "entityName": "烫发高业绩秘籍商业潮流法式烫",
+                                            "entityCode": "3340532",
+                                            "entityId": 1248,
+                                            "platformProductCode": "3340532",
+                                            "mediaUrl": "/o2-resources/o2pcm/videos/online/dm/2/O2-PUB/cover/3340532.png",
+                                            "lowedPrice": null,
+                                            "onlineShopName": "发型师",
+                                            "product": {
+                                                "platformProductId": 1248,
+                                                "platformProductCode": "3340532",
+                                                "mediaUrl": "/o2-resources/o2pcm/videos/online/dm/2/O2-PUB/cover/3340532.png",
+                                                "title": "烫发高业绩秘籍商业潮流法式烫",
+                                                "lowedPrice": null,
+                                                "displayPrice": null,
+                                                "currencyCode": null,
+                                                "entityId": 1248,
+                                                "entityCode": "3340532",
+                                                "entityName": "烫发高业绩秘籍商业潮流法式烫",
+                                                "serialNum": null,
+                                                "catalogCode": "OW-1",
+                                                "catalogVersionCode": "OW-1",
+                                                "entityStatus": null,
+                                                "entityStatusMeaning": null,
+                                                "mediaId": null,
+                                                "activeFlag": 1,
+                                                "shelfStatusCode": "ON",
+                                                "shelfStatusMeaning": "已上架",
+                                                "labelRelProductMap": {
+                                                    "CUSTOM": [
+                                                        {
+                                                            "objectVersionNumber": 1,
+                                                            "_token": "UZ7lDxKqxeo0SxH+w9U5aT7QzETbk0weA1umDQkZiczDLn7y+ityXNIzOVpFvv4SAYwyy2d+VRbC6iUvLk5k4fcY9f7tRRBQR2RAjZrmZwU=",
+                                                            "labelId": 275,
+                                                            "labelCode": "LABEL2023121414",
+                                                            "labelName": "法式烫",
+                                                            "labelTypeCode": "CUSTOM",
+                                                            "showFlag": 1,
+                                                            "tenantId": 2,
+                                                            "labelRelId": 60,
+                                                            "platformProductId": 1248
+                                                        }
+                                                    ]
+                                                },
+                                                "tenantId": 2,
+                                                "tenantName": "欧莱雅",
+                                                "onlineShopName": "发型师",
+                                                "kindTypeCode": "VIRTUAL_COURSE",
+                                                "courseAddressList": null,
+                                                "speaker": "欧莱雅PRO",
+                                                "liveTime": null,
+                                                "courseForm": "ONLINE"
+                                            }
+                                        },
+                                        "childrenData": [
+                                            {
+                                                "anchorTitle": null,
+                                                "componentCode": "image",
+                                                "groupCode": "common",
+                                                "groupName": "常用组件",
+                                                "componentName": "图片",
+                                                "editFlag": 0,
+                                                "data": {
+                                                    "url": "https://static-d2s-prod.platform-loreal.cn/o2-resources/metadata/o2cms/2/O2-PUB/1711550363534_000000000000000.jpeg",
+                                                    "width": "100%",
+                                                    "height": "100%",
+                                                    "objectFit": "scale-down",
+                                                    "objectPosition": "center",
+                                                    "hasCover": false,
+                                                    "cdnUrl": "https://static-d2s-prod.platform-loreal.cn/o2-resources/metadata/o2cms/2/O2-PUB/1711550363534_000000000000000.jpeg",
+                                                    "path": "/o2-resources/metadata/o2cms/2/O2-PUB/1711550363534_000000000000000.jpeg"
+                                                },
+                                                "style": {
+                                                    "borderRadius": "8px 8px 8px 8px"
+                                                },
+                                                "childrenData": [],
+                                                "componentId": "_574aa0cc-8c3f-44a2-b1ea-fb1c838340ea"
+                                            },
+                                            {
+                                                "anchorTitle": null,
+                                                "componentCode": "text",
+                                                "groupCode": "common",
+                                                "groupName": "常用组件",
+                                                "componentName": "文字",
+                                                "editFlag": 0,
+                                                "data": {
+                                                    "text": "商业潮流法式烫",
+                                                    "overflowMode": "unset",
+                                                    "fontFamily": "font-regular"
+                                                },
+                                                "style": {
+                                                    "display": "block",
+                                                    "fontSize": "14px",
+                                                    "fontWeight": "500",
+                                                    "color": "black",
+                                                    "marginTop": "8px"
+                                                },
+                                                "childrenData": [],
+                                                "componentId": "_eac8b4fe-8d09-41ca-8214-69de63deb712"
+                                            },
+                                            {
+                                                "anchorTitle": null,
+                                                "componentCode": "rows-container",
+                                                "groupCode": "container",
+                                                "groupName": "容器",
+                                                "componentName": "多行容器",
+                                                "editFlag": 0,
+                                                "style": {
+                                                    "display": "flex",
+                                                    "marginTop": "8px"
+                                                },
+                                                "data": {
+                                                    "rowsNum": 2
+                                                },
+                                                "childrenData": [
+                                                    {
+                                                        "anchorTitle": null,
+                                                        "componentCode": "image",
+                                                        "groupCode": "common",
+                                                        "groupName": "常用组件",
+                                                        "componentName": "图片",
+                                                        "editFlag": 0,
+                                                        "data": {
+                                                            "url": "https://static-d2s-prod.platform-loreal.cn/o2-resources/metadata/o2cms/2/O2-PUB/1702959787131_任玉平.jpg",
+                                                            "width": "16px",
+                                                            "height": "16px",
+                                                            "objectFit": "scale-down",
+                                                            "objectPosition": "center",
+                                                            "hasCover": false,
+                                                            "cdnUrl": "https://static-d2s-prod.platform-loreal.cn/o2-resources/metadata/o2cms/2/O2-PUB/1702959787131_任玉平.jpg",
+                                                            "path": "/o2-resources/metadata/o2cms/2/O2-PUB/1702959787131_任玉平.jpg"
+                                                        },
+                                                        "style": {
+                                                            "marginRight": "4px",
+                                                            "borderRadius": "30px"
+                                                        },
+                                                        "childrenData": [],
+                                                        "componentId": "_846da644-3788-436c-85e5-b1040e8e8662"
+                                                    },
+                                                    {
+                                                        "anchorTitle": null,
+                                                        "componentCode": "text",
+                                                        "groupCode": "common",
+                                                        "groupName": "常用组件",
+                                                        "componentName": "文字",
+                                                        "editFlag": 0,
+                                                        "data": {
+                                                            "text": "任玉平",
+                                                            "overflowMode": "unset",
+                                                            "fontFamily": "font-regular"
+                                                        },
+                                                        "style": {
+                                                            "display": "block",
+                                                            "fontSize": "12px",
+                                                            "fontWeight": "500",
+                                                            "color": "black"
+                                                        },
+                                                        "childrenData": [],
+                                                        "componentId": "_362496e5-1a12-4a92-8655-1205d43ff4dc"
+                                                    }
+                                                ],
+                                                "componentId": "_f50b2991-f95e-4a86-87ed-def213828a19"
+                                            }
+                                        ],
+                                        "componentId": "_185c3604-cc32-487d-bae5-591e42552f38",
+                                        "action": {
+                                            "code": "bind-product",
+                                            "data": {
+                                                "page": {},
+                                                "params": {}
+                                            }
+                                        }
+                                    }
+                                ],
+                                "componentId": "_a9423106-aa1b-4a1d-89f8-72e2518ea1a6"
+                            },
+                            {
+                                "anchorTitle": null,
+                                "componentCode": "column-container",
+                                "groupCode": "container",
+                                "groupName": "容器",
+                                "componentName": "多列容器",
+                                "editFlag": 0,
+                                "style": {
+                                    "display": "flex",
+                                    "flexDirection": "row",
+                                    "alignItems": "stretch",
+                                    "justifyContent": "flex-start",
+                                    "marginTop": "24px"
+                                },
+                                "data": {
+                                    "columnNum": 2,
+                                    "gutter": 17
+                                },
+                                "childrenData": [
+                                    {
+                                        "anchorTitle": null,
+                                        "componentCode": "rows-container",
+                                        "groupCode": "container",
+                                        "groupName": "容器",
+                                        "componentName": "多行容器",
+                                        "editFlag": 0,
+                                        "style": {
+                                            "display": "block"
+                                        },
+                                        "data": {
+                                            "rowsNum": 3,
+                                            "gutter": null,
+                                            "entityName": "剪发中的剪裁结构和思维 by sunny",
+                                            "entityCode": "3651108",
+                                            "entityId": 944,
+                                            "platformProductCode": "3651108",
+                                            "mediaUrl": "/o2-resources/o2pcm/videos/online/dm/2/O2-PUB/cover/3651108.png",
+                                            "lowedPrice": null,
+                                            "onlineShopName": "发型师",
+                                            "product": {
+                                                "platformProductId": 944,
+                                                "platformProductCode": "3651108",
+                                                "mediaUrl": "/o2-resources/o2pcm/videos/online/dm/2/O2-PUB/cover/3651108.png",
+                                                "title": "剪发中的剪裁结构和思维 by sunny",
+                                                "lowedPrice": null,
+                                                "displayPrice": null,
+                                                "currencyCode": null,
+                                                "entityId": 944,
+                                                "entityCode": "3651108",
+                                                "entityName": "剪发中的剪裁结构和思维 by sunny",
+                                                "serialNum": null,
+                                                "catalogCode": "OW-1",
+                                                "catalogVersionCode": "OW-1",
+                                                "entityStatus": null,
+                                                "entityStatusMeaning": null,
+                                                "mediaId": null,
+                                                "activeFlag": 1,
+                                                "shelfStatusCode": "ON",
+                                                "shelfStatusMeaning": "已上架",
+                                                "labelRelProductMap": {
+                                                    "CUSTOM": [
+                                                        {
+                                                            "objectVersionNumber": 1,
+                                                            "_token": "UZ7lDxKqxeo0SxH+w9U5aT7QzETbk0weA1umDQkZiczDLn7y+ityXNIzOVpFvv4SAYwyy2d+VRbC6iUvLk5k4TBhLNA+cfSZ78nHZzm6m9U=",
+                                                            "labelId": 273,
+                                                            "labelCode": "LABEL2023121412",
+                                                            "labelName": "裁剪思维",
+                                                            "labelTypeCode": "CUSTOM",
+                                                            "showFlag": 1,
+                                                            "tenantId": 2,
+                                                            "labelRelId": 51,
+                                                            "platformProductId": 944
+                                                        }
+                                                    ]
+                                                },
+                                                "tenantId": 2,
+                                                "tenantName": "欧莱雅",
+                                                "onlineShopName": "发型师",
+                                                "kindTypeCode": "VIRTUAL_COURSE",
+                                                "courseAddressList": null,
+                                                "speaker": "欧莱雅PRO",
+                                                "liveTime": null,
+                                                "courseForm": "ONLINE"
+                                            }
+                                        },
+                                        "childrenData": [
+                                            {
+                                                "anchorTitle": null,
+                                                "componentCode": "image",
+                                                "groupCode": "common",
+                                                "groupName": "常用组件",
+                                                "componentName": "图片",
+                                                "editFlag": 0,
+                                                "data": {
+                                                    "url": "https://static-d2s-prod.platform-loreal.cn/o2-resources/metadata/o2cms/2/O2-PUB/1711550354301_00000000.jpeg",
+                                                    "width": "100%",
+                                                    "height": "100%",
+                                                    "objectFit": "scale-down",
+                                                    "objectPosition": "center",
+                                                    "hasCover": false,
+                                                    "cdnUrl": "https://static-d2s-prod.platform-loreal.cn/o2-resources/metadata/o2cms/2/O2-PUB/1711550354301_00000000.jpeg",
+                                                    "path": "/o2-resources/metadata/o2cms/2/O2-PUB/1711550354301_00000000.jpeg"
+                                                },
+                                                "style": {
+                                                    "borderRadius": "8px 8px 8px 8px"
+                                                },
+                                                "childrenData": [],
+                                                "componentId": "_9656a43e-fe7d-4db2-8452-53ecce251294"
+                                            },
+                                            {
+                                                "anchorTitle": null,
+                                                "componentCode": "text",
+                                                "groupCode": "common",
+                                                "groupName": "常用组件",
+                                                "componentName": "文字",
+                                                "editFlag": 0,
+                                                "data": {
+                                                    "text": "剪发中的剪裁结构和思维",
+                                                    "overflowMode": "unset",
+                                                    "fontFamily": "font-regular"
+                                                },
+                                                "style": {
+                                                    "display": "block",
+                                                    "fontSize": "14px",
+                                                    "fontWeight": "500",
+                                                    "color": "black",
+                                                    "marginTop": "8px"
+                                                },
+                                                "childrenData": [],
+                                                "componentId": "_1396cd3f-3090-420e-8146-2db3fb497956"
+                                            },
+                                            {
+                                                "anchorTitle": null,
+                                                "componentCode": "rows-container",
+                                                "groupCode": "container",
+                                                "groupName": "容器",
+                                                "componentName": "多行容器",
+                                                "editFlag": 0,
+                                                "style": {
+                                                    "display": "flex",
+                                                    "marginTop": "8px"
+                                                },
+                                                "data": {
+                                                    "rowsNum": 2
+                                                },
+                                                "childrenData": [
+                                                    {
+                                                        "anchorTitle": null,
+                                                        "componentCode": "image",
+                                                        "groupCode": "common",
+                                                        "groupName": "常用组件",
+                                                        "componentName": "图片",
+                                                        "editFlag": 0,
+                                                        "data": {
+                                                            "url": "https://static-d2s-prod.platform-loreal.cn/o2-resources/metadata/o2cms/2/O2-PUB/1702958276239_WechatIMG295.jpg",
+                                                            "width": "16px",
+                                                            "height": "16px",
+                                                            "objectFit": "scale-down",
+                                                            "objectPosition": "center",
+                                                            "hasCover": false,
+                                                            "cdnUrl": "https://static-d2s-prod.platform-loreal.cn/o2-resources/metadata/o2cms/2/O2-PUB/1702958276239_WechatIMG295.jpg",
+                                                            "path": "/o2-resources/metadata/o2cms/2/O2-PUB/1702958276239_WechatIMG295.jpg"
+                                                        },
+                                                        "style": {
+                                                            "marginRight": "4px",
+                                                            "borderRadius": "30px"
+                                                        },
+                                                        "childrenData": [],
+                                                        "componentId": "_be8d177e-29c4-400b-b294-d5af0874bcf3"
+                                                    },
+                                                    {
+                                                        "anchorTitle": null,
+                                                        "componentCode": "text",
+                                                        "groupCode": "common",
+                                                        "groupName": "常用组件",
+                                                        "componentName": "文字",
+                                                        "editFlag": 0,
+                                                        "data": {
+                                                            "text": "Sunny",
+                                                            "overflowMode": "unset",
+                                                            "fontFamily": "font-regular"
+                                                        },
+                                                        "style": {
+                                                            "display": "block",
+                                                            "fontSize": "12px",
+                                                            "fontWeight": "500",
+                                                            "color": "black"
+                                                        },
+                                                        "childrenData": [],
+                                                        "componentId": "_46a699e4-d657-42a0-827e-f96a07675426"
+                                                    }
+                                                ],
+                                                "componentId": "_92e6eed9-899c-4821-8239-e9b690589e8f"
+                                            }
+                                        ],
+                                        "componentId": "_e1853d45-f341-46aa-8aac-b5e26dc116e6",
+                                        "action": {
+                                            "code": "bind-product",
+                                            "data": {
+                                                "page": {},
+                                                "params": {}
+                                            }
+                                        }
+                                    },
+                                    {
+                                        "anchorTitle": null,
+                                        "componentCode": "rows-container",
+                                        "groupCode": "container",
+                                        "groupName": "容器",
+                                        "componentName": "多行容器",
+                                        "editFlag": 0,
+                                        "style": {
+                                            "display": "block"
+                                        },
+                                        "data": {
+                                            "rowsNum": 3,
+                                            "entityName": "烫发高业绩秘籍商业潮流法式烫",
+                                            "entityCode": "3340532",
+                                            "entityId": 1248,
+                                            "platformProductCode": "3340532",
+                                            "mediaUrl": "/o2-resources/o2pcm/videos/online/dm/2/O2-PUB/cover/3340532.png",
+                                            "lowedPrice": null,
+                                            "onlineShopName": "发型师",
+                                            "product": {
+                                                "platformProductId": 1248,
+                                                "platformProductCode": "3340532",
+                                                "mediaUrl": "/o2-resources/o2pcm/videos/online/dm/2/O2-PUB/cover/3340532.png",
+                                                "title": "烫发高业绩秘籍商业潮流法式烫",
+                                                "lowedPrice": null,
+                                                "displayPrice": null,
+                                                "currencyCode": null,
+                                                "entityId": 1248,
+                                                "entityCode": "3340532",
+                                                "entityName": "烫发高业绩秘籍商业潮流法式烫",
+                                                "serialNum": null,
+                                                "catalogCode": "OW-1",
+                                                "catalogVersionCode": "OW-1",
+                                                "entityStatus": null,
+                                                "entityStatusMeaning": null,
+                                                "mediaId": null,
+                                                "activeFlag": 1,
+                                                "shelfStatusCode": "ON",
+                                                "shelfStatusMeaning": "已上架",
+                                                "labelRelProductMap": {
+                                                    "CUSTOM": [
+                                                        {
+                                                            "objectVersionNumber": 1,
+                                                            "_token": "UZ7lDxKqxeo0SxH+w9U5aT7QzETbk0weA1umDQkZiczDLn7y+ityXNIzOVpFvv4SAYwyy2d+VRbC6iUvLk5k4fcY9f7tRRBQR2RAjZrmZwU=",
+                                                            "labelId": 275,
+                                                            "labelCode": "LABEL2023121414",
+                                                            "labelName": "法式烫",
+                                                            "labelTypeCode": "CUSTOM",
+                                                            "showFlag": 1,
+                                                            "tenantId": 2,
+                                                            "labelRelId": 60,
+                                                            "platformProductId": 1248
+                                                        }
+                                                    ]
+                                                },
+                                                "tenantId": 2,
+                                                "tenantName": "欧莱雅",
+                                                "onlineShopName": "发型师",
+                                                "kindTypeCode": "VIRTUAL_COURSE",
+                                                "courseAddressList": null,
+                                                "speaker": "欧莱雅PRO",
+                                                "liveTime": null,
+                                                "courseForm": "ONLINE"
+                                            }
+                                        },
+                                        "childrenData": [
+                                            {
+                                                "anchorTitle": null,
+                                                "componentCode": "image",
+                                                "groupCode": "common",
+                                                "groupName": "常用组件",
+                                                "componentName": "图片",
+                                                "editFlag": 0,
+                                                "data": {
+                                                    "url": "https://static-d2s-prod.platform-loreal.cn/o2-resources/metadata/o2cms/2/O2-PUB/1711550363534_000000000000000.jpeg",
+                                                    "width": "100%",
+                                                    "height": "100%",
+                                                    "objectFit": "scale-down",
+                                                    "objectPosition": "center",
+                                                    "hasCover": false,
+                                                    "cdnUrl": "https://static-d2s-prod.platform-loreal.cn/o2-resources/metadata/o2cms/2/O2-PUB/1711550363534_000000000000000.jpeg",
+                                                    "path": "/o2-resources/metadata/o2cms/2/O2-PUB/1711550363534_000000000000000.jpeg"
+                                                },
+                                                "style": {
+                                                    "borderRadius": "8px 8px 8px 8px"
+                                                },
+                                                "childrenData": [],
+                                                "componentId": "_574aa0cc-8c3f-44a2-b1ea-fb1c838340ea"
+                                            },
+                                            {
+                                                "anchorTitle": null,
+                                                "componentCode": "text",
+                                                "groupCode": "common",
+                                                "groupName": "常用组件",
+                                                "componentName": "文字",
+                                                "editFlag": 0,
+                                                "data": {
+                                                    "text": "商业潮流法式烫",
+                                                    "overflowMode": "unset",
+                                                    "fontFamily": "font-regular"
+                                                },
+                                                "style": {
+                                                    "display": "block",
+                                                    "fontSize": "14px",
+                                                    "fontWeight": "500",
+                                                    "color": "black",
+                                                    "marginTop": "8px"
+                                                },
+                                                "childrenData": [],
+                                                "componentId": "_eac8b4fe-8d09-41ca-8214-69de63deb712"
+                                            },
+                                            {
+                                                "anchorTitle": null,
+                                                "componentCode": "rows-container",
+                                                "groupCode": "container",
+                                                "groupName": "容器",
+                                                "componentName": "多行容器",
+                                                "editFlag": 0,
+                                                "style": {
+                                                    "display": "flex",
+                                                    "marginTop": "8px"
+                                                },
+                                                "data": {
+                                                    "rowsNum": 2
+                                                },
+                                                "childrenData": [
+                                                    {
+                                                        "anchorTitle": null,
+                                                        "componentCode": "image",
+                                                        "groupCode": "common",
+                                                        "groupName": "常用组件",
+                                                        "componentName": "图片",
+                                                        "editFlag": 0,
+                                                        "data": {
+                                                            "url": "https://static-d2s-prod.platform-loreal.cn/o2-resources/metadata/o2cms/2/O2-PUB/1702959787131_任玉平.jpg",
+                                                            "width": "16px",
+                                                            "height": "16px",
+                                                            "objectFit": "scale-down",
+                                                            "objectPosition": "center",
+                                                            "hasCover": false,
+                                                            "cdnUrl": "https://static-d2s-prod.platform-loreal.cn/o2-resources/metadata/o2cms/2/O2-PUB/1702959787131_任玉平.jpg",
+                                                            "path": "/o2-resources/metadata/o2cms/2/O2-PUB/1702959787131_任玉平.jpg"
+                                                        },
+                                                        "style": {
+                                                            "marginRight": "4px",
+                                                            "borderRadius": "30px"
+                                                        },
+                                                        "childrenData": [],
+                                                        "componentId": "_846da644-3788-436c-85e5-b1040e8e8662"
+                                                    },
+                                                    {
+                                                        "anchorTitle": null,
+                                                        "componentCode": "text",
+                                                        "groupCode": "common",
+                                                        "groupName": "常用组件",
+                                                        "componentName": "文字",
+                                                        "editFlag": 0,
+                                                        "data": {
+                                                            "text": "任玉平",
+                                                            "overflowMode": "unset",
+                                                            "fontFamily": "font-regular"
+                                                        },
+                                                        "style": {
+                                                            "display": "block",
+                                                            "fontSize": "12px",
+                                                            "fontWeight": "500",
+                                                            "color": "black"
+                                                        },
+                                                        "childrenData": [],
+                                                        "componentId": "_362496e5-1a12-4a92-8655-1205d43ff4dc"
+                                                    }
+                                                ],
+                                                "componentId": "_f50b2991-f95e-4a86-87ed-def213828a19"
+                                            }
+                                        ],
+                                        "componentId": "_185c3604-cc32-487d-bae5-591e42552f38",
+                                        "action": {
+                                            "code": "bind-product",
+                                            "data": {
+                                                "page": {},
+                                                "params": {}
+                                            }
+                                        }
+                                    }
+                                ],
+                                "componentId": "_a9423106-aa1b-4a1d-89f8-72e2518ea1a6"
+                            },
                         ]
                     }
                 ]

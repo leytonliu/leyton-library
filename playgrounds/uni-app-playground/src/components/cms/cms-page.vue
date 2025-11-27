@@ -29,6 +29,7 @@ onMounted(async () => {
       envConfig.value = {
         // 根据需要添加环境配置
         env: 'dev',
+        navigationStyle: 'default',
       };
       console.log('页面数据加载成功', pageConfig.value);
 
