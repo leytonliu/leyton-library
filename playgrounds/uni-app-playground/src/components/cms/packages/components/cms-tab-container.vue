@@ -8,7 +8,12 @@
     @tap="handleTapBaseContainer"
   >
     <view class="cms-tab-header-wrapper">
-      <scroll-view class="cms-tab-header-scroll" scroll-with-animation scroll-x>
+      <scroll-view
+        class="cms-tab-header-scroll"
+        scroll-with-animation
+        scroll-x
+        :scroll-into-view="scrollIntoViewId"
+      >
         <view class="cms-tab-header-flex">
           <view
             v-for="(tab, index) in processedTabs"
@@ -59,12 +64,23 @@ import {
   nextTick,
   type CSSProperties,
 } from 'vue';
-import { CmsBaseComponentProps, CmsComponentData } from '../../cms';
+import { CmsBaseComponentProps, CmsComponentConfig } from '../../cms';
 import { cmsBaseComponentDefaults } from '../utils/constants';
 import useCmsComponent from '../hooks/useCmsComponent';
 import CmsBaseComponent from '../cms-base-component.vue';
 import { deepcopy } from '../utils/deepcopy';
 import { usePageScroll } from '../hooks/usePageScroll';
+
+// --- 类型定义 ---
+interface ProcessedTab {
+  uniqueKey: string;
+  headerComponentData: CmsComponentConfig;
+  contentChildren: CmsComponentConfig[];
+  hasBeenRendered: boolean;
+}
+
+// 补充 UniApp 的 NodeInfo 类型定义 (如果没有全局定义)
+type RectResult = UniApp.NodeInfo | null;
 
 defineOptions({
   name: 'CmsTabContainer',
@@ -78,7 +94,7 @@ const props = withDefaults(defineProps<CmsBaseComponentProps>(), {
   ...cmsBaseComponentDefaults,
 });
 
-// --- Hook 集成 ---
+// --- 1. 基础 Hook 集成 ---
 const {
   classes,
   styles: containerStyles,
@@ -87,86 +103,96 @@ const {
 } = useCmsComponent(props);
 
 const instance = getCurrentInstance();
-// 生成唯一ID用于滚动定位
 const containerId = `cms-tab-container-${
   instance?.uid || Math.random().toString(36).slice(2)
 }`;
 
-// (保留滚动监听，如果业务需要)
+// 滚动监听 (业务预留)
 const { onScroll } = usePageScroll();
 onScroll(({ scrollTop }) => {
-  // console.log('onScroll', scrollTop);
+  /* optional logic */
 });
 
+// --- 2. 状态管理 ---
 const activeIndex = ref(0);
 const scrollIntoViewId = ref('');
-// [!新增] 用于动态撑住容器高度
-const containerMinHeight = ref('');
-
-// --- 数据结构定义 ---
-interface ProcessedTab {
-  uniqueKey: string;
-  headerComponentData: CmsComponentData;
-  contentChildren: CmsComponentData[];
-  hasBeenRendered: boolean;
-}
-
+const containerMinHeight = ref(''); // 动态高度锁
 const processedTabs = ref<ProcessedTab[]>([]);
 
-// --- 核心逻辑：数据处理 ---
+// --- 3. 核心逻辑：数据处理 ---
+
+/**
+ * 将原始配置转换为视图层可用的 Tab 结构
+ * 包含数据清洗、模板应用、伪造数据处理
+ */
+const transformTabsData = (newData: CmsBaseComponentProps['data']) => {
+  if (!newData.childrenData?.[0]) return [];
+
+  const templateData = newData.childrenData[0];
+  const panes = newData.readonlyData?.panes || [];
+
+  // 1. 映射数据结构
+  const list: ProcessedTab[] = panes.map((pane: any, index: number) => {
+    const headerData = deepcopy({
+      ...templateData,
+      data: { ...templateData.data, tab: pane },
+    });
+
+    return {
+      uniqueKey: pane.id || `tab_${index}`,
+      headerComponentData: headerData,
+      contentChildren: (pane.childrenData || []).filter((i: any) => i),
+      hasBeenRendered: index === 0, // 默认只渲染第一个
+    };
+  });
+
+  // 2. 处理编辑器模式下的伪造数据 (Fake Data)
+  if (bindingValue?.fakeDataManager) {
+    bindingValue.fakeDataManager.resetFakeData(newData);
+    const headerList = list.map((t) => t.headerComponentData);
+    bindingValue.fakeDataManager.processFakeData(newData, headerList);
+  }
+
+  return list;
+};
+
 watch(
   () => props.data,
   (newData) => {
-    if (!newData.childrenData || !newData.childrenData[0]) return;
-
-    const templateData = newData.childrenData[0];
-    const panes = newData.readonlyData?.panes || [];
-
-    const list: ProcessedTab[] = panes.map((pane: any, index: number) => {
-      const headerData = deepcopy({
-        ...templateData,
-        data: { ...templateData.data, tab: pane },
-      });
-
-      return {
-        uniqueKey: pane.id || `tab_${index}`,
-        headerComponentData: headerData,
-        contentChildren: (pane.childrenData || []).filter((i: any) => i),
-        hasBeenRendered: index === 0,
-      };
-    });
-
-    if (bindingValue?.fakeDataManager) {
-      bindingValue.fakeDataManager.resetFakeData(newData);
-      const headerList = list.map((t) => t.headerComponentData);
-      bindingValue.fakeDataManager.processFakeData(newData, headerList);
-    }
-
+    const list = transformTabsData(newData);
     processedTabs.value = list;
 
-    if (activeIndex.value >= list.length) {
+    // 索引越界修正
+    if (list.length > 0 && activeIndex.value >= list.length) {
       activeIndex.value = 0;
     }
   },
   { immediate: true, deep: true }
 );
 
-// --- 样式逻辑 ---
+// --- 4. 样式逻辑 ---
+
 const hasUnderline = computed(() => {
   const d = props.data.data;
-  return !!(d && d.underlineWidth && d.underlineHeight && d.underlineColor);
+  return !!(d?.underlineWidth && d?.underlineHeight && d?.underlineColor);
 });
 
 const cssVars = computed(() => {
   const d = props.data.data || {};
-
-  // 假设吸顶高度是固定的或者动态计算的，这里填入您实际的逻辑
+  // 假设吸顶距离逻辑 (这里可替换为实际业务逻辑)
   const stickyTopVal = 0;
+
+  const activeW = parseInt(d.borderWeightActive) || 0;
+  const inactiveW = parseInt(d.borderWeightInactive) || 0;
+
+  // 2. [关键] 取最大值，作为统一的占位宽度
+  const maxBorderW = Math.max(activeW, inactiveW);
 
   return {
     '--tab-font-size': d.textFontSize,
     '--tab-line-height': d.textLineHeight,
     '--tab-border-radius': d.textBorderRadius,
+    '--tab-border-width': `${maxBorderW}px`,
     '--tab-padding-x': d.textPaddingX,
     '--tab-margin-x': d.textMarginX,
     '--active-bg': d.textBackgroundActive,
@@ -187,67 +213,72 @@ const cssVars = computed(() => {
 
 provide('activeTabIndex', activeIndex);
 
-// --- 交互逻辑 (核心修改) ---
-const handleSwitchTab = async (index: number) => {
-  if (index === activeIndex.value) return;
+// --- 5. 交互逻辑 (Helper Functions) ---
 
-  // 1. [撑杆跳策略] 切换前，先测量当前高度
-  if (instance) {
-    const rect = await new Promise<UniApp.NodeInfo>((resolve) => {
-      uni
-        .createSelectorQuery()
-        .in(instance)
-        .select(`#${containerId}`) // 选中最外层容器
-        .boundingClientRect(resolve)
-        .exec();
-    });
-
-    // 如果当前高度很高，先把它锁死！
-    // 防止切换瞬间页面高度塌陷，导致浏览器强行重置滚动条
-    if (rect && rect.height) {
-      containerMinHeight.value = `${rect.height}px`;
-    }
-  }
-
-  // 2. 强制等待 DOM 更新，确保 min-height 生效
-  await nextTick();
-
-  // 3. 触发懒加载并切换显示
-  if (processedTabs.value[index]) {
-    processedTabs.value[index]!.hasBeenRendered = true;
-  }
-  activeIndex.value = index;
-
-  // 4. [智能回滚] 检查是否需要滚回顶部
-  if (instance) {
+/**
+ * [工具] 异步获取节点信息 (Promise化)
+ */
+const getRect = (selector: string): Promise<RectResult> => {
+  return new Promise((resolve) => {
+    if (!instance) return resolve(null);
     uni
       .createSelectorQuery()
       .in(instance)
-      .select('.cms-tab-header-sticky-wrapper')
-      .boundingClientRect((res) => {
-        const headerRect = res as UniApp.NodeInfo;
-        const stickyTop = parseInt(String(cssVars.value['--sticky-top'])) || 0;
-
-        // 如果头部已经滚出去了（top < stickyTop），或者滚得太远
-        if (headerRect && headerRect.top <= stickyTop + 5) {
-          uni.pageScrollTo({
-            selector: `#${containerId}`, // 滚回容器顶部
-            duration: 0, // 瞬时完成
-            offsetTop: -stickyTop,
-          });
-        }
-      })
+      .select(selector)
+      .boundingClientRect((res) => resolve(res as RectResult))
       .exec();
+  });
+};
+
+/**
+ * [核心] 切换 Tab 处理
+ * 包含：懒加载触发、高度锁防止塌陷、智能回滚
+ */
+const handleSwitchTab = async (index: number) => {
+  if (index === activeIndex.value) return;
+
+  // 1. 【高度锁】切换前测量当前高度
+  const containerRect = await getRect(`#${containerId}`);
+
+  // 如果有高度，先强行锁死 min-height
+  // 防止“长内容切短内容”时页面瞬间塌陷导致滚动条跳动
+  if (containerRect?.height) {
+    containerMinHeight.value = `${containerRect.height}px`;
   }
 
-  // 5. [撤销撑杆] 延迟解锁高度
-  // 稍微延迟一点，确保滚动动作完成，且新 Tab 已经渲染
+  // 2. 强制等待 DOM 样式生效
+  await nextTick();
+
+  // 3. 【切换】状态变更
+  const targetTab = processedTabs.value[index];
+  if (targetTab) targetTab.hasBeenRendered = true; // 触发懒加载
+  activeIndex.value = index;
+
+  // 4. 【智能回滚】检查头部位置
+  const headerRect = await getRect('.cms-tab-header-sticky-wrapper');
+  const stickyTop = parseInt(String(cssVars.value['--sticky-top'])) || 0;
+
+  // 如果头部已经滚出去了（或者滚得太远），说明用户在浏览下方内容
+  // 此时需要把页面拉回到 Tab 顶部，模拟“新页面”的感觉
+  if (
+    headerRect &&
+    headerRect.top !== undefined &&
+    headerRect.top <= stickyTop + 5
+  ) {
+    uni.pageScrollTo({
+      selector: `#${containerId}`,
+      duration: 0, // 必须是0，瞬间完成
+      offsetTop: -stickyTop, // 抵消吸顶高度
+    });
+  }
+
+  // 5. 【解锁】延迟释放高度
+  // 稍微延迟一点，确保滚动动作完成且新内容已渲染
   setTimeout(() => {
-    // 清空内联样式，让 CSS 接管 (回退到默认的 min-height)
-    containerMinHeight.value = '';
+    containerMinHeight.value = ''; // 清空，交还给 CSS 控制
   }, 100);
 
-  // 6. 头部横向滚动 (可选)
+  // 6. 头部横向滚动 (居中策略：滚到前一个)
   // scrollIntoViewId.value = index > 0 ? `tab-item-${index - 1}` : `tab-item-0`;
 };
 </script>
@@ -255,73 +286,79 @@ const handleSwitchTab = async (index: number) => {
 <style lang="scss" scoped>
 .cms-tab-container {
   position: relative;
-  // 确保内边距不撑大容器
   box-sizing: border-box;
 
-  // [!关键] 默认给一个最小高度，防止解锁后变为0
+  // 默认最小高度兜底
   min-height: 60vh;
 
   // --- 头部样式 ---
-  .cms-tab-header-sticky-wrapper {
-    position: sticky;
-    top: var(--sticky-top);
-    z-index: 10;
-    background-color: #fff;
-    width: 100%;
-    max-width: 100vw;
-    overflow: hidden;
-  }
-
-  .cms-tab-header-scroll {
-    white-space: nowrap;
-    width: 100%;
-
-    .cms-tab-header-flex {
-      display: flex;
-      align-items: center;
+  .cms-tab-header-wrapper {
+    // 粘性定位容器
+    .cms-tab-header-sticky-wrapper {
+      position: sticky;
+      top: var(--sticky-top);
+      z-index: 10;
+      background-color: #fff;
+      width: 100%;
+      max-width: 100vw;
+      overflow: hidden;
     }
 
-    .cms-tab-header-item {
-      flex-shrink: 0;
-      display: inline-flex;
-      align-items: center;
-      justify-content: center;
-      position: relative;
+    .cms-tab-header-scroll {
+      white-space: nowrap;
+      width: 100%;
 
-      font-size: var(--tab-font-size);
-      line-height: var(--tab-line-height);
-      border-radius: var(--tab-border-radius);
-      padding: 0 var(--tab-padding-x);
-      margin-right: var(--tab-margin-x);
-      border-style: solid;
-      box-sizing: border-box;
-
-      background-color: var(--inactive-bg);
-      color: var(--inactive-color);
-      border-color: var(--inactive-border-color);
-      border-width: var(--inactive-border-width);
-
-      &:last-child {
-        margin-right: 0;
+      .cms-tab-header-flex {
+        display: flex;
+        align-items: center;
       }
 
-      &.is-active {
-        background-color: var(--active-bg);
-        color: var(--active-color);
-        border-color: var(--active-border-color);
-        border-width: var(--active-border-width);
-      }
+      .cms-tab-header-item {
+        flex-shrink: 0;
+        display: inline-flex;
+        align-items: center;
+        justify-content: center;
+        position: relative;
+        box-sizing: border-box;
+        border-style: solid;
 
-      &.is-active.has-underline::after {
-        content: '';
-        position: absolute;
-        bottom: 0;
-        left: 50%;
-        transform: translateX(-50%);
-        width: var(--underline-width);
-        height: var(--underline-height);
-        border-radius: var(--underline-radius);
-        background-color: var(--underline-color);
+        // 变量应用
+        font-size: var(--tab-font-size);
+        line-height: var(--tab-line-height);
+        border-radius: var(--tab-border-radius);
+        padding: 0 var(--tab-padding-x);
+        margin-right: var(--tab-margin-x);
+
+        // 默认状态
+        background-color: var(--inactive-bg);
+        color: var(--inactive-color);
+        border-color: var(--inactive-border-color);
+        border-width: var(--tab-border-width);
+        box-sizing: border-box;
+
+        &:last-child {
+          margin-right: 0;
+        }
+
+        // 激活状态
+        &.is-active {
+          background-color: var(--active-bg);
+          color: var(--active-color);
+          border-color: var(--active-border-color);
+        }
+
+        // 下划线
+        &.is-active.has-underline::after {
+          content: '';
+          position: absolute;
+          bottom: 0;
+          left: 50%;
+          transform: translateX(-50%);
+          width: var(--underline-width);
+          height: var(--underline-height);
+          border-radius: var(--underline-radius);
+          background-color: var(--underline-color);
+        }
       }
     }
   }
@@ -331,15 +368,20 @@ const handleSwitchTab = async (index: number) => {
     width: 100%;
     box-sizing: border-box;
     overflow-x: hidden;
+
+    // 平滑过渡高度变化
     transition: min-height 0.3s ease-out;
 
     .cms-tab-content-pane {
       width: 100%;
       box-sizing: border-box;
       min-height: 100rpx;
+
+      // 新内容淡入
       animation: fadeIn 0.3s ease-out;
     }
   }
+
   @keyframes fadeIn {
     from {
       opacity: 0;
