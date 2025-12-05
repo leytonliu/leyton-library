@@ -29,7 +29,10 @@ export const getFirstDefinedValue = (...args: any[]): any => {
  * @returns 转换后的 kebab-case 字符串
  */
 export const kebabCase = (str: string): string => {
-  if (str.length > 1 && /[A-Z]/.test(str.charAt(0))) {
+  // 特殊处理 Vendor 前缀 (如 Webkit, Moz)，保留首字母大写以便生成前缀 dash (e.g. -webkit-)
+  const isVendorPrefix = /^(Webkit|Moz|O|ms)/.test(str);
+
+  if (!isVendorPrefix && str.length > 1 && /[A-Z]/.test(str.charAt(0))) {
     str = str.charAt(0).toLowerCase() + str.substring(1);
   }
   return str.replace(/[A-Z]/g, (i) => '-' + i.toLowerCase());
