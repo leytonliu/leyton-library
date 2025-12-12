@@ -1,6 +1,6 @@
 {
   "name": "@leyton/miniprogram",
-  "version": "7.0.10",
+  "version": "7.0.11",
   "type": "module",
   "description": "Miniprogram utilities for leyton-library",
   "main": "./dist/index.umd.cjs",
