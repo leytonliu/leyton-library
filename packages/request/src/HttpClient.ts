@@ -60,10 +60,6 @@ export interface ApiError extends Error {
 // --- Request Cancellation Management ---
 const pendingRequests = new Map<string, CancelTokenSource>();
 
-function isUniAppEnv(): boolean {
-  return typeof uni !== 'undefined' || typeof wx !== 'undefined';
-}
-
 export class HttpClient {
   private service: AxiosInstance;
   private config: Required<HttpClientConfig>;

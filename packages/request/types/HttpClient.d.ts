@@ -1,4 +1,4 @@
-import { AxiosRequestConfig, AxiosResponse, AxiosError } from 'axios';
+import { AxiosError, AxiosRequestConfig, AxiosResponse } from 'axios';
 /**
  * Configuration interface for the HttpClient.
  */
@@ -58,7 +58,6 @@ export declare class HttpClient {
     put<T = any>(url: string, data?: any, options?: AxiosRequestConfig): Promise<T>;
     delete<T = any>(url: string, params?: Record<string, any>, options?: AxiosRequestConfig): Promise<T>;
     patch<T = any>(url: string, data?: any, options?: AxiosRequestConfig): Promise<T>;
-    upload<T = any>(url: string, file: File | Blob, fieldName?: string, options?: AxiosRequestConfig): Promise<T>;
     cancelAllRequests(message?: string): void;
     getRequestKey(config: AxiosRequestConfig): string;
 }
