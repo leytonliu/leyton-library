@@ -1,6 +1,6 @@
 {
   "name": "@leyton/const",
-  "version": "7.0.5",
+  "version": "7.0.6",
   "type": "module",
   "description": "Constants and configuration for leyton-library",
   "main": "./dist/index.umd.cjs",
