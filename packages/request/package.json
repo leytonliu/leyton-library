@@ -1,6 +1,6 @@
 {
   "name": "@leyton/request",
-  "version": "7.0.0",
+  "version": "7.0.1",
   "private": true,
   "description": "A request library based on axios, for web and uni-app.",
   "main": "./dist/index.js",
