@@ -6,11 +6,20 @@
     </view>
 
     <view class="nav-list">
-      <view class="nav-item" @tap="goToCmsTest">
+      <view class="nav-item" @tap="goPage('/pages/cms-test/index')">
         <view class="nav-icon">🎨</view>
         <view class="nav-content">
-          <text class="nav-title">CMS Vue3 测试</text>
+          <text class="nav-title">CMS Vue3</text>
           <text class="nav-desc">使用 mockData.json 测试</text>
+        </view>
+        <view class="nav-arrow">→</view>
+      </view>
+
+      <view class="nav-item" @tap="goPage('/pages/upload/index')">
+        <view class="nav-icon">📃</view>
+        <view class="nav-content">
+          <text class="nav-title">request库</text>
+          <text class="nav-desc">文件上传</text>
         </view>
         <view class="nav-arrow">→</view>
       </view>
@@ -32,11 +41,13 @@
 </template>
 
 <script setup>
-const goToCmsTest = () => {
+const goPage = (path) => {
   uni.navigateTo({
-    url: '/pages/cms-test/index'
-  });
-};
+    url: path,
+  })
+}
+
+
 </script>
 
 <style lang="scss" scoped>

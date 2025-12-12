@@ -1,6 +1,6 @@
 {
   "name": "@leyton/request",
-  "version": "0.0.1",
+  "version": "1.0.0",
   "private": true,
   "description": "A request library based on axios, for web and uni-app.",
   "main": "./dist/index.js",
@@ -8,9 +8,9 @@
   "types": "./types/index.d.ts",
   "exports": {
     ".": {
+      "types": "./types/index.d.ts",
       "import": "./dist/index.mjs",
-      "require": "./dist/index.js",
-      "types": "./types/index.d.ts"
+      "require": "./dist/index.js"
     }
   },
   "scripts": {
