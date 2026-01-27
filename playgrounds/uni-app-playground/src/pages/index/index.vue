@@ -15,14 +15,15 @@
         <view class="nav-arrow">→</view>
       </view>
 
-      <view class="nav-item" @tap="goPage('/pages/upload/index')">
+      <view class="nav-item" @tap="goPage('/pages/poster/index')">
         <view class="nav-icon">📃</view>
         <view class="nav-content">
-          <text class="nav-title">request库</text>
-          <text class="nav-desc">文件上传</text>
+          <text class="nav-title">海报</text>
+          <text class="nav-desc">海报生成</text>
         </view>
         <view class="nav-arrow">→</view>
       </view>
+
     </view>
 
     <view class="info-card">

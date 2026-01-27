@@ -21,9 +21,9 @@
       }
     },
     {
-      "path": "pages/upload/index",
+      "path": "pages/poster/index",
       "style": {
-        "navigationBarTitleText": "文件上传",
+        "navigationBarTitleText": "海报",
         "enablePullDownRefresh": false
       }
     }
