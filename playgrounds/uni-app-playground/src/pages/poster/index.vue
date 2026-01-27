@@ -3,9 +3,9 @@
     <button type="primary" @click="startGeneratePoster" style="margin: 20px">
       生成订单海报
     </button>
-    <view style="text-align: center; color: #999; font-size: 14px"
-      >点击按钮，海报将在后台生成并自动保存到相册</view
-    >
+    <view style="text-align: center; color: #999; font-size: 14px">
+      点击按钮，海报生成后将弹出预览
+    </view>
 
     <canvas
       type="2d"
@@ -13,13 +13,34 @@
       class="poster-canvas"
       :style="{ width: canvasWidth + 'px', height: canvasHeight + 'px' }"
     ></canvas>
+
+    <view class="preview-modal" v-if="showPreview" @touchmove.stop.prevent>
+      <view class="preview-mask" @click="closePreview"></view>
+
+      <view class="preview-container">
+        <scroll-view scroll-y class="preview-scroll">
+          <image
+            :src="posterTempPath"
+            mode="widthFix"
+            class="preview-image"
+            @click="previewBigImage"
+          />
+        </scroll-view>
+
+        <view class="preview-footer">
+          <button class="save-btn" type="primary" @click="handleSaveToAlbum">
+            保存到相册
+          </button>
+        </view>
+      </view>
+    </view>
   </view>
 </template>
 
 <script>
 // ================== 模拟数据和工具函数区域 ==================
 
-// 1. 模拟订单数据 (实际开发中请替换为接口返回的数据)
+// 1. 模拟订单数据
 const mockOrderData = {
   status: '待付款',
   userPhone: '许宁 132XXXX2847',
@@ -39,7 +60,6 @@ const mockOrderData = {
           price: '749.5',
           originalPrice: '1499',
           count: 1,
-          // 使用占位图，实际请换成你的图片链接 (需配置小程序 download 域名白名单)
           img: 'https://osschina.hongsheart.com/20260126/854ae15b-6de0-4e08-b25f-8ca7b904a0a9.jpg?x-oss-process=style/middle',
         },
         {
@@ -74,7 +94,6 @@ const mockOrderData = {
     promotion: '1000',
     finalPay: '3898',
   },
-  // 使用占位二维码
   qrCode:
     'https://osschina.hongsheart.com/20260126/854ae15b-6de0-4e08-b25f-8ca7b904a0a9.jpg?x-oss-process=style/middle',
   orderInfo: {
@@ -85,10 +104,9 @@ const mockOrderData = {
   },
 };
 
-// 2. 工具函数：下载网络图片到本地临时路径
+// 2. 工具函数：下载网络图片
 function downloadImage(url) {
   return new Promise((resolve, reject) => {
-    // 如果是空或本地路径，直接返回
     if (!url || !url.startsWith('http')) {
       resolve(url);
       return;
@@ -104,7 +122,7 @@ function downloadImage(url) {
   });
 }
 
-// 3. 工具函数：绘制圆角矩形路径 (用于裁切或填充背景)
+// 3. 工具函数：绘制圆角矩形路径
 function drawRoundedRectPath(ctx, x, y, width, height, radius) {
   ctx.beginPath();
   ctx.moveTo(x + radius, y);
@@ -121,15 +139,14 @@ function drawRoundedRectPath(ctx, x, y, width, height, radius) {
 
 // 4. 工具函数：绘制圆角图片
 function drawRoundedImage(ctx, img, x, y, width, height, radius) {
-  ctx.save(); // 保存当前画布状态
-  drawRoundedRectPath(ctx, x, y, width, height, radius); // 创建圆角路径
-  ctx.clip(); // 裁切
-  ctx.drawImage(img, x, y, width, height); // 绘制图片
-  ctx.restore(); // 恢复画布状态
+  ctx.save();
+  drawRoundedRectPath(ctx, x, y, width, height, radius);
+  ctx.clip();
+  ctx.drawImage(img, x, y, width, height);
+  ctx.restore();
 }
 
-// 5. 工具函数：绘制自动换行的文本
-// 返回绘制完成后的新 Y 坐标
+// 5. 工具函数：绘制自动换行文本
 function drawWrappedText(ctx, text, x, y, maxWidth, lineHeight, maxLines = 0) {
   const words = text.split('');
   let line = '';
@@ -142,22 +159,20 @@ function drawWrappedText(ctx, text, x, y, maxWidth, lineHeight, maxLines = 0) {
     const testWidth = metrics.width;
 
     if (testWidth > maxWidth && i > 0) {
-      // 需要换行
       if (maxLines > 0 && lineCount >= maxLines - 1) {
-        // 超出最大行数，显示省略号并结束
         line = line.substring(0, line.length - 1) + '...';
         ctx.fillText(line, x, currentY);
         return currentY + lineHeight;
       }
-      ctx.fillText(line, x, currentY); // 绘制当前行
-      line = words[i]; // 新的一行从当前字开始
+      ctx.fillText(line, x, currentY);
+      line = words[i];
       currentY += lineHeight;
       lineCount++;
     } else {
-      line = testLine; // 继续追加字符
+      line = testLine;
     }
   }
-  ctx.fillText(line, x, currentY); // 绘制最后一行
+  ctx.fillText(line, x, currentY);
   return currentY + lineHeight;
 }
 
@@ -166,26 +181,28 @@ function drawWrappedText(ctx, text, x, y, maxWidth, lineHeight, maxLines = 0) {
 export default {
   data() {
     return {
-      canvasWidth: 375, // 默认宽度
-      canvasHeight: 1300, // 初始给一个足够大的高度，后面会动态计算
+      canvasWidth: 375, // 画布逻辑宽度
+      canvasHeight: 1300, // 画布逻辑高度（会动态计算）
       dpr: 1, // 设备像素比
-      orderData: mockOrderData, // 数据源
+      orderData: mockOrderData,
+
+      // --- 新增预览相关状态 ---
+      showPreview: false, // 是否显示弹窗
+      posterTempPath: '', // 绘制好的临时图片路径
     };
   },
   onReady() {
-    // 获取系统信息，设置画布基准宽度和像素比
     const sysInfo = uni.getSystemInfoSync();
     this.canvasWidth = sysInfo.screenWidth;
     this.dpr = sysInfo.pixelRatio;
   },
   methods: {
-    // 主流程：开始生成海报
+    // 1. 主流程：开始准备资源并绘制
     async startGeneratePoster() {
       uni.showLoading({ title: '准备资源中...', mask: true });
       try {
-        // 1. 并发下载所有需要的图片资源
+        // 1.1 下载图片资源
         const downloadTasks = [];
-        // 下载商品图片
         this.orderData.shops.forEach((shop) => {
           shop.items.forEach((item) => {
             downloadTasks.push(
@@ -195,7 +212,6 @@ export default {
             );
           });
         });
-        // 下载二维码
         downloadTasks.push(
           downloadImage(this.orderData.qrCode).then(
             (path) => (this.orderData.localQrCodePath = path),
@@ -206,7 +222,7 @@ export default {
 
         uni.showLoading({ title: '正在绘制...', mask: true });
 
-        // 2. 获取 Canvas 2D 节点和上下文
+        // 1.2 获取 Canvas 节点
         const query = uni.createSelectorQuery().in(this);
         query
           .select('#posterCanvas')
@@ -220,21 +236,20 @@ export default {
             const canvas = res[0].node;
             const ctx = canvas.getContext('2d');
 
-            // 3. 动态计算海报总高度并设置
+            // 1.3 动态设置高度
             this.canvasHeight = this.calculatePosterHeight();
-            // 等待 Vue 更新 DOM 样式中的 height
             await this.$nextTick();
 
-            // 4. 适配高清屏 (DPR)
+            // 1.4 适配高清屏
             canvas.width = this.canvasWidth * this.dpr;
             canvas.height = this.canvasHeight * this.dpr;
             ctx.scale(this.dpr, this.dpr);
 
-            // 5. 执行核心绘制逻辑
+            // 1.5 执行绘制
             await this.drawPosterContent(canvas, ctx);
 
-            // 6. 导出图片并保存到相册
-            this.savePosterToAlbum(canvas);
+            // 1.6 生成临时图片供预览 (不再直接保存到相册)
+            this.generateTempImage(canvas);
           });
       } catch (error) {
         console.error('海报生成失败:', error);
@@ -243,22 +258,21 @@ export default {
       }
     },
 
-    // 估算海报总高度 (用于设置 Canvas 高度)
+    // 计算海报高度
     calculatePosterHeight() {
-      let h = 120; // 头部高度
-      h += 20; // 头部与卡片间距
-      h += 120; // 地址区域估算
-      // 商品区域估算
+      let h = 120; // 头部
+      h += 20; // 间距
+      h += 120; // 地址区域
       this.orderData.shops.forEach((shop) => {
-        h += 40; // 店铺标题
+        h += 40; // 店铺头
         shop.items.forEach(() => {
-          h += 110; // 商品项高度 + 间距
+          h += 110; // 商品项
         });
       });
-      h += 80; // 订单备注估算
-      h += 180; // 结算区域估算
-      h += 380; // 二维码区域估算
-      h += 180; // 底部信息区域估算
+      h += 80; // 备注
+      h += 180; // 结算
+      h += 380; // 二维码
+      h += 180; // 订单信息
       h += 30; // 底部留白
       return h;
     },
@@ -266,46 +280,46 @@ export default {
     // 核心绘制逻辑
     async drawPosterContent(canvas, ctx) {
       const CW = this.canvasWidth;
-      const PADDING = 0; // 页面左右边距
-      let currentY = 0; // Y轴游标，控制绘制位置
+      const PADDING = 0;
+      let currentY = 0;
 
-      // --- 绘制背景 ---
+      // 背景
       ctx.fillStyle = '#F5F5F5';
       ctx.fillRect(0, 0, CW, this.canvasHeight);
 
-      // --- 1. 头部区域 ---
+      // --- 头部 ---
       const headerHeight = 120;
-      ctx.fillStyle = '#C5A678'; // 原型图的金色
+      ctx.fillStyle = '#C5A678';
       ctx.fillRect(0, currentY, CW, headerHeight);
-
+      // 订单状态
       ctx.fillStyle = '#FFFFFF';
       ctx.font = 'bold 24px sans-serif';
-      ctx.fillText(this.orderData.status, PADDING + 5, currentY + 50);
+      ctx.fillText(this.orderData.status, PADDING + 20, currentY + 50);
+      // 用户电话
       ctx.font = '14px sans-serif';
-      ctx.fillText(this.orderData.userPhone, PADDING + 5, currentY + 85);
-
+      ctx.fillText(this.orderData.userPhone, PADDING + 20, currentY + 85);
       currentY += headerHeight;
 
-      // --- 2. 绘制白色卡片背景 ---
-      const cardStartY = currentY + 10;
+      // --- 白色卡片背景 ---
+      const cardStartY = currentY;
       const cardWidth = CW - PADDING * 2;
-      // 卡片高度延伸到底部留一些空隙
       const cardHeight = this.canvasHeight - cardStartY - 20;
 
       ctx.fillStyle = '#FFFFFF';
       drawRoundedRectPath(ctx, PADDING, cardStartY, cardWidth, cardHeight, 8);
-      ctx.fill(); // 填充白色背景
+      ctx.fill();
 
-      // --- 卡片内部内容绘制 ---
-      currentY = cardStartY + 20; // 更新游标到卡片内部起始位置
-      const contentX = PADDING + 15; // 内部内容左边距
-      const contentMaxWidth = cardWidth - 30; // 内部内容最大宽度
+      // --- 卡片内容 ---
+      currentY = cardStartY + 20;
+      const contentX = PADDING + 15;
+      const contentMaxWidth = cardWidth - 30;
 
-      // [收货地址]
+      // 1. 收货地址
       ctx.fillStyle = '#333333';
       ctx.font = 'bold 15px sans-serif';
       ctx.fillText('收货地址', contentX, currentY + 10);
       currentY += 35;
+      // 姓名电话
       ctx.font = '14px sans-serif';
       ctx.fillText(
         `${this.orderData.address.userName} ${this.orderData.address.phone}`,
@@ -313,9 +327,9 @@ export default {
         currentY + 10,
       );
       currentY += 25;
+      // 详细地址
       ctx.fillStyle = '#666666';
       ctx.font = '13px sans-serif';
-      // 地址支持多行换行
       currentY = drawWrappedText(
         ctx,
         this.orderData.address.detail,
@@ -324,15 +338,20 @@ export default {
         contentMaxWidth,
         20,
       );
-      currentY += 15;
 
-      // [商品列表循环]
+      // 浅灰色分割间距
+      ctx.fillStyle = '#f7f7f7';
+      drawRoundedRectPath(ctx, PADDING, currentY, CW, 8, 0);
+      ctx.fill();
+      currentY += 25;
+
+      // 2. 店铺和商品
       for (const shop of this.orderData.shops) {
-        // 店铺标题
+        // 店铺名
         ctx.fillStyle = '#333333';
         ctx.font = 'bold 14px sans-serif';
         ctx.fillText(shop.name, contentX, currentY + 15);
-        // 店铺商品总数 (右对齐)
+
         ctx.fillStyle = '#666666';
         ctx.font = '13px sans-serif';
         const countText = `${shop.count} 件`;
@@ -342,35 +361,36 @@ export default {
           CW - PADDING - 15 - countTextWidth,
           currentY + 15,
         );
+        currentY += 35;
 
-        currentY += 45;
-        
-        // 店铺分割线
+        // 分割线
         ctx.beginPath();
-        ctx.moveTo(contentX, currentY);
-        ctx.lineTo(CW - PADDING - 15, currentY);
+        ctx.moveTo(0, currentY);
+        ctx.lineTo(CW - PADDING, currentY);
         ctx.strokeStyle = '#EEEEEE';
         ctx.lineWidth = 0.5;
         ctx.stroke();
         currentY += 20;
 
-        // 商品项循环
+
+
+        // 商品项
         for (const item of shop.items) {
           const itemStartY = currentY;
-          // a. 绘制圆角商品图 (需要先创建 image 对象)
+          // 图片
           const img = canvas.createImage();
           await new Promise((resolve) => {
             img.onload = resolve;
-            img.onerror = resolve; // 失败也继续，避免卡死
+            img.onerror = resolve;
             img.src = item.localImgPath;
           });
           drawRoundedImage(ctx, img, contentX, itemStartY, 80, 80, 6);
 
-          // b. 商品文字信息
+          // 文字
           const textX = contentX + 95;
           const textMaxWidthForGoods = contentMaxWidth - 95;
 
-          // 标题 (最多2行)
+          // 标题
           ctx.fillStyle = '#333333';
           ctx.font = '13px sans-serif';
           let textY = drawWrappedText(
@@ -396,13 +416,12 @@ export default {
           ctx.fillText(priceStr, textX, priceY);
           const priceWidth = ctx.measureText(priceStr).width;
 
-          // 原价 (带删除线)
+          // 原价
           ctx.fillStyle = '#999999';
           ctx.font = '11px sans-serif';
           const originalPriceStr = `¥${item.originalPrice}`;
           const originX = textX + priceWidth + 10;
           ctx.fillText(originalPriceStr, originX, priceY);
-          // 画删除线
           const originalWidth = ctx.measureText(originalPriceStr).width;
           ctx.beginPath();
           ctx.moveTo(originX, priceY - 4);
@@ -411,7 +430,7 @@ export default {
           ctx.lineWidth = 1;
           ctx.stroke();
 
-          // 数量 (右对齐)
+          // 数量
           ctx.font = '12px sans-serif';
           const itemCountText = `x ${item.count}`;
           const itemCountWidth = ctx.measureText(itemCountText).width;
@@ -421,11 +440,11 @@ export default {
             itemStartY + 12,
           );
 
-          currentY += 110; // 商品高度 + 间距
+          currentY += 110;
         }
       }
 
-      // [订单备注]
+      // 3. 备注
       currentY += 5;
       ctx.fillStyle = '#333333';
       ctx.font = 'bold 14px sans-serif';
@@ -442,22 +461,19 @@ export default {
       );
       currentY += 20;
 
-      // [结算区域]
-      // 分割线
-      ctx.beginPath();
-      ctx.moveTo(contentX, currentY);
-      ctx.lineTo(CW - PADDING - 15, currentY);
-      ctx.strokeStyle = '#EEEEEE';
-      ctx.lineWidth = 0.5;
-      ctx.stroke();
-      currentY += 20;
+      // 浅灰色分割间距
+      ctx.fillStyle = '#f7f7f7';
+      drawRoundedRectPath(ctx, PADDING, currentY, CW, 8, 0);
+      ctx.fill();
+      currentY += 25;
+
+      // 4. 结算
 
       ctx.fillStyle = '#333333';
       ctx.font = 'bold 15px sans-serif';
       ctx.fillText('结算', contentX, currentY + 15);
       currentY += 40;
 
-      // 绘制结算行的辅助函数
       const drawSettlementRow = (
         label,
         value,
@@ -467,7 +483,6 @@ export default {
         ctx.fillStyle = '#333333';
         ctx.font = '13px sans-serif';
         ctx.fillText(label, contentX, currentY + 10);
-
         ctx.fillStyle = isRed ? '#FF0000' : '#333333';
         ctx.font = isBold ? 'bold 14px sans-serif' : '13px sans-serif';
         const valStr = isRed ? `- ¥${value}` : `¥ ${value}`;
@@ -488,7 +503,7 @@ export default {
       );
       currentY += 30;
 
-      // [二维码区域]
+      // 5. 二维码
       const qrSize = 160;
       const qrX = (CW - qrSize) / 2;
       const qrImg = canvas.createImage();
@@ -507,8 +522,7 @@ export default {
       ctx.fillText(tipText, (CW - tipWidth) / 2, currentY);
       currentY += 40;
 
-      // [底部订单信息]
-      // 分割线
+      // 6. 订单信息
       ctx.beginPath();
       ctx.moveTo(contentX, currentY);
       ctx.lineTo(CW - PADDING - 15, currentY);
@@ -535,48 +549,71 @@ export default {
       drawInfoRow('服务导购', this.orderData.orderInfo.guide);
       drawInfoRow('下单门店', this.orderData.orderInfo.store);
       drawInfoRow('下单时间', this.orderData.orderInfo.time);
-
-      // 绘制完成
     },
 
-    // 导出 Canvas 内容并保存到相册
-    savePosterToAlbum(canvas) {
+    // 导出 Canvas 图片临时路径并显示预览
+    generateTempImage(canvas) {
       uni.canvasToTempFilePath({
-        canvas: canvas, // Canvas 2D 必须传入 canvas 实例
+        canvas: canvas,
         success: (res) => {
-          uni.saveImageToPhotosAlbum({
-            filePath: res.tempFilePath,
-            success: () => {
-              uni.hideLoading();
-              uni.showToast({ title: '已保存到相册', icon: 'success' });
-            },
-            fail: (err) => {
-              uni.hideLoading();
-              console.error('保存相册失败', err);
-              // 处理用户未授权的情况
-              if (
-                err.errMsg.includes('auth deny') ||
-                err.errMsg.includes('authorize:fail')
-              ) {
-                uni.showModal({
-                  title: '提示',
-                  content: '需要您授权保存图片到相册，请在设置中开启权限。',
-                  success: (modalRes) => {
-                    if (modalRes.confirm) {
-                      uni.openSetting();
-                    }
-                  },
-                });
-              } else {
-                uni.showToast({ title: '保存失败，请重试', icon: 'none' });
-              }
-            },
-          });
+          uni.hideLoading();
+          this.posterTempPath = res.tempFilePath;
+          this.showPreview = true;
         },
         fail: (err) => {
           uni.hideLoading();
-          console.error('导出图片失败', err);
-          uni.showToast({ title: '海报导出失败', icon: 'none' });
+          console.error('生成图片失败', err);
+          uni.showToast({ title: '生成预览失败', icon: 'none' });
+        },
+      });
+    },
+
+    // 关闭预览
+    closePreview() {
+      this.showPreview = false;
+    },
+
+    // 点击大图预览
+    previewBigImage() {
+      if (this.posterTempPath) {
+        uni.previewImage({
+          urls: [this.posterTempPath],
+        });
+      }
+    },
+
+    // 保存到相册
+    handleSaveToAlbum() {
+      if (!this.posterTempPath) return;
+      uni.showLoading({ title: '保存中...' });
+
+      uni.saveImageToPhotosAlbum({
+        filePath: this.posterTempPath,
+        success: () => {
+          uni.hideLoading();
+          uni.showToast({ title: '已保存到相册', icon: 'success' });
+          // 保存成功后可以选择关闭弹窗，或者留着让用户自己关
+          // this.showPreview = false;
+        },
+        fail: (err) => {
+          uni.hideLoading();
+          console.error('保存相册失败', err);
+          if (
+            err.errMsg.includes('auth deny') ||
+            err.errMsg.includes('authorize:fail')
+          ) {
+            uni.showModal({
+              title: '提示',
+              content: '需要您授权保存图片到相册，请在设置中开启权限。',
+              success: (modalRes) => {
+                if (modalRes.confirm) {
+                  uni.openSetting();
+                }
+              },
+            });
+          } else {
+            uni.showToast({ title: '保存失败，请重试', icon: 'none' });
+          }
         },
       });
     },
@@ -593,10 +630,95 @@ export default {
 }
 
 .poster-canvas {
-  /* 将 canvas 移出屏幕可视区域，但不要使用 display:none */
   position: fixed;
   left: 9000px;
   top: 0;
-  /* 宽高通过 JS 动态设置 style */
+}
+
+/* ================== 预览弹窗样式 ================== */
+.preview-modal {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  z-index: 999;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.preview-mask {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.6);
+}
+
+.preview-container {
+  position: relative;
+  z-index: 1000;
+  width: 80%; /* 弹窗占屏幕宽度的 80% */
+  height: 80%; /* 弹窗占屏幕高度的 80% */
+  background-color: #fff;
+
+  display: flex;
+  flex-direction: column;
+  overflow: hidden;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.3);
+}
+
+.preview-header {
+  height: 50px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-weight: bold;
+  font-size: 16px;
+  border-bottom: 1px solid #eee;
+  position: relative;
+  background-color: #fff;
+  flex-shrink: 0; /* 防止头部被压缩 */
+}
+
+.close-btn {
+  position: absolute;
+  right: 15px;
+  top: 0;
+  height: 50px;
+  line-height: 50px;
+  font-size: 24px;
+  color: #999;
+  padding: 0 10px;
+}
+
+.preview-scroll {
+  flex: 1; /* 占据中间剩余的所有空间 */
+  background-color: #f5f5f5;
+  width: 100%;
+  height: 0; /* 配合 flex:1 使用，确保 scroll-view 高度生效 */
+}
+
+.preview-image {
+  width: 100%;
+  display: block;
+  /* 高度自适应 */
+}
+
+.preview-footer {
+  padding: 15px;
+  background-color: #fff;
+  border-top: 1px solid #eee;
+  flex-shrink: 0; /* 防止底部被压缩 */
+}
+
+.save-btn {
+  width: 100%;
+  height: 44px;
+  line-height: 44px;
+  border-radius: 22px;
+  font-size: 16px;
 }
 </style>
