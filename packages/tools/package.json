@@ -1,6 +1,6 @@
 {
   "name": "@leyton/tools",
-  "version": "8.0.1",
+  "version": "9.0.0",
   "type": "module",
   "description": "Utility functions and tools for leyton-library",
   "main": "./dist/index.umd.cjs",
