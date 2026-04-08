@@ -1,6 +1,6 @@
 {
   "name": "@leyton/cms",
-  "version": "8.0.0",
+  "version": "8.0.1",
   "type": "module",
   "description": "CMS component system for uni-app, a declarative page rendering engine based on Vue 3",
   "keywords": [
@@ -24,7 +24,7 @@
     "src"
   ],
   "scripts": {
-    "build": "vite build && tsc --emitDeclarationOnly",
+    "build": "vite build",
     "build-only": "vite build",
     "test": "vitest run",
     "test:watch": "vitest"
