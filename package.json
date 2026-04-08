@@ -1,7 +1,7 @@
 {
   "name": "leyton-library",
   "private": true,
-  "version": "7.0.11",
+  "version": "7.0.12",
   "type": "module",
   "workspaces": [
     "packages/*"
@@ -44,6 +44,7 @@
   "dependencies": {
     "@highlightjs/vue-plugin": "^2.1.0",
     "@leyton/cli": "workspace:*",
+    "@leyton/cms": "workspace:*",
     "@leyton/const": "workspace:*",
     "@leyton/miniprogram": "workspace:*",
     "@leyton/tools": "workspace:*",

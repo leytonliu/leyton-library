@@ -1,0 +1,13 @@
+{
+  "permissions": {
+    "allow": [
+      "Bash(cp playgrounds/uni-app-playground/src/components/cms/packages/binding/*.ts packages/cms/src/binding/)",
+      "Bash(cp playgrounds/uni-app-playground/src/components/cms/packages/binding/custom/*.ts packages/cms/src/binding/custom/)",
+      "Bash(xargs sed:*)",
+      "Bash(find:*)",
+      "Bash(pnpm install:*)",
+      "Bash(pnpm run:*)",
+      "Bash(npx tsc:*)"
+    ]
+  }
+}
