@@ -1,42 +1,44 @@
 <template>
   <cms-preview
-    v-if="!pageConfigLoading && !pageConfigEmpty"
-    :data="pageConfig"
+    v-if="hasValidData"
+    :data="data"
     :envConfig="envConfig"
   />
+  <view v-else class="cms-page-empty">
+    <!-- 空状态提示 -->
+  </view>
 </template>
+
 <script setup lang="ts">
-import { onMounted, ref } from 'vue';
+import { computed } from 'vue';
+import type { CmsPageConfig, CmsEnvConfig } from './cms.js';
 import CmsPreview from './cms-preview.vue';
-import { CmsPageConfig } from './cms.js';
 
-const envConfig = ref({});
-const pageConfig = ref<CmsPageConfig | undefined>();
+interface Props {
+  data: CmsPageConfig;
+  envConfig?: CmsEnvConfig;
+}
 
-const pageConfigLoading = ref(false);
-const pageConfigEmpty = ref(true);
+const props = withDefaults(defineProps<Props>(), {
+  data: undefined,
+  envConfig: () => ({
+    env: 'production',
+  }),
+});
 
-onMounted(async () => {
-  try {
-    console.log('加载 mockData:', mockData);
-    pageConfigLoading.value = true;
-    pageConfigEmpty.value = true;
-    setTimeout(() => {
-      // 直接使用 mockData
-      pageConfig.value = mockData as unknown as CmsPageConfig;
-      // 设置环境配置
-      envConfig.value = {
-        // 根据需要添加环境配置
-        env: 'dev',
-        navigationStyle: 'default',
-      };
-      console.log('页面数据加载成功', pageConfig.value);
+defineOptions({
+  name: 'CmsPage',
+});
 
-      pageConfigLoading.value = false;
-      pageConfigEmpty.value = false;
-    }, 200);
-  } catch (e) {
-    console.error('加载页面数据失败:', e);
-  }
+// 检查是否有有效的页面数据
+const hasValidData = computed(() => {
+  return props.data && props.data.childrenData && props.data.childrenData.length > 0;
 });
 </script>
+
+<style scoped>
+.cms-page-empty {
+  min-height: 100vh;
+  background-color: #f5f5f5;
+}
+</style>
